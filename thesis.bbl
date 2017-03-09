@@ -19,6 +19,7 @@
 \bibitem[Berlind \& Weinberg(2002)]{berlind_weinberg2002} Berlind, A.~A., \& Weinberg, D.~H.\ 2002, \apj, 575, 587 
 \bibitem[Berlind et al.(2006)]{groups} Berlind, A.~A., Frieman, J., Weinberg, D.~H., et al.\ 2006, \apjs, 167, 1 
 \bibitem[Bernardeau et al.(2002)]{Bernardeau:2002aa} Bernardeau, F., Colombi, S., Gazta{\~n}aga, E., \& Scoccimarro, R.\ 2002, \physrep, 367, 1 
+\bibitem[Bertin \& Arnouts(1996)]{sextractor} Bertin, E., \& Arnouts, S.\ 1996, \aaps, 117, 393 
 \bibitem[Bishop \& Nasrabadi(2007)]{bishop} Bishop, C.~M., \& Nasrabadi, N.~M.\ 2007, Journal of Electronic Imaging, 16, 049901 
 \bibitem[Blot et al.(2016)]{blot2016} Blot, L., Corasaniti, P.~S., Amendola, L., \& Kitching, T.~D.\ 2016, \mnras, 458, 4462 
 \bibitem[Bolton et al.(2012)]{zfail} Bolton, A.~S., Schlegel, D.~J., Aubourg, {\'E}., et al.\ 2012, \aj, 144, 144 
@@ -46,6 +47,7 @@
 \bibitem[de la Torre \& Peacock(2013)]{delatorre} de la Torre, S., \& Peacock, J.~A.\ 2013, \mnras, 435, 743 
 \bibitem[Del Moral et al.(2012)]{smc} Del Moral, P., Doucet, A., \& Jasra, A.\ 2012, arXiv:1203.0464 
 \bibitem[Dodelson \& Schneider(2013)]{dodelson2013} Dodelson, S., \& Schneider, M.~D.\ 2013, \prd, 88, 063537 
+\bibitem[Doob(1946)]{crlb} Doob, J.~L.\ 1946, Science, 104, 450 
 \bibitem[Dressler(1980)]{Dressler:1980aa} Dressler, A.\ 1980, \apj, 236, 351 
 \bibitem[Dutton \& Macci{\`o}(2014)]{nfw_c(M)} Dutton, A.~A., \& Macci{\`o}, A.~V.\ 2014, \mnras, 441, 3359 
 \bibitem[Eriksen et al.(2004)]{Eriksen:2004aa} Eriksen, H.~K., O'Dwyer, I.~J., Jewell, J.~B., et al.\ 2004, \apjs, 155, 227 
@@ -54,6 +56,7 @@
 \bibitem[Feng et al.(2016)]{fastpm} Feng, Y., Chu, M.-Y., Seljak, U., \& McDonald, P.\ 2016, \mnras, 463, 2273 
 \bibitem[Filippi et al.(2011)]{optimalkernel} Filippi, S., Barnes, C., Cornebise, J., \& Stumpf, M.~P.~H.\ 2011, arXiv:1106.6280 
 \bibitem[Foreman-Mackey et al.(2013)]{emcee} Foreman-Mackey, D., Hogg, D.~W., Lang, D., \& Goodman, J.\ 2013, \pasp, 125, 306 
+\bibitem[Foreman-Mackey et al.(2015)]{dfm} Foreman-Mackey, D., Montet, B.~T., Hogg, D.~W., et al.\ 2015, \apj, 806, 215 
 \bibitem[Foreman-Mackey(2016)]{corner}Foreman-Mackey, D.\ 2016, The Journal of Open Source Software, 24, Url = {http://dx.doi.org/10.5281/zenodo.45906}
 \bibitem[Frieman \& Dark Energy Survey Collaboration(2013)]{DES} Frieman, J., \& Dark Energy Survey Collaboration 2013, American Astronomical Society Meeting Abstracts \#221, 221, 335.01 
 \bibitem[Fry \& Gaztanaga(1993)]{fry1993} Fry, J.~N., \& Gaztanaga, E.\ 1993, \apj, 413, 447 
@@ -76,6 +79,7 @@
 \bibitem[Ishida et al.(2015)]{cosmoabc} Ishida, E.~E.~O., Vitenti, S.~D.~P., Penna-Lima, M., et al.\ 2015, Astronomy and Computing, 13, 1 
 \bibitem[Ishida et al.(2015)]{Ishida:2015aa} Ishida, E.~E.~O., Vitenti, S.~D.~P., Penna-Lima, M., et al.\ 2015, Astronomy and Computing, 13, 1 
 \bibitem[Izard et al.(2016)]{ice_cola} Izard, A., Crocce, M., \& Fosalba, P.\ 2016, \mnras, 459, 2327 
+\bibitem[Jarvis et al.(2016)]{des} Jarvis, M., Sheldon, E., Zuntz, J., et al.\ 2016, \mnras, 460, 2245 
 \bibitem[Joachimi(2016)]{joachimi2016} Joachimi, B.\ 2016, arXiv:1612.00752 
 \bibitem[Kaiser(1984)]{kaiser1984} Kaiser, N.\ 1984, \apjl, 284, L9 
 \bibitem[Kitaura \& He{\ss}(2013)]{alpt} Kitaura, F.-S., \& He{\ss}, S.\ 2013, \mnras, 435, L78 
@@ -97,6 +101,7 @@
 \bibitem[Laureijs et al.(2011)]{euclid} Laureijs, R., Amiaux, J., Arduini, S., et al.\ 2011, arXiv:1110.3193
 \bibitem[Lawrence et al.(2010)]{coyote3} Lawrence, E., Heitmann, K., White, M., et al.\ 2010, \apj, 713, 1322 
 \bibitem[Leach et al.(2008)]{Leach:2008aa} Leach, S.~M., Cardoso, J.-F., Baccigalupi, C., et al.\ 2008, \aap, 491, 597 
+\bibitem[Le Cam(1953)]{lecam} Le Cam, L.~M. \ 1953, University of California press, 1, 11
 \bibitem[Ledoit \& Wolf(2004)]{ledoit2004}Ledoit, O., \& Wolf, M.\ 2004, Journal of Multivariate Analysis, 88, 365
 \bibitem[Ledoit \& Wolf(2012)]{ledoit2012} Ledoit, O., \& Wolf, M.\ 2012, The Annals of Statistics, 40, 1024
 \bibitem[Lemson \& Kauffmann(1999)]{lemson99} Lemson, G., \& Kauffmann, G.\ 1999, \mnras, 302, 111 
@@ -106,7 +111,9 @@
 \bibitem[Levi et al.(2013)]{desi} Levi, M., Bebek, C., Beers, T., et al.\ 2013, arXiv:1308.0847 
 \bibitem[Lin \& Kilbinger(2015)]{abcwl} Lin, C.-A., \& Kilbinger, M.\ 2015, \aap, 583, A70 
 \bibitem[Lin et al.(2016)]{abcwl2} Lin, C.-A., Kilbinger, M., \& Pires, S.\ 2016, \aap, 593, A88 
+\bibitem[Lobos et al.(2015)]{lobos} Lobos, R.~A., Silva, J.~F., Mendez, R.~A., \& Orchard, M.\ 2015, \pasp, 127, 1166 
 \bibitem[LSST Science Collaboration et al.(2009)]{lsst} LSST Science Collaboration, Abell, P.~A., Allison, J., et al.\ 2009, arXiv:0912.0201 
+\bibitem[Lupton et al.(2001)]{sdss} Lupton, R., Gunn, J.~E., Ivezi{\'c}, Z., Knapp, G.~R., \& Kent, S.\ 2001, Astronomical Data Analysis Software and Systems X, 238, 269 
 \bibitem[Manera et al.(2013)]{pthalo} Manera, M., Scoccimarro, R., Percival, W.~J., et al.\ 2013, \mnras, 428, 1036 
 \bibitem[Manera et al.(2015)]{manera2015} Manera, M., Samushia, L., Tojeiro, R., et al.\ 2015, \mnras, 447, 437
 \bibitem[McDonald \& Roy(2009)]{mcdonald2009} McDonald, P., Roy, A.\ 2009, \jcap, 8, 20
@@ -138,6 +145,7 @@
 \bibitem[Rodr{\'{\i}}guez-Torres et al.(2016)]{sergio2016} Rodr{\'{\i}}guez-Torres, S.~A., Chuang, C.-H., Prada, F., et al.\ 2016, \mnras, 460, 1173 
 \bibitem[Rodr{\'{\i}}guez-Torres et al.(2016)]{Rodriguez-Torres:2015aa} Rodr{\'{\i}}guez-Torres, S.~A., Chuang, C.-H., Prada, F., et al.\ 2016, \mnras, 460, 1173 
 \bibitem[Ross et al.(2012)]{Ross:2012aa} Ross, A.~J., Percival, W.~J., S{\'a}nchez, A.~G., et al.\ 2012, \mnras, 424, 564 
+\bibitem[Rowe et al.(2015)]{galsim} Rowe, B.~T.~P., Jarvis, M., Mandelbaum, R., et al.\ 2015, Astronomy and Computing, 10, 121 
 \bibitem[Santiago \& Strauss(1992)]{Santiago:1992aa} Santiago, B.~X., \& Strauss, M.~A.\ 1992, \apj, 387, 9 
 \bibitem[Schneider et al.(2002)]{schneider2002} Schneider, P., van Waerbeke, L., Kilbinger, M., \& Mellier, Y.\ 2002, \aap, 396, 1 
 \bibitem[Scoccimarro et al.(2001)]{scoccimarro2001} Scoccimarro, R., Sheth, R.~K., Hui, L., \& Jain, B.\ 2001, \apj, 546, 20 
@@ -167,6 +175,7 @@
 \bibitem[Tinker et al.(2010)]{tinker10} Tinker, J.~L., Robertson, B.~E., Kravtsov, A.~V., et al.\ 2010, \apj, 724, 878 
 \bibitem[Tinker et al.(2011)]{Tinker:2011aa} Tinker, J., Wetzel, A., \& Conroy, C.\ 2011, arXiv:1107.5046 
 \bibitem[Tinker et al.(2013)]{Tinker:2013aa} Tinker, J.~L., Leauthaud, A., Bundy, K., et al.\ 2013, \apj, 778, 93 
+\bibitem[Trujillo et al.(2001)]{moffat} Trujillo, I., Aguerri, J.~A.~L., Cepa, J., \& Guti{\'e}rrez, C.~M.\ 2001, \mnras, 328, 977 
 \bibitem[van den Bosch et al.(2003)]{vdb03} van den Bosch, F.~C., Mo, H.~J., \& Yang, X.\ 2003, \mnras, 345, 923 
 \bibitem[van den Bosch et al.(2013)]{vdBosch13} van den Bosch, F.~C., More, S., Cacciato, M., Mo, H., \& Yang, X.\ 2013, \mnras, 430, 725 
 \bibitem[Wandelt et al.(2004)]{Wandelt:2004aa} Wandelt, B.~D., Larson, D.~L., \& Lakshminarayanan, A.\ 2004, \prd, 70, 083511 
@@ -179,4 +188,7 @@
 \bibitem[Zhao et al.(2015)]{zhao2015} Zhao, C., Kitaura, F.-S., Chuang, C.-H., et al.\ 2015, \mnras, 451, 4266 
 \bibitem[Zheng et al.(2005)]{zheng2005} Zheng, Z., Berlind, A.~A., Weinberg, D.~H., et al.\ 2005, \apj, 633, 791 
 \bibitem[Zheng et al.(2007)]{zheng07} Zheng, Z., Coil, A.~L., \& Zehavi, I.\ 2007, \apj, 667, 760 
+\bibitem[Zuntz et al.(2013)]{im3shape} Zuntz, J., Kacprzak, T., Voigt, L., et al.\ 2013, \mnras, 434, 1604 
+\bibitem[Zuntz et al.(2014)]{im3shape_code} Zuntz, J., Kacprzak, T., Voigt, L., et al.\ 2014, Astrophysics Source Code Library, ascl:1409.013 
+
 \end{thebibliography}
