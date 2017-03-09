@@ -1,0 +1,3695 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.9.30)  9 MAR 2017 01:28
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**thesis
+(./thesis.tex
+LaTeX2e <2011/06/27>
+Babel <3.9h> and hyphenation patterns for 78 languages loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+(./definitions.tex
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count88
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 130.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
+
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
+)
+Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+)
+\@linkdim=\dimen105
+\Hy@linkcounter=\count89
+\Hy@pagecounter=\count90
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count91
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4443.
+Package hyperref Info: Link nesting OFF on input line 4448.
+Package hyperref Info: Hyper index ON on input line 4451.
+Package hyperref Info: Plain pages OFF on input line 4458.
+Package hyperref Info: Backreferencing OFF on input line 4463.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4688.
+\c@Hy@tempcnt=\count92
+
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5041.
+\XeTeXLinkMargin=\dimen106
+\Fld@menulength=\count93
+\Field@Width=\dimen107
+\Fld@charsize=\dimen108
+Package hyperref Info: Hyper figures OFF on input line 6295.
+Package hyperref Info: Link nesting OFF on input line 6300.
+Package hyperref Info: Hyper index ON on input line 6303.
+Package hyperref Info: backreferencing OFF on input line 6310.
+Package hyperref Info: Link coloring OFF on input line 6315.
+Package hyperref Info: Link coloring with OCG OFF on input line 6320.
+Package hyperref Info: PDF/A mode OFF on input line 6325.
+LaTeX Info: Redefining \ref on input line 6365.
+LaTeX Info: Redefining \pageref on input line 6369.
+\Hy@abspage=\count94
+\c@Item=\count95
+\c@Hfootnote=\count96
+)
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
+\Fld@listcount=\count97
+\c@bookmark@seq@number=\count98
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip43
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 6.
+Package hyperref Info: Option `pageanchor' set `false' on input line 7.
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/indentfirst.sty
+Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip44
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks15
+\ex@=\dimen109
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen110
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count99
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count100
+\leftroot@=\count101
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count102
+\DOTSCASE@=\count103
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen111
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count104
+\c@MaxMatrixCols=\count105
+\dotsspace@=\muskip11
+\c@parentequation=\count106
+\dspbrk@lvl=\count107
+\tag@help=\toks16
+\row@=\count108
+\column@=\count109
+\maxfields@=\count110
+\andhelp@=\toks17
+\eqnshift@=\dimen112
+\alignsep@=\dimen113
+\tagshift@=\dimen114
+\tagwidth@=\dimen115
+\totwidth@=\dimen116
+\lineht@=\dimen117
+\@envbody=\toks18
+\multlinegap=\skip45
+\multlinetaggap=\skip46
+\mathdisplay@stack=\toks19
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2005/04/14 v1.61803 publication quality tables
+\heavyrulewidth=\dimen118
+\lightrulewidth=\dimen119
+\cmidrulewidth=\dimen120
+\belowrulesep=\dimen121
+\belowbottomsep=\dimen122
+\aboverulesep=\dimen123
+\abovetopsep=\dimen124
+\cmidrulesep=\dimen125
+\cmidrulekern=\dimen126
+\defaultaddspace=\dimen127
+\@cmidla=\count111
+\@cmidlb=\count112
+\@aboverulesep=\dimen128
+\@belowrulesep=\dimen129
+\@thisruleclass=\count113
+\@lastruleclass=\count114
+\@thisrulewidth=\dimen130
+)
+(./aas_macros.sty) (/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip47
+\bibsep=\skip48
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count115
+)
+(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithmic.sty
+Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@ALC@unique=\count116
+\c@ALC@line=\count117
+\c@ALC@rem=\count118
+\c@ALC@depth=\count119
+\ALC@tlm=\skip49
+\algorithmicindent=\skip50
+)
+(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count120
+\float@exts=\toks20
+\float@box=\box28
+\@float@everytoks=\toks21
+\@floatcapt=\box29
+)
+\@float@every@algorithm=\toks22
+\c@algorithm=\count121
+)) (./thesis.aux
+
+LaTeX Warning: Label `sec:method' multiply defined.
+
+
+LaTeX Warning: Label `sec:discussion' multiply defined.
+
+
+LaTeX Warning: Label `sec:method' multiply defined.
+
+
+LaTeX Warning: Label `sec:data' multiply defined.
+
+
+LaTeX Warning: Label `tab:prior' multiply defined.
+
+
+LaTeX Warning: Label `sec:result' multiply defined.
+
+
+LaTeX Warning: Label `sec:method' multiply defined.
+
+
+LaTeX Warning: Label `fig:bias' multiply defined.
+
+
+LaTeX Warning: Label `sec:discussion' multiply defined.
+
+)
+\openout1 = `thesis.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+ (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count122
+\scratchdimen=\dimen131
+\scratchbox=\box30
+\nofMPsegments=\count123
+\nofMParguments=\count124
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count125
+\MPscratchDim=\dimen132
+\MPnumerator=\count126
+\makeMPintoPDFobject=\count127
+\everyMPtoPDFconversion=\toks24
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+\AtBeginShipoutBox=\box31
+Package hyperref Info: Link coloring ON on input line 42.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+)
+\c@section@level=\count128
+)
+LaTeX Info: Redefining \ref on input line 42.
+LaTeX Info: Redefining \pageref on input line 42.
+LaTeX Info: Redefining \nameref on input line 42.
+
+(./thesis.out) (./thesis.out)
+\@outlinefile=\write3
+\openout3 = `thesis.out'.
+
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 87.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 87.
+ [2] [3]
+(./acknowledge.tex) [4] (./abstract.tex) [5] (./thesis.toc
+LaTeX Font Info:    Try loading font information for U+msa on input line 1.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 1.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [6
+
+])
+\tf@toc=\write4
+\openout4 = `thesis.toc'.
+
+ [7]
+(./thesis.lof [8
+
+] [9] [10]
+
+Package natbib Warning: Citation `zheng07' on page xi undefined on input line 1
+5.
+
+[11] [12] [13] [14]
+
+Package natbib Warning: Citation `hw2013' on page xv undefined on input line 26
+.
+
+
+Package natbib Warning: Citation `hearin2014' on page xv undefined on input lin
+e 26.
+
+[15]
+
+Package natbib Warning: Citation `zentner2016' on page xvi undefined on input l
+ine 28.
+
+
+Package natbib Warning: Citation `zehavi2011' on page xvi undefined on input li
+ne 28.
+
+
+Package natbib Warning: Citation `zentner2016' on page xvi undefined on input l
+ine 28.
+
+[16] [17]
+
+Package natbib Warning: Citation `corner' on page xviii undefined on input line
+ 33.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+ [][] [][][]\OT1/cmr/m/n/12 Posterior prob-a-bil-ity dis-tri-bu-tion of the \OT
+1/cmr/m/sc/12 patchy \OT1/cmr/m/n/12 bias pa-ram-e-ters 
+ []
+
+
+Underfull \hbox (badness 1082) in paragraph at lines 33--33
+ \OT1/cmr/m/n/12 in-ter-vals of the pos-te-rior prob-a-bil-i-ties. This plot is
+ made us-ing the 
+ []
+
+[18])
+\tf@lof=\write5
+\openout5 = `thesis.lof'.
+
+ [19] (./thesis.lot
+
+Package natbib Warning: Citation `zheng07' on page xx undefined on input line 4
+.
+
+)
+\tf@lot=\write6
+\openout6 = `thesis.lot'.
+
+ [20
+
+] (./intro.tex
+! Undefined control sequence.
+l.5 photometry measured by the \kepler
+                                      \ Mission \citep{Borucki:2010}.
+? 
+
+Package natbib Warning: Citation `Borucki:2010' on page 1 undefined on input li
+ne 5.
+
+
+Package natbib Warning: Citation `Rowe:2015' on page 1 undefined on input line 
+7.
+
+! Undefined control sequence.
+l.12 The \kepler
+                \ Mission has changed the face of exoplanet research because...
+
+? 
+! Undefined control sequence.
+l.15 stars, the \kepler
+                       \ spacecraft was designed to monitor the brightness o...
+
+? 
+! Undefined control sequence.
+l.25 ...rbits, the discoveries made in the \kepler
+                                                  \ dataset
+? 
+
+Package natbib Warning: Citation `Howard:2012' on page 1 undefined on input lin
+e 30.
+
+
+Package natbib Warning: Citation `Petigura:2013' on page 1 undefined on input l
+ine 30.
+
+
+Package natbib Warning: Citation `Foreman-Mackey:2014' on page 1 undefined on i
+nput line 30.
+
+
+Package natbib Warning: Citation `Dressing:2015' on page 1 undefined on input l
+ine 30.
+
+
+LaTeX Warning: Reference `chap:exopop' on page 1 undefined on input line 30.
+
+! Undefined control sequence.
+l.32 ultimate goal of the \kepler
+                                 \ Mission because they open the door to direct
+
+? 
+[1
+
+]
+
+Package natbib Warning: Citation `Dressing:2013' on page 2 undefined on input l
+ine 38.
+
+
+Package natbib Warning: Citation `Dressing:2015' on page 2 undefined on input l
+ine 38.
+
+
+Package natbib Warning: Citation `Howard:2012' on page 2 undefined on input lin
+e 40.
+
+
+Package natbib Warning: Citation `Fressin:2013' on page 2 undefined on input li
+ne 40.
+
+
+Package natbib Warning: Citation `Petigura:2013' on page 2 undefined on input l
+ine 40.
+
+
+Package natbib Warning: Citation `Foreman-Mackey:2014' on page 2 undefined on i
+nput line 40.
+
+
+Package natbib Warning: Citation `Weiss:2014' on page 2 undefined on input line
+ 45.
+
+
+Package natbib Warning: Citation `Rogers:2015' on page 2 undefined on input lin
+e 45.
+
+! Undefined control sequence.
+l.53 One shortcoming of the \kepler
+                                   \ Mission was that it only targeted one f...
+
+? 
+! Undefined control sequence.
+l.62 In the Summer of 2014, the \kepler
+                                       \ instrument was re-purposed and it b...
+
+? 
+! Undefined control sequence.
+l.63 taking data in a mode called \KT
+                                     \ with substantial degraded pointing ac...
+
+? 
+
+Package natbib Warning: Citation `Howell:2014' on page 2 undefined on input lin
+e 64.
+
+! Undefined control sequence.
+l.65 Because of technical constraints, \KT
+                                          \ targets a different field in the
+? 
+! Undefined control sequence.
+l.69 ...s been demonstrated that the data from \KT
+                                                  \ can reach precisions
+? 
+
+Package natbib Warning: Citation `Vanderburg:2014' on page 2 undefined on input
+ line 72.
+
+
+Package natbib Warning: Citation `Vanderburg:2015' on page 2 undefined on input
+ line 72.
+
+
+Package natbib Warning: Citation `Crossfield:2015' on page 2 undefined on input
+ line 72.
+
+
+Package natbib Warning: Citation `Foreman-Mackey:2015' on page 2 undefined on i
+nput line 72.
+
+
+LaTeX Warning: Reference `chap:ketu' on page 2 undefined on input line 72.
+
+! Undefined control sequence.
+l.73 The discoveries made using \KT
+                                   ---and the upcoming \tess\ Mission---impr...
+
+? 
+! Undefined control sequence.
+l.73 ...es made using \KT---and the upcoming \tess
+                                                  \ Mission---improve our
+? 
+! Undefined control sequence.
+l.75 ...s that were not prioritized by the \kepler
+                                                  \ Mission.
+? 
+! Undefined control sequence.
+l.78 \project
+             {James Webb Space Telescope}.
+? 
+[2]
+! Undefined control sequence.
+l.81 ...uced by a time series mission like \kepler
+                                                  \ is a hard one.
+? 
+
+Package natbib Warning: Citation `Winn:2010' on page 3 undefined on input line 
+84.
+
+
+Package natbib Warning: Citation `Basri:2013' on page 3 undefined on input line
+ 90.
+
+
+Package natbib Warning: Citation `McQuillan:2014' on page 3 undefined on input 
+line 91.
+
+
+Package natbib Warning: Citation `Stumpe:2012' on page 3 undefined on input lin
+e 92.
+
+
+Package natbib Warning: Citation `Smith:2012' on page 3 undefined on input line
+ 92.
+
+
+Package natbib Warning: Citation `Kovacs:2002' on page 3 undefined on input lin
+e 99.
+
+
+Package natbib Warning: Citation `Kovacs:2005' on page 3 undefined on input lin
+e 99.
+
+
+Package natbib Warning: Citation `Berta:2012' on page 3 undefined on input line
+ 99.
+
+
+Package natbib Warning: Citation `Petigura:2013' on page 3 undefined on input l
+ine 99.
+
+
+Package natbib Warning: Citation `Foreman-Mackey:2015' on page 3 undefined on i
+nput line 99.
+
+
+Package natbib Warning: Citation `Jenkins:2014' on page 3 undefined on input li
+ne 107.
+
+
+Package natbib Warning: Citation `Petigura:2013' on page 3 undefined on input l
+ine 115.
+
+
+Package natbib Warning: Citation `Burke:2014' on page 3 undefined on input line
+ 115.
+
+
+Package natbib Warning: Citation `Rowe:2015' on page 3 undefined on input line 
+115.
+
+[3]
+! Undefined control sequence.
+l.125 completely missed by \kepler
+                                  .
+? 
+! Undefined control sequence.
+l.126 ...rtcoming becomes even more severe for \KT
+                                                  \ and \tess, transit surveys
+? 
+! Undefined control sequence.
+l.126 ...comes even more severe for \KT\ and \tess
+                                                  , transit surveys
+? 
+! Undefined control sequence.
+l.132 \kepler
+             \ dataset and, in particular, by methods and software solutions
+? 
+! Undefined control sequence.
+l.139 implementation \project
+                             {emcee} \citep[][and
+? 
+
+Package natbib Warning: Citation `Foreman-Mackey:2013' on page 4 undefined on i
+nput line 140.
+
+
+LaTeX Warning: Reference `chap:emcee' on page 4 undefined on input line 140.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 142--142
+[][][][][]$\OT1/cmtt/m/n/10 http : / / adsabs . harvard . edu / cgi-[]bin / nph
+-[]ref _ query ? bibcode = 2013PASP . .125 . .306F & amp ; refs =
+ []
+
+! Undefined control sequence.
+l.144 \project
+              {GitHub}\footnote{\url{https://github.com/dfm/emcee}}, \projec...
+
+? 
+! Undefined control sequence.
+l.144 ...{https://github.com/dfm/emcee}}, \project
+                                                  {emcee}
+? 
+
+LaTeX Warning: Reference `chap:emcee' on page 4 undefined on input line 148.
+
+
+LaTeX Warning: Reference `chap:exopop' on page 4 undefined on input line 148.
+
+
+LaTeX Warning: Reference `chap:ketu' on page 4 undefined on input line 150.
+
+
+LaTeX Warning: Reference `chap:peerless' on page 4 undefined on input line 152.
+
+
+[4]
+
+LaTeX Warning: Reference `chap:emcee' on page 5 undefined on input line 158.
+
+
+Package natbib Warning: Citation `Goodman:2010' on page 5 undefined on input li
+ne 159.
+
+
+LaTeX Warning: Reference `chap:exopop' on page 5 undefined on input line 163.
+
+
+LaTeX Warning: Reference `chap:ketu' on page 5 undefined on input line 168.
+
+! Undefined control sequence.
+l.172 \project
+              {K2} Campagin 1 dataset and deployed it on the NYU HPC Butinah
+? 
+
+LaTeX Warning: Reference `chap:peerless' on page 5 undefined on input line 177.
+
+
+) (./chapters/centroiding.tex
+
+! LaTeX Error: Can be used only in preamble.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \DeclareMathOperator
+                        *{\argmax}{arg\,max}
+? 
+! Undefined control sequence.
+l.3 \DeclareMathOperator*{\argmax
+                                 }{arg\,max}
+? 
+
+! LaTeX Error: Command \etal already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 \newcommand{\etal}{et~al.}
+                              
+? 
+
+! LaTeX Error: Command \etc already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 \newcommand{\etc}{\latin{etc.}}
+                                   
+? 
+
+! LaTeX Error: Command \todo already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.24 ...mand{\todo}[1]{{\em \textcolor{red}{ #1}}}
+                                                  
+? 
+[5]
+Chapter 1.
+
+Package natbib Warning: Citation `Vakili:2016' on page 6 undefined on input lin
+e 30.
+
+[6
+
+] [7]
+
+Package natbib Warning: Citation `lobos' on page 8 undefined on input line 79.
+
+[8] [9]
+
+Package natbib Warning: Citation `crlb' on page 10 undefined on input line 140.
+
+
+[10] [11]
+
+Package natbib Warning: Citation `crlb' on page 12 undefined on input line 195.
+
+
+! Undefined control sequence.
+l.203 ...{\mathbf{\theta}}_{\text{ML}} &=& \argmax
+                                                   \mathcal{L}, \\
+? 
+
+Package natbib Warning: Citation `crlb' on page 12 undefined on input line 213.
+
+
+
+Package natbib Warning: Citation `lecam' on page 12 undefined on input line 213
+.
+
+[12]
+
+Package natbib Warning: Citation `moffat' on page 13 undefined on input line 23
+8.
+
+
+Package natbib Warning: Citation `im3shape' on page 13 undefined on input line 
+247.
+
+
+Package natbib Warning: Citation `im3shape_code' on page 13 undefined on input 
+line 247.
+
+
+Package natbib Warning: Citation `galsim' on page 13 undefined on input line 24
+7.
+
+[13] [14] [15] [16] [17] [18]
+
+Package natbib Warning: Citation `sdss' on page 19 undefined on input line 466.
+
+
+[19] [20] [21] [22] [23] [24] [25]
+
+Package natbib Warning: Citation `dfm' on page 26 undefined on input line 605.
+
+[26] [27]
+Underfull \hbox (badness 10000) in paragraph at lines 641--642
+
+ []
+
+<figures/centroiding/new_psf.pdf, id=741, 845.0471pt x 597.51233pt>
+File: figures/centroiding/new_psf.pdf Graphic file (type pdf)
+
+<use figures/centroiding/new_psf.pdf>
+Package pdftex.def Info: figures/centroiding/new_psf.pdf used on input line 644
+.
+(pdftex.def)             Requested size: 469.75499pt x 332.15207pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 653--654
+
+ []
+
+<figures/centroiding/new_matchedfilter.pdf, id=742, 845.0471pt x 597.51233pt>
+File: figures/centroiding/new_matchedfilter.pdf Graphic file (type pdf)
+
+<use figures/centroiding/new_matchedfilter.pdf>
+Package pdftex.def Info: figures/centroiding/new_matchedfilter.pdf used on inpu
+t line 655.
+(pdftex.def)             Requested size: 469.75499pt x 332.15207pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 664--665
+
+ []
+
+<figures/centroiding/new_polynomial.pdf, id=743, 845.0471pt x 597.51233pt>
+File: figures/centroiding/new_polynomial.pdf Graphic file (type pdf)
+
+<use figures/centroiding/new_polynomial.pdf>
+Package pdftex.def Info: figures/centroiding/new_polynomial.pdf used on input l
+ine 666.
+(pdftex.def)             Requested size: 469.75499pt x 332.15207pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 674--675
+
+ []
+
+<figures/centroiding/new_moment.pdf, id=744, 845.0471pt x 597.51233pt>
+File: figures/centroiding/new_moment.pdf Graphic file (type pdf)
+
+<use figures/centroiding/new_moment.pdf>
+Package pdftex.def Info: figures/centroiding/new_moment.pdf used on input line 
+676.
+(pdftex.def)             Requested size: 469.75499pt x 332.15207pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 685--686
+
+ []
+
+<figures/centroiding/new_fwhm_psf.pdf, id=745, 597.51233pt x 845.0471pt>
+File: figures/centroiding/new_fwhm_psf.pdf Graphic file (type pdf)
+
+<use figures/centroiding/new_fwhm_psf.pdf>
+Package pdftex.def Info: figures/centroiding/new_fwhm_psf.pdf used on input lin
+e 687.
+(pdftex.def)             Requested size: 305.33788pt x 431.83224pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 693--694
+
+ []
+
+
+<figures/centroiding/new_fwhm_matchedfilter.pdf, id=746, 597.51233pt x 845.0471
+pt>
+File: figures/centroiding/new_fwhm_matchedfilter.pdf Graphic file (type pdf)
+ <use figures/centroiding/new_fwhm_matchedfilter.pdf>
+Package pdftex.def Info: figures/centroiding/new_fwhm_matchedfilter.pdf used on
+ input line 695.
+(pdftex.def)             Requested size: 305.33788pt x 431.83224pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 702--703
+
+ []
+
+
+<figures/centroiding/new_fwhm_polynomial.pdf, id=747, 597.51233pt x 845.0471pt>
+File: figures/centroiding/new_fwhm_polynomial.pdf Graphic file (type pdf)
+<use figures/centroiding/new_fwhm_polynomial.pdf>
+Package pdftex.def Info: figures/centroiding/new_fwhm_polynomial.pdf used on in
+put line 704.
+(pdftex.def)             Requested size: 305.33788pt x 431.83224pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 711--712
+
+ []
+
+<figures/centroiding/new_fwhm_moment.pdf, id=748, 597.51233pt x 845.0471pt>
+File: figures/centroiding/new_fwhm_moment.pdf Graphic file (type pdf)
+
+<use figures/centroiding/new_fwhm_moment.pdf>
+Package pdftex.def Info: figures/centroiding/new_fwhm_moment.pdf used on input 
+line 713.
+(pdftex.def)             Requested size: 305.33788pt x 431.83224pt.
+) (./chapters/wfc3ir.tex [28pdfTeX warning (ext4): destination with the same id
+entifier (name{figure.1.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1 \chapter
+            {Super-resolution PSF model of HST WFC3-IR\chaplabel{wfc3ir}} <./fi
+gures/centroiding/new_psf.pdf>] [29pdfTeX warning (ext4): destination with the 
+same identifier (name{figure.1.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1 \chapter
+            {Super-resolution PSF model of HST WFC3-IR\chaplabel{wfc3ir}} <./fi
+gures/centroiding/new_matchedfilter.pdf>] [30pdfTeX warning (ext4): destination
+ with the same identifier (name{figure.1.3}) has been already used, duplicate i
+gnored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1 \chapter
+            {Super-resolution PSF model of HST WFC3-IR\chaplabel{wfc3ir}} <./fi
+gures/centroiding/new_polynomial.pdf>] [31pdfTeX warning (ext4): destination wi
+th the same identifier (name{figure.1.4}) has been already used, duplicate igno
+red
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1 \chapter
+            {Super-resolution PSF model of HST WFC3-IR\chaplabel{wfc3ir}} <./fi
+gures/centroiding/new_moment.pdf>] [32pdfTeX warning (ext4): destination with t
+he same identifier (name{figure.1.5}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1 \chapter
+            {Super-resolution PSF model of HST WFC3-IR\chaplabel{wfc3ir}} <./fi
+gures/centroiding/new_fwhm_psf.pdf>] [33pdfTeX warning (ext4): destination with
+ the same identifier (name{figure.1.6}) has been already used, duplicate ignore
+d
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1 \chapter
+            {Super-resolution PSF model of HST WFC3-IR\chaplabel{wfc3ir}} <./fi
+gures/centroiding/new_fwhm_matchedfilter.pdf>] [34pdfTeX warning (ext4): destin
+ation with the same identifier (name{figure.1.7}) has been already used, duplic
+ate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1 \chapter
+            {Super-resolution PSF model of HST WFC3-IR\chaplabel{wfc3ir}} <./fi
+gures/centroiding/new_fwhm_polynomial.pdf>] [35pdfTeX warning (ext4): destinati
+on with the same identifier (name{figure.1.8}) has been already used, duplicate
+ ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1 \chapter
+            {Super-resolution PSF model of HST WFC3-IR\chaplabel{wfc3ir}} <./fi
+gures/centroiding/new_fwhm_moment.pdf>]
+Chapter 2.
+) (./chapters/abc.tex [36
+
+
+]
+Chapter 3.
+
+Package natbib Warning: Citation `Hahn:2016' on page 37 undefined on input line
+ 4.
+
+
+! LaTeX Error: Command \todo already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...mmand{\todo}[1]{{\em \textcolor{red}{ #1}}}
+                                                  
+? 
+
+! LaTeX Error: Command \beq already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 \newcommand{\beq}{\begin{equation}}
+                                       
+? 
+
+! LaTeX Error: Command \eeq already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 \newcommand{\eeq}{\end{equation}}
+                                     
+? 
+[37
+
+]
+
+Package natbib Warning: Citation `White:1996aa' on page 38 undefined on input l
+ine 47.
+
+
+Package natbib Warning: Citation `Riess:1998aa' on page 38 undefined on input l
+ine 47.
+
+
+Package natbib Warning: Citation `Oh:1999aa' on page 38 undefined on input line
+ 50.
+
+
+Package natbib Warning: Citation `Wandelt:2004aa' on page 38 undefined on input
+ line 50.
+
+
+Package natbib Warning: Citation `Eriksen:2004aa' on page 38 undefined on input
+ line 51.
+
+
+Package natbib Warning: Citation `planckI' on page 38 undefined on input line 5
+1.
+
+
+Package natbib Warning: Citation `planckII' on page 38 undefined on input line 
+51.
+
+
+Package natbib Warning: Citation `planck_NG' on page 38 undefined on input line
+ 55.
+
+
+Package natbib Warning: Citation `planck_inflation' on page 38 undefined on inp
+ut line 55.
+
+
+Package natbib Warning: Citation `Knox:1995aa' on page 38 undefined on input li
+ne 56.
+
+
+Package natbib Warning: Citation `Leach:2008aa' on page 38 undefined on input l
+ine 56.
+
+[38]
+
+Package natbib Warning: Citation `Bernardeau:2002aa' on page 39 undefined on in
+put line 64.
+
+
+Package natbib Warning: Citation `Dressler:1980aa' on page 39 undefined on inpu
+t line 66.
+
+
+Package natbib Warning: Citation `Kaiser:1984aa' on page 39 undefined on input 
+line 66.
+
+
+Package natbib Warning: Citation `Santiago:1992aa' on page 39 undefined on inpu
+t line 66.
+
+
+Package natbib Warning: Citation `Steidel:1998aa' on page 39 undefined on input
+ line 66.
+
+
+Package natbib Warning: Citation `somerville15' on page 39 undefined on input l
+ine 66.
+
+
+Package natbib Warning: Citation `Mo:1996aa' on page 39 undefined on input line
+ 67.
+
+
+Package natbib Warning: Citation `Sommerville:2001aa' on page 39 undefined on i
+nput line 67.
+
+
+Package natbib Warning: Citation `Casas-Miranda:2002aa' on page 39 undefined on
+ input line 67.
+
+
+Package natbib Warning: Citation `devpois' on page 39 undefined on input line 6
+8.
+
+[39]
+
+Package natbib Warning: Citation `smc' on page 40 undefined on input line 103.
+
+
+Package natbib Warning: Citation `abcpmc' on page 40 undefined on input line 10
+6.
+
+
+Package natbib Warning: Citation `abccosmology' on page 40 undefined on input l
+ine 111.
+
+
+Package natbib Warning: Citation `abcmorphology' on page 40 undefined on input 
+line 112.
+
+
+Package natbib Warning: Citation `abcwl' on page 40 undefined on input line 115
+.
+
+
+Package natbib Warning: Citation `abcwl2' on page 40 undefined on input line 11
+5.
+
+
+Package natbib Warning: Citation `abcsn' on page 40 undefined on input line 115
+.
+
+
+Package natbib Warning: Citation `cosmoabc' on page 40 undefined on input line 
+116.
+
+[40]
+
+Package natbib Warning: Citation `press74' on page 41 undefined on input line 1
+22.
+
+
+Package natbib Warning: Citation `bond91' on page 41 undefined on input line 12
+2.
+
+
+Package natbib Warning: Citation `cooray_sheth2002' on page 41 undefined on inp
+ut line 122.
+
+
+Package natbib Warning: Citation `lemson99' on page 41 undefined on input line 
+125.
+
+
+Package natbib Warning: Citation `seljak2000' on page 41 undefined on input lin
+e 125.
+
+
+Package natbib Warning: Citation `scoccimarro2001' on page 41 undefined on inpu
+t line 125.
+
+
+Package natbib Warning: Citation `berlind_weinberg2002' on page 41 undefined on
+ input line 125.
+
+
+Package natbib Warning: Citation `zheng2005' on page 41 undefined on input line
+ 125.
+
+
+Package natbib Warning: Citation `Rodriguez-Torres:2015aa' on page 41 undefined
+ on input line 128.
+
+
+Package natbib Warning: Citation `miyatake15' on page 41 undefined on input lin
+e 128.
+
+
+Package natbib Warning: Citation `vdb03' on page 41 undefined on input line 129
+.
+
+
+Package natbib Warning: Citation `tinker05' on page 41 undefined on input line 
+129.
+
+
+Package natbib Warning: Citation `cacciato13' on page 41 undefined on input lin
+e 129.
+
+
+Package natbib Warning: Citation `more13' on page 41 undefined on input line 12
+9.
+
+
+Package natbib Warning: Citation `conroy09' on page 41 undefined on input line 
+130.
+
+
+Package natbib Warning: Citation `Tinker:2011aa' on page 41 undefined on input 
+line 130.
+
+
+Package natbib Warning: Citation `leauthaud12' on page 41 undefined on input li
+ne 130.
+
+
+Package natbib Warning: Citation `behroozi13' on page 41 undefined on input lin
+e 130.
+
+
+Package natbib Warning: Citation `Tinker:2013aa' on page 41 undefined on input 
+line 130.
+
+
+Package natbib Warning: Citation `bolshoi' on page 41 undefined on input line 1
+35.
+
+
+Package natbib Warning: Citation `multidark' on page 41 undefined on input line
+ 135.
+
+
+Package natbib Warning: Citation `Hearin:2016aa' on page 41 undefined on input 
+line 137.
+
+[41]
+
+Package natbib Warning: Citation `bishop' on page 42 undefined on input line 16
+1.
+
+[42] [43] [44]
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 249.
+
+
+Package natbib Warning: Citation `abcsn' on page 45 undefined on input line 294
+.
+
+
+Package natbib Warning: Citation `abcwl' on page 45 undefined on input line 298
+.
+
+
+Package natbib Warning: Citation `abcwl' on page 45 undefined on input line 300
+.
+
+[45]
+
+Package natbib Warning: Citation `optimalkernel' on page 46 undefined on input 
+line 318.
+
+[46]
+
+! LaTeX Error: Command \dd already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.339 \newcommand{\dd}{\mathrm{d}}
+                                  
+? 
+[47]
+
+Package natbib Warning: Citation `vdBosch13' on page 48 undefined on input line
+ 399.
+
+
+Package natbib Warning: Citation `coyote2' on page 48 undefined on input line 4
+01.
+
+
+Package natbib Warning: Citation `coyote1' on page 48 undefined on input line 4
+01.
+
+
+Package natbib Warning: Citation `Hearin:2016aa' on page 48 undefined on input 
+line 407.
+
+[48]
+
+Package natbib Warning: Citation `zheng07' on page 49 undefined on input line 4
+11.
+
+
+Package natbib Warning: Citation `rockstar' on page 49 undefined on input line 
+424.
+
+
+Package natbib Warning: Citation `nfw' on page 49 undefined on input line 426.
+
+
+Package natbib Warning: Citation `nfw_c(M)' on page 49 undefined on input line 
+427.
+
+
+Package natbib Warning: Citation `more2010' on page 49 undefined on input line 
+429.
+
+
+Package natbib Warning: Citation `hearin15' on page 49 undefined on input line 
+429.
+
+
+Package natbib Warning: Citation `Hearin:2016aa' on page 49 undefined on input 
+line 430.
+
+
+Package natbib Warning: Citation `rockstar' on page 49 undefined on input line 
+434.
+
+
+Package natbib Warning: Citation `multidark' on page 49 undefined on input line
+ 435.
+
+
+Package natbib Warning: Citation `art' on page 49 undefined on input line 438.
+
+[49] [50]
+
+Package natbib Warning: Citation `peebles80' on page 51 undefined on input line
+ 471.
+
+
+Package natbib Warning: Citation `fof' on page 51 undefined on input line 479.
+
+
+Package natbib Warning: Citation `groups' on page 51 undefined on input line 48
+2.
+
+
+Package natbib Warning: Citation `fof' on page 51 undefined on input line 483.
+
+[51]
+
+Package natbib Warning: Citation `zheng07' on page 52 undefined on input line 5
+14.
+
+
+Package natbib Warning: Citation `zheng07' on page 52 undefined on input line 5
+16.
+
+[52] [53]
+
+Package natbib Warning: Citation `silk12' on page 54 undefined on input line 57
+8.
+
+[54]
+
+Package natbib Warning: Citation `abcwl' on page 55 undefined on input line 612
+.
+
+[55]
+
+Package natbib Warning: Citation `zheng07' on page 56 undefined on input line 6
+30.
+
+
+Package natbib Warning: Citation `zheng07' on page 56 undefined on input line 6
+30.
+
+
+Package natbib Warning: Citation `zheng07' on page 56 undefined on input line 6
+52.
+
+[56pdfTeX warning (ext4): destination with the same identifier (name{table.3.1}
+) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.674 
+      ] [57] [58]
+
+Package natbib Warning: Citation `hartlap2007' on page 59 undefined on input li
+ne 751.
+
+
+Package natbib Warning: Citation `emcee' on page 59 undefined on input line 761
+.
+
+[59] [60]
+
+Package natbib Warning: Citation `cosmiccode' on page 61 undefined on input lin
+e 809.
+
+
+Package natbib Warning: Citation `nifty' on page 61 undefined on input line 809
+.
+
+[61] [62] [63]
+<figures/abc/paper_data_observables.pdf, id=1010, 843.36172pt x 426.71935pt>
+File: figures/abc/paper_data_observables.pdf Graphic file (type pdf)
+
+<use figures/abc/paper_data_observables.pdf>
+Package pdftex.def Info: figures/abc/paper_data_observables.pdf used on input l
+ine 910.
+(pdftex.def)             Requested size: 469.75499pt x 237.685pt.
+ [64]
+<figures/abc/paper_ABC_poolevolution_nbargmf.pdf, id=1019, 775.96417pt x 549.28
+743pt>
+File: figures/abc/paper_ABC_poolevolution_nbargmf.pdf Graphic file (type pdf)
+ <use figures/abc/paper_ABC_poolevolution_nbargmf.pdf>
+Package pdftex.def Info: figures/abc/paper_ABC_poolevolution_nbargmf.pdf used o
+n input line 925.
+(pdftex.def)             Requested size: 446.2658pt x 315.90486pt.
+
+<figures/abc/paper_ABCconvergence.pdf, id=1022, 1209.22137pt x 654.51111pt>
+File: figures/abc/paper_ABCconvergence.pdf Graphic file (type pdf)
+
+<use figures/abc/paper_ABCconvergence.pdf>
+Package pdftex.def Info: figures/abc/paper_ABCconvergence.pdf used on input lin
+e 945.
+(pdftex.def)             Requested size: 469.75499pt x 254.2596pt.
+
+<figures/abc/paper_ABCcorner_nbarxi.pdf, id=1023, 850.1382pt x 854.59277pt>
+File: figures/abc/paper_ABCcorner_nbarxi.pdf Graphic file (type pdf)
+
+<use figures/abc/paper_ABCcorner_nbarxi.pdf>
+Package pdftex.def Info: figures/abc/paper_ABCcorner_nbarxi.pdf used on input l
+ine 961.
+(pdftex.def)             Requested size: 399.2946pt x 401.38481pt.
+
+
+Package natbib Warning: Citation `zheng07' on page 65 undefined on input line 9
+72.
+
+
+Package natbib Warning: Citation `zheng07' on page 65 undefined on input line 9
+72.
+
+<figures/abc/paper_ABCcorner_nbargmf.pdf, id=1026, 850.1382pt x 854.59277pt>
+File: figures/abc/paper_ABCcorner_nbargmf.pdf Graphic file (type pdf)
+
+<use figures/abc/paper_ABCcorner_nbargmf.pdf>
+Package pdftex.def Info: figures/abc/paper_ABCcorner_nbargmf.pdf used on input 
+line 978.
+(pdftex.def)             Requested size: 399.2946pt x 401.38481pt.
+
+<figures/abc/paper_ABCposterior.pdf, id=1029, 1073.38773pt x 773.61531pt>
+File: figures/abc/paper_ABCposterior.pdf Graphic file (type pdf)
+
+<use figures/abc/paper_ABCposterior.pdf>
+Package pdftex.def Info: figures/abc/paper_ABCposterior.pdf used on input line 
+989.
+(pdftex.def)             Requested size: 469.75499pt x 338.5621pt.
+
+<figures/abc/paper_ABCvsMCMC_nbarxi.pdf, id=1034, 1187.0036pt x 550.72217pt>
+File: figures/abc/paper_ABCvsMCMC_nbarxi.pdf Graphic file (type pdf)
+
+<use figures/abc/paper_ABCvsMCMC_nbarxi.pdf>
+Package pdftex.def Info: figures/abc/paper_ABCvsMCMC_nbarxi.pdf used on input l
+ine 1009.
+(pdftex.def)             Requested size: 469.75499pt x 217.94043pt.
+
+<figures/abc/paper_ABCvsMCMC_nbargmf.pdf, id=1035, 1187.0036pt x 550.72217pt>
+File: figures/abc/paper_ABCvsMCMC_nbargmf.pdf Graphic file (type pdf)
+
+<use figures/abc/paper_ABCvsMCMC_nbargmf.pdf>
+Package pdftex.def Info: figures/abc/paper_ABCvsMCMC_nbargmf.pdf used on input 
+line 1020.
+(pdftex.def)             Requested size: 469.75499pt x 217.94043pt.
+
+<figures/abc/paper_ABCvsMCMC_contour_nbarxi.pdf, id=1038, 1215.09586pt x 435.09
+015pt>
+File: figures/abc/paper_ABCvsMCMC_contour_nbarxi.pdf Graphic file (type pdf)
+ <use figures/abc/paper_ABCvsMCMC_contour_nbarxi.pdf>
+Package pdftex.def Info: figures/abc/paper_ABCvsMCMC_contour_nbarxi.pdf used on
+ input line 1035.
+(pdftex.def)             Requested size: 469.75499pt x 168.20398pt.
+
+<figures/abc/paper_ABCvsMCMC_contour_nbargmf.pdf, id=1039, 1215.09586pt x 435.0
+9015pt>
+File: figures/abc/paper_ABCvsMCMC_contour_nbargmf.pdf Graphic file (type pdf)
+ <use figures/abc/paper_ABCvsMCMC_contour_nbargmf.pdf>
+Package pdftex.def Info: figures/abc/paper_ABCvsMCMC_contour_nbargmf.pdf used o
+n input line 1047.
+(pdftex.def)             Requested size: 469.75499pt x 168.20398pt.
+)
+(./chapters/gambly.tex [65pdfTeX warning (ext4): destination with the same iden
+tifier (name{figure.3.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1 \chapter
+            {How are galaxies assigned to halos? searching for assembly bias...
+ <./figures/abc/paper_data_observables.pdf>] [66pdfTeX warning (ext4): destinat
+ion with the same identifier (name{figure.3.2}) has been already used, duplicat
+e ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1 \chapter
+            {How are galaxies assigned to halos? searching for assembly bias...
+ <./figures/abc/paper_ABC_poolevolution_nbargmf.pdf>] [67pdfTeX warning (ext4):
+ destination with the same identifier (name{figure.3.3}) has been already used,
+ duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1 \chapter
+            {How are galaxies assigned to halos? searching for assembly bias...
+ <./figures/abc/paper_ABCconvergence.pdf>] [68pdfTeX warning (ext4): destinatio
+n with the same identifier (name{figure.3.4}) has been already used, duplicate 
+ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1 \chapter
+            {How are galaxies assigned to halos? searching for assembly bias...
+ <./figures/abc/paper_ABCcorner_nbarxi.pdf>] [69pdfTeX warning (ext4): destinat
+ion with the same identifier (name{figure.3.5}) has been already used, duplicat
+e ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1 \chapter
+            {How are galaxies assigned to halos? searching for assembly bias...
+ <./figures/abc/paper_ABCcorner_nbargmf.pdf>] [70pdfTeX warning (ext4): destina
+tion with the same identifier (name{figure.3.6}) has been already used, duplica
+te ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1 \chapter
+            {How are galaxies assigned to halos? searching for assembly bias...
+ <./figures/abc/paper_ABCposterior.pdf>] [71pdfTeX warning (ext4): destination 
+with the same identifier (name{figure.3.7}) has been already used, duplicate ig
+nored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1 \chapter
+            {How are galaxies assigned to halos? searching for assembly bias...
+ <./figures/abc/paper_ABCvsMCMC_nbarxi.pdf>] [72pdfTeX warning (ext4): destinat
+ion with the same identifier (name{figure.3.8}) has been already used, duplicat
+e ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1 \chapter
+            {How are galaxies assigned to halos? searching for assembly bias...
+ <./figures/abc/paper_ABCvsMCMC_nbargmf.pdf>] [73pdfTeX warning (ext4): destina
+tion with the same identifier (name{figure.3.9}) has been already used, duplica
+te ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1 \chapter
+            {How are galaxies assigned to halos? searching for assembly bias...
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.10})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1 \chapter
+            {How are galaxies assigned to halos? searching for assembly bias...
+ <./figures/abc/paper_ABCvsMCMC_contour_nbarxi.pdf> <./figures/abc/paper_ABCvsM
+CMC_contour_nbargmf.pdf
+
+pdfTeX warning: pdflatex (file ./figures/abc/paper_ABCvsMCMC_contour_nbargmf.pd
+f): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+Chapter 4.
+
+Package natbib Warning: Citation `Vakili:2016' on page 74 undefined on input li
+ne 3.
+
+
+Package hyperref Warning: Option `colorlinks' has already been used,
+(hyperref)                setting the option has no effect on input line 16.
+
+
+! LaTeX Error: Can be used only in preamble.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 \DeclareMathOperator
+                         *{\argmax}{arg\,max}
+? 
+! Undefined control sequence.
+l.18 \DeclareMathOperator*{\argmax
+                                  }{arg\,max}
+? 
+
+! LaTeX Error: Command \beq already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.19 \newcommand{\beq}{\begin{equation}}
+                                        
+? 
+
+! LaTeX Error: Command \eeq already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20 \newcommand{\eeq}{\end{equation}}
+                                      
+? 
+
+! LaTeX Error: Command \lang already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 \newcommand{\lang}{\langle}
+                                
+? 
+
+! LaTeX Error: Command \ra already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22 \newcommand{\ra}{\rangle}
+                              
+? 
+
+! LaTeX Error: Command \vep already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23 \newcommand{\vep}{\bm{\epsilon}}
+                                     
+? 
+
+! LaTeX Error: Command \ep already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.24 \newcommand{\ep}{\epsilon}
+                               
+? 
+
+! LaTeX Error: Command \pars already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25 \newcommand{\pars}{\vec{\theta}}
+                                     
+? 
+
+! LaTeX Error: Command \dev already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 \newcommand{\dev}{\mathrm{d}}
+                                  
+? 
+
+! LaTeX Error: Command \ngal already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.27 \newcommand{\ngal}{n_{g}}
+                              
+? 
+
+! LaTeX Error: Command \gmf already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 \newcommand{\gmf}{g(N)}
+                            
+? 
+
+! LaTeX Error: Command \todo already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.39 ...mand{\todo}[1]{{\em \textcolor{red}{ #1}}}
+                                                  
+? 
+[74
+
+]
+
+Package natbib Warning: Citation `seljak2000' on page 75 undefined on input lin
+e 71.
+
+
+Package natbib Warning: Citation `berlind_weinberg2002' on page 75 undefined on
+ input line 71.
+
+
+Package natbib Warning: Citation `scoccimarro2001' on page 75 undefined on inpu
+t line 71.
+
+
+Package natbib Warning: Citation `zheng2005' on page 75 undefined on input line
+ 71.
+
+
+Package natbib Warning: Citation `zheng07' on page 75 undefined on input line 7
+1.
+
+
+Package natbib Warning: Citation `leauthaud12' on page 75 undefined on input li
+ne 71.
+
+
+Package natbib Warning: Citation `tinker2013' on page 75 undefined on input lin
+e 71.
+
+
+Package natbib Warning: Citation `decorated' on page 75 undefined on input line
+ 71.
+
+
+Package natbib Warning: Citation `2016arXiv160701782H' on page 75 undefined on 
+input line 71.
+
+[75]
+
+Package natbib Warning: Citation `zheng07' on page 76 undefined on input line 8
+2.
+
+
+Package natbib Warning: Citation `tinker_rsd2007' on page 76 undefined on input
+ line 82.
+
+
+Package natbib Warning: Citation `zehavi2011' on page 76 undefined on input lin
+e 82.
+
+
+Package natbib Warning: Citation `leauthaud12' on page 76 undefined on input li
+ne 82.
+
+
+Package natbib Warning: Citation `parejko2013' on page 76 undefined on input li
+ne 82.
+
+
+Package natbib Warning: Citation `coupon2015' on page 76 undefined on input lin
+e 82.
+
+
+Package natbib Warning: Citation `hod-3pcf' on page 76 undefined on input line 
+82.
+
+
+Package natbib Warning: Citation `guo2015' on page 76 undefined on input line 8
+2.
+
+
+Package natbib Warning: Citation `miyatake15' on page 76 undefined on input lin
+e 82.
+
+
+Package natbib Warning: Citation `zu2015' on page 76 undefined on input line 82
+.
+
+
+Package natbib Warning: Citation `hod_vs_sham' on page 76 undefined on input li
+ne 82.
+
+
+Package natbib Warning: Citation `abazajian2005' on page 76 undefined on input 
+line 83.
+
+
+Package natbib Warning: Citation `tinker05' on page 76 undefined on input line 
+83.
+
+
+Package natbib Warning: Citation `tinker_rsd2007' on page 76 undefined on input
+ line 83.
+
+
+Package natbib Warning: Citation `tinker2012' on page 76 undefined on input lin
+e 83.
+
+
+Package natbib Warning: Citation `vdb03' on page 76 undefined on input line 83.
+
+
+
+Package natbib Warning: Citation `cacciato13' on page 76 undefined on input lin
+e 83.
+
+
+Package natbib Warning: Citation `more13' on page 76 undefined on input line 83
+.
+
+
+Package natbib Warning: Citation `vdb13' on page 76 undefined on input line 83.
+
+
+
+Package natbib Warning: Citation `york2000' on page 76 undefined on input line 
+84.
+
+
+Package natbib Warning: Citation `more15' on page 76 undefined on input line 84
+.
+
+
+Package natbib Warning: Citation `boss' on page 76 undefined on input line 84.
+
+
+Package natbib Warning: Citation `manera2013' on page 76 undefined on input lin
+e 84.
+
+
+Package natbib Warning: Citation `white2014' on page 76 undefined on input line
+ 84.
+
+
+Package natbib Warning: Citation `conroy2009' on page 76 undefined on input lin
+e 84.
+
+
+Package natbib Warning: Citation `leauthaud12' on page 76 undefined on input li
+ne 84.
+
+
+Package natbib Warning: Citation `behroozi13' on page 76 undefined on input lin
+e 84.
+
+
+Package natbib Warning: Citation `hudson2015' on page 76 undefined on input lin
+e 84.
+
+
+Package natbib Warning: Citation `zu2015' on page 76 undefined on input line 84
+.
+
+
+Package natbib Warning: Citation `zu2016' on page 76 undefined on input line 84
+.
+
+
+Package natbib Warning: Citation `sheth2004' on page 76 undefined on input line
+ 90.
+
+
+Package natbib Warning: Citation `gao2005' on page 76 undefined on input line 9
+0.
+
+
+Package natbib Warning: Citation `harker2006' on page 76 undefined on input lin
+e 90.
+
+
+Package natbib Warning: Citation `weschler2006' on page 76 undefined on input l
+ine 90.
+
+
+Package natbib Warning: Citation `gao2007' on page 76 undefined on input line 9
+0.
+
+
+Package natbib Warning: Citation `croton2007' on page 76 undefined on input lin
+e 90.
+
+
+Package natbib Warning: Citation `wang2007' on page 76 undefined on input line 
+90.
+
+
+Package natbib Warning: Citation `angulo2008' on page 76 undefined on input lin
+e 90.
+
+
+Package natbib Warning: Citation `dalal2008' on page 76 undefined on input line
+ 90.
+
+
+Package natbib Warning: Citation `li2008' on page 76 undefined on input line 90
+.
+
+
+Package natbib Warning: Citation `sunayama2016' on page 76 undefined on input l
+ine 90.
+
+
+Package natbib Warning: Citation `miyatake2016' on page 76 undefined on input l
+ine 90.
+
+[76]
+
+Package natbib Warning: Citation `tinker_void_2009' on page 77 undefined on inp
+ut line 92.
+
+
+Package natbib Warning: Citation `tinker_density_hod' on page 77 undefined on i
+nput line 92.
+
+
+Package natbib Warning: Citation `edHOD-tinker' on page 77 undefined on input l
+ine 92.
+
+
+Package natbib Warning: Citation `croton2007' on page 77 undefined on input lin
+e 93.
+
+
+Package natbib Warning: Citation `kravtsov2004' on page 77 undefined on input l
+ine 98.
+
+
+Package natbib Warning: Citation `vale2004' on page 77 undefined on input line 
+98.
+
+
+Package natbib Warning: Citation `tasitsiomi2004' on page 77 undefined on input
+ line 98.
+
+
+Package natbib Warning: Citation `conroy2009' on page 77 undefined on input lin
+e 98.
+
+
+Package natbib Warning: Citation `guo2010' on page 77 undefined on input line 9
+8.
+
+
+Package natbib Warning: Citation `wetzel2010' on page 77 undefined on input lin
+e 98.
+
+
+Package natbib Warning: Citation `Neisten2011' on page 77 undefined on input li
+ne 98.
+
+
+Package natbib Warning: Citation `watson2012' on page 77 undefined on input lin
+e 98.
+
+
+Package natbib Warning: Citation `rodriguez2012' on page 77 undefined on input 
+line 98.
+
+
+Package natbib Warning: Citation `kravstov2013' on page 77 undefined on input l
+ine 98.
+
+
+Package natbib Warning: Citation `mao2015' on page 77 undefined on input line 9
+8.
+
+
+Package natbib Warning: Citation `chavez2016' on page 77 undefined on input lin
+e 98.
+
+
+Package natbib Warning: Citation `reddick2013' on page 77 undefined on input li
+ne 99.
+
+
+Package natbib Warning: Citation `lehman2015' on page 77 undefined on input lin
+e 99.
+
+
+Package natbib Warning: Citation `hod_vs_sham' on page 77 undefined on input li
+ne 99.
+
+
+Package natbib Warning: Citation `sham_gmf' on page 77 undefined on input line 
+99.
+
+[77]
+
+Package natbib Warning: Citation `hw2013' on page 78 undefined on input line 10
+1.
+
+
+Package natbib Warning: Citation `arz2014' on page 78 undefined on input line 1
+01.
+
+
+Package natbib Warning: Citation `lehman2015' on page 78 undefined on input lin
+e 101.
+
+
+Package natbib Warning: Citation `hw2013' on page 78 undefined on input line 10
+4.
+
+
+Package natbib Warning: Citation `arz2014' on page 78 undefined on input line 1
+04.
+
+
+Package natbib Warning: Citation `edHOD-tinker' on page 78 undefined on input l
+ine 118.
+
+
+Package natbib Warning: Citation `edHOD-gillmartin' on page 78 undefined on inp
+ut line 118.
+
+
+Package natbib Warning: Citation `edHOD-weinberg' on page 78 undefined on input
+ line 118.
+
+
+Package natbib Warning: Citation `decorated' on page 78 undefined on input line
+ 120.
+
+[78]
+
+Package natbib Warning: Citation `guo2015' on page 79 undefined on input line 1
+31.
+
+
+Package natbib Warning: Citation `Blanton2005' on page 79 undefined on input li
+ne 131.
+
+
+Package natbib Warning: Citation `hw2013' on page 79 undefined on input line 13
+3.
+
+
+Package natbib Warning: Citation `zentner2016' on page 79 undefined on input li
+ne 135.
+
+
+Package natbib Warning: Citation `zentner2016' on page 79 undefined on input li
+ne 135.
+
+
+Package natbib Warning: Citation `zentner2016' on page 79 undefined on input li
+ne 135.
+
+[79]
+
+Package natbib Warning: Citation `rockstar' on page 80 undefined on input line 
+152.
+
+
+Package natbib Warning: Citation `smallmultidark' on page 80 undefined on input
+ line 152.
+
+
+Package natbib Warning: Citation `smallmultidark' on page 80 undefined on input
+ line 154.
+
+[80]
+
+Package natbib Warning: Citation `halodemographic' on page 81 undefined on inpu
+t line 160.
+
+
+Package natbib Warning: Citation `hod_vs_sham' on page 81 undefined on input li
+ne 181.
+
+
+Package natbib Warning: Citation `Klypin2011' on page 81 undefined on input lin
+e 184.
+
+
+Package natbib Warning: Citation `smallmultidark' on page 81 undefined on input
+ line 184.
+
+
+Package natbib Warning: Citation `blanton2003' on page 81 undefined on input li
+ne 184.
+
+[81]
+
+Package natbib Warning: Citation `zheng07' on page 82 undefined on input line 1
+89.
+
+
+Package natbib Warning: Citation `2016arXiv160701782H' on page 82 undefined on 
+input line 197.
+
+
+Package natbib Warning: Citation `decorated' on page 82 undefined on input line
+ 197.
+
+
+Package natbib Warning: Citation `guo2015' on page 82 undefined on input line 1
+97.
+
+
+Package natbib Warning: Citation `nfw' on page 82 undefined on input line 197.
+
+
+Package natbib Warning: Citation `hod_vs_sham' on page 82 undefined on input li
+ne 197.
+
+
+Package natbib Warning: Citation `zheng_guo' on page 82 undefined on input line
+ 197.
+
+
+Package natbib Warning: Citation `nfw_c(M)' on page 82 undefined on input line 
+201.
+
+
+Package natbib Warning: Citation `more2010' on page 82 undefined on input line 
+204.
+
+
+Package natbib Warning: Citation `decorated' on page 82 undefined on input line
+ 204.
+
+[82]
+
+Package natbib Warning: Citation `decorated' on page 83 undefined on input line
+ 207.
+
+[83] [84]
+
+Package natbib Warning: Citation `decorated' on page 85 undefined on input line
+ 240.
+
+
+Package natbib Warning: Citation `2016arXiv160701782H' on page 85 undefined on 
+input line 240.
+
+
+Package natbib Warning: Citation `tinker08' on page 85 undefined on input line 
+240.
+
+
+Package natbib Warning: Citation `tinker10' on page 85 undefined on input line 
+240.
+
+
+Package natbib Warning: Citation `watson13' on page 85 undefined on input line 
+240.
+
+
+Package natbib Warning: Citation `vdb13' on page 85 undefined on input line 240
+.
+
+
+Package natbib Warning: Citation `corrfunc' on page 85 undefined on input line 
+247.
+
+
+Package natbib Warning: Citation `guo2015' on page 85 undefined on input line 2
+47.
+
+[85]
+
+Package natbib Warning: Citation `zehavi2011' on page 86 undefined on input lin
+e 249.
+
+
+Package natbib Warning: Citation `guo2012' on page 86 undefined on input line 2
+49.
+
+
+Package natbib Warning: Citation `guo2015' on page 86 undefined on input line 2
+55.
+
+
+Package natbib Warning: Citation `Blanton2005' on page 86 undefined on input li
+ne 255.
+
+
+Package natbib Warning: Citation `abazajian2009' on page 86 undefined on input 
+line 255.
+
+
+Package natbib Warning: Citation `zehavi2011' on page 86 undefined on input lin
+e 255.
+
+
+Package natbib Warning: Citation `guo2015' on page 86 undefined on input line 2
+55.
+
+
+Package natbib Warning: Citation `zehavi2011' on page 86 undefined on input lin
+e 255.
+
+[86]
+
+Package natbib Warning: Citation `norberg' on page 87 undefined on input line 2
+60.
+
+
+Package natbib Warning: Citation `guo2012' on page 87 undefined on input line 2
+62.
+
+
+Package natbib Warning: Citation `decorated' on page 87 undefined on input line
+ 262.
+
+
+Package natbib Warning: Citation `decorated' on page 87 undefined on input line
+ 262.
+
+
+Package natbib Warning: Citation `sunayama2016' on page 87 undefined on input l
+ine 262.
+
+
+Package natbib Warning: Citation `guo2012' on page 87 undefined on input line 2
+63.
+
+[87]
+
+Package natbib Warning: Citation `guo2015' on page 88 undefined on input line 2
+84.
+
+
+Package natbib Warning: Citation `hartlap2007' on page 88 undefined on input li
+ne 284.
+
+[88]
+
+Package natbib Warning: Citation `goodmanweare' on page 89 undefined on input l
+ine 310.
+
+
+Package natbib Warning: Citation `emcee' on page 89 undefined on input line 310
+.
+
+
+Package natbib Warning: Citation `grtest' on page 89 undefined on input line 31
+0.
+
+[89pdfTeX warning (ext4): destination with the same identifier (name{table.4.1}
+) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.311 
+      ]
+
+Package natbib Warning: Citation `weschler2006' on page 90 undefined on input l
+ine 328.
+
+
+Package natbib Warning: Citation `gao2007' on page 90 undefined on input line 3
+28.
+
+
+Package natbib Warning: Citation `miyatake2016' on page 90 undefined on input l
+ine 328.
+
+
+Package natbib Warning: Citation `gao2007' on page 90 undefined on input line 3
+28.
+
+
+Package natbib Warning: Citation `gao2007' on page 90 undefined on input line 3
+28.
+
+
+Package natbib Warning: Citation `li2008' on page 90 undefined on input line 32
+8.
+
+
+Package natbib Warning: Citation `sunayama2016' on page 90 undefined on input l
+ine 328.
+
+[90]
+
+Package natbib Warning: Citation `weschler2006' on page 91 undefined on input l
+ine 330.
+
+
+Package natbib Warning: Citation `sunayama2016' on page 91 undefined on input l
+ine 330.
+
+
+Package natbib Warning: Citation `prada2012' on page 91 undefined on input line
+ 331.
+
+
+Package natbib Warning: Citation `sunayama2016' on page 91 undefined on input l
+ine 333.
+
+
+Package natbib Warning: Citation `more2016' on page 91 undefined on input line 
+333.
+
+[91] [92]
+
+Package natbib Warning: Citation `prada2012' on page 93 undefined on input line
+ 345.
+
+
+Package natbib Warning: Citation `vmax_potential' on page 93 undefined on input
+ line 345.
+
+
+Package natbib Warning: Citation `reddick2013' on page 93 undefined on input li
+ne 349.
+
+
+Package natbib Warning: Citation `lehman2015' on page 93 undefined on input lin
+e 349.
+
+
+Package natbib Warning: Citation `hod_vs_sham' on page 93 undefined on input li
+ne 349.
+
+
+Package natbib Warning: Citation `halodemographic' on page 93 undefined on inpu
+t line 349.
+
+
+Package natbib Warning: Citation `decorated' on page 93 undefined on input line
+ 351.
+
+
+Package natbib Warning: Citation `zentner2005' on page 93 undefined on input li
+ne 351.
+
+
+Package natbib Warning: Citation `mao2015' on page 93 undefined on input line 3
+51.
+
+[93]
+
+Package natbib Warning: Citation `sham_gmf' on page 94 undefined on input line 
+353.
+
+
+Package natbib Warning: Citation `2016arXiv160701782H' on page 94 undefined on 
+input line 353.
+
+
+Package natbib Warning: Citation `guo2015' on page 94 undefined on input line 3
+57.
+
+
+Package natbib Warning: Citation `guo2015' on page 94 undefined on input line 3
+57.
+
+[94]
+
+Package natbib Warning: Citation `arz2014' on page 95 undefined on input line 3
+61.
+
+
+Package natbib Warning: Citation `arz2014' on page 95 undefined on input line 3
+66.
+
+
+Package natbib Warning: Citation `conroy:2006aa' on page 95 undefined on input 
+line 367.
+
+
+Package natbib Warning: Citation `hw2013' on page 95 undefined on input line 36
+7.
+
+
+Package natbib Warning: Citation `reddick2013' on page 95 undefined on input li
+ne 367.
+
+
+Package natbib Warning: Citation `hw2013' on page 95 undefined on input line 36
+9.
+
+
+Package natbib Warning: Citation `edHOD-weinberg' on page 95 undefined on input
+ line 369.
+
+
+Package natbib Warning: Citation `arz2014' on page 95 undefined on input line 3
+69.
+
+[95]
+
+Package natbib Warning: Citation `Klypin2011' on page 96 undefined on input lin
+e 371.
+
+
+Package natbib Warning: Citation `art' on page 96 undefined on input line 371.
+
+
+Package natbib Warning: Citation `rockstar' on page 96 undefined on input line 
+371.
+
+
+Package natbib Warning: Citation `hw2013' on page 96 undefined on input line 37
+2.
+
+
+Package natbib Warning: Citation `arz2014' on page 96 undefined on input line 3
+74.
+
+
+Package natbib Warning: Citation `edHOD-weinberg' on page 96 undefined on input
+ line 374.
+
+
+Package natbib Warning: Citation `arz2014' on page 96 undefined on input line 3
+74.
+
+
+Package natbib Warning: Citation `hw2013' on page 96 undefined on input line 37
+6.
+
+
+Package natbib Warning: Citation `arz2014' on page 96 undefined on input line 3
+76.
+
+
+Package natbib Warning: Citation `edHOD-weinberg' on page 96 undefined on input
+ line 376.
+
+
+Package natbib Warning: Citation `hw2013' on page 96 undefined on input line 37
+8.
+
+[96]
+
+Package natbib Warning: Citation `arz2014' on page 97 undefined on input line 3
+80.
+
+
+Package natbib Warning: Citation `lehman2015' on page 97 undefined on input lin
+e 380.
+
+
+Package natbib Warning: Citation `edHOD-weinberg' on page 97 undefined on input
+ line 380.
+
+
+Overfull \hbox (38.17531pt too wide) in paragraph at lines 387--427
+ [] 
+ []
+
+
+Package natbib Warning: Citation `aic' on page 97 undefined on input line 436.
+
+
+Package natbib Warning: Citation `gelmanic' on page 97 undefined on input line 
+436.
+
+
+Package natbib Warning: Citation `bic' on page 97 undefined on input line 436.
+
+[97] [98pdfTeX warning (ext4): destination with the same identifier (name{table
+.4.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.437 
+      ] [99]
+
+Package natbib Warning: Citation `smallmultidark' on page 100 undefined on inpu
+t line 454.
+
+
+Package natbib Warning: Citation `zentner2016' on page 100 undefined on input l
+ine 456.
+
+
+Package natbib Warning: Citation `zentner2016' on page 100 undefined on input l
+ine 458.
+
+
+Package natbib Warning: Citation `zehavi2011' on page 100 undefined on input li
+ne 458.
+
+[100]
+
+Package natbib Warning: Citation `arz2014' on page 101 undefined on input line 
+462.
+
+
+Package natbib Warning: Citation `lehman2015' on page 101 undefined on input li
+ne 462.
+
+
+Package natbib Warning: Citation `decorated' on page 101 undefined on input lin
+e 466.
+
+
+Package natbib Warning: Citation `guo2015' on page 101 undefined on input line 
+466.
+
+[101]
+
+Package natbib Warning: Citation `hw2013' on page 102 undefined on input line 4
+72.
+
+
+Package natbib Warning: Citation `arz2014' on page 102 undefined on input line 
+472.
+
+
+Package natbib Warning: Citation `hw2013' on page 102 undefined on input line 4
+72.
+
+
+Package natbib Warning: Citation `zentner2016' on page 102 undefined on input l
+ine 475.
+
+
+Package natbib Warning: Citation `arz2014' on page 102 undefined on input line 
+475.
+
+
+Package natbib Warning: Citation `lehman2015' on page 102 undefined on input li
+ne 475.
+
+[102]
+
+Package natbib Warning: Citation `corner' on page 103 undefined on input line 4
+84.
+
+
+Package natbib Warning: Citation `emcee' on page 103 undefined on input line 48
+4.
+
+
+Package natbib Warning: Citation `halotools' on page 103 undefined on input lin
+e 484.
+
+
+Package natbib Warning: Citation `corrfunc' on page 103 undefined on input line
+ 484.
+
+[103] [104]
+Underfull \hbox (badness 10000) in paragraph at lines 495--496
+
+ []
+
+<figures/gambly/bias2.pdf, id=1684, 527.0503pt x 524.23534pt>
+File: figures/gambly/bias2.pdf Graphic file (type pdf)
+
+<use figures/gambly/bias2.pdf>
+Package pdftex.def Info: figures/gambly/bias2.pdf used on input line 497.
+(pdftex.def)             Requested size: 375.80542pt x 373.80952pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 508--509
+
+ []
+
+<figures/gambly/wpmodel.pdf, id=1685, 1437.97223pt x 1001.7425pt>
+File: figures/gambly/wpmodel.pdf Graphic file (type pdf)
+
+<use figures/gambly/wpmodel.pdf>
+Package pdftex.def Info: figures/gambly/wpmodel.pdf used on input line 510.
+(pdftex.def)             Requested size: 469.75499pt x 327.24384pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 519--520
+
+ []
+
+<figures/gambly/wpres.pdf, id=1686, 1451.58559pt x 1001.7425pt>
+File: figures/gambly/wpres.pdf Graphic file (type pdf)
+
+<use figures/gambly/wpres.pdf>
+Package pdftex.def Info: figures/gambly/wpres.pdf used on input line 521.
+(pdftex.def)             Requested size: 469.75499pt x 324.1715pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 532--533
+
+ []
+
+<figures/gambly/paper_wprandom.pdf, id=1689, 1283.55782pt x 481.3985pt>
+File: figures/gambly/paper_wprandom.pdf Graphic file (type pdf)
+
+<use figures/gambly/paper_wprandom.pdf>
+Package pdftex.def Info: figures/gambly/paper_wprandom.pdf used on input line 5
+34.
+(pdftex.def)             Requested size: 469.75499pt x 176.18277pt.
+
+
+Package natbib Warning: Citation `hw2013' on page 105 undefined on input line 5
+35.
+
+
+Package natbib Warning: Citation `hearin2014' on page 105 undefined on input li
+ne 535.
+
+
+Package natbib Warning: Citation `hw2013' on page 105 undefined on input line 5
+35.
+
+
+Package natbib Warning: Citation `hearin2014' on page 105 undefined on input li
+ne 535.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 545--546
+
+ []
+
+<figures/gambly/IC.pdf, id=1692, 523.2235pt x 523.90732pt>
+File: figures/gambly/IC.pdf Graphic file (type pdf)
+
+<use figures/gambly/IC.pdf>
+Package pdftex.def Info: figures/gambly/IC.pdf used on input line 547.
+(pdftex.def)             Requested size: 375.80542pt x 376.29366pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 558--559
+
+ []
+
+<figures/gambly/bias_comparison.pdf, id=1693, 527.0503pt x 524.23534pt>
+File: figures/gambly/bias_comparison.pdf Graphic file (type pdf)
+
+<use figures/gambly/bias_comparison.pdf>
+Package pdftex.def Info: figures/gambly/bias_comparison.pdf used on input line 
+560.
+(pdftex.def)             Requested size: 375.80542pt x 373.80952pt.
+
+
+Package natbib Warning: Citation `zentner2016' on page 105 undefined on input l
+ine 561.
+
+
+Package natbib Warning: Citation `zehavi2011' on page 105 undefined on input li
+ne 561.
+
+
+Package natbib Warning: Citation `zentner2016' on page 105 undefined on input l
+ine 561.
+
+
+Package natbib Warning: Citation `zentner2016' on page 105 undefined on input l
+ine 561.
+
+
+Package natbib Warning: Citation `zehavi2011' on page 105 undefined on input li
+ne 561.
+
+
+Package natbib Warning: Citation `zentner2016' on page 105 undefined on input l
+ine 561.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 571--572
+
+ []
+
+<figures/gambly/hist_comparison.pdf, id=1694, 1156.32pt x 578.16pt>
+File: figures/gambly/hist_comparison.pdf Graphic file (type pdf)
+
+<use figures/gambly/hist_comparison.pdf>
+Package pdftex.def Info: figures/gambly/hist_comparison.pdf used on input line 
+573.
+(pdftex.def)             Requested size: 469.75499pt x 234.87692pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 584--585
+
+ []
+
+<figures/gambly/post20_5combined.pdf, id=1695, 1148.15338pt x 1137.25194pt>
+File: figures/gambly/post20_5combined.pdf Graphic file (type pdf)
+
+<use figures/gambly/post20_5combined.pdf>
+Package pdftex.def Info: figures/gambly/post20_5combined.pdf used on input line
+ 586.
+(pdftex.def)             Requested size: 422.77661pt x 418.76369pt.
+) (./chapters/mocks.tex [105pdfTeX warning (ext4): destination with the same id
+entifier (name{figure.4.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.47 \chapter
+             {Accurate galaxy-halo mocks with automatic bias estimation and ...
+ <./figures/gambly/bias2.pdf>] [106pdfTeX warning (ext4): destination with the 
+same identifier (name{figure.4.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.47 \chapter
+             {Accurate galaxy-halo mocks with automatic bias estimation and ...
+ <./figures/gambly/wpmodel.pdf>] [107pdfTeX warning (ext4): destination with th
+e same identifier (name{figure.4.3}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.47 \chapter
+             {Accurate galaxy-halo mocks with automatic bias estimation and ...
+ <./figures/gambly/wpres.pdf>] [108pdfTeX warning (ext4): destination with the 
+same identifier (name{figure.4.4}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.47 \chapter
+             {Accurate galaxy-halo mocks with automatic bias estimation and ...
+ <./figures/gambly/paper_wprandom.pdf>] [109pdfTeX warning (ext4): destination 
+with the same identifier (name{figure.4.5}) has been already used, duplicate ig
+nored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.47 \chapter
+             {Accurate galaxy-halo mocks with automatic bias estimation and ...
+ <./figures/gambly/IC.pdf>] [110pdfTeX warning (ext4): destination with the sam
+e identifier (name{figure.4.6}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.47 \chapter
+             {Accurate galaxy-halo mocks with automatic bias estimation and ...
+ <./figures/gambly/bias_comparison.pdf>] [111pdfTeX warning (ext4): destination
+ with the same identifier (name{figure.4.7}) has been already used, duplicate i
+gnored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.47 \chapter
+             {Accurate galaxy-halo mocks with automatic bias estimation and ...
+ <./figures/gambly/hist_comparison.pdf>] [112pdfTeX warning (ext4): destination
+ with the same identifier (name{figure.4.8}) has been already used, duplicate i
+gnored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.47 \chapter
+             {Accurate galaxy-halo mocks with automatic bias estimation and ...
+ <./figures/gambly/post20_5combined.pdf>]
+Chapter 5.
+
+Package natbib Warning: Citation `Vakili:2017' on page 113 undefined on input l
+ine 49.
+
+[113
+
+
+]
+
+Package natbib Warning: Citation `eBOSS' on page 114 undefined on input line 62
+.
+
+
+Package natbib Warning: Citation `desi' on page 114 undefined on input line 62.
+
+
+
+Package natbib Warning: Citation `euclid' on page 114 undefined on input line 6
+2.
+
+
+Package natbib Warning: Citation `lsst' on page 114 undefined on input line 62.
+
+
+
+Package natbib Warning: Citation `wfirst' on page 114 undefined on input line 6
+2.
+
+[114]
+
+Package natbib Warning: Citation `dodelson2013' on page 115 undefined on input 
+line 64.
+
+
+Package natbib Warning: Citation `taylor2014' on page 115 undefined on input li
+ne 64.
+
+
+Package natbib Warning: Citation `taylor2013' on page 115 undefined on input li
+ne 64.
+
+
+Package natbib Warning: Citation `buchert1993' on page 115 undefined on input l
+ine 67.
+
+
+Package natbib Warning: Citation `bouchet1995' on page 115 undefined on input l
+ine 67.
+
+
+Package natbib Warning: Citation `catelan1995' on page 115 undefined on input l
+ine 67.
+
+
+Package natbib Warning: Citation `monaco2002' on page 115 undefined on input li
+ne 67.
+
+
+Package natbib Warning: Citation `scocci2002' on page 115 undefined on input li
+ne 67.
+
+
+Package natbib Warning: Citation `alpt' on page 115 undefined on input line 67.
+
+
+
+Package natbib Warning: Citation `eazymock' on page 115 undefined on input line
+ 67.
+
+
+Package natbib Warning: Citation `cola2013' on page 115 undefined on input line
+ 67.
+
+
+Package natbib Warning: Citation `qpm' on page 115 undefined on input line 67.
+
+
+Package natbib Warning: Citation `howlet2015' on page 115 undefined on input li
+ne 67.
+
+
+Package natbib Warning: Citation `cola' on page 115 undefined on input line 67.
+
+
+
+Package natbib Warning: Citation `fastpm' on page 115 undefined on input line 6
+7.
+
+
+Package natbib Warning: Citation `ice_cola' on page 115 undefined on input line
+ 67.
+
+
+Package natbib Warning: Citation `koda' on page 115 undefined on input line 67.
+
+
+
+Package natbib Warning: Citation `kitaura2014' on page 115 undefined on input l
+ine 67.
+
+
+Package natbib Warning: Citation `qpm' on page 115 undefined on input line 67.
+
+
+Package natbib Warning: Citation `pthalo' on page 115 undefined on input line 6
+7.
+
+
+Package natbib Warning: Citation `koda' on page 115 undefined on input line 67.
+
+
+
+Package natbib Warning: Citation `fastpm' on page 115 undefined on input line 6
+7.
+
+[115]
+
+Package natbib Warning: Citation `kitaura2014' on page 116 undefined on input l
+ine 69.
+
+
+Package natbib Warning: Citation `kitaura2015' on page 116 undefined on input l
+ine 69.
+
+
+Package natbib Warning: Citation `kitaura2014' on page 116 undefined on input l
+ine 69.
+
+
+Package natbib Warning: Citation `kitaura2015' on page 116 undefined on input l
+ine 69.
+
+
+Package natbib Warning: Citation `kitaura2016' on page 116 undefined on input l
+ine 69.
+
+
+Package natbib Warning: Citation `feldman1994' on page 116 undefined on input l
+ine 71.
+
+
+Package natbib Warning: Citation `smith2008' on page 116 undefined on input lin
+e 71.
+
+
+Package natbib Warning: Citation `crocce2011' on page 116 undefined on input li
+ne 71.
+
+
+Package natbib Warning: Citation `sun2013' on page 116 undefined on input line 
+71.
+
+
+Package natbib Warning: Citation `grieb2016' on page 116 undefined on input lin
+e 71.
+
+
+Package natbib Warning: Citation `klaus2016' on page 116 undefined on input lin
+e 71.
+
+
+Package natbib Warning: Citation `ledoit2004' on page 116 undefined on input li
+ne 74.
+
+
+Package natbib Warning: Citation `pope2008' on page 116 undefined on input line
+ 74.
+
+
+Package natbib Warning: Citation `ledoit2012' on page 116 undefined on input li
+ne 74.
+
+
+Package natbib Warning: Citation `joachimi2016' on page 116 undefined on input 
+line 74.
+
+
+Package natbib Warning: Citation `simpson2016' on page 116 undefined on input l
+ine 74.
+
+[116]
+
+Package natbib Warning: Citation `fastpm' on page 117 undefined on input line 8
+0.
+
+
+Package natbib Warning: Citation `multidark' on page 117 undefined on input lin
+e 82.
+
+
+Package natbib Warning: Citation `chuang2015' on page 117 undefined on input li
+ne 82.
+
+
+Package natbib Warning: Citation `zhao2015' on page 117 undefined on input line
+ 82.
+
+
+Package natbib Warning: Citation `kitaura2016' on page 117 undefined on input l
+ine 82.
+
+
+Package natbib Warning: Citation `sergio2016' on page 117 undefined on input li
+ne 82.
+
+
+Package natbib Warning: Citation `slepian2015' on page 117 undefined on input l
+ine 84.
+
+
+Package natbib Warning: Citation `gill2015a' on page 117 undefined on input lin
+e 84.
+
+
+Package natbib Warning: Citation `gill2015b' on page 117 undefined on input lin
+e 84.
+
+
+Package natbib Warning: Citation `guo2016' on page 117 undefined on input line 
+84.
+
+
+Package natbib Warning: Citation `slepian2016a' on page 117 undefined on input 
+line 84.
+
+
+Package natbib Warning: Citation `slepian2016b' on page 117 undefined on input 
+line 84.
+
+
+Package natbib Warning: Citation `gill2017' on page 117 undefined on input line
+ 84.
+
+
+Package natbib Warning: Citation `kitaura2016' on page 117 undefined on input l
+ine 94.
+
+
+Package natbib Warning: Citation `sergio2016' on page 117 undefined on input li
+ne 94.
+
+[117] <figures/mocks/bigmd_large.pdf, id=2301, 451.50343pt x 451.8145pt>
+File: figures/mocks/bigmd_large.pdf Graphic file (type pdf)
+
+<use figures/mocks/bigmd_large.pdf>
+Package pdftex.def Info: figures/mocks/bigmd_large.pdf used on input line 99.
+(pdftex.def)             Requested size: 140.92792pt x 141.01932pt.
+
+<figures/mocks/fastpm_large.pdf, id=2302, 451.07422pt x 451.72234pt>
+File: figures/mocks/fastpm_large.pdf Graphic file (type pdf)
+
+<use figures/mocks/fastpm_large.pdf>
+Package pdftex.def Info: figures/mocks/fastpm_large.pdf used on input line 100.
+
+(pdftex.def)             Requested size: 140.92792pt x 141.12842pt.
+
+<figures/mocks/alpt_large.pdf, id=2303, 451.84612pt x 451.41414pt>
+File: figures/mocks/alpt_large.pdf Graphic file (type pdf)
+
+<use figures/mocks/alpt_large.pdf>
+Package pdftex.def Info: figures/mocks/alpt_large.pdf used on input line 101.
+(pdftex.def)             Requested size: 140.92792pt x 140.79105pt.
+
+<figures/mocks/bigmd_medium.pdf, id=2304, 451.55235pt x 452.19176pt>
+File: figures/mocks/bigmd_medium.pdf Graphic file (type pdf)
+
+<use figures/mocks/bigmd_medium.pdf>
+Package pdftex.def Info: figures/mocks/bigmd_medium.pdf used on input line 102.
+
+(pdftex.def)             Requested size: 140.92792pt x 141.12328pt.
+
+<figures/mocks/fastpm_medium.pdf, id=2305, 451.91522pt x 451.8289pt>
+File: figures/mocks/fastpm_medium.pdf Graphic file (type pdf)
+
+<use figures/mocks/fastpm_medium.pdf>
+Package pdftex.def Info: figures/mocks/fastpm_medium.pdf used on input line 103
+.
+(pdftex.def)             Requested size: 140.92792pt x 140.89972pt.
+
+<figures/mocks/alpt_medium.pdf, id=2306, 451.4861pt x 452.3588pt>
+File: figures/mocks/alpt_medium.pdf Graphic file (type pdf)
+
+<use figures/mocks/alpt_medium.pdf>
+Package pdftex.def Info: figures/mocks/alpt_medium.pdf used on input line 104.
+(pdftex.def)             Requested size: 140.92792pt x 141.19612pt.
+
+<figures/mocks/bigmd_small.pdf, id=2307, 452.3272pt x 452.39339pt>
+File: figures/mocks/bigmd_small.pdf Graphic file (type pdf)
+
+<use figures/mocks/bigmd_small.pdf>
+Package pdftex.def Info: figures/mocks/bigmd_small.pdf used on input line 105.
+(pdftex.def)             Requested size: 140.92792pt x 140.95149pt.
+
+<figures/mocks/fastpm_small.pdf, id=2308, 452.66994pt x 452.97809pt>
+File: figures/mocks/fastpm_small.pdf Graphic file (type pdf)
+
+<use figures/mocks/fastpm_small.pdf>
+Package pdftex.def Info: figures/mocks/fastpm_small.pdf used on input line 106.
+
+(pdftex.def)             Requested size: 140.92792pt x 141.02309pt.
+
+<figures/mocks/alpt_small.pdf, id=2309, 451.84903pt x 451.79723pt>
+File: figures/mocks/alpt_small.pdf Graphic file (type pdf)
+
+<use figures/mocks/alpt_small.pdf>
+Package pdftex.def Info: figures/mocks/alpt_small.pdf used on input line 107.
+(pdftex.def)             Requested size: 140.92792pt x 140.91052pt.
+
+
+Package natbib Warning: Citation `alpt' on page 118 undefined on input line 115
+.
+
+
+Package natbib Warning: Citation `fastpm' on page 118 undefined on input line 1
+17.
+
+
+Package natbib Warning: Citation `fastpm' on page 118 undefined on input line 1
+18.
+
+
+Package natbib Warning: Citation `cola2013' on page 118 undefined on input line
+ 118.
+
+
+Package natbib Warning: Citation `fastpm' on page 118 undefined on input line 1
+20.
+
+
+Package natbib Warning: Citation `fof' on page 118 undefined on input line 120.
+
+
+
+Package natbib Warning: Citation `treepm' on page 118 undefined on input line 1
+20.
+
+
+Package natbib Warning: Citation `cola2013' on page 118 undefined on input line
+ 120.
+
+[118] [119pdfTeX warning (ext4): destination with the same identifier (name{fig
+ure.5.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.121 
+       <./figures/mocks/bigmd_large.pdf> <./figures/mocks/fastpm_large.pdf> <./
+figures/mocks/alpt_large.pdf> <./figures/mocks/bigmd_medium.pdf> <./figures/moc
+ks/fastpm_medium.pdf> <./figures/mocks/alpt_medium.pdf> <./figures/mocks/bigmd_
+small.pdf> <./figures/mocks/fastpm_small.pdf> <./figures/mocks/alpt_small.pdf>]
+[120]
+
+Package natbib Warning: Citation `kaiser1984' on page 121 undefined on input li
+ne 148.
+
+
+Package natbib Warning: Citation `bardeen1986' on page 121 undefined on input l
+ine 148.
+
+
+Package natbib Warning: Citation `sheth2001' on page 121 undefined on input lin
+e 148.
+
+
+Package natbib Warning: Citation `mo2002' on page 121 undefined on input line 1
+48.
+
+
+Package natbib Warning: Citation `kitaura2014' on page 121 undefined on input l
+ine 148.
+
+
+Package natbib Warning: Citation `neyrinck2014' on page 121 undefined on input 
+line 148.
+
+
+Package natbib Warning: Citation `kitaura2015' on page 121 undefined on input l
+ine 156.
+
+
+Package natbib Warning: Citation `cen1993' on page 121 undefined on input line 
+156.
+
+
+Package natbib Warning: Citation `fry1993' on page 121 undefined on input line 
+156.
+
+
+Package natbib Warning: Citation `delatorre' on page 121 undefined on input lin
+e 156.
+
+[121]
+
+Package natbib Warning: Citation `somerville2001' on page 122 undefined on inpu
+t line 171.
+
+
+Package natbib Warning: Citation `miranda2002' on page 122 undefined on input l
+ine 171.
+
+
+Package natbib Warning: Citation `kitaura2014' on page 122 undefined on input l
+ine 171.
+
+
+Package natbib Warning: Citation `neyrinck2014' on page 122 undefined on input 
+line 171.
+
+
+Package natbib Warning: Citation `Peebles1980' on page 122 undefined on input l
+ine 173.
+
+[122]
+
+Package natbib Warning: Citation `kitaura2015' on page 123 undefined on input l
+ine 183.
+
+[123]
+
+Package natbib Warning: Citation `goodmanweare' on page 124 undefined on input 
+line 193.
+
+
+Package natbib Warning: Citation `emcee' on page 124 undefined on input line 19
+3.
+
+
+Package natbib Warning: Citation `grtest' on page 124 undefined on input line 1
+93.
+
+
+Package natbib Warning: Citation `monaco2002' on page 124 undefined on input li
+ne 197.
+
+
+Package natbib Warning: Citation `monaco2013' on page 124 undefined on input li
+ne 197.
+
+
+Package natbib Warning: Citation `monaco2016' on page 124 undefined on input li
+ne 197.
+
+
+Package natbib Warning: Citation `buchert1993' on page 124 undefined on input l
+ine 197.
+
+
+Package natbib Warning: Citation `bouchet1995' on page 124 undefined on input l
+ine 197.
+
+
+Package natbib Warning: Citation `catelan1995' on page 124 undefined on input l
+ine 197.
+
+
+Package natbib Warning: Citation `scocci2002' on page 124 undefined on input li
+ne 197.
+
+
+Package natbib Warning: Citation `pthalo' on page 124 undefined on input line 1
+97.
+
+
+Package natbib Warning: Citation `manera2015' on page 124 undefined on input li
+ne 197.
+
+
+Package natbib Warning: Citation `monaco2013' on page 124 undefined on input li
+ne 198.
+
+[124]
+
+Package natbib Warning: Citation `kitaura2014' on page 125 undefined on input l
+ine 201.
+
+
+Package natbib Warning: Citation `qpm' on page 125 undefined on input line 201.
+
+
+
+Package natbib Warning: Citation `eazymock' on page 125 undefined on input line
+ 201.
+
+
+Package natbib Warning: Citation `zhao2015' on page 125 undefined on input line
+ 203.
+
+
+Package natbib Warning: Citation `kitaura2015' on page 125 undefined on input l
+ine 203.
+
+
+Package natbib Warning: Citation `zhao2015' on page 125 undefined on input line
+ 205.
+
+
+Package natbib Warning: Citation `kitaura2016' on page 125 undefined on input l
+ine 205.
+
+
+Package natbib Warning: Citation `ata2015' on page 125 undefined on input line 
+207.
+
+[125] <figures/mocks/posterior.pdf, id=2453, 844.61935pt x 851.78542pt>
+File: figures/mocks/posterior.pdf Graphic file (type pdf)
+
+<use figures/mocks/posterior.pdf>
+Package pdftex.def Info: figures/mocks/posterior.pdf used on input line 213.
+(pdftex.def)             Requested size: 469.75499pt x 473.74728pt.
+
+
+Package natbib Warning: Citation `corner' on page 126 undefined on input line 2
+14.
+
+
+Package natbib Warning: Citation `corner' on page 126 undefined on input line 2
+14.
+
+
+Underfull \hbox (badness 2582) in paragraph at lines 214--214
+[]\OT1/cmr/m/n/12 Figure 5.2: [][] Pos-te-rior prob-a-bil-ity dis-tri-bu-tion o
+f the \OT1/cmr/m/sc/12 patchy \OT1/cmr/m/n/12 bias pa-ram-e-ters
+ []
+
+<figures/mocks/pdf.pdf, id=2454, 289.08pt x 289.08pt>
+File: figures/mocks/pdf.pdf Graphic file (type pdf)
+
+<use figures/mocks/pdf.pdf>
+Package pdftex.def Info: figures/mocks/pdf.pdf used on input line 220.
+(pdftex.def)             Requested size: 211.3883pt x 211.38834pt.
+
+<figures/mocks/pk.pdf, id=2455, 289.08pt x 289.08pt>
+File: figures/mocks/pk.pdf Graphic file (type pdf)
+
+<use figures/mocks/pk.pdf>
+Package pdftex.def Info: figures/mocks/pk.pdf used on input line 221.
+(pdftex.def)             Requested size: 211.3883pt x 211.38834pt.
+
+<figures/mocks/bispec1.pdf, id=2456, 216.81pt x 216.81pt>
+File: figures/mocks/bispec1.pdf Graphic file (type pdf)
+
+<use figures/mocks/bispec1.pdf>
+Package pdftex.def Info: figures/mocks/bispec1.pdf used on input line 231.
+(pdftex.def)             Requested size: 187.89912pt x 187.90858pt.
+
+<figures/mocks/bispec3.pdf, id=2457, 216.81pt x 216.81pt>
+File: figures/mocks/bispec3.pdf Graphic file (type pdf)
+
+<use figures/mocks/bispec3.pdf>
+Package pdftex.def Info: figures/mocks/bispec3.pdf used on input line 232.
+(pdftex.def)             Requested size: 187.89912pt x 187.90858pt.
+
+<figures/mocks/bispec2.pdf, id=2458, 216.81pt x 216.81pt>
+File: figures/mocks/bispec2.pdf Graphic file (type pdf)
+
+<use figures/mocks/bispec2.pdf>
+Package pdftex.def Info: figures/mocks/bispec2.pdf used on input line 236.
+(pdftex.def)             Requested size: 187.89912pt x 187.90858pt.
+
+<figures/mocks/bispec5.pdf, id=2459, 216.81pt x 216.81pt>
+File: figures/mocks/bispec5.pdf Graphic file (type pdf)
+
+<use figures/mocks/bispec5.pdf>
+Package pdftex.def Info: figures/mocks/bispec5.pdf used on input line 237.
+(pdftex.def)             Requested size: 187.89912pt x 187.90858pt.
+
+<figures/mocks/bispec4.pdf, id=2460, 216.81pt x 216.81pt>
+File: figures/mocks/bispec4.pdf Graphic file (type pdf)
+
+<use figures/mocks/bispec4.pdf>
+Package pdftex.def Info: figures/mocks/bispec4.pdf used on input line 241.
+(pdftex.def)             Requested size: 187.89912pt x 187.90858pt.
+
+<figures/mocks/bispec6.pdf, id=2461, 216.81pt x 216.81pt>
+File: figures/mocks/bispec6.pdf Graphic file (type pdf)
+
+<use figures/mocks/bispec6.pdf>
+Package pdftex.def Info: figures/mocks/bispec6.pdf used on input line 242.
+(pdftex.def)             Requested size: 187.89912pt x 187.90858pt.
+
+
+LaTeX Warning: Float too large for page by 9.00673pt on input line 246.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 249.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 249.
+
+
+Package natbib Warning: Citation `white2011' on page 126 undefined on input lin
+e 252.
+
+
+Package natbib Warning: Citation `Dawson2013' on page 126 undefined on input li
+ne 252.
+
+
+Package natbib Warning: Citation `bdm' on page 126 undefined on input line 258.
+
+
+
+Package natbib Warning: Citation `multidark' on page 126 undefined on input lin
+e 259.
+
+
+Package natbib Warning: Citation `gadget' on page 126 undefined on input line 2
+59.
+
+
+Package natbib Warning: Citation `white2011' on page 126 undefined on input lin
+e 265.
+
+
+Package natbib Warning: Citation `Dawson2013' on page 126 undefined on input li
+ne 265.
+
+
+Package natbib Warning: Citation `kitaura2016' on page 126 undefined on input l
+ine 265.
+
+
+Package natbib Warning: Citation `sergio2016' on page 126 undefined on input li
+ne 265.
+
+[126] [127pdfTeX warning (ext4): destination with the same identifier (name{fig
+ure.5.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.266 
+       <./figures/mocks/posterior.pdf>] [128pdfTeX warning (ext4): destination 
+with the same identifier (name{figure.5.3}) has been already used, duplicate ig
+nored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.266 
+       <./figures/mocks/pdf.pdf> <./figures/mocks/pk.pdf
+
+pdfTeX warning: pdflatex (file ./figures/mocks/pk.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+>] [129pdfTeX warning (ext4): destination with the same identifier (name{figure
+.5.4}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.266 
+       <./figures/mocks/bispec1.pdf> <./figures/mocks/bispec3.pdf
+
+pdfTeX warning: pdflatex (file ./figures/mocks/bispec3.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
+> <./figures/mocks/bispec2.pdf
+
+pdfTeX warning: pdflatex (file ./figures/mocks/bispec2.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
+> <./figures/mocks/bispec5.pdf
+
+pdfTeX warning: pdflatex (file ./figures/mocks/bispec5.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
+> <./figures/mocks/bispec4.pdf
+
+pdfTeX warning: pdflatex (file ./figures/mocks/bispec4.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
+> <./figures/mocks/bispec6.pdf
+
+pdfTeX warning: pdflatex (file ./figures/mocks/bispec6.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
+>]
+
+Package natbib Warning: Citation `kitaura2014' on page 130 undefined on input l
+ine 274.
+
+[130]
+
+Package natbib Warning: Citation `neyrinck2014' on page 131 undefined on input 
+line 278.
+
+
+Package natbib Warning: Citation `kitaura2016' on page 131 undefined on input l
+ine 284.
+
+[131]
+
+Package natbib Warning: Citation `kitaura2014' on page 132 undefined on input l
+ine 302.
+
+
+Package natbib Warning: Citation `kitaura2015' on page 132 undefined on input l
+ine 302.
+
+
+Package natbib Warning: Citation `mcdonald2009' on page 132 undefined on input 
+line 304.
+
+
+Package natbib Warning: Citation `kitaura2016' on page 132 undefined on input l
+ine 304.
+
+
+Package natbib Warning: Citation `kitaura2015' on page 132 undefined on input l
+ine 304.
+
+[132]
+
+Package natbib Warning: Citation `kitaura2015' on page 133 undefined on input l
+ine 310.
+
+
+Package natbib Warning: Citation `eazymock' on page 133 undefined on input line
+ 312.
+
+[133]
+
+Package natbib Warning: Citation `fastpm' on page 134 undefined on input line 3
+23.
+
+[134]
+
+Package natbib Warning: Citation `zhao2015' on page 135 undefined on input line
+ 332.
+
+
+Package natbib Warning: Citation `kitaura2014' on page 135 undefined on input l
+ine 334.
+
+
+Package natbib Warning: Citation `eazymock' on page 135 undefined on input line
+ 334.
+
+
+Package natbib Warning: Citation `chuang2015' on page 135 undefined on input li
+ne 334.
+
+
+Package natbib Warning: Citation `chuang2015' on page 135 undefined on input li
+ne 334.
+
+
+Package natbib Warning: Citation `delatorre' on page 135 undefined on input lin
+e 336.
+
+
+Package natbib Warning: Citation `angulo2014' on page 135 undefined on input li
+ne 336.
+
+
+Package natbib Warning: Citation `ahn2015' on page 135 undefined on input line 
+336.
+
+[135] [136]) (./conclusion.tex [137]) (./biblio.tex [138
+
+] (./thesis.bbl
+[139
+
+
+] [140] [141] [142] [143] [144]pdfTeX warning (ext4): destination with the same
+ identifier (name{cite.fof}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.113 \bibitem[Davis et al.(1985)]{fof}
+                                        Davis, M., Efstathiou, G., Frenk, C....
+pdfTeX warning (ext4): destination with the same identifier (name{cite.fastpm})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.119 \bibitem[Feng et al.(2016)]{fastpm}
+                                          Feng, Y., Chu, M.-Y., Seljak, U., ...
+
+Underfull \hbox (badness 3919) in paragraph at lines 121--122
+[]\OT1/cmr/m/n/12 Foreman-Mackey, D. 2016, The Jour-nal of Open Source Soft-war
+e, 24, Url =
+ []
+
+[145]pdfTeX warning (ext4): destination with the same identifier (name{cite.har
+tlap2007}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.131 \bibitem[Hartlap et al.(2007)]{hartlap2007}
+                                                  Hartlap, J., Simon, P., \&...
+[146]pdfTeX warning (ext4): destination with the same identifier (name{cite.bdm
+}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.141 \bibitem[Klypin \& Holtzman(1997)]{bdm}
+                                              Klypin, A., \& Holtzman, J.\ 1...
+pdfTeX warning (ext4): destination with the same identifier (name{cite.multidar
+k}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.142 \bibitem[Klypin et al.(2016)]{multidark}
+                                               Klypin, A., Yepes, G., Gottl{...
+pdfTeX warning (ext4): destination with the same identifier (name{cite.desi}) h
+as been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.148 \bibitem[Levi et al.(2013)]{desi}
+                                        Levi, M., Bebek, C., Beers, T., et a...
+[147] [148]pdfTeX warning (ext4): destination with the same identifier (name{ci
+te.cola}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.177 \bibitem[Tassev et al.(2015)]{cola}
+                                          Tassev, S., Eisenstein, D.~J., Wan...
+))
+
+Package natbib Warning: There were undefined citations.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 159.
+[149]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 159.
+ (./thesis.aux
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 159.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 159.
+
+
+Package rerunfilecheck Warning: File `thesis.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `thesis.out':
+(rerunfilecheck)             Before: C8E8DA1C6FFFF31C552057FA9B43CCD9;2399
+(rerunfilecheck)             After:  DC8776B688D0E0564F0169906DD48381;2449.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 159.
+ ) 
+Here is how much of TeX's memory you used:
+ 8344 strings out of 493304
+ 121549 string characters out of 6139871
+ 269333 words of memory out of 5000000
+ 11228 multiletter control sequences out of 15000+600000
+ 21039 words of font info for 81 fonts, out of 8000000 for 9000
+ 957 hyphenation exceptions out of 8191
+ 31i,17n,31p,1388b,890s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/hfbright/hfbr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/hfbr
+ight/hfbr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/hfbright/hfbr
+mi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/hfbright/hfbrsy10.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/hfbright/hftl10.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/sha
+re/texmf/fonts/type1/public/cm-super/sfbtl10.pfb>
+Output written on thesis.pdf (169 pages, 9423474 bytes).
+PDF statistics:
+ 3416 PDF objects out of 3580 (max. 8388607)
+ 2161 compressed objects within 22 object streams
+ 373 named destinations out of 1000 (max. 500000)
+ 509 words of extra memory for PDF output out of 10000 (max. 10000000)
+
