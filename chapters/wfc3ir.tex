@@ -1,1 +1,39 @@
 \chapter{Super-resolution PSF model of HST WFC3-IR\chaplabel{wfc3ir}}
+
+This \paper is jointly written with Ross~Fadely (Insight) and David~W.~Hogg (NYU) and it is being prepared for submission. 
+
+\section{chapter abstract}
+
+WRITE SOMETHING SENSIBLE HERE
+
+\section{introduction}
+
+Point Spread Function (hereafter PSF) of the \hst \wfc camera is 
+extremely undersampled. That is, if a center of an observed star lies on the center of a pixel, a significant fraction of the brightness of that star will be 
+encapsulated by the detector's pixel that contains the centroid of the star. 
+This is mainly the result of a compromise made in design of the detectors to cover a wider field of view. The PSF determines the fraction of photons from a given point source that lands on a particular location from the center of that point source. 
+
+In this investigation, we focus our attention to modeling the pixel-convolved PSF which is the optical (instrumental) convolved with the pixel response function. An important step in all weak gravitational lensing studies is fitting a model to this pixel-convolved PSF which then will be used in making accurate estimates of the galaxy ellipticities and eventually the cosmic shear signal. 
+From now on, we refer to the pixel-convolved PSF as the PSF. 
+
+%A significant body of works are focused on developing a physical model of the optical PSF. 
+
+The factor by which the PSF is undersampled varies from one filter to another.
+The \wfc camera consists of six filters: F105W, F125W, F140W, F160W. In what follows in the rest of this chapter, we focus on modelling the super-resolution PSF in the FLT frame of F160W filter. The data is collected from targeting the globular cluster Omega Centauri during the calibration program.
+
+Our strategy for inferring the super-resolution of the PSF model of F160W filter is as follows. First we run the Source Extractor algorithm to identify all the stellar sources in the observed data. 
+
+
+The noise model adopted in this work is the following:
+
+\beq
+s_n^2 = \sigma_{n}^{2} + g.f_{n}
+\eeq    
+
+Ideally one would use the bright isolated sources to estimate the PSF. A considerable fraction of the observed stars are present in the crowded fields. 
+In order to alleviate the issue arising from the contamination of stellar patches by the light coming from overlapping sources, we add another term to the noise model which accounts for the discrepancy between the downsampled PSF model on the data grid and the observed star. 
+
+\beq
+s_n^2 = \sigma_{n}^{2} + g.f_{n} + qf_{n}^{2}
+\eeq 
+
