@@ -1,12 +1,23 @@
+\newcommand{\todo}[1]{{\em \textcolor{red}{ #1}}}
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\newcommand{\lang}{\langle}
+\newcommand{\ra}{\rangle}
+\newcommand{\vep}{\bm{\epsilon}}
+\newcommand{\ep}{\epsilon}
+\newcommand{\pars}{\vec{\theta}}
+\newcommand{\dev}{\mathrm{d}}
+\newcommand{\mstar}{h^{-1}M_\odot}
+
 \chapter{Super-resolution PSF model of HST WFC3-IR\chaplabel{wfc3ir}}
 
-This \paper is jointly written with Ross~Fadely (Insight) and David~W.~Hogg (NYU) and it is being prepared for submission. 
+This \paper is joint work with Ross~Fadely (Insight) and David~W.~Hogg (NYU) and it is being prepared for submission. 
 
-\section{chapter abstract}
+\section{Chapter abstract}
 
 WRITE SOMETHING SENSIBLE HERE
 
-\section{introduction}
+\section{Introduction}
 
 Point Spread Function (hereafter PSF) of the \hst \wfc camera is 
 extremely undersampled. That is, if a center of an observed star lies on the center of a pixel, a significant fraction of the brightness of that star will be 
@@ -21,19 +32,66 @@ From now on, we refer to the pixel-convolved PSF as the PSF.
 The factor by which the PSF is undersampled varies from one filter to another.
 The \wfc camera consists of six filters: F105W, F125W, F140W, F160W. In what follows in the rest of this chapter, we focus on modelling the super-resolution PSF in the FLT frame of F160W filter. The data is collected from targeting the globular cluster Omega Centauri during the calibration program.
 
-Our strategy for inferring the super-resolution of the PSF model of F160W filter is as follows. First we run the Source Extractor algorithm to identify all the stellar sources in the observed data. 
+Our strategy for inferring the super-resolution of the PSF model of F160W filter is as follows. 
+First we run the Source Extractor algorithm to identify all the stellar sources in the observed data. 
 
+In patch $n$, the model is given by
 
-The noise model adopted in this work is the following:
-
+\begin{eqnarray}
+\mathbf{y}_{n} &=&  \mathbf{m}_{n} + \mathrm{noise} \\
+m_{n,i} &=& f_{n}K^{(n)}_{il} (\Delta_n) X_{l} + b_{n} 
+\end{eqnarray} 
+where the variance of the noise model adopted in this work is the following:
 \beq
-s_n^2 = \sigma_{n}^{2} + g.f_{n}
+s_n^2 = \sigma_{n}^{2} + g.m_{n}
 \eeq    
 
 Ideally one would use the bright isolated sources to estimate the PSF. A considerable fraction of the observed stars are present in the crowded fields. 
 In order to alleviate the issue arising from the contamination of stellar patches by the light coming from overlapping sources, we add another term to the noise model which accounts for the discrepancy between the downsampled PSF model on the data grid and the observed star. 
 
 \beq
-s_n^2 = \sigma_{n}^{2} + g.f_{n} + qf_{n}^{2}
+s_n^2 = \sigma_{n}^{2} + g.m_{n} + qm_{n}^{2}
 \eeq 
+
+
+The log-likelihood function for each patch is written as follows. 
+\beq
+-2 \ln L_{n} = \sum_{i=1}^{N_{\rm pix}} \frac{\big(y_{i} - m_{i} \big)^{2}}{s^{2}_{n}} + \ln(s_{n}^{2})
+\eeq
+
+
+
+\begin{algorithm} 
+\caption{The procedure for Inferring the Super-Resolution PSF}
+\begin{algorithmic}[1] \label{alg:abcpmc}
+%\STATE \DATA: D
+%\STATE \RESULT: ABC posterior sample of $\pars$
+\IF{$t=1:$}
+%\STATE $\epsilon_t \gets \infty$
+\FOR{$n=1,...,N$}
+   \STATE // \emph{This can now be done in parallel for all i}
+   %\WHILE{$\rho(X,D)>\epsilon_t$}
+   \STATE $b_{n}$ \gets \mathrm{median} $(y_{n})$
+   \STATE $f_{n}$ \gets $\sum_{i=1}^{N_pix} \big(y_{n,i} - b_{n}\big)$
+   \STATE \mathrm{Initialize} $\Delta_{n}$ with the 3\time3 polynomial method
+   \STATE $X_{n}$ \gets \mathrm{cubic spline} $(\Delta_n)[\big(y_{n,i} - b_{n}\big)/f_n]$
+\ENDFOR
+\STATE $X$ \gets $\sum_{n=1}^{N} X_{n]$
+   %\ENDWHILE
+\ENDIF
+\IF{$t=2,...,N_{it}:$}
+\FOR{$i=1,...,N$}
+   \STATE // \emph{This loop can now be done in parallel for all i}
+   \WHILE{$\rho(X,D)>\epsilon_t$}
+   \STATE Draw $\pars^{*}_{t}$ from $\{\pars_{t-1}\}$ with probabilities $\{w_{t-1}\}$
+   \STATE $\pars^{*}_{t} \gets K(\pars^{*}_{t},.)$
+   \STATE $X = f(\pars^{*}_{t})$
+   \ENDWHILE
+   \STATE $\pars^{(i)}_{t} \gets \pars^{*}_{t}$
+   \STATE $w^{(i)}_{t} \gets \pi(\pars^{(i)}_{t}) / \big(\sum\limits_{j=1}^{N}w_{t-1}^{(i)}K(\pars^{(j)}_{t-1},\pars^{(i)}_{t}) \big)$
+\ENDFOR
+\ENDIF
+\end{algorithmic}
+\end{algorithm}
+
 
