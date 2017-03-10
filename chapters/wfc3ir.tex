@@ -71,10 +71,10 @@ The log-likelihood function for each patch is written as follows.
 \FOR{$n=1,...,N$}
    \STATE // \emph{This can now be done in parallel for all i}
    %\WHILE{$\rho(X,D)>\epsilon_t$}
-   \STATE $b_{n}$ \gets \mathrm{median} $(y_{n})$
+   \STATE $b_{n}$ \gets \mathrm{median} \; $(y_{n})$
    \STATE $f_{n}$ \gets $\sum_{i=1}^{N_pix} \big(y_{n,i} - b_{n}\big)$
    \STATE \mathrm{Initialize} $\Delta_{n}$ with the 3\time3 polynomial method
-   \STATE $X_{n}$ \gets \mathrm{cubic spline} $(\Delta_n)[\big(y_{n,i} - b_{n}\big)/f_n]$
+   \STATE $X_{n}$ \gets \mathrm{cubic \; spline} $(\Delta_n)[\big(y_{n,i} - b_{n}\big)/f_n]$
 \ENDFOR
 \STATE $X$ \gets $\sum_{n=1}^{N} X_{n]$
    %\ENDWHILE
