@@ -50,16 +50,55 @@ resolved galaxies through model fitting, we need to convolve the model describin
 Therfore, having access to a higher resolution model of the PSF is an essential ingredient in weak lensing studies of galaxies detected by the $\hst$ $\wfc$ IR 
 channel.   
 
-In this investigation, we focus our attention to modeling the pixel-convolved PSF which is the optical (instrumental) convolved with the 
-pixel response function. An important step in all weak gravitational lensing studies is fitting a model to this pixel-convolved PSF which then will be used in making accurate estimates of the galaxy ellipticities and eventually the cosmic shear signal. 
-From now on, we refer to the pixel-convolved PSF as the PSF. 
+In this investigation, we focus on modeling the pixel-convolved PSF which is the optical (instrumental) PSF convolved with the 
+pixel response function. It is the pixel-convolved PSF that can be directly estimated from observation without making any assumption 
+about the sensitivity of detector pixels. Moreover, it is the pixel-convolved PSF that can be used to perform astrometry and photometry measurements as well as 
+galaxy shape measurement for weak lensing analyses. All these procedures involve fitting a model to the pixel-convolved PSF. 
 
-%A significant body of works are focused on developing a physical model of the optical PSF. 
+Alternatively, one can deliver a model of the optical (instrumental) PSF based on physical models of the telescope optics. 
+This involves measurement of the optical wavefront at all locations across the focal plane and use of physically motivated parameters 
+to model the image changes in wavefront. Significant progress has been made in exploring the space of physical models that can efficiently 
+describe the optical PSF \citep{zernike,krist1995,krist2011,galsim_software}. 
 
-The factor by which the PSF is undersampled varies from one filter to another.
-The \wfc camera consists of six filters: F105W, F125W, F140W, F160W. In what follows in the rest of this chapter, we focus on modelling the super-resolution PSF in the FLT frame of F160W filter. The data is collected from targeting the globular cluster Omega Centauri during the calibration program.
+Development of the optical models of the PSF are valuable efforts for simulations, validations, and understanding the systematic uncertainties 
+that can affect astronomical inferences \citep{great3,galsim}. In practice however, using the optical PSF for photometry, astrometry and weak lensing studies 
+requires fitting a star's model to the wavefront PSF model. The major drawbacks of this approach are the following: $(i)$ it does not make use of the observed 
+data, and ${ii}$ it makes strong assumptions about sensitivity of detector pixels when it is used for model fitting. Since these reasons, we focus on building a 
+data driven empirical model of the PSF. From now on in this \paper, we refer to the pixel-convolved PSF as the PSF. 
 
-Our strategy for inferring the super-resolution of the PSF model of F160W filter is as follows. 
+
+This \paper is structured as follows: In Section \ref{sec:data} we discuss the observations and data reduction. In Section \ref{sec:method} we discuss the algorithm we 
+have developed for infering the super-resolution PSF model of the $\hst$ $\wfc$ IR channel observations. In Section \ref{sec:results} we present the preliminary results, and 
+in Section{sec:summary} we summarize and conclude. 
+
+\section{Data}\label{sec:data}
+
+The $\wfc$ IR camera consists of four filters: F105W, F125W, F140W, F160W.
+In what follows in the rest of this \paper\ we focus on modeling the images of point sources in the F160W filter of $\hst$ $\wfc$ IR channel. 
+In our analysis, we make use of the FLT images that our calibrated with the recent models of charge transfer efficiency, flat-field, etc. 
+We choose not use Drizzeled images \citep{drizzle,astrodrizzle} because they introduce correlated noise and 
+distortions to the PSF that are not consistent across the image (a new algorithm \citep{olic} developed for the WFIRST mission does not suffer from these issues). 
+This poses a challenge for optimal extraction of information and accurate measurement of shapes. Therefore the pixels in the FLT images are better-suited for performing PSF modeling. 
+
+For each FLT image, we follow the following procedure to select stars with sufficiently high signal-to-noise ratio 
+for PSF mdoeling. First the Source Extractor software \citep{sextractor} is run on each image to detect the objects. 
+For each object, the stellarity index and blending/error flags are extracted. An object is called a \emph{star} if no blending/error flag is 
+raised, its stellarity index is greater than 0.8 and if its peak pixel brightness values is 25 times greater than the median pixel brightness 
+value.  
+
+The FLT files obtained from the HST MAST archive are accompanied by Data Quality extension files. While extracting the super-resolution PSF model 
+from the point sources in FLT images, pixels with data quality other than zero are not included in the model. This requirement guarantees that 
+the damaged pixels do not contribute to the PSF model. For each point source, we extract a 25 pixels $\time$ 25 pixels patch that is centered on the brightest 
+pixel of the point source.   
+
+\section{Method}\label{sec:method}
+
+
+We follow something like \citep{xd,hmf} heteroscedastic matrix factorization ....
+Simillar methods in the literature that rely on compressed sensing \citep{ngole,ngole2}
+
+
+The factor by which the PSF is undersampled varies from one filter to another. Our strategy for inferring the super-resolution of the PSF model of F160W filter is as follows. 
 First we run the Source Extractor algorithm to identify all the stellar sources in the observed data. 
 
 In patch $n$, the model is given by
@@ -122,4 +161,10 @@ super-resolution PSF $X$ is as follows:
 \end{algorithmic}
 \end{algorithm}
 
+\section{Preliminary Results}\label{sec:results}
 
+blah ...
+
+\section{Summary and Conclusion}\label{sec:summary}
+
+blah...
