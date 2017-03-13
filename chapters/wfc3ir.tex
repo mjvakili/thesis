@@ -93,10 +93,44 @@ pixel of the point source.
 
 \section{Method}\label{sec:method}
 
+We build our empirical model of the PSF by assuming that a given point source at the center of a patch can be described by 
+the following quantities: 
 
-We follow something like \citep{xd,hmf} heteroscedastic matrix factorization ....
-Simillar methods in the literature that rely on compressed sensing \citep{ngole,ngole2}
+\begin{itemize}
+\item A global solution for the super-resolution PSF $X$ that is shared between all point sources across the field of view. We assume 
+that $X$ is normalized to one and it is centered at the center of the central pixel of the patch. This super-resolution PSF is sampled on 
+a grid with a higher resolution that the native pixel grid of $\hst$ $\wfc$ IR observations.
 
+\item Centroid coordinate of a point source at a given patch $\Delta_n = (\Delta x_n, \Delta y_n)$. 
+These two parameters dictate the offset between the position of the centroid of the point source $n$ with 
+respect to the center of the patch.
+
+\item Flux quantity $f_n$ which is the brightness of the point source.
+
+\item A background quantity $b_n$ which sets the brightness level of the background sky.
+
+\end{itemize}
+
+Given these ingredients, we write down the generative forward model of the point sources in the center of patches in the following way:
+
+\begin{eqnarray}
+\mathbf{d}_{n} &=&  \mathbf{m}_{n} + \mathrm{noise}, \\
+m_{n,i} &=& f_{n}K^{(n)}_{il} (\Delta_n) X_{l} + b_{n}. 
+\end{eqnarray} 
+
+Note that the operator $K^{(n)}(\Delta_n)$ is a linear operator that maps the super-resolution psf $X$ to a downsampled PSF at the native 
+data grid. That is, when this operator is applied to $X$, it samples the $X$ on a downsampled grid (with the same resolution as the observations) 
+that is shifted with respect to the grid on which $X$ is defined. The shift between the two grids is given by the vector $\Delta_n = (\Delta x_n , \Delta y_n)$.
+
+The are many possibilities for designing the sampling operator $K$. We want to be able to explicitly construct these matrices so we can analytically 
+compute the likelihood function and its derivative with respect to the super-resolution PSF $X$. The simplest and fastest approach that one could 
+choose is bilinear interpolation. But after applying this method to simulated PSFs, we find that this method lacks the sufficient accuracy we 
+need for our forward model.
+
+%We follow something like \citep{xd,hmf} heteroscedastic matrix factorization ....
+%Simillar methods in the literature that rely on compressed sensing \citep{ngole,ngole2}
+
+It is important to note that our forward model of the $\wfc$ IR observations suffer from significant degeneracies. The first degen
 
 The factor by which the PSF is undersampled varies from one filter to another. Our strategy for inferring the super-resolution of the PSF model of F160W filter is as follows. 
 First we run the Source Extractor algorithm to identify all the stellar sources in the observed data. 
