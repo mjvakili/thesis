@@ -205,7 +205,7 @@ we update $f_n$ by optimizing $L_n$ while holding $\{b_n, \Delta_n, X\}$ fixed. 
 Once $\Delta_n$ is updated, we update the sampling matrix $K^{(n)}$ accordingly. 
 
 Once $\{b_n, f_n, \Delta_n\}$ for all patches, we update $X$ 
-by optimizing the regularized cost function $C_{\rm reg}$ given in Eq. \ref{eq:reg}. At every iteration, we normalize the super-resolution PSF and 
+by optimizing the regularized cost function $C_{\rm reg}$ given in Eq.~\ref{eq:reg}. At every iteration, we normalize the super-resolution PSF and 
 interpolate it such that it is centered on the center of the 75 $\times$ 75 grid. We repeat these iterations until the value of regularized cost function 
 $C_{\rm reg}$ converges.
 
@@ -235,7 +235,7 @@ In order to alleviate the issue arising from the light contamination of patches,
 of the noise. This additional term is proportional to squared downsampled model of the patch. This accounts for the discrepancy between the downsampled PSF model of the 
 point source at the center of the patch and the observed patch. The modified variance model is given by
 \beq
-$\mathbf{s}$_n^2 = \sigma^{2} + g$\mathbf{m}$_{n} + q$\mathbf{m}$_{n}^{2},
+\mathbf{s}_n^2 = \sigma^{2} + g\mathbf{m}_{n} + q\mathbf{m}_{n}^{2},
 \label{eq:modified_variance}
 \eeq 
 where in principle, the dimensionless parameter $q$ is large when we have do not have a good knowledge of the PSF model and should become 
@@ -250,11 +250,14 @@ At every iteration of optimizing the log-likelihood function, we mask out the pi
 \eeq
 where $\mathbf{s}_{n}^{2}$ is given Eq.~\ref{eq:modified_variance}. In a given patch $n$, the log-likelihood pixels with $\chi^{2}_{n,\mathrm{clip}} > 3$ 
 do not contribute to computation of $L_n$ and its derivatives with respect to model variables. 
+We set the parameter $q$ to 1. We note that this choice of does a good job at masking out the pixels that recieve light from the nearby or overlapping sources. 
+In principle $q$ needs to decrease iteratively as our knowledge of the PSF improves. In this work however, we choose to hold the value of $q$ fixed at one. 
 
+The algorithm we use for inference of the super-resolution PSF $X$ is summarized in Algorithm~\ref{alg:supermean}
 
 \begin{algorithm} 
 \caption{The procedure for Inferring the Super-Resolution PSF}
-\begin{algorithmic}[1] \label{alg:abcpmc}
+\begin{algorithmic}[1] \label{alg:supermean}
 %\STATE \DATA: D
 %\STATE \RESULT: ABC posterior sample of $\pars$
 \IF{$t=1:$}
@@ -289,6 +292,16 @@ do not contribute to computation of $L_n$ and its derivatives with respect to mo
 
 blah ...
 
-\section{Summary and Conclusion}\label{sec:summary}
+\section{Discussion}\label{sec:summary}
 
-blah...
+In this work, we have presented the first generative forward model of the observations of point sources in $\hst$ $\wfc$ IR 
+observations. The PSF of $\wfc$ IR channels are the most undersampled amongst all $\hst$ channels. 
+The exersize of making highly accurate masurements of the shapes of faint poorly resolved galaxies, accurate and precise astrometry and photometry of point sources, 
+correction of the variable sub-pixel response function ``flat-field'' of the telescope, and many other scientific applications require excuisitely accurate model of 
+the PSF at a resolution higher than what can be sampled by the $\wfc$ IR detectors. 
+
+Ou approach differs from the analysis presented in \citep{ngole,ngole2} in that it does not any infer the super-resolution PSF in a wavelet basis and it does not 
+imposes any sparsity regularization. 
+
+
+
