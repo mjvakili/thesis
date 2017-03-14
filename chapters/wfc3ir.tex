@@ -88,7 +88,7 @@ value.
 
 The FLT files obtained from the HST MAST archive are accompanied by Data Quality extension files. While extracting the super-resolution PSF model 
 from the point sources in FLT images, pixels with data quality other than zero are not included in the model. This requirement guarantees that 
-the damaged pixels do not contribute to the PSF model. For each point source, we extract a 25 pixels $\time$ 25 pixels patch that is centered on the brightest 
+the damaged pixels do not contribute to the PSF model. For each point source, we extract a 25 pixels $\times$ 25 pixels patch that is centered on the brightest 
 pixel of the point source.   
 
 \section{Method}\label{sec:method}
@@ -121,7 +121,7 @@ m_{n,i} &=& f_{n}K^{(n)}_{il} (\Delta_n) X_{l} + b_{n}.
 \label{eq:model}
 \end{eqnarray} 
 
-In equation~\ref{eq:model}, $\mathbf{d}_{n}$ is the observed 625 dimensional vector in patch $n$. $\mathbf{m}_{n}$ is the model of patch $n$ with the same dimensionality. The 
+In Eq.~\ref{eq:model}, $\mathbf{d}_{n}$ is the observed 625 dimensional vector in patch $n$. $\mathbf{m}_{n}$ is the model of patch $n$ with the same dimensionality. The 
 noise term \mathrm{noise} has a variance that we present shortly.
 The operator $K^{(n)}(\Delta_n)$ is a linear operator that maps the super-resolution psf $X$ to a downsampled PSF at the native 
 data grid. That is, when this operator is applied to $X$, it samples the $X$ on a downsampled grid (with the same resolution as the observations) 
@@ -144,7 +144,7 @@ present our strategy for estimating the values of the parameters of individual p
 the global solution of the super-resolution PSF $X$.
 
 The factor by which the PSF is undersampled varies from one filter to another. Our strategy for inferring the super-resolution of the PSF model of F160W filter is as follows. 
-First we run the Source Extractor algorithm to identify all the stellar sources in the observed data. In this \paper\ we estimate $X$ on a 75 pixels $\time$ 75 pixels grid, which 
+First we run the Source Extractor algorithm to identify all the stellar sources in the observed data. In this \paper\ we estimate $X$ on a 75 pixels $\times$ 75 pixels grid, which 
 has a resolution three times that of the native pixel grid of the observations.
 
 In order to estimate the PSF, we optimize the following likelihood function:
@@ -164,7 +164,7 @@ where we extract Gaussian variance $\sigma^{2}=0.01$ and gain $g=0.05$ from the 
 It is important to note that our forward model of the $\wfc$ IR 
 observations given by euation ~\ref{eq:model} suffers from degeneracies. The first degeneracy is between 
 the flux values $\{f_n\}$ and the super-resolution PSF $X$. This degeneracy will prevent us from finding a unique 
-solution for $\{f_n\}$ and $X$. This degeneracy can be lifted by adding a reqularization term to equation \ref{eq:total} that imposes 
+solution for $\{f_n\}$ and $X$. This degeneracy can be lifted by adding a reqularization term to Eq. \ref{eq:total} that imposes 
 smoothness condition to $X$. 
 
 We add the following term to the log-likelihood $L$
@@ -190,14 +190,14 @@ are in crowded fields and therefore applying the matched-filter centroiding meth
 or nearby sources. 
 
 The initial background values $\{b_n\}$ are estimated by taking the median pixel value in each patch. For initializing the flux values $\{f_n\}$, first we subtract the initial 
-estimates of background values from each patch. Afterwards, the $\{f_n\}$ values are initialized by computing the sum of the pixel values within 5$\time$5 apertures centered on 
-the central pixels of the patches. The reason for limiting our initialization of the flux estimates to the 5$\time$5 apertures is to prevent light contamination of fluxes from 
+estimates of background values from each patch. Afterwards, the $\{f_n\}$ values are initialized by computing the sum of the pixel values within 5$\times$5 apertures centered on 
+the central pixels of the patches. The reason for limiting our initialization of the flux estimates to the 5$\times$5 apertures is to prevent light contamination of fluxes from 
 overlapping and nearby sources. Besides since the PSF is poorly sampled, we expect the majority of the flux values to be captured by a few pixels in the centers of the patches. 
 
 Lastly, the super-resolution PSF $X$ is initialized in the following way. First we subtract our intial estimates of the sky background levels from the pacthes. Then we divid the 
 pixel values of the patches by their corresponding initial flux estimates. Then we use the cubic-spline interpolation method to interpolate the rescaled patches to a high resolution 
-75 $\time$ 75 grid whose centers is shifted by $\{-\Delta_n\}$ with respect to the initial centroiding estimates. Afterwards, we evaluate the mean of the interpolated rescaled patches 
-to get estimate the initial PSF. Furthermore, we normalize the PSF to one and interpolate it such that it is centered on the central pixel of the 75 $\time$ 75 high resolution grid.  
+75 $\times$ 75 grid whose centers is shifted by $\{-\Delta_n\}$ with respect to the initial centroiding estimates. Afterwards, we evaluate the mean of the interpolated rescaled patches 
+to get estimate the initial PSF. Furthermore, we normalize the PSF to one and interpolate it such that it is centered on the central pixel of the 75 $\times$ 75 high resolution grid.  
 
 Now that we have initialzed the parameters of our model, we present the EM algorithm for optimizing them. At every iteration, we follow this 
 iterative scheme. In the $n$th patch, we update $b_n$ by optimizing $L_n$ while holding $\{f_n, \Delta_n, X\}$ fixed. Then 
@@ -205,26 +205,51 @@ we update $f_n$ by optimizing $L_n$ while holding $\{b_n, \Delta_n, X\}$ fixed. 
 Once $\Delta_n$ is updated, we update the sampling matrix $K^{(n)}$ accordingly. 
 
 Once $\{b_n, f_n, \Delta_n\}$ for all patches, we update $X$ 
-by optimizing the regularized cost function $C_{\rm reg}$ given in equation (\ref{eq:reg}). At every iteration, we normalize the super-resolution PSF and 
-interpolate it such that it is centered on the center of the 75 $\time$ 75 grid. We repeat these iterations until the value of regularized cost function 
+by optimizing the regularized cost function $C_{\rm reg}$ given in Eq. \ref{eq:reg}. At every iteration, we normalize the super-resolution PSF and 
+interpolate it such that it is centered on the center of the 75 $\times$ 75 grid. We repeat these iterations until the value of regularized cost function 
 $C_{\rm reg}$ converges.
 
-Note that we need to set the strength of the smoothness regularization term $\epsilon$. In order to so, first we randomly divide the patches into to sets: 
-the training set and the cross validation set.  
+Note that we need to set the strength of the smoothness regularization term $\epsilon$. In order to so, we randomly divide the patches into to sets: 
+the training set and the cross validation set. We select a set of values $S_{\epsilon} = \{0.01,0.1,1,10,100\}$ for the parameter $\epsilon$. We then modify the optimization 
+procedure as follows. First, we select a value of $\epsilon$ from $S_{\epsilon}$. Then given the selected $\epsilon$ we follow the optimization procedure as described above to 
+the patches in the training sample to estimate $X$ as well as the parameters $\{f_n,b_n,\Delta_n\}$. 
 
+Once $X_{\epsilon}$ is estimated assuming a value for the parameter $\epsilon$, we optimize the patch negative log-likelihood $-2\ln L_n$ given in Eq.~\ref{eq:patch} to find a solution for $\{f_n,b_n,\Delta_n\}$
+variables for every patch in the cross validation set. We then sum up the optimal values of $-2\ln L_n$ in the cross validation patches to compute the cross validation score $C_{\rm cv}$ as a function of 
+regularization strength $\epsilon$
 
+\beq
+C_{\rm cv} (\epsilon) = -2 \sum_{n} \ln L_{n}^{\star} \; \mathrm{where} \; L_{n}^{\star} = \mathrm{max} \{ L_{n}(X_{\epsilon})\}
+\eeq
 
+In the end, we select the super-resolution PSF $X_{\epsilon}$ that minimizes the cross-validation cost function $C_{\rm cv} (\epsilon)$.
 
 %We follow something like \citep{xd,hmf} heteroscedastic matrix factorization ....
 %Simillar methods in the literature that rely on compressed sensing \citep{ngole,ngole2}
 
+Sofar we have not addressed the problem of how our generative forward model of the patches takes into account the light contamination arising from 
+the overlapping or nearby sources. Ideally one would use the bright isolated sources to estimate the PSF. This issue is particularly alarming since 
+a considerable number of point sources in our collected $\wfc$ IR observations are present in crowded regions. 
 
-Ideally one would use the bright isolated sources to estimate the PSF. A considerable fraction of the observed stars are present in the crowded fields. 
-In order to alleviate the issue arising from the contamination of stellar patches by the light coming from overlapping sources, we add another term to the noise model which accounts for the discrepancy between the downsampled PSF model on the data grid and the observed star. 
-
+In order to alleviate the issue arising from the light contamination of patches, we modify the noise model by introducing an additional term to the variance 
+of the noise. This additional term is proportional to squared downsampled model of the patch. This accounts for the discrepancy between the downsampled PSF model of the 
+point source at the center of the patch and the observed patch. The modified variance model is given by
 \beq
-s_n^2 = \sigma_{n}^{2} + g.m_{n} + qm_{n}^{2}
+$\mathbf{s}$_n^2 = \sigma^{2} + g$\mathbf{m}$_{n} + q$\mathbf{m}$_{n}^{2},
+\label{eq:modified_variance}
 \eeq 
+where in principle, the dimensionless parameter $q$ is large when we have do not have a good knowledge of the PSF model and should become 
+smaller as our knowledge of the PSF improves. 
+
+Furthermore, we use a $\chi^2$ clipping technique to clip ill-fit portions of the patches. 
+This clipping step will prevent the light contamination by overlapping sources to bias the infered parameters. 
+At every iteration of optimizing the log-likelihood function, we mask out the pixels for which the clipped $\chi^{2}$ 
+(denoted by $\chi^{2}_{clip}$ from now on) is larger than 3. For a given patch $n$, the clipped $\chi^{2}$ is defined in the folowing way:
+\beq
+\chi^{2}_{n,\mathrm{clip}} &=& \frac{(\mathbf{d}_{n} - \mathbf{m}_{n})^{2}}{\mathbf{s}_{n}^{2}}, 
+\eeq
+where $\mathbf{s}_{n}^{2}$ is given Eq.~\ref{eq:modified_variance}. In a given patch $n$, the log-likelihood pixels with $\chi^{2}_{n,\mathrm{clip}} > 3$ 
+do not contribute to computation of $L_n$ and its derivatives with respect to model variables. 
 
 
 \begin{algorithm} 
@@ -239,7 +264,7 @@ s_n^2 = \sigma_{n}^{2} + g.m_{n} + qm_{n}^{2}
    %\WHILE{$\rho(X,D)>\epsilon_t$}
    \STATE $b_{n}$ \gets \mathrm{median} \; $(y_{n})$
    \STATE $f_{n}$ \gets $\sum_{i=1}^{N_pix} \big(y_{n,i} - b_{n}\big)$
-   \STATE \mathrm{Initialize} $\Delta_{n}$ with the 3\time3 polynomial method
+   \STATE \mathrm{Initialize} $\Delta_{n}$ with the 3 \times 3 polynomial method
    \STATE $X_{n}$ \gets \mathrm{cubic \; spline} $(\Delta_n)[\big(y_{n,i} - b_{n}\big)/f_n]$
 \ENDFOR
 \STATE $X$ \gets $\sum_{n=1}^{N} X_{n]$
