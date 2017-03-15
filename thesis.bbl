@@ -9,6 +9,7 @@
 \bibitem[Ahn et al.(2015)]{ahn2015} Ahn, K., Iliev, I.~T., Shapiro, P.~R., Srisawat, C.\ 2015, \mnras, 450, 1486
 \bibitem[Akaike(1974)]{aic} Akaike, H.\ 1974, IEEE Transactions on Automatic Control, 19, 716 
 \bibitem[Akeret et al.(2015)]{abccosmology} Akeret, J., Refregier, A., Amara, A., Seehars, S., \& Hasner, C.\ 2015, \jcap, 8, 043 
+\bibitem[Anderson \& King(2000)]{anderson2000} Anderson, J., \& King, I.~R.\ 2000, \pasp, 112, 1360 
 \bibitem[Anderson et al.(2012)]{Anderson:2012aa} Anderson, L., Aubourg, E., Bailey, S., et al.\ 2012, \mnras, 427, 3435 
 \bibitem[Angulo et al.(2008)]{angulo2008} Angulo, R.~E., Baugh, C.~M., \& Lacey, C.~G.\ 2008, \mnras, 387, 921 
 \bibitem[Angulo et al.(2015)]{angulo2014} Angulo, R.~E., Baugh, C.~M., Frenk, C.~S., Lacey, C.~G.\ 2014, \mnras, 442, 3256
@@ -27,6 +28,7 @@
 \bibitem[Berlind et al.(2006)]{berlind2006} Berlind, A.~A., Frieman, J., Weinberg, D.~H., et al.\ 2006, \apjs, 167, 1 
 \bibitem[Bernardeau et al.(2002)]{Bernardeau:2002aa} Bernardeau, F., Colombi, S., Gazta{\~n}aga, E., \& Scoccimarro, R.\ 2002, \physrep, 367, 1 
 \bibitem[Bertin \& Arnouts(1996)]{sextractor} Bertin, E., \& Arnouts, S.\ 1996, \aaps, 117, 393 
+\bibitem[Bickerton \& Lupton(2013)]{bickerton} Bickerton, S.~J., \& Lupton, R.~H.\ 2013, \mnras, 431, 1275 
 \bibitem[Bishop \& Nasrabadi(2007)]{bishop} Bishop, C.~M., \& Nasrabadi, N.~M.\ 2007, Journal of Electronic Imaging, 16, 049901 
 \bibitem[Blanton et al.(2003)]{blanton2003} Blanton, M.~R., Hogg, D.~W., Bahcall, N.~A., et al.\ 2003, \apj, 592, 819 
 \bibitem[Blanton et al.(2005)]{Blanton2005} Blanton, M.~R., Schlegel, D.~J., Strauss, M.~A., et al.\ 2005, \aj, 129, 2562 
@@ -91,12 +93,14 @@
 \bibitem[Grieb et al.(2016)]{grieb2016} Grieb, J.~N., S{\'a}nchez, A.~G., Salazar-Albornoz, S., \& Dalla Vecchia, C.\ 2016, \mnras, 457, 1577 
 \bibitem[Guth \& Pi(1982)]{Guth:1982aa} Guth, A.~H., \& Pi, S.-Y.\ 1982, Physical Review Letters, 49, 1110 
 \bibitem[Guo et al.(2010)]{guo2010} Guo, Q., White, S., Li, C., \& Boylan-Kolchin, M.\ 2010, \mnras, 404, 1111 
+\bibitem[Guo et al.(2012)]{Guo:2012a} Guo, H., Zehavi, I., \& Zheng, Z.\ 2012, \apj, 756, 127    %FIXME!!!!!
 \bibitem[Guo et al.(2012)]{guo2012} Guo, H., Zehavi, I., \& Zheng, Z.\ 2012, \apj, 756, 127 
 \bibitem[Guo et al.(2015)]{hod-3pcf} Guo, H., Zheng, Z., Jing, Y.~P., et al.\ 2015, \mnras, 449, L95 
 \bibitem[Guo et al.(2015)]{guo2015} Guo, H., Zheng, Z., Zehavi, I., et al.\ 2015, \mnras, 453, 4368 
 \bibitem[Guo et al.(2016)]{hod_vs_sham} Guo, H., Zheng, Z., Behroozi, P.~S., et al.\ 2016, \mnras, 459, 3040 
 \bibitem[Guo et al.(2016)]{guo2016} Guo, H., Zheng, Z., Behroozi, P.~S., et al.\ 2016, \apj, 831, 3 
 \bibitem[Hahn et al.(2016)]{2016arXiv160701782H} Hahn, C., Vakili, M., Walsh, K., et al.\ 2016, arXiv:1607.01782 
+\bibitem[Hahn et al.(2017)]{Hahn:2017a} Hahn, C., Scoccimarro, R., Blanton, M.~R., Tinker, J.~L., \& Rodr{\'{\i}}guez-Torres, S.\ 2017, \mnras,  
 \bibitem[Harker et al.(2006)]{harker2006} Harker, G., Cole, S., Helly, J., Frenk, C., \& Jenkins, A.\ 2006, \mnras, 367, 1039 
 \bibitem[Hartlap et al.(2007)]{hartlap2007} Hartlap, J., Simon, P., \& Schneider, P.\ 2007, \aap, 464, 399 
 \bibitem[Hearin et al.(2013)]{sham_gmf} Hearin, A.~P., Zentner, A.~R., Berlind, A.~A., \& Newman, J.~A.\ 2013, \mnras, 433, 659 
@@ -216,6 +220,7 @@
 \bibitem[Scoccimarro et al.(2001)]{scoccimarro2001} Scoccimarro, R., Sheth, R.~K., Hui, L., \& Jain, B.\ 2001, \apj, 546, 20 
 \bibitem[Scoccimarro \& Sheth(2002)]{scocci2002} Scoccimarro, R., Sheth, R.~K.\ 2002, \mnras, 329, 629
 \bibitem[Seljak(2000)]{seljak2000} Seljak, U.\ 2000, \mnras, 318, 203 
+\bibitem[Sellentin \& Heavens(2016)]{Sellentin:2016a} Sellentin, E., \& Heavens, A.~F.\ 2016, \mnras, 456, L132 
 \bibitem[Sheth et al.(2001)]{sheth2001} Sheth, R.~K., Mo, H.~J., \& Tormen, G.\ 2001, \mnras, 323, 1 
 \bibitem[Sheth \& Tormen(2004)]{sheth2004} Sheth, R.~K., \& Tormen, G.\ 2004, \mnras, 350, 1385 
 \bibitem[Silk et al.(2012)]{silk12} Silk, D., Filippi, S., \& Stumpf, M.~P.~H.\ 2012, arXiv:1210.3296 
