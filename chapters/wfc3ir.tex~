@@ -47,7 +47,7 @@ model of the PSF.
 Furthermore, cosmic shear studies require accurate measurement of the shapes of individual distant galaxies. The galaxies used for estimation 
 of the cosmic shear signal are faint and barely resolved by the $\hst$ $\wfc$ detectors. In order to reliably estimate the ellipticities of these poorly 
 resolved galaxies through model fitting, we need to convolve the model describing the light distribution of these galaxies with a higher resolution PSF model. 
-Therfore, having access to a higher resolution model of the PSF is an essential ingredient in weak lensing studies of galaxies detected by the $\hst$ $\wfc$ IR 
+Therefore, having access to a higher resolution model of the PSF is an essential ingredient in weak lensing studies of galaxies detected by the $\hst$ $\wfc$ IR 
 channel.   
 
 In this investigation, we focus on modeling the pixel-convolved PSF which is the optical (instrumental) PSF convolved with the 
@@ -80,7 +80,7 @@ distortions to the PSF that are not consistent across the image (a new algorithm
 This poses a challenge for optimal extraction of information and accurate measurement of shapes. Therefore the pixels in the FLT images are better-suited for performing PSF modeling. 
 
 For each FLT image, we follow the following procedure to select stars with sufficiently high signal-to-noise ratio 
-for PSF mdoeling. First the Source Extractor software \citep{sextractor} is run on each image to detect the objects. 
+for PSF modeling. First the Source Extractor software \citep{sextractor} is run on each image to detect the objects. 
 For each object, the stellarity index and blending/error flags are extracted. An object is called a \emph{star} if no blending/error flag is 
 raised, its stellarity index is greater than 0.8 and if its peak pixel brightness values is 25 times greater than the median pixel brightness 
 value.  

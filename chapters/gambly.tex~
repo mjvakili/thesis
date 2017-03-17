@@ -37,7 +37,7 @@ citecolor=darkblue}
 
 \chapter{How are galaxies assigned to halos? searching for assembly bias in SDSS clustering measurements\chaplabel{gambly}}
 
-This \paper\ is joint work with ChangHoon~Hahn (NYU) submitted to the \emph{Astrophysical Journal}.. 
+This \paper\ is joint work with ChangHoon~Hahn (NYU) submitted to the \emph{Astrophysical Journal}.
 
 
 \section {chapter abstract}
@@ -79,7 +79,7 @@ In the standard model, the statistical properties of galaxies is governed by the
 %%%
 Mathematically, this assumption can be written as $P(N|M,\{x\})=P(N|M)$ where $\{x\}$ is the set of all possible halo properties beyond halo mass $M$.
 
-Despite this simplifying assumption, the models of galaxy--halo connection based on HOD have been successfully used in fitting the measurements of a wide range of statistics such as the projected two-point correlation function of galaxies, small scale redshift space distortion, three-point function, and galaxy--galaxy lensing with remarkable success (e.g. \citealt{zheng07,tinker_rsd2007,zehavi2011,leauthaud12,parejko2013,coupon2015,hod-3pcf,guo2015,miyatake15,zu2015,hod_vs_sham}). 
+Despite this simplifying assumption, the models of galaxy--halo connection based on HOD have been successfully used in fitting the measurements of a wide range of statistics such as the projected two-point correlation function of galaxies, small scale redshift space distortion, three-point function, and galaxy--galaxy lensing with remarkable success (e.g. \citealt{zheng07,tinker_rsd2007,zehavi2011,leauthaud12,parejko2013,coupon2015,hod-3pcf,miyatake15,zu2015,hod_vs_sham}). 
 HOD has been used in constraining the cosmological parameters through modeling the galaxy two-point correlation function (hereafter 2PCF) (\citealt{abazajian2005}), combination of 2PCF with mass-to-light ratio of galaxies (\citealt{tinker05}), redshift space distortions (\citealt{tinker_rsd2007}), mass-to-number ratio of galaxy clusters (\citealt{tinker2012}) galaxy-galaxy weak lensing (\citealt{vdb03,cacciato13,more13,vdb13}) in the main sample of galaxies
 of the Sloan Digital Sky Survey (hereafter SDSS, \citealt{york2000}), and also the combination of galaxy clustering and galaxy-galaxy lensing (\citealt{more15}) in SDSS III Baryon Oscillation Spectroscopic Survey (BOSS, \citealt{boss}). Furthermore, HOD is implemented in producing mock galaxy catalogs in the BOSS survey (\citealt{manera2013,white2014}). It has also been used in galaxy evolution studies (\citealt{conroy2009,leauthaud12,behroozi13,hudson2015,zu2015,zu2016}).
 
@@ -323,7 +323,9 @@ and satellite galaxies are different. The large scale clustering---or the two ha
 In particular, findings of \citet{weschler2006} and \citet{sunayama2016}
 have demonstrated that for halos with mass bellow the collapse mass ($M \leq M_{\rm col} \simeq 10^{12.5}\; M_{\odot} $) the large scale bias of high-$V_{\rm max}$ (or equivalently high-$c$ halos at a fixed halo mass) is larger than that of the low-$V_{\rm max}$ (low-$c$ halos). This signal reverses and weakens for the high mass halos ($M \geq M_{\rm col}$). Note that the halo concentration traces the maximum circular velocity $V_{\rm max}$ such that halos with higher $V_{max}$ have higher concentration and vice versa (see \citealt{prada2012}). For halos described by NFW profile, at a fixed halo mass, halos with higher values of concentration have higher values of $V_{\rm max}$.
 
-Furthermore, investigation of the scale dependence of halo assembly bias has shown that the ratio of the bias of high-$V_{\rm max}$ halos and the low-$V_{\rm max}$ halos has a bump-like feature in the quasi-linear scales $\sim$ 0.5 $\mathrm{Mpc}h^{-1}-5\mathrm{Mpc}h^{-1}$. From the theoretical standpoint, this phenomenon has been attributed to a population of distinct halos with $M \sim 10^{11.7} \; h^{-1}M_{\odot}$ at the present time that are close to the most massive groups and clusters (\citealt{sunayama2016}, and see \citealt{more2016} for the observational investigation of this signal by means of galaxy-galaxy lensing). The clustering of these population of halos is therefore dictated by that of the massive halos. Note that this scale-dependent bias feature vanishes in high mass halos. 
+Furthermore, investigation of the scale dependence of halo assembly bias has shown that the ratio of the bias of high-$V_{\rm max}$ halos and the low-$V_{\rm max}$ halos has a bump-like feature in the quasi-linear scales $\sim$ 0.5 $\mathrm{Mpc}h^{-1}-5\mathrm{Mpc}h^{-1}$. From the theoretical standpoint, this phenomenon has been attributed to a population of distinct halos with $M \sim 10^{11.7} \; h^{-1}M_{\odot}$ at the present time that are close to the most massive groups and clusters (\citealt{sunayama2016}.
+
+%, and see \citealt{more2016} for the observational investigation of this signal by means of galaxy-galaxy lensing). The clustering of these population of halos is therefore dictated by that of the massive halos. Note that this scale-dependent bias feature vanishes in high mass halos. %FIXME
 
 Consequently, at a fixed halo mass less than $M_{\rm col}$, assignment of more central galaxies to the high-$c$ halos (higher expected number of central galaxies in the high-$c$ halos) gives rise to a boost in the galaxy clustering in the linear scales as well as in regimes corresponding to the one-halo to two-halo transition. For the more massive halos ($M \geq M_{\rm col}$), we expect the large-scale clustering boost to reverse sign, and the quasi-linear bump feature to vanish.  
 

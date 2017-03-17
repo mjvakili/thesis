@@ -58,9 +58,8 @@ involves no (or minimal) approximations (\citealt{Oh:1999aa}, \citealt{Wandelt:2
 \citealt{Eriksen:2004aa}, \citealt{planckI, planckII}). 
 
 Fundamentally, the tractability of likelihood functions in cosmology flows from
-the fact that the initial conditions are exceedingly close to Gaussian in form 
-(\citealt{planck_NG, planck_inflation}),
-and that many sources of measurement noise are also Gaussian (\citealt{Knox:1995aa, Leach:2008aa}).
+the fact that the initial conditions are exceedingly close to Gaussian in form,
+and that many sources of measurement noise are also Gaussian (\citealt{Knox:1995aa}).
 Likelihood functions are easier to write down and evaluate when things are closer 
 to Gaussian, so at large scales and in the early universe. Hence likelihood analyses 
 are ideally suitable for CMB data. 
@@ -99,7 +98,7 @@ expensive. Fortunately, there are principled, (relatively) efficient methods for
 minimizing computation and delivering correct posterior inferences, using only a 
 data simulator and some choices about statistics. 
 In the present work, we use Approximate Bayesian Computation---ABC---which provides a \emph{rejection sampling} 
-framework (\citealt{abcrejectionsampling}) that relaxes the assumptions of the traditional approach. 
+framework that relaxes the assumptions of the traditional approach. 
 
 ABC approximates the posterior probability distribution function (model given the data)
 by drawing proposals from the prior over the model parameters, simulating the data from the 
