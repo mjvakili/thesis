@@ -30,8 +30,7 @@ Therefore it is important to make use of statistical techniques that mitigate
 biases arising from these systematic errors. It is important to design end-to-end simulations of the survey.
 
 Gravitational lensing of luminous sources (\eg\ galaxies) can measure 
-the state of the inhomogeneous matter density and the time-dependence of dark energy. 
-\citep{}. Cosmic shear studies are hurdled by a number of statistical uncertainties (\eg\ unknown distribution 
+the state of the inhomogeneous matter density and the time-dependence of dark energy. Cosmic shear studies are hurdled by a number of statistical uncertainties (unknown distribution 
 of galaxy intrinsic morphologies) and systematics. The long list of systematic error budget 
 of cosmic shear studies can in general fall into the following categories: uncertain distance 
 (photometric redshift) information, and imperfect knowledge of intrinsic alignments of galaxies and non-linear matter 
@@ -47,25 +46,25 @@ sample of galaxies \citep{bonnett2016,choi2016,boris2016,hildebrandt2017}. %FIXM
 Intrinsic alignment of galaxies (IAs) also contaminate the cosmic shear signal. These IAs, if not accounted for, 
 can significantly bias the cosmological parameter inference \citep{codis2015,joachimi2015, kirk2015,krause_ia}. 
 Cosmological interpretation of the cosmic shear signal requires an accurate knowledge of the nonlinear 
-matter power spectrum \citep{semboloni2013, eifler2015, schaye2015, joudaki2016, kitching2016, mead2016}. The role of 
-Modeling the Baryonic feedback and the accuracy of the emulators for nonlinear matter clustering remains an active area of research. 
+matter power spectrum \citep{semboloni2013, eifler2015, schaye2015, joudaki2016, kitching2016, mead2016}. Modeling the role of 
+Baryonic feedback and the accuracy of the emulators for nonlinear matter clustering remains an active area of research. 
 
 Perhaps the most widely and extensively studied sources of systematics in weak lensing are the image systematics which make 
-the process of inferring the cosmic shear from noisy images of galaxies is far from trivial. The light profile of 
+the process of inferring the cosmic shear from noisy images of galaxies far from trivial. The light profile of 
 galaxies is distorted with the atmosphere and telescope optics. The amount of distortion is captured in a kernel called 
 the Point Spread Function (PSF). The size and anisotropy of the background galaxies used in weak lensing studies is 
 smaller than those of the PSF, making the cosmic shear signal dominated by the PSF which is empirically estimated at the positions of stars and 
 then interpolated to the positions of galaxies.  
 
 Furthermore, additional systematics arise from unrealistic models of galaxy light profile \citep{voight2010,im3shape,kac2014}, 
-detector effects \citep{arun2016,jaya2016,plazas2016}, and bias of the point estimates of shear due to nonlinear dependence of galaxy ellipticities 
-on the pixel data in the presence of noise \citep{melchoir,great3,conti2017}, incorrect model of the PSF or inaccurate PSF interpolation 
-\citep{rowe2010,kuijken2015,great3,des}.
+detector effects \citep{arun2016,jaya2016,plazas2016}, nonlinear dependence of galaxy ellipticities 
+on the pixel data in the presence of noise that biases the shear \emph{point} \emph{estimates} \citep{melchoir,great3,conti2017}, 
+and incorrect model of the PSF or inaccurate PSF interpolation \citep{rowe2010,kuijken2015,great3,des}.
 
 These systematics lead to shear calibration biases in the form of additive and multiplicative 
 shear biases. For instance, an incorrect size or ellipticity in the PSF model could introduce 
-an additional term to the estimated the cosmic shear which has the same order of magnitude as 
-the cosmological signal.
+a multiplicative bias shear. This bias gives rise to a spurious correlation function with the 
+same order of magnitude as the cosmological signal.
 
 The shear biases are either calibrated with realistic image simulations \citep{im3shape,jee2016,conti2017} or through cross correlation of 
 the cosmic shear signal with other cosmic probes that do not suffer from the same biases (\eg\ galaxy positions)
@@ -104,25 +103,75 @@ Most galaxies of interest for weak lensing studies with these space-based weak l
 As a consequence, estimating the shear from unresolved galaxy images requires 
 knowing the the galaxy light profile model and the PSF at higher resolutions than the native pixel size of the telescopes \citep{olic,ngole2}.
 
-The filters in \hst\ \wfc\ IR channel have the most undersampled detectors among all \hst\ filters. 
-As such, \hst \wfc\ IR channel could benefit a lot from an accurate model of its super resolution PSF. 
+The filters in HST WFC3 IR channel have the most undersampled detectors among all HST filters. 
+As such, HST WFC3 IR channel could benefit a lot from an accurate model of its super resolution PSF. 
 In this chapter 5, we present the first generative forward model of stellar sources as observed by the HST camera.
-Unlike previous attempts at inferring the PSF model of \hst\ \wfc\, our model for is empirical in that it makes 
+Unlike previous attempts at inferring the PSF model of HST WFC3, our model is data driven in that it makes 
 use of the observed data and it presents a proper treatment of modeling in the presence of damaged pixels, overlapping 
 point sources, \etc\.  
 
-Galaxy surveys will provide a valuable legacy dataset that can be used for detailed galaxy formation studies. 
-These investigations will provide a window into how the visible structures in the observable universe 
-trace the underlying invisible dark matter density. Furthermore, more comprehensive knowledge of galaxy-dark matter connection 
-can inform cosmological parameter inferences with galaxies. 
+Galaxies are luminous tracers of the large scale structure. Thus study of galaxy clustering as a means to understand the growth of structure is 
+one of the key drivers of low redshift galaxy surveys. Significant progress has been made in linking the observations of 
+galaxies and our theoretical understanding of the nonlinear evolution of dark matter. 
 
+On large scales, cosmological perturbation theory equipped with a prescription for galaxy bias permits us 
+to accurately model the clustering of galaxies. However, nonlinear evolution of matter 
+poses a challenge to applicability of perturbative approaches in small scales. In such limits, 
+galaxy clustering must be understood within the context of the halo model which has had 
+much success in describing time evolution of the clustering of matter.  
+
+Modeling galaxy clustering with the halo models follows two central assumptions. First, galaxies form in virialized regions of 
+dark matter over density known as halos. Clustering of galaxies is governed by clustering of dark matter halos. 
+In order to use galaxy clustering measurements for gaining insight into cosmological structure formation models we need to 
+know how clustering of galaxies can be determined from clustering of halos. That is, we are required to specify how halos 
+are populated with galaxies.
+
+One of the successful prescriptions for assignment of galaxies to halos is the halo occupation distribution (HOD). 
+HOD provides a prescription for the expected number of galaxies that reside a halo as well as 
+the positions and velocities of galaxies are distributed within a halo. This simple assumption has been useful 
+in reproducing the observed statistics of galaxies.
+
+Despite being successful at reproducing a wide range of the observed statistics of galaxies, HOD remains agnostic about assembly bias.
+Assembly bias, a phenomenon seen in simulations, has not certainly been confirmed with observations.
+According to halo assembly bias, at a fixed halo mass, clustering of halos depend on halo properties beyond mass.
+There are very mixed results in the literature.
+
+By weak lensing analysis of the galaxy groups in GAMA (GAlaxy and Mass Assembly, see \citet{driver}) 
+with the KiDS (Kilo Degree Survey, see \citet{kuijken2015}) imaging data, \citet{dvornik} find no evidence for halo assembly bias.
+Using the galaxy-galaxy lensing and clustering measurements of SDSS galaxy \emph{redmapper} clusters \citep{rykoff} with halo masses 10^14 $M_{\odot}$, 
+\citep{miyatake2016} claimed strong difference between the bias of two populations of clusters with different radial distribution of satellite galaxies 
+(a proxy for the formation history of a dark matter halo). \citet{zuetal2016} argues that the findings of \citet{miyatake2016} is due to projection effects (as a result of highly uncertain photometric redshifts) and they cannot be interpreted as detection of assembly bias. 
+
+The effect of assembly bias on galaxy clustering can be seen in many subhalo abundance matching (SHAM, see \citet{hearin2014,lehman2015} and references therein) methods. SHAM assumes a one-to-one relation between halo (including subhalos) properties (\eg\ mass, circular velocity) and some galaxy properties (\eg\ stellar mass, luminosity). In Chapter 3, with the clustering measurements of SDSS DR7 main sample of galaxies \citep{abazajian2009} and the Small MultiDark $N$-body simulation, we show that the clustering predictions of \citep{decorated} HOD model are consistent with the predictions of the \emph{mass-only} HOD model within 1-$\sigma$ level. 
+
+We also note that for the sample of $L_{\star}$ galaxies, there is \emph{slight} improvements in galaxy clustering predictions of the HOD model with assembly bias 
+on large scales. Furthermore, we note that in terms of information criteria, there is no improvement when a more complex HOD model is used to fit the clustering measurements.
+We note that in terms of the effect of halo assembly bias on galaxy clustering, our constraints show qualitatively behavior in comparison with the predictions of subhalo abundance matching models. Unlike the findings of \citet{zentner2016} we do not find any evidence for assembly bias in the satellite population of galaxies.
+
+One of the perplexities faced by contemporary cosmology is the discordance between the constraints on cosmological parameters from some of the low redshift probes and 
+the Planck CMB results \citep{planckII}. This includes the cosmological constraints from the cosmic shear analysis of CFHTLenS \citep{heymans,kitching2016} and KiDs \citep{hildebrandt2017}. The disagreement appears in the constraints over the parameters $\sigma_{8}$ and $\Omega_{m}$, the amplitude of the linear matter power spectrum and the matter density parameters respectively. This tension exists at a 2-$\sigma$ level. 
+
+The \emph{cosmic} \emph{discordance} persists when the low redshift probe under consideration is galaxy-galaxy lensing which contains information regarding galaxy-matter cross correlation. Similar to galaxy clustering, modeling the small scale galaxy-galaxy lensing signal requires assuming a halo model. 
+This signal is an estimate of the lensing of the background galaxies from a \emph{deep} imaging survey and the foreground galaxies in a \emph{shallow} spectroscopic survey.
+
+The galaxy-galaxy lensing signal of SDSS III/BOSS \citep{miyatake15,lensingislow} are not consistent with the predictions of best-fit Planck cosmology \citep{planckII}.
+The $\sigma_{8}-\Omega_{m}$ constraint from clustering and galaxy-galaxy lensing measurements of BOSS galaxies \citep{more15} does not match the Planck constraint.
+Disagreements hold for the cosmological constraints---assuming a simple mass only HOD model---from the clustering and galaxy-galaxy lensing measurements of SDSS DR7 main sample \citep{more13}. These discrepancies could signal a new physics, observational systematics, or uncertainties arising from the galaxy formation physics, including \emph{assembly} \emph{bias}.
+
+Combining the early universe probes of cosmology and large scale structure requires accurate characterization of systematics and nuisance parameters in both datasets.
+In the context of large scale structure, models governing the galaxy-halo connection serve as nuisance parameters that we marginalize over. A possible source of uncertainty in characterization of galaxy-halo connection is assembly bias. In order to distinguish between physical scenarios pointing at potentially new physics and systematics, it is important to study the effect of halo assembly bias on low redshift cosmological probes including galaxy clustering and galaxy-galaxy lensing. In Chapter 3, we take a step toward better understanding the impact of assembly bias. 
+
+%Galaxy surveys will provide a valuable legacy dataset that can be used for detailed galaxy formation studies. 
+%These investigations will provide a window into how the visible structures in the observable universe 
+%trace the underlying invisible dark matter density. Furthermore, more comprehensive knowledge of galaxy-dark matter connection 
+%can inform cosmological parameter inferences with galaxies. 
 
 In Chapters 2,3, and 4 we used the suite of MultiDark cosmological $N$-body simulations made publicly available in the CosmoSim database \footnote{\url{https://www.cosmosim.org}}. The CosmoSim database used in this paper is a service by the Leibniz-Institute for Astrophysics Potsdam (AIP). sThe MultiDark database was developed in cooperation with the Spanish MultiDark Consolider Project CSD2009-00064.
 
 In Chapter 3, we used the measurements done with the SDSS DR7 \footnote{\url{http://classic.sdss.org/dr7/}} data \citep{abazajian2009}. 
 Funding for the SDSS and SDSS-II has been provided by the Alfred P. Sloan Foundation, the Participating Institutions, the National Science Foundation, the U.S. Department of Energy, the National Aeronautics and Space Administration, the Japanese Monbukagakusho, the Max Planck Society, and the Higher Education Funding Council for England. The SDSS Web Site is http://www.sdss.org/. The SDSS is managed by the Astrophysical Research Consortium for the Participating Institutions. The Participating Institutions are the American Museum of Natural History, Astrophysical Institute Potsdam, University of Basel, University of Cambridge, Case Western Reserve University, University of Chicago, Drexel University, Fermilab, the Institute for Advanced Study, the Japan Participation Group, Johns Hopkins University, the Joint Institute for Nuclear Astrophysics, the Kavli Institute for Particle Astrophysics and Cosmology, the Korean Scientist Group, the Chinese Academy of Sciences (LAMOST), Los Alamos National Laboratory, the Max-Planck-Institute for Astronomy (MPIA), the Max-Planck-Institute for Astrophysics (MPA), New Mexico State University, Ohio State University, University of Pittsburgh, University of Portsmouth, Princeton University, the United States Naval Observatory, and the University of Washington.
 
-In Chapter 5, all of the HST archival data were obtained from the Mikulski Archive for Space Telescopes (MAST) \footnote{\url{https://archive.stsci.edu}}. STScI is operated by the Association of Universities for Research in Astronomy, Inc., under NASA contract NAS5-26555. Support for MAST for non-HST data is provided by the NASA Office of Space Science via grant NNX09AF08G and by other grants and contracts.
+In Chapter 5, all of the HST archival data were obtained from the Mikulski Archive for Space Telescopes (MAST) \footnote{\url{https://archive.stsci.edu}}. STScI is operated by the Association of Universities for Research in Astronomy, Inc., under NASA contract NAS5-26555.
  
 Bulk of the computations in this work were carried out on the Mercer cluster which is part of the New York University High Performance Computing facilities \footnote{https://wikis.nyu.edu/display/NYUHPC/Clusters+-+Mercer}}. For a fraction of computations performed for this thesis, I acknowledge the use of machines in the Center for Cosmology and Particle Physics \footnote{http://ccpp.nyu.edu}}.
 I also acknowledge the use of the computational resources in MareNostrum Cosmological Project \footnote{http://astro.ft.uam.es/marenostrum/}}. 

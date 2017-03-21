@@ -77,7 +77,9 @@
 \bibitem[Dodelson \& Schneider(2013)]{dodelson2013} Dodelson, S., \& Schneider, M.~D.\ 2013, \prd, 88, 063537 
 \bibitem[Doob(1946)]{crlb} Doob, J.~L.\ 1946, Science, 104, 450 
 \bibitem[Dressler(1980)]{Dressler:1980aa} Dressler, A.\ 1980, \apj, 236, 351 
+\bibitem[Driver et al.(2011)]{driver} Driver, S.~P., Hill, D.~T., Kelvin, L.~S., et al.\ 2011, \mnras, 413, 971 
 \bibitem[Dutton \& Macci{\`o}(2014)]{nfw_c(M)} Dutton, A.~A., \& Macci{\`o}, A.~V.\ 2014, \mnras, 441, 3359 
+\bibitem[Dvornik et al.(2017)]{dvornik2017} Dvornik, A., Cacciato, M., Kuijken, K., et al.\ 2017, arXiv:1703.06657 
 \bibitem[Eifler et al.(2015)]{eifler2015} Eifler, T., Krause, E., Dodelson, S., et al.\ 2015, \mnras, 454, 2451 
 \bibitem[Eriksen et al.(2004)]{Eriksen:2004aa} Eriksen, H.~K., O'Dwyer, I.~J., Jewell, J.~B., et al.\ 2004, \apjs, 155, 227 
 \bibitem[Feldman et al.(1994)]{feldman1994} Feldman, H.~A., Kaiser, N., \& Peacock, J.~A.\ 1994, \apj, 426, 23 
@@ -123,6 +125,7 @@
 \bibitem[Heitmann et al.(2008)]{cosmiccode} Heitmann, K., Luki{\'c}, Z., Fasel, P., et al.\ 2008, Computational Science and Discovery, 1, 015003 
 \bibitem[Heitmann et al.(2009)]{coyote2} Heitmann, K., Higdon, D., White, M., et al.\ 2009, \apj, 705, 156 
 \bibitem[Heitmann et al.(2010)]{coyote1} Heitmann, K., White, M., Wagner, C., Habib, S., \& Higdon, D.\ 2010, \apj, 715, 104 
+\bibitem[Heymans et al.(2013)]{heymans} Heymans, C., Grocutt, E., Heavens, A., et al.\ 2013, \mnras, 432, 2433 
 \bibitem[Hildebrandt et al.(2017)]{hildebrandt2017} Hildebrandt, H., Viola, M., Heymans, C., et al.\ 2017, \mnras, 465, 1454 
 \bibitem[Hoekstra et al.(2016)]{hoekstra} Hoekstra, H., Viola, M., \& Herbonnet, R.\ 2016, arXiv:1609.03281 
 \bibitem[Howlett et al.(2015)]{howlet2015} Howlett, C., Manera, M., \& Percival, W.~J.\ 2015, Astronomy and Computing, 12, 109 
@@ -177,6 +180,7 @@
 \bibitem[Lemson \& Kauffmann(1999)]{lemson99} Lemson, G., \& Kauffmann, G.\ 1999, \mnras, 302, 111 
 \bibitem[Leauthaud et al.(2011)]{leauthaud11} Leauthaud, A., Tinker, J., Behroozi, P.~S., Busha, M.~T., \& Wechsler, R.~H.\ 2011, \apj, 738, 45 
 \bibitem[Leauthaud et al.(2012)]{leauthaud12} Leauthaud, A., Tinker, J., Bundy, K., et al.\ 2012, \apj, 744, 159 
+\bibitem[Leauthaud et al.(2017)]{lensingislow} Leauthaud, A., Saito, S., Hilbert, S., et al.\ 2017, \mnras, 467, 3024 
 \bibitem[Leistedt \& Hogg(2016)]{boris2016} Leistedt, B., \& Hogg, D.~W.\ 2016, arXiv:1612.00847 
 \bibitem[Levi et al.(2013)]{desi} Levi, M., Bebek, C., Beers, T., et al.\ 2013, arXiv:1308.0847 
 \bibitem[Levi et al.(2013)]{desi} Levi, M., Bebek, C., Beers, T., et al.\ 2013, arXiv:1308.0847 
@@ -197,7 +201,6 @@
 \bibitem[McEwen \& Weinberg(2016)]{edHOD-weinberg} McEwen, J.~E., \& Weinberg, D.~H.\ 2016, arXiv:1601.02693 
 \bibitem[Mead et al.(2016)]{mead2016} Mead, A.~J., Heymans, C., Lombriser, L., et al.\ 2016, \mnras, 459, 1468 
 \bibitem[Melchior \& Viola(2012)]{melchoir} Melchior, P., \& Viola, M.\ 2012, \mnras, 424, 2757 
-\bibitem[Miyatake et al.(2015)]{miyatake15} Miyatake, H., More, S., Mandelbaum, R., et al.\ 2015, \apj, 806, 1 
 \bibitem[Miyatake et al.(2015)]{miyatake15} Miyatake, H., More, S., Mandelbaum, R., et al.\ 2015, \apj, 806, 1 
 \bibitem[Miyatake et al.(2016)]{miyatake2016} Miyatake, H., More, S., Takada, M., et al.\ 2016, Physical Review Letters, 116, 041301 
 \bibitem[Mo \& White(1996)]{Mo:1996aa} Mo, H.~J., \& White, S.~D.~M.\ 1996, \mnras, 282, 347 
@@ -244,6 +247,7 @@
 \bibitem[Rowe et al.(2011)]{olic} Rowe, B., Hirata, C., \& Rhodes, J.\ 2011, \apj, 741, 46 
 \bibitem[Rowe et al.(2014)]{galsim_software} Rowe, B., Jarvis, M., \& Mandelbaum, R.\ 2014, Astrophysics Source Code Library, ascl:1402.009 
 \bibitem[Rowe et al.(2015)]{galsim} Rowe, B.~T.~P., Jarvis, M., Mandelbaum, R., et al.\ 2015, Astronomy and Computing, 10, 121 
+\bibitem[Rykoff et al.(2014)]{rykoff} Rykoff, E.~S., Rozo, E., Busha, M.~T., et al.\ 2014, \apj, 785, 104 
 \bibitem[Santiago \& Strauss(1992)]{Santiago:1992aa} Santiago, B.~X., \& Strauss, M.~A.\ 1992, \apj, 387, 9 
 \bibitem[Schaye(2015)]{schaye2015} Schaye, J.\ 2015, IAU General Assembly, 22, 2250042 
 \bibitem[Schaan et al.(2016)]{schann} Schaan, E., Krause, E., Eifler, T., et al.\ 2016, arXiv:1607.01761 
@@ -328,6 +332,7 @@
 \bibitem[Zheng \& Guo(2016)]{zheng_guo} Zheng, Z., \& Guo, H.\ 2016, \mnras, 458, 4015 
 \bibitem[Zu \& Mandelbaum(2015)]{zu2015} Zu, Y., \& Mandelbaum, R.\ 2015, \mnras, 454, 1161 
 \bibitem[Zu \& Mandelbaum(2016)]{zu2016} Zu, Y., \& Mandelbaum, R.\ 2016, \mnras, 457, 4360 
+\bibitem[Zu et al.(2016)]{zuetal2016} Zu, Y., Mandelbaum, R., Simet, M., Rozo, E., \& Rykoff, E.~S.\ 2016, arXiv:1611.00366 
 \bibitem[Zuntz et al.(2013)]{im3shape} Zuntz, J., Kacprzak, T., Voigt, L., et al.\ 2013, \mnras, 434, 1604 
 \bibitem[Zuntz et al.(2014)]{im3shape_code} Zuntz, J., Kacprzak, T., Voigt, L., et al.\ 2014, Astrophysics Source Code Library, ascl:1409.013 
 \end{thebibliography}
