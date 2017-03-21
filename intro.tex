@@ -18,7 +18,7 @@ Combining multiple probes such as galaxy-galaxy auto correlation function and ga
 correlation has been shown to provide a powerful cosmological probe after marginalizing out 
 the galaxy-halo connection.
 
-With the spectroscopic surveys such as eBOSS \citep{eboss}, DESI , and Euclid \citep{euclid}, 
+With the spectroscopic surveys such as eBOSS \citep{eboss}, DESI, and Euclid \citep{euclid}, 
 we are going to precisely constrain the expansion history of the universe as well as the growth of structure. 
 With these constraints, we will be able to distinguish different physical scenarios that explain the accelerating expansion of the universe. 
 A crucial component of BAO and RSD analyses is estimation of the uncertainties of the statistical summaries of 
@@ -29,13 +29,88 @@ Furthermore, we live in the era of systematic dominated measurements.
 Therefore it is important to make use of statistical techniques that mitigate 
 biases arising from these systematic errors. It is important to design end-to-end simulations of the survey.
 
-Weak gravitational lensing is the study of the distortion of lights coming from distant galaxies by 
-the intervening large scale structure. Cosmic shear is a direct probe of the distribution of 
-matter in the universe. Cosmic shear analysis in multiple tomographic bins is going to 
-constrain the dark energy equation of state and growth of structure. 
-Extraction of the cosmological information from the galaxy images is a procedure far from 
-trivial. This is due to the fact that the cosmic shear signal is dominated by systematics such as the PSF. 
+Gravitational lensing of luminous sources (\eg\ galaxies) can measure 
+the state of the inhomogeneous matter density and the time-dependence of dark energy. 
+\citep{}. Cosmic shear studies are hurdled by a number of statistical uncertainties (\eg\ unknown distribution 
+of galaxy intrinsic morphologies) and systematics. The long list of systematic error budget 
+of cosmic shear studies can in general fall into the following categories: uncertain distance 
+(photometric redshift) information, and imperfect knowledge of intrinsic alignments of galaxies and non-linear matter 
+power spectrum models, and image systematics. 
 
+Tomographic reconstruction of the distribution of dark matter with imaging surveys requires 
+accurate distance information which is encoded in the redshifts of galaxies. 
+The redshift estimated from the imaging surveys is usually uncertain as it is measured with coarse 
+spectra in the form of a few magnitude numbers based on broadband photometry. These redshifts are called 
+photometric redshifts and their accuracy depends on the number of broadband filters and the overlapping spectroscopic 
+sample of galaxies \citep{bonnett2016,choi2016,boris2016,hildebrandt2017}. %FIXME BORIS AND HOGG?
+
+Intrinsic alignment of galaxies (IAs) also contaminate the cosmic shear signal. These IAs, if not accounted for, 
+can significantly bias the cosmological parameter inference \citep{codis2015,joachimi2015, kirk2015,krause_ia}. 
+Cosmological interpretation of the cosmic shear signal requires an accurate knowledge of the nonlinear 
+matter power spectrum \citep{semboloni2013, eifler2015, schaye2015, joudaki2016, kitching2016, mead2016}. The role of 
+Modeling the Baryonic feedback and the accuracy of the emulators for nonlinear matter clustering remains an active area of research. 
+
+Perhaps the most widely and extensively studied sources of systematics in weak lensing are the image systematics which make 
+the process of inferring the cosmic shear from noisy images of galaxies is far from trivial. The light profile of 
+galaxies is distorted with the atmosphere and telescope optics. The amount of distortion is captured in a kernel called 
+the Point Spread Function (PSF). The size and anisotropy of the background galaxies used in weak lensing studies is 
+smaller than those of the PSF, making the cosmic shear signal dominated by the PSF.  
+
+Furthermore, additional systematics arise from unrealistic models of galaxy light profile [CITE BRIDLE AND VOIGHT], 
+detector effects \citep{arun2016,jaya2016,plazas2016}, and nonlinear dependence of galaxy ellipticities in the presence of noise 
+[kakperzak, zuntz, schneider, bernstein, ...].
+
+These systematics lead to shear calibration biases in the form of additive and multiplicative 
+shear biases. For instance, an incorrect size or ellipticity in the PSF model could introduce 
+an additional term to the estimated the cosmic shear which has the same order of magnitude as 
+the cosmological signal.
+
+Many strategies have been developed in order to mitigate the shear biases. 
+The most widely used technique is calibration of shear with realistic image simulations [great3, dls james jee, jarvis 2016, kuiken] which 
+are limited because of the difficulty in generating realistic galaxy images [great3,francoise] and the ability to match the depth and 
+detection limits of imaging surveys [hoekstra]. 
+
+Another strategy for mitigation of shear biases is cross correlation of the weak lensing shear with galaxy positions [SCHANN] or the CMB lensing [LIU].
+The premise of these techniques is that by joint analysis of a signal that suffers from a certain systematic bias and another signal that lacks that systematic bias, 
+one could constrain---self-calibrate--- that bias parameters. The limitation of self-calibration is that it makes strong assumptions about the assigning a single bias parameter 
+to a large population of galaxies under consideration.  
+
+More modern shear inference models that rely on statistical inference of the cosmic shear signal instead of 
+taking the average of galaxy ellipticities have been shown to provide promising 
+venues for mitigating the biases in shear estimation [huff,sheldon,schneider, bernstein]. 
+However, it is important to note that the accuracy of these methods is limited to 
+having an accurate model of the PSF which is empirically estimated at the positions of stars and 
+then interpolated to the positions of galaxies.
+
+One of the steps of astronomical image processing that could lead to inaccurate model of the PSF is centroiding 
+of stars. An errornous method for determination of the centroid of stars could lead to both inaccurate estimation of the 
+PSF at the positions of stars and inaccurate PSF interpolation [cite lupton DESC]. Large astronomical surveys rely on approximate 
+methods for centroiding the stars [cite lupton, source extractor, jarvis]. 
+
+In chapter one we argue that in the presence of noise, there exist
+a lower bound on the error arising from centroiding methods. We show that this theoretically set lower bound, also known as the Cram\'{e}r-Rao lower bound, 
+is \emph{almost} saturated by centroiding methods that rely on correlating the images of stars with the PSF or some approximation to the 
+PSF. These centroiding methods are called matched-filter centroiding methods and in certain limits provide an approximation to the more accurate 
+methods that rely on fitting a model to the stars. 
+
+Additionally, weak lensing shear couples the short wavelength and long wavelength modes of the galaxy light profiles. 
+Therefore estimation of the response of galaxy light profile to shear requires knowing the model of galaxy image 
+with a resolution better than the PSF that the image of galaxy is convolved with. 
+
+In most space telescope [CITE HST and WFIRST and Euclid] the detectors are designed to be large in order to yield wider field of view. 
+That is, the detectors sample the light profile of the PSF at a lower resolution. In such cases, a large fraction of the light of a given point source 
+is captured by the pixel that contains the centroid of the point source. That is the PSF is \emph{undersampled}.
+
+Most galaxies of interest for weak lensing studies with these space-based weak lensing experiments are unresolved. 
+As a consequence, estimating the shear from unresolved galaxy images requires 
+knowing the the galaxy light profile model and the PSF at lower resolutions [ROWE, NGOLE2, ...].
+
+The filters in \hst\ \wfc\ IR channel have the most undersampled detectors among all \hst\ filters. 
+As such, \hst \wfc\ IR channel could benefit a lot from an accurate model of its super resolution PSF. 
+In this chapter 5, we present the first generative forward model of stellar sources as observed by the HST camera.
+Unlike previous attempts at inferring the PSF model of \hst\ \wfc\, our model for is empirical in that it makes 
+use of the observed data and it presents a proper treatment of modeling in the presence of damaged pixels, overlapping 
+point sources, \etc\.  
 
 Galaxy surveys will provide a valuable legacy dataset that can be used for detailed galaxy formation studies. 
 These investigations will provide a window into how the visible structures in the observable universe 
@@ -43,8 +118,14 @@ trace the underlying invisible dark matter density. Furthermore, more comprehens
 can inform cosmological parameter inferences with galaxies. 
 
 
+In Chapters 2,3, and 4 we used the suite of MultiDark cosmological $N$-body simulations made publicly available in the CosmoSim database \footnote{\url{https://www.cosmosim.org}}. The CosmoSim database used in this paper is a service by the Leibniz-Institute for Astrophysics Potsdam (AIP). sThe MultiDark database was developed in cooperation with the Spanish MultiDark Consolider Project CSD2009-00064.
 
+In Chapter 3, we used the measurements done with the SDSS DR7 \footnote{\url{http://classic.sdss.org/dr7/}} data \citep{abazajian2009}. 
+Funding for the SDSS and SDSS-II has been provided by the Alfred P. Sloan Foundation, the Participating Institutions, the National Science Foundation, the U.S. Department of Energy, the National Aeronautics and Space Administration, the Japanese Monbukagakusho, the Max Planck Society, and the Higher Education Funding Council for England. The SDSS Web Site is http://www.sdss.org/. The SDSS is managed by the Astrophysical Research Consortium for the Participating Institutions. The Participating Institutions are the American Museum of Natural History, Astrophysical Institute Potsdam, University of Basel, University of Cambridge, Case Western Reserve University, University of Chicago, Drexel University, Fermilab, the Institute for Advanced Study, the Japan Participation Group, Johns Hopkins University, the Joint Institute for Nuclear Astrophysics, the Kavli Institute for Particle Astrophysics and Cosmology, the Korean Scientist Group, the Chinese Academy of Sciences (LAMOST), Los Alamos National Laboratory, the Max-Planck-Institute for Astronomy (MPIA), the Max-Planck-Institute for Astrophysics (MPA), New Mexico State University, Ohio State University, University of Pittsburgh, University of Portsmouth, Princeton University, the United States Naval Observatory, and the University of Washington.
+
+In Chapter 5, all of the HST archival data were obtained from the Mikulski Archive for Space Telescopes (MAST) \footnote{\url{https://archive.stsci.edu}}. STScI is operated by the Association of Universities for Research in Astronomy, Inc., under NASA contract NAS5-26555. Support for MAST for non-HST data is provided by the NASA Office of Space Science via grant NNX09AF08G and by other grants and contracts.
  
-
+Bulk of the computations in this work were carried out on the Mercer cluster which is part of the New York University High Performance Computing facilities \footnote{https://wikis.nyu.edu/display/NYUHPC/Clusters+-+Mercer}}. For a fraction of computations performed for this thesis, I acknowledge the use of machines in the Center for Cosmology and Particle Physics \footnote{http://ccpp.nyu.edu}}.
+I also acknowledge the use of the computational resources in MareNostrum Cosmological Project \footnote{http://astro.ft.uam.es/marenostrum/}}. 
 
 
