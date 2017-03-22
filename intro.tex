@@ -1,8 +1,19 @@
 \chapter*{Introduction}\addcontentsline{toc}{chapter}{Introduction}
 
-We are entering a new era of cosmology. Thanks to the ongoing and 
-the upcoming galaxy surveys, we are going to be able to measure cosmological 
-parameters within a few percent level precision. This ambitious goal 
+Cosmology is entering a new era. Thanks to the ongoing and 
+the upcoming low redshift galaxy surveys as well as the early universe probes, 
+we are able to examine theories that describe the history of the universe with 
+high precision.
+ 
+With the observations of the cosmic microwave background radiation 
+and the distant Type Ia supernovae, our understanding of universe was revolutionized in the late 90s. 
+By analyzing the key CMB datasets, we now know that the universe was in a very hot uniform state with the 
+random fluctuations around the uniform background. By measuring the brightness of SNe Ia, we have learned 
+that these SNe Ia are dimmer that what expected in a matter dominated expanding universe. Further investigations 
+have led us to believe that the late universe is undergoing an accelerated expansion.
+
+Mention BAO feature, redshift space distortion, weak lensing, .... . Mention that by combining probes, we are going to reach percent level precision on ....
+This ambitious goal 
 can only be achieved if we keep the uncertainties arising from 
 astrophysical and observation systematics below the statistical errors.
  
@@ -11,26 +22,19 @@ astrophysical and observation systematics below the statistical errors.
 
 %Furthermore, there is a wealth of information in small scale galaxy clustering. 
 %We can place unprecedented constraints on the cosmological parameters and the growth of structure. 
-Furthermore, rigorous probe of the clustering of galaxies on small scales 
-can shed light on how galaxies form and how they trace the underlying dark matter density field.
-Characterization of the galaxy clustering signal on small scales requires assuming a halo model. 
-Combining multiple probes such as galaxy-galaxy auto correlation function and galaxy-matter cross 
-correlation has been shown to provide a powerful cosmological probe after marginalizing out 
-the galaxy-halo connection.
+%Furthermore, rigorous probe of the clustering of galaxies on small scales 
+%can shed light on how galaxies form and how they trace the underlying dark matter density field.
+%Characterization of the galaxy clustering signal on small scales requires assuming a halo model. 
+%Combining multiple probes such as galaxy-galaxy auto correlation function and galaxy-matter cross 
+%correlation has been shown to provide a powerful cosmological probe after marginalizing out 
+%the galaxy-halo connection.
 
-With the spectroscopic surveys such as eBOSS \citep{eboss}, DESI, and Euclid \citep{euclid}, 
-we are going to precisely constrain the expansion history of the universe as well as the growth of structure. 
-With these constraints, we will be able to distinguish different physical scenarios that explain the accelerating expansion of the universe. 
-A crucial component of BAO and RSD analyses is estimation of the uncertainties of the statistical summaries of 
-the data obtained from galaxy surveys. One of the most promising frameworks for estimating the uncertainties in form of covariance matrices is production 
-of a large number of accurate simulations of our observations. 
-
-Furthermore, we live in the era of systematic dominated measurements. 
-Therefore it is important to make use of statistical techniques that mitigate 
-biases arising from these systematic errors. It is important to design end-to-end simulations of the survey.
-
-Gravitational lensing of luminous sources (\eg\ galaxies) can measure 
-the state of the inhomogeneous matter density and the time-dependence of dark energy. Cosmic shear studies are hurdled by a number of statistical uncertainties (unknown distribution 
+Gravitational lensing of luminous sources (\eg\ CMB, galaxies) can measure 
+the state of the inhomogeneous matter density and the time-dependence of dark energy. 
+Lensing of the light emitted by background faint galaxies by the intervening large scale structure 
+results in very small but correlated distortions in the shapes of galaxies. This phenomenon is referred to 
+as cosmic shear.
+Cosmic shear studies are hurdled by a number of statistical uncertainties (unknown distribution 
 of galaxy intrinsic morphologies) and systematics. The long list of systematic error budget 
 of cosmic shear studies can in general fall into the following categories: uncertain distance 
 (photometric redshift) information, and imperfect knowledge of intrinsic alignments of galaxies and non-linear matter 
@@ -76,7 +80,7 @@ the imaging surveys \citep{hoekstra}. The limitation of cross-correlation techni
 single bias parameter to a large population of galaxies under consideration. The shear biases have been shown to be scale-dependent \citep{des,jee2016} 
 and depend on galaxy properties \citep{im3shape,conti2017}. 
 
-Modern shear inference models that do not rely on delivering a point-estimate for the shear signal \citep{schneider,bernstein,huff,sheldon} 
+Novel shear inference models that do not rely on delivering a point-estimate for the shear signal \citep{schneider,bernstein,huff,sheldon} 
 provide promising venues for mitigation of biases but their accuracy is limited to the accuracy in the PSF model.
 In chapters 1 and 5, we try to address two challenges in accurate PSF modeling that could lead to biases in cosmological weak lensing analysis. 
 
@@ -120,33 +124,33 @@ poses a challenge to applicability of perturbative approaches in small scales. I
 galaxy clustering must be understood within the context of the halo model which has had 
 much success in describing time evolution of the clustering of matter.  
 
-Modeling galaxy clustering with the halo models follows two central assumptions. First, galaxies form in virialized regions of 
+Modeling galaxy clustering with the halo model follows two central assumptions. First, galaxies form in virialized regions of 
 dark matter over density known as halos. Clustering of galaxies is governed by clustering of dark matter halos. 
 In order to use galaxy clustering measurements for gaining insight into cosmological structure formation models we need to 
 know how clustering of galaxies can be determined from clustering of halos. That is, we are required to specify how halos 
-are populated with galaxies.
+are populated with galaxies \citep{seljak2000,scoccimarro2001,berlind_weinberg2002}.
 
 One of the successful prescriptions for assignment of galaxies to halos is the halo occupation distribution (HOD). 
 HOD provides a prescription for the expected number of galaxies that reside a halo as well as 
-the positions and velocities of galaxies are distributed within a halo. This simple assumption has been useful 
-in reproducing the observed statistics of galaxies.
+the positions and velocities of galaxies that are distributed within a halo. This simple assumption has been useful 
+in reproducing the observed statistics of galaxies \citep{tinker_rsd2007,zehavi2011,zheng_guo}.
 
-Despite being successful at reproducing a wide range of the observed statistics of galaxies, HOD remains agnostic about assembly bias.
-Assembly bias, a phenomenon seen in simulations, has not certainly been confirmed with observations.
-According to halo assembly bias, at a fixed halo mass, clustering of halos depend on halo properties beyond mass.
-There are very mixed results in the literature.
+Despite being successful at reproducing a wide range of the observed statistics of galaxies, the simple \emph{mass-only} HOD 
+remains challenged by a theoretical phenomenon known as assembly bias. Assembly bias, seen in $N-$body simulations, states that at a fixed halo mass, clustering 
+of halos depend on halo properties beyond mass such as their formation history, gravitational potential, \etc\ \citep{weschler2006,gao2007,arz2014,sunayama2016}.
+This theoretical prediction has not yet been confirmed with observations and there are very mixed results in the literature.
 
-By weak lensing analysis of the galaxy groups in GAMA (GAlaxy and Mass Assembly, see \citet{driver}) 
-with the KiDS (Kilo Degree Survey, see \citet{kuijken2015}) imaging data, \citet{dvornik} find no evidence for halo assembly bias.
-Using the galaxy-galaxy lensing and clustering measurements of SDSS galaxy \emph{redmapper} clusters \citep{rykoff} with halo masses 10^14 $M_{\odot}$, 
-\citep{miyatake2016} claimed strong difference between the bias of two populations of clusters with different radial distribution of satellite galaxies 
+By weak lensing analysis of the galaxy groups in GAMA (GAlaxy and Mass Assembly, see \citealt{driver}) 
+with the KiDS (Kilo Degree Survey, see \citealt{kuijken2015}) imaging data, \citet{dvornik2017} find no evidence for halo assembly bias.
+Using the galaxy-galaxy lensing and clustering measurements of SDSS galaxy \emph{redmapper} clusters \citep{rykoff} with halo masses $10^{14}$ $M_{\odot}$, 
+\citet{miyatake2016} claimed strong difference between the bias of two populations of clusters with different radial distribution of satellite galaxies 
 (a proxy for the formation history of a dark matter halo). \citet{zuetal2016} argues that the findings of \citet{miyatake2016} is due to projection effects (as a result of highly uncertain photometric redshifts) and they cannot be interpreted as detection of assembly bias. 
 
-The effect of assembly bias on galaxy clustering can be seen in many subhalo abundance matching (SHAM, see \citet{hearin2014,lehman2015} and references therein) methods. SHAM assumes a one-to-one relation between halo (including subhalos) properties (\eg\ mass, circular velocity) and some galaxy properties (\eg\ stellar mass, luminosity). In Chapter 3, with the clustering measurements of SDSS DR7 main sample of galaxies \citep{abazajian2009} and the Small MultiDark $N$-body simulation, we show that the clustering predictions of \citep{decorated} HOD model are consistent with the predictions of the \emph{mass-only} HOD model within 1-$\sigma$ level. 
+The effect of assembly bias on galaxy clustering can be seen in many subhalo abundance matching (SHAM, see \citealt{hearin2014,lehman2015} and references therein) methods. SHAM assumes a one-to-one relation between halo (including subhalos) properties (\eg\ mass, circular velocity) and some galaxy properties (\eg\ stellar mass, luminosity). In Chapter 3, with the clustering measurements of SDSS DR7 main sample of galaxies \citep{abazajian2009} and the Small MultiDark $N$-body simulation, we show that the clustering predictions of \citep{decorated} HOD model that takes assembly bias into account are consistent with the predictions of the \emph{mass-only} HOD model within 1-$\sigma$ level. 
 
 We also note that for the sample of $L_{\star}$ galaxies, there is \emph{slight} improvements in galaxy clustering predictions of the HOD model with assembly bias 
 on large scales. Furthermore, we note that in terms of information criteria, there is no improvement when a more complex HOD model is used to fit the clustering measurements.
-We note that in terms of the effect of halo assembly bias on galaxy clustering, our constraints show qualitatively behavior in comparison with the predictions of subhalo abundance matching models. Unlike the findings of \citet{zentner2016} we do not find any evidence for assembly bias in the satellite population of galaxies.
+We note that in terms of the effect of halo assembly bias on galaxy clustering, our constraints show qualitatively similar behavior in comparison with the predictions of subhalo abundance matching models. Unlike the findings of \citet{zentner2016}, we do not find any evidence for assembly bias in the satellite population of galaxies.
 
 One of the perplexities faced by contemporary cosmology is the discordance between the constraints on cosmological parameters from some of the low redshift probes and 
 the Planck CMB results \citep{planckII}. This includes the cosmological constraints from the cosmic shear analysis of CFHTLenS \citep{heymans,kitching2016} and KiDs \citep{hildebrandt2017}. The disagreement appears in the constraints over the parameters $\sigma_{8}$ and $\Omega_{m}$, the amplitude of the linear matter power spectrum and the matter density parameters respectively. This tension exists at a 2-$\sigma$ level. 
@@ -154,12 +158,25 @@ the Planck CMB results \citep{planckII}. This includes the cosmological constrai
 The \emph{cosmic} \emph{discordance} persists when the low redshift probe under consideration is galaxy-galaxy lensing which contains information regarding galaxy-matter cross correlation. Similar to galaxy clustering, modeling the small scale galaxy-galaxy lensing signal requires assuming a halo model. 
 This signal is an estimate of the lensing of the background galaxies from a \emph{deep} imaging survey and the foreground galaxies in a \emph{shallow} spectroscopic survey.
 
-The galaxy-galaxy lensing signal of SDSS III/BOSS \citep{miyatake15,lensingislow} are not consistent with the predictions of best-fit Planck cosmology \citep{planckII}.
+The galaxy-galaxy lensing measurements of SDSS III/BOSS \citep{miyatake15,lensingislow} are not consistent with the predictions of best-fit Planck cosmology \citep{planckII}.
 The $\sigma_{8}-\Omega_{m}$ constraint from clustering and galaxy-galaxy lensing measurements of BOSS galaxies \citep{more15} does not match the Planck constraint.
-Disagreements hold for the cosmological constraints---assuming a simple mass only HOD model---from the clustering and galaxy-galaxy lensing measurements of SDSS DR7 main sample \citep{more13}. These discrepancies could signal a new physics, observational systematics, or uncertainties arising from the galaxy formation physics, including \emph{assembly} \emph{bias}.
+Disagreements hold for the cosmological constraints---assuming a simple mass only HOD model---from the clustering and galaxy-galaxy lensing measurements of SDSS DR7 main sample \citep{cacciato13}. These discrepancies could signal a new physics, observational systematics, or uncertainties arising from the galaxy formation physics, including \emph{assembly} \emph{bias}.
 
 Combining the early universe probes of cosmology and large scale structure requires accurate characterization of systematics and nuisance parameters in both datasets.
 In the context of large scale structure, models governing the galaxy-halo connection serve as nuisance parameters that we marginalize over. A possible source of uncertainty in characterization of galaxy-halo connection is assembly bias. In order to distinguish between physical scenarios pointing at potentially new physics and systematics, it is important to study the effect of halo assembly bias on low redshift cosmological probes including galaxy clustering and galaxy-galaxy lensing. In Chapter 3, we take a step toward better understanding the impact of assembly bias. 
+
+With the spectroscopic surveys such as eBOSS \citep{eboss}, DESI, and Euclid \citep{euclid}, 
+we are going to precisely constrain the expansion history of the universe as well as the growth of structure. 
+With these constraints, we will be able to distinguish different physical scenarios that explain the accelerating expansion of the universe. 
+A crucial component of BAO and RSD analyses is estimation of the uncertainties of the statistical summaries of 
+the data obtained from galaxy surveys. One of the most promising frameworks for estimating the uncertainties in form of covariance matrices is production 
+of a large number of accurate simulations of our observations. 
+
+Our strategy is to use approximate gravity solvers to create an accurate density scale on large scales.
+
+Furthermore, we live in the era of systematic dominated measurements. 
+Therefore it is important to make use of statistical techniques that mitigate 
+biases arising from these systematic errors. It is important to design end-to-end simulations of the survey.
 
 %Galaxy surveys will provide a valuable legacy dataset that can be used for detailed galaxy formation studies. 
 %These investigations will provide a window into how the visible structures in the observable universe 
