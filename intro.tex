@@ -33,9 +33,6 @@ the solar system, binary pulsars, and gravitational waves as a result of merging
 precision test of GR on large scales remain an active area of research. Current constraints on 
 the accelerated expansion and growth of structure can not rule out some theories of 
 modified gravity.
- 
-%The nature of dark energy and its time-dependence remains unanswered. Modified theories of gravity 
-%provide an alternative route for explaining the accelerated expansion.  
 
 Detection of the Baryonic Acoustic feature in clustering of galaxies further enhanced 
 our understanding of the expansion history. Acoustic oscillations in the early universe plasma 
@@ -43,8 +40,6 @@ result in a sound wave that leaves an imprint with a characteristic scale on the
 in late time universe. Therefore the BAO provides a highly accurate estimate of the angular diameter 
 distance and it provides a powerful probe of the geometry and expansion history of the universe. 
 
-%Besides distance information, we can also examine how the perturbations of matter 
-%around the homogeneous isotropic background grow in an expanding universe. 
 In galaxy redshift surveys, the distances to galaxies can be measured by the measured 
 redshifts. The distance information provided by these surveys is distorted by the peculiar 
 velocities of galaxies along the line of sight. These distortions are referred to as redshift space 
@@ -52,35 +47,18 @@ distortions (RSD). Redshift space distortions are highly sensitive probes of the
 and contain additional cosmological information than what can be provided by BAO. Thus measurements of 
 galaxy clustering with redshift surveys can constrain dark energy and laws of gravity.
 
-Gravitational lensing of luminous sources (\eg\ CMB, galaxies) can measure 
+With the spectroscopic surveys such as eBOSS \citep{eboss}, DESI, and Euclid \citep{euclid}, 
+we are going to precisely constrain the expansion history of the universe as well as the growth of structure. 
+With these constraints, we will be able to distinguish different physical scenarios that explain the accelerating expansion of the universe. 
+A crucial component of BAO and RSD analyses is estimation of the uncertainties of the statistical summaries of 
+the data obtained from galaxy surveys. One of the most promising frameworks for estimating the uncertainties in form of covariance matrices is production 
+of a large number of accurate simulations of our observations. 
+
+Gravitational lensing of luminous sources (galaxies, CMB) can measure 
 the state of the inhomogeneous matter density and the time-dependence of dark energy. 
 Lensing of the light emitted by background faint galaxies by the intervening large scale structure 
 results in very small but correlated distortions in the shapes of galaxies. This phenomenon is referred to 
 as cosmic shear.
-
-All these low redshift probes, along with the key CMB datasets, will provide us 
-with a consistent picture of the initial conditions of the universe, formation of structures, and laws of 
-gravity. Reaching a percent-level constraint over the cosmological parameters will forever shape 
-our understanding of the cosmos. 
-
-This ambitious goal however, can only be achieved if we keep the 
-uncertainties arising from astrophysical and observation systematics 
-below the statistical errors. In this dissertation, we attempt to use some 
-computational methods in order to address some sources of uncertainty that stand 
-between us and precision cosmology. 
- 
-%precision cosmology. The ongoing and the upcoming galaxy surveys 
-%are going to forever shape our understanding of the universe. 
-
-%Furthermore, there is a wealth of information in small scale galaxy clustering. 
-%We can place unprecedented constraints on the cosmological parameters and the growth of structure. 
-%Furthermore, rigorous probe of the clustering of galaxies on small scales 
-%can shed light on how galaxies form and how they trace the underlying dark matter density field.
-%Characterization of the galaxy clustering signal on small scales requires assuming a halo model. 
-%Combining multiple probes such as galaxy-galaxy auto correlation function and galaxy-matter cross 
-%correlation has been shown to provide a powerful cosmological probe after marginalizing out 
-%the galaxy-halo connection.
-
 
 Cosmic shear studies are hurdled by a number of statistical uncertainties (unknown distribution 
 of galaxy intrinsic morphologies) and systematics. The long list of systematic error budget 
@@ -210,19 +188,23 @@ The galaxy-galaxy lensing measurements of SDSS III/BOSS \citep{miyatake15,lensin
 The $\sigma_{8}-\Omega_{m}$ constraint from clustering and galaxy-galaxy lensing measurements of BOSS galaxies \citep{more15} does not match the Planck constraint.
 Disagreements hold for the cosmological constraints---assuming a simple mass only HOD model---from the clustering and galaxy-galaxy lensing measurements of SDSS DR7 main sample \citep{cacciato13}. These discrepancies could signal a new physics, observational systematics, or uncertainties arising from the galaxy formation physics, including \emph{assembly} \emph{bias}.
 
-Combining the early universe probes of cosmology and large scale structure requires accurate characterization of systematics and nuisance parameters in both datasets.
-In the context of large scale structure, models governing the galaxy-halo connection serve as nuisance parameters that we marginalize over. A possible source of uncertainty in characterization of galaxy-halo connection is assembly bias. In order to distinguish between physical scenarios pointing at potentially new physics and systematics, it is important to study the effect of halo assembly bias on low redshift cosmological probes including galaxy clustering and galaxy-galaxy lensing. In Chapter 3, we take a step toward better understanding the impact of assembly bias. 
+Combining the early universe probes of cosmology and large scale structure requires accurate 
+characterization of systematics and nuisance parameters in both datasets. In the context of large scale 
+structure, models governing the galaxy-halo connection serve as nuisance parameters that we marginalize over. A possible source of uncertainty in characterization of galaxy-halo connection is assembly bias. In order to distinguish between physical scenarios pointing at potentially new physics and systematics, it is important to study the effect of halo assembly bias on low redshift cosmological probes including galaxy clustering and galaxy-galaxy lensing. In Chapter 3, we take a step toward better understanding the impact of assembly bias. 
 
-With the spectroscopic surveys such as eBOSS \citep{eboss}, DESI, and Euclid \citep{euclid}, 
-we are going to precisely constrain the expansion history of the universe as well as the growth of structure. 
-With these constraints, we will be able to distinguish different physical scenarios that explain the accelerating expansion of the universe. 
-A crucial component of BAO and RSD analyses is estimation of the uncertainties of the statistical summaries of 
-the data obtained from galaxy surveys. One of the most promising frameworks for estimating the uncertainties in form of covariance matrices is production 
-of a large number of accurate simulations of our observations. 
+The future low redshift probes and the key CMB datasets will enable us to map the 
+density field across a considerable fraction of the observable universe. They will also provide us with 
+a consistent picture of the initial conditions, formation of structure, and laws of gravity. 
+Reaching a percent-level constraint over the cosmological parameters will 
+forever shape our understanding of the cosmos. 
 
-Our strategy is to use approximate gravity solvers to create an accurate density scale on large scales.
+These ambitious goal however, can only be achieved if we keep the 
+uncertainties arising from astrophysical and observation systematics 
+below the statistical errors. In this dissertation, we attempt to take advantage of 
+computational methods in order to address some sources of uncertainty that stand on the way of 
+reaching precision cosmology. 
 
-Furthermore, we live in the era of systematic dominated measurements. 
+We live in the era of systematic dominated cosmological measurements. 
 Therefore it is important to make use of statistical techniques that mitigate 
 biases arising from these systematic errors. It is important to design end-to-end simulations of the survey.
 
