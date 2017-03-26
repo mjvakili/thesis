@@ -2,10 +2,11 @@
 
 Cosmology is entering a new era. Thanks to the ongoing and 
 the upcoming low redshift galaxy surveys as well as the early universe probes, 
-we are able to test cosmological theories with high preceision.
+we are able to test cosmological theories with high precision.
 With the observations of the cosmic microwave background (CMB) radiation 
 and the distant Type Ia supernovae, our understanding of universe was 
-revolutionized in the late 90s. 
+revolutionized in the late 90s. Later datasets advanced our understanding 
+of the 
 
 The early universe was in a hot and dense state where 
 matter and radiation formed a primordial plasma. Eventually, the 
@@ -19,24 +20,29 @@ exponential rapid phase in the expansion of early universe---
 predict \emph{nearly Gaussian and scale invariant} random fluctuations around a homogeneous 
 background. Microscopic quantum fluctuations generated in an inflationary 
 stage were stretched to cosmic volumes. Evolution of these initial seeds 
-resulted in the formation of structures such as planets, stars, galaxies, clusters of galaxies, filaments, \etc\.
+resulted in the formation of structures such as planets, stars, galaxies, 
+clusters of galaxies, filaments, \emph{etc}.
 
 By measuring the brightness of supernovae type Ia, we have also learned 
 that supernovae Ia are fainter than what we expect them to be in an 
 expanding universe filled with matter. This surprising observation led us to 
 believe that approximately 70 $\%$ of the energy budget of the universe is 
-given by a dark energy component which can be though of as liquid with negative pressure.
+given by a dark energy component which can be though of as liquid with 
+negative pressure.
 
-From a theoretical standpoint, cosmic acceleration can be explained in numerous modified gravity frameworks. 
-Despite the astonishing success of general relativity in certain regimes such as 
-the solar system, binary pulsars, and gravitational waves as a result of merging supermassive blackholes, 
-precision test of GR on large scales remain an active area of research. Current constraints on 
-the accelerated expansion and growth of structure can not rule out some theories of 
-modified gravity.
+From a theoretical standpoint, cosmic acceleration 
+can be explained in numerous modified gravity frameworks. 
+Despite the astonishing success of general relativity in 
+certain regimes such as the solar system, binary pulsars, 
+and gravitational waves as a result of merging supermassive blackholes, 
+precision test of GR on large scales remain an active area of research. 
+Current constraints on the accelerated expansion and growth of structure 
+can not rule out some theories of modified gravity.
 
-Detection of the Baryonic Acoustic feature in clustering of galaxies further enhanced 
-our understanding of the expansion history. Acoustic oscillations in the early universe plasma 
-result in a sound wave that leaves an imprint with a characteristic scale on the perturbations 
+Detection of the Baryonic Acoustic feature in clustering of galaxies 
+further enhanced our understanding of the expansion history. 
+Acoustic oscillations in the early universe plasma result in a sound wave 
+that leaves an imprint with a characteristic scale on the perturbations 
 in late time universe. Therefore the BAO provides a highly accurate estimate of the angular diameter 
 distance and it provides a powerful probe of the geometry and expansion history of the universe. 
 
@@ -47,12 +53,80 @@ distortions (RSD). Redshift space distortions are highly sensitive probes of the
 and contain additional cosmological information than what can be provided by BAO. Thus measurements of 
 galaxy clustering with redshift surveys can constrain dark energy and laws of gravity.
 
-With the spectroscopic surveys such as eBOSS \citep{eboss}, DESI, and Euclid \citep{euclid}, 
-we are going to precisely constrain the expansion history of the universe as well as the growth of structure. 
-With these constraints, we will be able to distinguish different physical scenarios that explain the accelerating expansion of the universe. 
-A crucial component of BAO and RSD analyses is estimation of the uncertainties of the statistical summaries of 
-the data obtained from galaxy surveys. One of the most promising frameworks for estimating the uncertainties in form of covariance matrices is production 
-of a large number of accurate simulations of our observations. 
+%Spectroscopic surveys such as eBOSS \citep{eboss}, DESI, and Euclid \citep{euclid} allow us to precisely 
+%constrain the expansion history of the universe as well as the growth of structure. 
+%However, interpretation of these rich datasets requires characterization of the uncertainties on the clustering 
+%measurements of these datasets. The uncertainties are estimated in terms of the covariance matrix. Precision matrix, 
+%the inverse of the covariance matrix appears in the cosmological likelihood 
+%(the probability of the observed data given the model).
+
+%These constraints will enable us to distinguish between different physical scenarios that explain the accelerated expansion of the universe. 
+%A crucial component of BAO and RSD analyses is estimation of the uncertainties of the statistical summaries of 
+%the data obtained from galaxy surveys. One of the most promising frameworks for estimating the uncertainties in form of covariance matrices is production 
+%of a large number of accurate simulations of our observations. 
+
+The large datasets from galaxy surveys are analyzed by estimating the statistical summaries of the 
+data and then interpreting them with the predictions from cosmological theories. This is done by writing down 
+a likelihood function which is the probability of the observed data given the theoretical model.
+Cosmological likelihood functions are often assumed to have a Gaussian functional form. Given this assumption, the likelihood 
+can be fully specified with three ingredients: a data vector which is estimated from observations, a mean model vector 
+which is computed from the predictions of theoretical models, and an inverse covariance matrix. 
+
+Therefore, a crucial step in interpreting the data is computing the error covariance matrix. 
+More importantly we need to know the inverse covariance matrix (precision matrix) precisely because this 
+is the matrix that appears in the likelihood function. Modern cosmological analyses rely on computing the covariance matrix 
+analytically or estimation of the matrix from a large suite of simulations or from internal resampling of the data. 
+
+Motivated by the idea of minimizing the effect of the noise properties of the precision matrix on 
+cosmological parameter estimation, \citet{dodelson2013,taylor2013,taylor2014} derived a set of requirements 
+on the number of independent mock simulations given the number of data points and the number of parameters 
+in a given cosmological analysis. Assuming that the estimated covariance matrix follows a Wishart distribution, 
+\citep{Sellentin:2016a} present a method for marginalizing over the precision matrix. They demonstrate that the 
+resulting likelihood function is no longer Gaussian and instead follows a $t$-distribution.
+
+\citet{dodelson2013,Sellentin:2017a} demonstrate that using a noisy estimate of the precision matrix 
+constructed from insufficient number of simulated mocks can systematically bias the confidence 
+intervals over the cosmological parameters. These findings place strict requirement on the number of 
+mock catalogs for the ongoing and future galaxy surveys. In general, the number of mocks need to be much larger than 
+the number of data points.
+
+A common practice in analysis of the deep imaging surveys is tomographic binning of the data and combining probes.
+In tomographic binning, the dataset is split into multiple redshift slices and the summary statistics of 
+the data are estimated by correlating the data within each redshift slice and cross-correlating the data across 
+multiple datasets. The size of the resulting data vector can be as large as a few hundred which makes the task of 
+creating mock catalogs even more challenging. 
+
+Combining probes means joint analysis of different cosmic probes such as galaxy 
+positions and galaxy shears. Multi-probe analyses are more robust against systematic 
+uncertainties and have more constraining power. Most modern surveys offer this opportunity. 
+But one of the main obstacles a head of these efforts is the large data vector under consideration. 
+Production of the covariance of this data vector requires a very large number of simulations which may not 
+be feasible.   
+
+Analytical covariance matrices on the other hand, are not as computationally demanding. Their inverse (precision matrix) 
+is noise free. But the model approximations and assumptions used in these methods may not be sufficient 
+for the accuracy requirements of precision cosmology. Analytical covariance matrices are considered to 
+receive a Gaussian contribution and a non-Gaussian contribution. Assuming that the density field is a 
+Gaussian random field, the Gaussian part of the covariance matrix is straightforward to compute \citep{grieb2016,klaus2016,slepian2016b}.
+
+Including the non-Gaussian part of the covariance matrix however, is necessary for accurate parameter estimation \citep{takahashi2011,blot2016,chan2016}.
+Significant progress has been made in modeling the non-Gaussian contribution to the covariance matrix through employing approaches based on perturbation 
+theory and effective theories of large scale structure \citep{mohammed_seljak,mohammed2017} or by adopting a halo model \citep{takada_spergel,eifler2014}.
+Regardless of the applicability of analytical covariance matrices in analyzing the survey data, production of simulated mocks remains an important step 
+in \emph{validation} and \emph{calibration} of these analytical covariance matrices \citep{slepian2016b,hildebrandt2017}.
+
+Progress has been made in developing methods that take into account our prior beliefs 
+about the of covariance matrices. By considering sparsity of the covariance matrix, \citet{paz2015,padmanabhan2016} 
+present methods to estimate the precision matrices with fewer mocks. Shrinkage methods \citep{pope2008,joachimi2016} 
+also require less simulations. \citet{fried2017} presents a method for expansion of the precision matrix 
+around an analytical model and estimating the leading expansion terms with fewer simulations.
+
+One of the common tools for estimation of covariance matrices is internal resampling of the data such as jackknife and bootstrap. These covariance 
+estimators have been extensively used in analyses of galaxy clustering and galaxy-galaxy lensing (for example see \citealt{hod_vs_sham,singh2016,kwan2017,shirasaki}).
+In situations when no reliable analytical or simulation-based estimate of covariance is available, one could use these estimators. 
+For instance in interpreting the SDSS DR7 galaxy clustering measurements, we make use of estimates of covariance matrix based on 
+jackknife resampling of the data. But as \citet{norberg,fried2016} point out, data re-sampling methods do not faithfully capture the 
+uncertainties. 
 
 Gravitational lensing of luminous sources (galaxies, CMB) can measure 
 the state of the inhomogeneous matter density and the time-dependence of dark energy. 
