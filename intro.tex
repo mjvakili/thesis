@@ -122,12 +122,28 @@ also require less simulations. \citet{fried2017} presents a method for expansion
 around an analytical model and estimating the leading expansion terms with fewer simulations.
 
 One of the common tools for estimation of covariance matrices is internal resampling of the data such as jackknife and bootstrap. These covariance 
-estimators have been extensively used in analyses of galaxy clustering and galaxy-galaxy lensing (for example see \citealt{hod_vs_sham,singh2016,kwan2017,shirasaki}).
+estimators have been extensively used in analyses of galaxy clustering and galaxy-galaxy lensing (for example see \citealt{reid2014,hod_vs_sham,singh2016,shirasaki,kwan2017}).
 In situations when no reliable analytical or simulation-based estimate of covariance is available, one could use these estimators. 
 For instance in interpreting the SDSS DR7 galaxy clustering measurements, we make use of estimates of covariance matrix based on 
 jackknife resampling of the data. But as \citet{norberg,fried2016} point out, data re-sampling methods do not faithfully capture the 
 uncertainties. 
 
+Precision estimation of the covariance matrix from mocks requires a large number of mocks to be used in a given analysis. This has 
+led to development of a number of \emph{approximate} \emph{methods} for mass production of galaxy and halo (virialized regions of dark matter 
+over-density) mock catalogs. These methods rely on approximate gravity solvers for generation of the dark matter density field and a statistical 
+prescription for populating the dark matter density field with mock galaxies (see for example \citealt{manera2013,qpm,eazymock,kitaura2016} and references 
+therein). The state-of-the-art method for production of mock catalogs are QPM \citep{qpm} and PATCHY \citep{kitaura2016}. These methods were used in 
+cosmological analyses of the SDSS III-BOSS final data release \citep{alam2016}.
+
+In the PATCHY method the density field is generated with perturbation theory. The expected number of galaxies in a cosmic volume given the 
+density field is computed according to a biasing relation whose parameters are unknown. 
+Finally, the number of galaxies is drawn from a negative binomial distribution which is a Poisson distribution with an additional stochasticity. 
+\citet{nifty} demonstrates that this approach is very powerful at reproducing the two-point and three-point statistics of galaxies with high accuracy towards mildly 
+nonlinear scales.
+
+In Chapter 4, we address two limitations of this approach: the b
+ 
+  
 Gravitational lensing of luminous sources (galaxies, CMB) can measure 
 the state of the inhomogeneous matter density and the time-dependence of dark energy. 
 Lensing of the light emitted by background faint galaxies by the intervening large scale structure 
