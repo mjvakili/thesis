@@ -2,11 +2,11 @@
 
 Cosmology is entering a new era. Thanks to the ongoing and 
 the upcoming low redshift galaxy surveys as well as the early universe probes, 
-we are able to test cosmological theories with high precision.
+we are able to put cosmological theories into test with high precision.
 With the observations of the cosmic microwave background (CMB) radiation 
 and the distant Type Ia supernovae, our understanding of universe was 
 revolutionized in the late 90s. Later datasets advanced our understanding 
-of the 
+of the universe even further.
 
 The early universe was in a hot and dense state where 
 matter and radiation formed a primordial plasma. Eventually, the 
@@ -27,7 +27,7 @@ By measuring the brightness of supernovae type Ia, we have also learned
 that supernovae Ia are fainter than what we expect them to be in an 
 expanding universe filled with matter. This surprising observation led us to 
 believe that approximately 70 $\%$ of the energy budget of the universe is 
-given by a dark energy component which can be though of as liquid with 
+given by a dark energy component which can be considered a liquid with 
 negative pressure.
 
 From a theoretical standpoint, cosmic acceleration 
@@ -35,9 +35,9 @@ can be explained in numerous modified gravity frameworks.
 Despite the astonishing success of general relativity in 
 certain regimes such as the solar system, binary pulsars, 
 and gravitational waves as a result of merging supermassive blackholes, 
-precision test of GR on large scales remain an active area of research. 
+precision test of GR on large scales remains an active area of research. 
 Current constraints on the accelerated expansion and growth of structure 
-can not rule out some theories of modified gravity.
+can not rule out certain theories of modified gravity.
 
 Detection of the Baryonic Acoustic feature in clustering of galaxies 
 further enhanced our understanding of the expansion history. 
@@ -333,15 +333,32 @@ Furthermore, we discuss why the ABC-PMC method is advantageous in terms of imple
 We also point out the limitations of applying such technique to cosmological parameter estimation with galaxy clustering measurements of the modern galaxy surveys. 
 We argue that the main computational bottleneck is going to be the forward model that includes all observational systematics and complicated structure formation models. 
 
-These ambitious goal however, can only be achieved if we keep the 
-uncertainties arising from astrophysical and observation systematics 
-below the statistical errors. In this dissertation, we attempt to take advantage of 
-computational methods in order to address some sources of uncertainty that stand on the way of 
-reaching precision cosmology. 
+In this thesis, we try to address different aspects of solving a cosmological problems which is equivalent to specifying the following general likelihood function:
 
-We live in the era of systematic dominated cosmological measurements. 
-Therefore it is important to make use of statistical techniques that mitigate 
-biases arising from these systematic errors. It is important to design end-to-end simulations of the survey.
+\begin{equation}
+\mathcal{L} = p(\mathbf{d} \; | \; \mathbf{\mu} , \mathbf{C}),
+\end{equation}
+
+where $\mathbf{d}$ is an estimated data vector, $\mathbf{\mu}$ is a theoretical prediction, and \mathbf{C} is a covariance matrix that characterize the uncertainties in 
+a given cosmological analysis. In Chapters 1 and 5, we try to address the systematic uncertainties that affect $\mathbf{d}$ in weak lensing analyses. In Chapter 3 we try to address one of the astrophysical uncertainties, \emph{assembly bias}, that could impact our cosmological parameter inference practices with galaxy clustering observations. In Chapter 4, we address how accurately one could generate simulated datasets needed for precise estimation of the error covariance matrices of galaxy clustering measurements. In Chapter 2, we try to address how we can bypass the need for specifying a functional form for the likelihood function $p(\mathbf{d} \; | \; \mathbf{\mu} , \mathbf{C})$ and the challenges associated with it.
+
+Chapter 1 of this thesis is a joint work with David~W.~Hogg. The underlying ideas and the direction of this project were developed by David~W.~Hogg and me. 
+All the codes and text for this chapter was written by me with significant edits and modifications from David~W.~Hogg. Chapter 2 is based on a joint work with ChangHoon~ Hahn, Kilian~Walsh, Andrew~Hearin, David~W.~Hogg, and Duncan~Campbell. ChangHoon~Hahn and I had equal contributions to development of bulk of the code and text for this project. Kilian~Walsh also had significant contributions to both coding and writing. Andrew~Hearin and David~Hogg contributed to writing of the paper and Duncan~Campbell had some contribution 
+to the code. All of the code and the text for Chapter 3 was written by me. ChangHoon~Hahn had significant contribution to editing the text. I also received valuable comments from 
+David~W.~Hogg, Alex~I.~Malz regarding the text and from Andrew~Hearin and Chia-Hsun~Chuang regarding the highly technical details of my calculations. The idea of Chapter 4 was developed by Francisco-Shu Kitauro, Yu~Feng and myself. I wrote all the code and text, with some contribution to the text from Francisco-Shu~Kitaura. For the computations related to this work, I received significant help from Yu~Feng, Gustavo~Yepes, Cheng~Zhao, Chia-Hsun~Chuang, and ChangHoon~Hahn. The idea of Chapter 5 was developed in collaboration with Ross~Fadely and David~W.~Hogg. Development of the code was done by me and under the supervision of Ross~Fadely and David~W.~Hogg. All the text was written by me with edits by David~W.~Hogg.
+
+All of the code that I have written for the computations in this thesis are publicly available except the PATCHY code which is being ready for a public release. 
+The code for Chapters 1,2,3, and 5 are available at \url{github.com/mjvakili/centerer}, \url{github.com/mjvakili/ccppabc}, \url{github.com/mjvakili/gambly}, and \url{github.com/mjvakili/supermean}.
+
+%These ambitious goal however, can only be achieved if we keep the 
+%uncertainties arising from astrophysical and observation systematics 
+%below the statistical errors. In this dissertation, we attempt to take advantage of 
+%computational methods in order to address some sources of uncertainty that stand on the way of 
+%reaching precision cosmology. 
+
+%We live in the era of systematic dominated cosmological measurements. 
+%Therefore it is important to make use of statistical techniques that mitigate 
+%biases arising from these systematic errors. It is important to design end-to-end simulations of the survey.
 
 %Galaxy surveys will provide a valuable legacy dataset that can be used for detailed galaxy formation studies. 
 %These investigations will provide a window into how the visible structures in the observable universe 
