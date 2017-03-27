@@ -37,21 +37,22 @@ certain regimes such as the solar system, binary pulsars,
 and gravitational waves as a result of merging supermassive blackholes, 
 precision test of GR on large scales remains an active area of research. 
 Current constraints on the accelerated expansion and growth of structure 
-can not rule out certain theories of modified gravity.
+can not rule out with certainty some of the theories of modified gravity.
 
-Detection of the Baryonic Acoustic feature in clustering of galaxies 
+Detection of the Baryonic Acoustic Oscillation feature in clustering of galaxies 
 further enhanced our understanding of the expansion history. 
 Acoustic oscillations in the early universe plasma result in a sound wave 
 that leaves an imprint with a characteristic scale on the perturbations 
 in late time universe. Therefore the BAO provides a highly accurate estimate of the angular diameter 
 distance and it provides a powerful probe of the geometry and expansion history of the universe. 
 
-In galaxy redshift surveys, the distances to galaxies can be measured by the measured 
+In galaxy redshift surveys, the distances to galaxies can be estimated by the measured 
 redshifts. The distance information provided by these surveys is distorted by the peculiar 
 velocities of galaxies along the line of sight. These distortions are referred to as redshift space 
 distortions (RSD). Redshift space distortions are highly sensitive probes of the growth of structure 
-and contain additional cosmological information than what can be provided by BAO. Thus measurements of 
-galaxy clustering with redshift surveys can constrain dark energy and laws of gravity.
+and contain additional cosmological information beyond what is provided by the BAO feature. 
+Thus measurements of galaxy clustering with redshift surveys can 
+constrain dark energy and laws of gravity.
 
 %Spectroscopic surveys such as eBOSS \citep{eboss}, DESI, and Euclid \citep{euclid} allow us to precisely 
 %constrain the expansion history of the universe as well as the growth of structure. 
@@ -66,89 +67,75 @@ galaxy clustering with redshift surveys can constrain dark energy and laws of gr
 %of a large number of accurate simulations of our observations. 
 
 The large datasets from galaxy surveys are analyzed by estimating the statistical summaries of the 
-data and then interpreting them with the predictions from cosmological theories. This is done by writing down 
-a likelihood function which is the probability of the observed data given the theoretical model.
-Cosmological likelihood functions are often assumed to have a Gaussian functional form. Given this assumption, the likelihood 
-can be fully specified with three ingredients: a data vector which is estimated from observations, a mean model vector 
+data and then interpreting them with the predictions from cosmological theories. This is formally done 
+by writing down a likelihood function which is the probability of the observed data given the theoretical model under 
+consideration. Cosmological likelihood functions are often assumed to have a Gaussian 
+functional form. Given this assumption, the likelihood can be fully specified with three ingredients: a data vector which is estimated from observations, a mean model vector 
 which is computed from the predictions of theoretical models, and an inverse covariance matrix. 
 
 Therefore, a crucial step in interpreting the data is computing the error covariance matrix. 
-More importantly we need to know the inverse covariance matrix (precision matrix) precisely because this 
-is the matrix that appears in the likelihood function. Modern cosmological analyses rely on computing the covariance matrix 
-analytically or estimation of the matrix from a large suite of simulations or from internal resampling of the data. 
+In fact, the quantity that we need to know precisely is the inverse covariance matrix (precision matrix) because it is this matrix that appears in the likelihood function. Modern cosmological analyses rely on computing the covariance matrix analytically, estimating the matrix from a large suite of simulations, or from internal resampling of the data. 
 
-Motivated by the idea of minimizing the effect of the noise properties of the precision matrix on 
+Motivated by the pursuit of minimizing the effect of the noise properties of the precision matrix on 
 cosmological parameter estimation, \citet{dodelson2013,taylor2013,taylor2014} derived a set of requirements 
 on the number of independent mock simulations given the number of data points and the number of parameters 
-in a given cosmological analysis. Assuming that the estimated covariance matrix follows a Wishart distribution, 
+in a given cosmological analysis. Assuming that the estimated covariance matrix follows a \emph{Wishart} distribution, 
 \citep{Sellentin:2016a} present a method for marginalizing over the precision matrix. They demonstrate that the 
 resulting likelihood function is no longer Gaussian and instead follows a $t$-distribution.
 
-\citet{dodelson2013,Sellentin:2017a} demonstrate that using a noisy estimate of the precision matrix 
+\citet{dodelson2013,Sellentin:2017a} demonstrate that a noisy estimate of the precision matrix 
 constructed from insufficient number of simulated mocks can systematically bias the confidence 
 intervals over the cosmological parameters. These findings place strict requirement on the number of 
 mock catalogs for the ongoing and future galaxy surveys. In general, the number of mocks need to be much larger than 
 the number of data points.
 
-A common practice in analysis of the deep imaging surveys is tomographic binning of the data and combining probes.
+Common practices in analysis of deep imaging surveys are tomographic binning of the data and combining probes.
 In tomographic binning, the dataset is split into multiple redshift slices and the summary statistics of 
 the data are estimated by correlating the data within each redshift slice and cross-correlating the data across 
-multiple datasets. The size of the resulting data vector can be as large as a few hundred which makes the task of 
-creating mock catalogs even more challenging. 
+multiple redshift slices. The size of the resulting data vector can be as large as a few hundred which makes the task of creating mock catalogs even more challenging. 
 
-Combining probes means joint analysis of different cosmic probes such as galaxy 
+Combining probes involves joint analysis of different cosmic probes such as galaxy 
 positions and galaxy shears. Multi-probe analyses are more robust against systematic 
-uncertainties and have more constraining power. Most modern surveys offer this opportunity. 
-But one of the main obstacles a head of these efforts is the large data vector under consideration. 
-Production of the covariance of this data vector requires a very large number of simulations which may not 
-be feasible.   
+uncertainties (specially systematics that only affect one of the probes) 
+and have more constraining power. Most modern surveys offer this great opportunity. 
+One of the main obstacles a head of these efforts is the large data vector under investigation. 
+Production of the covariance of this data vector requires many simulations which may not 
+be feasible to provide.   
 
-Analytical covariance matrices on the other hand, are not as computationally demanding. Their inverse (precision matrix) 
-is noise free. But the model approximations and assumptions used in these methods may not be sufficient 
-for the accuracy requirements of precision cosmology. Analytical covariance matrices are considered to 
-receive a Gaussian contribution and a non-Gaussian contribution. Assuming that the density field is a 
+Analytical covariance matrices on the other hand, are not as computationally demanding. 
+Their inverse (precision matrix) is noise free. But the model approximations and assumptions used in these methods may not be sufficient for the accuracy requirements of precision cosmology. Analytical covariance matrices are considered to receive Gaussian and a non-Gaussian contributions. Assuming that the density field is a 
 Gaussian random field, the Gaussian part of the covariance matrix is straightforward to compute \citep{grieb2016,klaus2016,slepian2016b}.
 
 Including the non-Gaussian part of the covariance matrix however, is necessary for accurate parameter estimation \citep{takahashi2011,blot2016,chan2016}.
-Significant progress has been made in modeling the non-Gaussian contribution to the covariance matrix through employing approaches based on perturbation 
-theory and effective theories of large scale structure \citep{mohammed_seljak,mohammed2017} or by adopting a halo model \citep{takada_spergel,eifler2014}.
-Regardless of the applicability of analytical covariance matrices in analyzing the survey data, production of simulated mocks remains an important step 
-in \emph{validation} and \emph{calibration} of these analytical covariance matrices \citep{slepian2016b,hildebrandt2017}.
+Significant progress has been made in modeling the non-Gaussian contribution to covariance matrices based on perturbation theory and effective theories of large scale structure \citep{mohammed_seljak,mohammed2017} or by adopting halo (virialized regions of matter overdensity) model \citep{takada_spergel,eifler2014}.
+Regardless of the applicability of analytical covariance matrices in analyzing the survey data, production of simulated mocks remains an important step in \emph{validation} and \emph{calibration} of these analytical covariance matrices \citep{slepian2016b,hildebrandt2017}.
 
-Progress has been made in developing methods that take into account our prior beliefs 
+Considerable progress has been made in developing methods that take into account our prior beliefs 
 about the of covariance matrices. By considering sparsity of the covariance matrix, \citet{paz2015,padmanabhan2016} 
 present methods to estimate the precision matrices with fewer mocks. Shrinkage methods \citep{pope2008,joachimi2016} 
-also require less simulations. \citet{fried2017} presents a method for expansion of the precision matrix 
-around an analytical model and estimating the leading expansion terms with fewer simulations.
+also require fewer simulations. \citet{fried2017} presents a trick for expanding the precision matrix 
+around a part that can be easily computed through analytical means and estimating the leading expansion terms with finite number of simulations.
 
-One of the common tools for estimation of covariance matrices is internal resampling of the data such as jackknife and bootstrap. These covariance 
-estimators have been extensively used in analyses of galaxy clustering and galaxy-galaxy lensing (for example see \citealt{reid2014,hod_vs_sham,singh2016,shirasaki,kwan2017}).
-In situations when no reliable analytical or simulation-based estimate of covariance is available, one could use these estimators. 
-For instance in interpreting the SDSS DR7 galaxy clustering measurements, we make use of estimates of covariance matrix based on 
-jackknife resampling of the data. But as \citet{norberg,fried2016} point out, data re-sampling methods do not faithfully capture the 
-uncertainties. 
+One of the common tools for estimation of covariance matrices is internal resampling of the data such as jackknife and bootstrap. These estimators have been extensively used in analyses of galaxy clustering and galaxy-galaxy lensing (for example see \citealt{reid2014,hod_vs_sham,singh2016,shirasaki,kwan2017}).
+In certain cases when no reliable analytical or simulation-based estimate of the covariance is available, one could use these estimators. 
+For instance in Chapter 3, for interpreting the SDSS DR7 galaxy clustering measurements, 
+we make use of covariance estimates based on jackknife resampling of the data. But as \citet{norberg,fried2016} point out, data resampling methods do not faithfully capture the uncertainties of the data. 
 
-Precision estimation of the covariance matrix from mocks requires a large number of mocks to be used in a given analysis. This has 
-led to development of a number of \emph{approximate} \emph{methods} for mass production of galaxy and halo (virialized regions of dark matter 
-over-density) mock catalogs. These methods rely on approximate gravity solvers for generation of the dark matter density field and a statistical 
-prescription for populating the dark matter density field with mock galaxies (see for example \citealt{manera2013,qpm,eazymock,kitaura2016} and references 
-therein). The state-of-the-art method for production of mock catalogs are QPM \citep{qpm} and PATCHY \citep{kitaura2016}. These methods were used in 
+Precision estimation of the covariance matrix from mocks requires generation of a large number of mocks for a given analysis. This has led to development of \emph{approximate} \emph{methods} for mass production of galaxy and halo mock catalogs. Approximate methods rely on approximate gravity solvers for generating dark matter density fields with reasonable accuracy on large scales and statistical prescriptions for populating the dark matter density field with mock galaxies (see for example \citealt{manera2013,qpm,eazymock,kitaura2016} and references 
+therein). The state-of-the-art techniques for production of mock catalogs are QPM \citep{qpm} and PATCHY \citep{kitaura2016}. These methods were used in 
 cosmological analyses of the SDSS III-BOSS final data release \citep{alam2016}.
 
-In the PATCHY method the density field is generated with perturbation theory. The expected number of galaxies in a cosmic volume given the 
-density field is computed according to a biasing relation whose parameters are unknown. 
-Finally, the number of galaxies is drawn from a negative binomial distribution which is a Poisson distribution with an additional stochasticity. 
-\citet{nifty} demonstrates that this approach is very powerful at reproducing the two-point and three-point statistics of galaxies with high accuracy towards mildly 
-nonlinear scales.
+In the PATCHY method the density field is generated with perturbation theory. Then the expected number of galaxies in a cosmic volume given the density field is computed according to a biasing relation whose parameters are unknown. 
+Finally, the number of galaxies is drawn from a negative binomial distribution which is a Poisson distribution with additional stochasticity. 
+\citet{nifty} demonstrates that this approach is very powerful at reproducing the two-point and three-point statistics of galaxies with high accuracy toward mildly nonlinear regimes.
 
-In Chapter 4, we address two limitations of this method: \emph{bias} \emph{estimation} and \emph{accuracy on small scales}. We replace the pertubation theory-based 
-gravity solver with the fast particle mesh (PM) method of \citet{fastpm}. The main difference between the two PM implementations of \citet{fastpm} and \citet{qpm} is that 
-FastPM imposes exact large scale growth by applying corrections and does not suffer from the loss of power on large scales as a result of using a limited number of time 
-steps for solving equations of motions. We also introduce an automatic bias estimation method based on MCMC. 
+In Chapter 4, we address two limitations of this method: \emph{bias} \emph{estimation} and \emph{accuracy on small scales}. We replace the perturbation theory-based 
+gravity solver of the PATCHY code with the fast particle mesh (PM) method of \citet{fastpm}. The main difference between the Particle mesh implementations of \citet{fastpm} and \citet{qpm} is that 
+FastPM imposes exact large scale growth and thus it does not suffer from the loss of power on large scales as a result of using a limited number of time steps for solving equations of motion. We also introduce an automatic bias estimation method based on MCMC. 
 
-In comparison with the previous version of the code based on perturbation theory, the novel approach yields a higher accuracy towards nonlinear scales for both two-point 
-and three-point statistics. Additionally, the effective bias model bypasses the resolution requirements of. In order to reach reasonable accuracy, the common approximate $N$-body methods \citep{qpm,fastpm,ice_cola} require a larger grid size than the number of particles. That is, the gravitational forces between the particles need to be calculated on a mesh (at least) twice larger than the number of particles (see also \citealt{nifty,monaco2016} for more details). We note that our effective bias prescription for populating the dark matter density field with halos bypasses this requirement and therefore significantly reduces the computational cost of generating mocks.      
-  
+In comparison with the previous version of the code based on perturbation theory, our novel approach yields higher accuracy toward nonlinear scales for both two-point 
+and three-point statistics. One of the main advantages of our approach is the following. In order to reach reasonable accuracy, the common approximate $N$-body methods \citep{qpm,fastpm,ice_cola} require a larger grid size than the number of particles. That is, the gravitational forces between the particles need to be calculated on a mesh (at least) twice larger than the number of particles (see also \citealt{nifty,monaco2016}) in order to resolve halos. We note that our effective bias prescription for populating the dark matter density field with halos bypasses this requirement and as a consequence, it significantly reduces the computational cost of generating mocks.      
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Gravitational lensing of luminous sources (galaxies, CMB) can measure 
 the state of the inhomogeneous matter density and the time-dependence of dark energy. 
 Lensing of the light emitted by background faint galaxies by the intervening large scale structure 
