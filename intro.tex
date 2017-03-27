@@ -141,8 +141,13 @@ Finally, the number of galaxies is drawn from a negative binomial distribution w
 \citet{nifty} demonstrates that this approach is very powerful at reproducing the two-point and three-point statistics of galaxies with high accuracy towards mildly 
 nonlinear scales.
 
-In Chapter 4, we address two limitations of this approach: the b
- 
+In Chapter 4, we address two limitations of this method: \emph{bias} \emph{estimation} and \emph{accuracy on small scales}. We replace the pertubation theory-based 
+gravity solver with the fast particle mesh (PM) method of \citet{fastpm}. The main difference between the two PM implementations of \citet{fastpm} and \citet{qpm} is that 
+FastPM imposes exact large scale growth by applying corrections and does not suffer from the loss of power on large scales as a result of using a limited number of time 
+steps for solving equations of motions. We also introduce an automatic bias estimation method based on MCMC. 
+
+In comparison with the previous version of the code based on perturbation theory, the novel approach yields a higher accuracy towards nonlinear scales for both two-point 
+and three-point statistics. Additionally, the effective bias model bypasses the resolution requirements of. In order to reach reasonable accuracy, the common approximate $N$-body methods \citep{qpm,fastpm,ice_cola} require a larger grid size than the number of particles. That is, the gravitational forces between the particles need to be calculated on a mesh (at least) twice larger than the number of particles (see also \citealt{nifty,monaco2016} for more details). We note that our effective bias prescription for populating the dark matter density field with halos bypasses this requirement and therefore significantly reduces the computational cost of generating mocks.      
   
 Gravitational lensing of luminous sources (galaxies, CMB) can measure 
 the state of the inhomogeneous matter density and the time-dependence of dark energy. 
@@ -287,6 +292,46 @@ density field across a considerable fraction of the observable universe. They wi
 a consistent picture of the initial conditions, formation of structure, and laws of gravity. 
 Reaching a percent-level constraint over the cosmological parameters will 
 forever shape our understanding of the cosmos. 
+
+Cosmological inferences rely on assuming a specific functional form for the likelihoods. For instance, interpretation of the 
+two-point correlation functions of the galaxy shears or galaxy positions is done through assuming a multivariate Gaussian likelihood 
+and interpreting the Cluster number counts is done through assuming a Poisson likelihood function. Therefore common practices in 
+cosmology make string assumptions about the underlying distribution of the \emph{estimated} observables.
+
+This fundamental assumption may not hold in detail and a robust test of this assumption can only be done with a large 
+number of realistic and accurate mock catalogs.One might expect the Gaussianity assumption in large scale structure analyses 
+to break down in certain regimes. One of the common arguments for the Gaussianity assumption is the central limit theorem. That is, a sufficiently large copies 
+of random variables, Fourier modes of the density field in a cosmological context, are Gaussian distributed. The central limit theorem may not be applicable on 
+the very large scales where the number of Fourier modes is not large. Nonlinear evolution of the density field on small scales may also break down this assumption. 
+
+The presence of systematics such as missing data as a result of fiber collision, selection effects, color-magnitude cuts, or catastrophic redshift 
+failures \citep{Guo:2012a,Ross:2012aa,Hahn:2017a} may affect the distribution of the estimated summary statistics of the data in a nontrivial way 
+that could be difficult to model. Unconventional observables beyond two-point statistics such as the group statistics are not very 
+robust against methodological systematics such as group identification (see \citealt{berlind2006,campbell2015}). Modeling such systematics in an explicit likelihood analysis may not be possible. A similar summary statistics in the context of weak lensing is the convergence peak counts. Convergence peak counts can, in principle, deliver competitive cosmological constraints but they suffer from nontrivial impact by systematic uncertainties \citep{abcwl2}. 
+
+Furthermore as we have mentioned earlier, parameter estimation with large scale structure observables require a precise estimate of 
+the sample variance in terms of the covariance matrix. Estimation of the covariance matrix is computationally demanding \citep{nifty,harnois} and even 
+in the presence of an estimate of it the form of the likelihood function can no longer be characterized by a Multivariate Gaussian distribution \citep{Sellentin:2016a,Sellentin:2017a}.
+These problems can lead to biases in cosmological parameter estimation.
+
+On the other hand, parameter estimation can be done with Approximate Bayesian Computation (ABC) without explicitly specifying a likelihood function. 
+In ABC, accounting for the likelihood function is implicitly done through a generative simulation based inference and a distant metric that quantitatively 
+measures the closeness of the observations and simulations \citep{optimalkernel,abcpmc}. Accounting for systematics in the ABC approach is done by implementing 
+them in the generative forward model of the data. For instance, the systematics associated with identification of galaxy groups can be built into the forward model that posses these group mis-identifications. The uncertainty in the photometric redshifts in deep imaging surveys can be incorporated into the forward model of the data.   
+
+This approach also bypasses any assumption regarding the functional form of the underlying distribution of the data. Regardless of how the estimated summary statistics are 
+distributed, one could use the ABC method for inferring the parameters of interest.
+Dependence of the analysis on the precise knowledge of the precision matrix can be circumvented by accounting for the sample variance 
+in the forward model. It is important to note that, the accuracy of this approach relies on the distance metric. Considerable care needs to be devoted to finding and testing a 
+reliable distance metric which in general depends on the cosmological observable under consideration \citep{abcsn,abcwl,jennings2016a,jennings2016b}. 
+
+In Chapter 2, we present the first application of ABC in the context of large scale structure. In particular, we show that this approach can be reliably used in order to constrain 
+the galaxy-halo connection models with small-scale galaxy clustering and group statistics. Using a simulated data with known true HOD parameters, we show that one can use ABC to infer these true parameters. We show that with ABC, observables beyond conventional two-point statistics such as the abundance of galaxy groups can robustly constrain the galaxy-halo connection parameters. More importantly, we make comparison between the performance of ABC equipped with Particle Monte Carlo sampling and Gaussian Pseudo-likelihood with MCMC sampling. We show that the constraints obtained from the two approaches are comparable and consistent within 1-$\sigma$ level, with the ABC-PMC constraints slightly less 
+biased when the abundance of galaxy groups is used as the summary statistics of the data. 
+
+Furthermore, we discuss why the ABC-PMC method is advantageous in terms of implementing the sample variance and observational systematics in the forward model.
+We also point out the limitations of applying such technique to cosmological parameter estimation with galaxy clustering measurements of the modern galaxy surveys. 
+We argue that the main computational bottleneck is going to be the forward model that includes all observational systematics and complicated structure formation models. 
 
 These ambitious goal however, can only be achieved if we keep the 
 uncertainties arising from astrophysical and observation systematics 
