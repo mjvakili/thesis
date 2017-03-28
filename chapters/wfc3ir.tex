@@ -13,28 +13,31 @@
 
 \chapter{Super-resolution PSF model of HST WFC3-IR\chaplabel{wfc3ir}}
 
-This \paper is joint work with Ross~Fadely (Insight) and David~W.~Hogg (NYU) and it is being prepared for submission. 
+This \paper\ is joint work with Ross~Fadely (Insight) and David~W.~Hogg (NYU). 
 
 \section{Chapter abstract}
 
 Accurate model of the Point Spread Function is crucial for reliable point source photometry, astrometry, and weak lensing studies.
-The PSF model of the $\hst$ $\wfc$ IR channel does not meet the accuracy required by these science goals. In addition, the PSF of the $\hst$ $\wfc$ IR 
+The PSF model of the $\hst$ $\wfc$ IR channel does not meet the accuracy required by these science goals. 
+In addition, the PSF of the $\hst$ $\wfc$ IR 
 channel is poorly sampled. Weak lensing studies of poorly resolved images of faint distant galaxies demands 
 a great knowledge of the PSF sampled at a resolution higher than of the $\hst$ $\wfc$ pixels.
+
 In this investigation, we present a generative model of every image taken by the $\wfc$ IR channel as a set of a number of point sources convolved
 with the instrument PSF. In particular, we focus on modeling the pixel-convolved PSF, the instrument PSF convolved with the pixel response function. 
-In particular, we model the images of point sources observed in the calibration program of the $\hst$ $\wfc$ IR channel in the F160W bandpass. We 
-expect the inference of the super-resolution PSF in the other bandpasses of the IR channel to follow a simillar procedure. 
-We find that we can find th optimal solution of the problem by using a variance model that correctly takes into account the model 
-uncertainty and a regularization term that imposes a smoothness condition on the super-resolution PSF 
+
+In particular, we model the images of point sources observed in the calibration program of the $\hst$ $\wfc$ IR channel in the \emph{F160W} bandpass. 
+We expect the inference of the super-resolution PSF in the other bandpasses of the IR channel to follow a similar procedure. 
+We discuss how the optimal solution of the problem can be found by using a variance model that correctly takes into account the model 
+uncertainty and a regularization term that imposes a smoothness condition on the super-resolution PSF. 
 
 \section{Introduction}
 
 The Point Spread Function (hereafter PSF) determines the fraction of photons from a given point source that lands on a particular location 
 from the center of that point source on a detector. The PSF of the $\hst$ $\wfc$ camera is extremely undersampled. That is, if a center of an observed star lies 
 on the center of a pixel, a significant fraction of the brightness of that star will be 
-encapsulated by the detector's pixel that contains the centroid of the star.
-In other words, the full-width half-maximum (FWHM) of the PSF is not spanned by multiple pixels since the designed 
+encapsulated by the pixel that contains the centroid of the star.
+In other words, within the full-width half-maximum (FWHM), the PSF is usually not spanned by multiple detector pixels since the designed 
 pixels are large. This is mainly the result of a compromise made in design of the detectors to cover a wider field of view.
 
 Poor sampling of the PSF by detectors renders many astronomical image processing tasks difficult. Precise astrometry and photometry 
@@ -46,8 +49,8 @@ model of the PSF.
 
 Furthermore, cosmic shear studies require accurate measurement of the shapes of individual distant galaxies. The galaxies used for estimation 
 of the cosmic shear signal are faint and barely resolved by the $\hst$ $\wfc$ detectors. In order to reliably estimate the ellipticities of these poorly 
-resolved galaxies through model fitting, we need to convolve the model describing the light distribution of these galaxies with a higher resolution PSF model. 
-Therefore, having access to a higher resolution model of the PSF is an essential ingredient in weak lensing studies of galaxies detected by the $\hst$ $\wfc$ IR 
+resolved galaxies, we need to convolve the model describing the light distribution of these galaxies with a higher resolution PSF model. 
+Therefore, high resolution PSF is an essential ingredient in weak lensing studies of galaxies detected by the $\hst$ $\wfc$ IR 
 channel.   
 
 In this investigation, we focus on modeling the pixel-convolved PSF which is the optical (instrumental) PSF convolved with the 
@@ -252,44 +255,73 @@ do not contribute to computation of $L_n$ and its derivatives with respect to mo
 We set the parameter $q$ to 1. We note that this choice of does a good job at masking out the pixels that recieve light from the nearby or overlapping sources. 
 In principle $q$ needs to decrease iteratively as our knowledge of the PSF improves. In this work however, we choose to hold the value of $q$ fixed at one. 
 
-The algorithm we use for inference of the super-resolution PSF $X$ is summarized in Algorithm 1. %~\ref{alg:supermean}.
+The algorithm we use for inference of the super-resolution PSF $X$ is summarized in Algorithm ~\ref{alg:supermean}.
 
-%\begin{algorithm} 
-%\caption{The procedure for Inferring the Super-Resolution PSF}
-%\begin{algorithmic}[1] \label{alg:supermean}
+\begin{algorithm} 
+\caption{The procedure for Inferring the Super-Resolution PSF}
+\begin{algorithmic}[1] \label{alg:supermean}
 
-%\IF{$t=1:$}
-%\STATE $\epsilon_t \gets \infty$
-%\FOR{$n=1,...,N$}
-%   \STATE // \emph{This can now be done in parallel for all i}
+\IF{$t=1:$}
+\STATE $\epsilon_t \gets \infty$
+\FOR{$n=1,...,N$}
+   \STATE // \emph{This can now be done in parallel for all i}
 
-%   \STATE $b_{n}$ \gets \mathrm{median} \; $(y_{n})$
-%   \STATE $f_{n}$ \gets $\sum_{i=1}^{N_pix} \big(y_{n,i} - b_{n}\big)$
-%   \STATE \mathrm{Initialize} $\Delta_{n}$ with the 3 \times 3 polynomial method
-%   \STATE $X_{n}$ \gets \mathrm{cubic \; spline} $(\Delta_n)[\big(y_{n,i} - b_{n}\big)/f_n]$
-%\ENDFOR
-%\STATE $X$ \gets $\sum_{n=1}^{N} X_{n]$
+   \STATE $b_{n}$ \gets \mathrm{median} \; $(y_{n})$
+   \STATE $f_{n}$ \gets $\sum_{i=1}^{N_pix} \big(y_{n,i} - b_{n}\big)$
+   \STATE \mathrm{Initialize} $\Delta_{n}$ with the 3 \times 3 polynomial method
+   \STATE $X_{n}$ \gets \mathrm{cubic \; spline} $(\Delta_n)[\big(y_{n,i} - b_{n}\big)/f_n]$
+\ENDFOR
+\STATE $X$ \gets $\sum_{n=1}^{N} X_{n]$
 
-%\ENDIF
-%\IF{$t=2,...,N_{it}:$}
-%\FOR{$i=1,...,N$}
-%   \STATE // \emph{This loop can now be done in parallel for all i}
-%   \WHILE{$\rho(X,D)>\epsilon_t$}
-%   \STATE Draw $\pars^{*}_{t}$ from $\{\pars_{t-1}\}$ with probabilities $\{w_{t-1}\}$
-%   \STATE $\pars^{*}_{t} \gets K(\pars^{*}_{t},.)$
-%   \STATE $X = f(\pars^{*}_{t})$
-%   \ENDWHILE
-%   \STATE $\pars^{(i)}_{t} \gets \pars^{*}_{t}$
-%   \STATE $w^{(i)}_{t} \gets \pi(\pars^{(i)}_{t}) / \big(\sum\limits_{j=1}^{N}w_{t-1}^{(i)}K(\pars^{(j)}_{t-1},\pars^{(i)}_{t}) \big)$
-%\ENDFOR
-%\ENDIF
-%\end{algorithmic}
-%\end{algorithm}
+\ENDIF
+\IF{$t=2,...,N_{it}:$}
+\FOR{$i=1,...,N$}
 
-%\section{Preliminary Results}\label{sec:results}
+   \WHILE{$\rho(X,D)>\epsilon_t$}
+   \STATE Draw $\pars^{*}_{t}$ from $\{\pars_{t-1}\}$ with probabilities $\{w_{t-1}\}$
+   \STATE $\pars^{*}_{t} \gets K(\pars^{*}_{t},.)$
+   \STATE $X = f(\pars^{*}_{t})$
+   \ENDWHILE
+   \STATE $\pars^{(i)}_{t} \gets \pars^{*}_{t}$
+   \STATE $w^{(i)}_{t} \gets \pi(\pars^{(i)}_{t}) / \big(\sum\limits_{j=1}^{N}w_{t-1}^{(i)}K(\pars^{(j)}_{t-1},\pars^{(i)}_{t}) \big)$
+\ENDFOR
+\ENDIF
 
-%With the ingredients of our methodology explained in Section~\ref{sec:method}, we now present the results of applying our 
-%method to the observations of the point sources in $\hst$ $\wfc$ IR channel.  
+\end{algorithmic}
+\end{algorithm}
+
+\section{Preliminary Results}\label{sec:results}
+
+With the ingredients of our methodology explained in Section~\ref{sec:method}, we now present the results of applying our 
+method to the observations of the point sources in $\hst$ $\wfc$ IR channel. First, we train our PSF model with a number of 
+patches that were selected such that majority of them only contain one point source. 
+
+In principle given the methodology explained in Section~\ref{sec:method}, we can train our model forward model on patches with arbitrary 
+number of stars. But in order to minimize the training time as much as possible, we follow this selection criteria for the training sample.
+It is important to note that selecting single-point source patches does not necessarily guarantee no light contamination by the nearby sources, 
+especially by bright objects in nearby patches.
+
+Therefore it is necessary to follow the procedure explained in the previous section to clip the pixels that may have received light 
+contamination from the nearby sources. The parameter $q$ will be held at the constant value of one and any pixel with $\chi^{2}_{\rm clip} > 3 $ 
+will not be permitted to contribute to the likelihood function. 
+This will ensure ill-fit portions of the training pixels will not bias the final PSF estimate. 
+
+In what follows in the remainder of this \paper\, we set the the strength of the smoothness regularization $\epsilon$ to 10$^{3}$ and hold 
+it fixed. Although it is important to set the value of $\epsilon$ by minimizing a cross-validation score, in practice one can choose a 
+value for $\epsilon$ by ensuring that neither the negative log-likelihood nor the regularization term will dominate each other. 
+
+Choosing an arbitrarily large value of $\epsilon$ will drive the optimization procedure to maximize smoothness, while choosing a very small 
+value of $\epsilon$ will make the smoothness regularization negligible. We found that with $\epsilon = 1000$, the contributions received from the 
+right hand sides of Eq.~(\ref{eq:reg}) remain similar. We will make use of the cross-validation set for validating our estimate of the 
+super-resolution PSF and our methodology for masking the contribution of nearby stellar sources to patch fitting.  
+
+In Figure~\ref{fig:srpsf} we show our initialization of the super-resolution PSF method and our final estimate of the PSF found form 
+minimizing Eq.~(\ref{eq:reg}). We note that in comparison to the final estimate of the PSF, our initaial estimate based on scaling, shifting, 
+upsampling and averaging is very smooth. The initial PSF misses many of the sharp features along the tails of the final estimate. Furthermore, 
+it appears to have a peak with less sharpness toward the center.
+
+ 
+
 
 \section{Discussion}\label{sec:summary}
 
@@ -299,10 +331,66 @@ The exersize of making highly accurate masurements of the shapes of faint poorly
 correction of the variable sub-pixel response function ``flat-field'' of the telescope, and many other scientific applications require excuisitely accurate model of 
 the PSF at a resolution higher than what can be sampled by the $\wfc$ IR detectors. 
 
-Ou approach differs from the analysis presented in \citet{ngole,ngole2} in that it does not any infer the super-resolution PSF in a wavelet basis and it does not 
+Our approach differs from the analysis presented in \citet{ngole,ngole2} in that it does not any infer the super-resolution PSF in a wavelet basis and it does not 
 imposes any sparsity regularization. Our analysis is different than the approach of \citet{anderson2000} as we estimate the PSF by optimizing a well-motivated objective function 
 that is based on a generative forward model of the observations. 
 
 The method presented in \citet{anderson2000} is based on shifting, averaging and eventually smoothing the PSF.
 Furthermore, it is restricted to using only the isolated point sources and it is not prone to patches in which there is light contamination by the nearby sources. 
 The method presented in this \paper\ implements a rigorous treatment of overlapping sources by modifying the variance of the noise model. 
+
+
+
+%%%%%%%%%%%%%%%%%%%% FIGURES %%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PSF INITIAL AND FINAL
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure*}
+ \begin{tabular}{cc}
+\includegraphics[width=0.5\textwidth]{figures/wfc3ir/super0.png}
+\includegraphics[width=0.5\textwidth]{figures/wfc3ir/super2.png}
+\end{tabular}
+\caption{\label{fig:srpsf} Left: Demonstration of the initialization of the super-resolution PSF model. The initial PSF was constructed by scaling (background subtraction and flux normalization), shifting (through matched-filter polynomial centroiding), upsampling (with cubic spline interpolation), and averaging the isolated stars in the observation sample. 
+Left: Demonstration of the super-resolution PSF estimate after optimizing the likelihood function with six iterations. Note how the averaged upsampled initial PSF is smooth and lacks the sharp features visible at tails of the optimized super-resolution PSF.}
+\end{figure*}
+
+\begin{figure*}
+\includegraphics[width=0.9\textwidth , height=0.9\textwidth ]{figures/wfc3ir/example1762.pdf}
+\caption{\label{fig:validation_1} }
+\end{figure*}
+
+\begin{figure*}
+\includegraphics[width=0.9\textwidth]{figures/wfc3ir/example7.pdf}
+\caption{\label{fig:validation_2} }
+\end{figure*}
+
+\begin{figure*}
+\includegraphics[width=0.9\textwidth]{figures/wfc3ir/example11.pdf}
+\caption{\label{fig:validation_3} }
+\end{figure*}
+
+
+\begin{figure*}
+\includegraphics[width=0.9\textwidth]{figures/wfc3ir/example19.pdf}
+\caption{\label{fig:validation_4} }
+\end{figure*}
+
+
+\begin{figure*}
+%\begin{center}
+\includegraphics[width=0.85\textwidth]{figures/abc/paper_ABCcorner_nbarxi.pdf}
+\caption{\label{fig:abc_corner_nbarxi} We present the constraints on the \citet{zheng07} HOD model parameters obtained from our ABC-PMC analysis using $\bar{n}$ and $\xigg(r)$ as observables.  
+The diagonal panels plot the posterior distribution of each HOD parameter with 
+vertical dashed lines marking the $50\%$ quantile and $68\%$ confidence intervals of the 
+distribution. The off-diagonal panels plot the degeneracies between parameter pairs. 
+The range of each panel corresponds to the range of our prior choice. The ``true''
+HOD parameters, listed in Section \ref{sec:mock_obv}, are also plotted in each of 
+the panels (black). For $\log\mathcal{M}_0$, $\alpha$, and $\sigma_{\log M}$, 
+the ``true'' parameter values lie near the center of the $68\%$ confidence interval 
+of the posterior distribution. For $\log\mathcal{M}_1$ and $\log\mathcal{M}_\mathrm{min}$, 
+which have tight constraints, the ``true'' values lie within the $68\%$ confidence 
+interval. Ultimately, the ABC parameter constraints we obtain in our analysis are consistent with the ``true'' HOD parameters.}
+%\end{center}
+\end{figure*}
