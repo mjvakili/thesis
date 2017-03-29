@@ -132,14 +132,14 @@ In order to investigate whether the additional complexity of the decorated HOD m
 
 
 
-This \paper is structured as follows: In Section \ref{sec:gmethod} we discuss the $N$-body simulation, the two halo occupation modeling methods, and the details of the computation of model observables used in this investigation. Then in Section \ref{sec:gdata}, we discuss the data used in this study. 
-In Section \ref{sec:ganalysis} we discuss the details of our inference analysis as well as the results. This includes description of the details of our inference setup. In Section \ref{sec:gresult} we discuss the constraints and their implications. This includes presentation of the constraints on the parameters of the two models, interpretation of the predictions of our constraints and their possible physical ramifications, assessment of the levels of assembly bias as predicted by our model constraints and its comparison with abundance matching mock catalogs, and finally model comparison. Finally, we discuss and conclude in Section \ref{sec:gsummary}.
+This \paper is structured as follows: In Section \ref{sec:method} we discuss the $N$-body simulation, the two halo occupation modeling methods, and the details of the computation of model observables used in this investigation. Then in Section \ref{sec:data}, we discuss the data used in this study. 
+In Section \ref{sec:analysis} we discuss the details of our inference analysis as well as the results. This includes description of the details of our inference setup. In Section \ref{sec:result} we discuss the constraints and their implications. This includes presentation of the constraints on the parameters of the two models, interpretation of the predictions of our constraints and their possible physical ramifications, assessment of the levels of assembly bias as predicted by our model constraints and its comparison with abundance matching mock catalogs, and finally model comparison. Finally, we discuss and conclude in Section \ref{sec:summary}.
 Throughout this paper, unless stated otherwise, 
 all radii and densities are stated in comoving units. 
 Standard flat $\Lambda$CDM is assumed, and all cosmological 
 parameters are set to the Planck 2015 best-fit estimates.
 
-\section{Method}\label{sec:gmethod}
+\section{Method}\label{sec:method}
 
 In this section, we discuss the ingredients of our modeling one-by-one. First, we discuss the simulation used in this study. Afterwards, we talk about the forward modeling of galaxy catalogs in the standard HOD modeling framework as well as the decorated HOD framework. Then, we provide an overview of the two summary statistics of the galaxy catalogs that we used in our inference.  
 
@@ -239,11 +239,11 @@ The projected 2PCF $w_{p}(r_{p})$ can be computed by integrating the 3D redshift
 w_{p}(r_{p}) = 2 \int_{0}^{\pi_{max}}\xi(r_{p} , \pi)\; d\pi
 \label{los}
 \eeq
-For our 2PCF calculations, we use the $w_{\rm p}$ measurement functionality of the fast and publicly available pair-counter code $\mathtt{CorrFunc}$ (\citealt{corrfunc} , available at \url{https://github.com/manodeep/Corrfunc}). To be consistent with the SDSS measurements described in Section \ref{sec:gdata}, $w_{\rm{p}}(r_{\rm{p}})$ is obtained by the line-of-sight integration to $\pi_{max}=40 \; h^{-1}\rm{Mpc}$. Note that $w_{p}(r_{p})$ is measured in units of $h^{-1}\rm{Mpc}$. To be consistent with \citet{guo2015}, we use the same binning (as specified in Section \ref{sec:gdata}) to measure $w_{\rm p}$. In addition to the projected 2PCF, we use the number density given by the number of mock galaxies divided by the comoving volume of the $\mathtt{SMDP}$ simulation. 
+For our 2PCF calculations, we use the $w_{\rm p}$ measurement functionality of the fast and publicly available pair-counter code $\mathtt{CorrFunc}$ (\citealt{corrfunc} , available at \url{https://github.com/manodeep/Corrfunc}). To be consistent with the SDSS measurements described in Section \ref{sec:data}, $w_{\rm{p}}(r_{\rm{p}})$ is obtained by the line-of-sight integration to $\pi_{max}=40 \; h^{-1}\rm{Mpc}$. Note that $w_{p}(r_{p})$ is measured in units of $h^{-1}\rm{Mpc}$. To be consistent with \citet{guo2015}, we use the same binning (as specified in Section \ref{sec:data}) to measure $w_{\rm p}$. In addition to the projected 2PCF, we use the number density given by the number of mock galaxies divided by the comoving volume of the $\mathtt{SMDP}$ simulation. 
 
-Note that a full forward model of the data requires running the simulation at different redshifts, generation of light cones, accounting for the complex survey geometry and systematic errors such as fiber collisions. Using the $z=0$ output of the $\mathtt{SMDP}$ simulation in our forward model of the spatial distribution of galaxies is only an approximation. This approximation can be justified by the small redshift range of the SDSS DR7 main galaxy sample. As described in \citealt{zehavi2011}, using random catalogs with angular window function of the data in measurements of galaxy clustering accounts for the geometry of the data. As described in Section~\ref{sec:gdata}, the fiber collision correction method of \citealt{guo2012} is applied to the SDSS clustering measurements used in this study. Therefore we do not account for that effect in our forward model.
+Note that a full forward model of the data requires running the simulation at different redshifts, generation of light cones, accounting for the complex survey geometry and systematic errors such as fiber collisions. Using the $z=0$ output of the $\mathtt{SMDP}$ simulation in our forward model of the spatial distribution of galaxies is only an approximation. This approximation can be justified by the small redshift range of the SDSS DR7 main galaxy sample. As described in \citealt{zehavi2011}, using random catalogs with angular window function of the data in measurements of galaxy clustering accounts for the geometry of the data. As described in Section~\ref{sec:data}, the fiber collision correction method of \citealt{guo2012} is applied to the SDSS clustering measurements used in this study. Therefore we do not account for that effect in our forward model.
 
-\section{Data}\label{sec:gdata}
+\section{Data}\label{sec:data}
 
 We focus on the measurements made on the volume-limited luminosity-threshold main sample of galaxies in the SDSS spectroscopic survey. In this section, we briefly describe the measurements used in our study for finding constraints on the assembly bias as well as the HOD parameters.
 
@@ -254,16 +254,16 @@ The projected 2PCFs are measured in 12 logarithmic $r_{p}$ bins (in units of $h^
 
 The 2PCF measurement of each luminosity-threshold sample is accompanied by a covariance matrix constructed using 400 jackknife sub-samples of the data. The number density measurements are also accompanied by uncertainties measured using the jackknife method. Furthermore, the covariance between the number denisty and the projected 2PCF measurements are neglected. As \citet{norberg} shows, parameter estimation using jackknife covariance matrices is conservative as the jackknife method overestimates the errors in the observations. 
 
-The advantage of using these measurements is that the effects of fiber collision systematic errors on the two-point statistics are corrected for (with the method described in \citealt{guo2012}), and therefore, these measurements provide accurate small scale clustering measurements. The assembly bias parameters introduced in section \ref{sec:gmethod} can have a 10-percent level impacts on galaxy clustering (\citealt{decorated}). Presence of assembly bias in the satellite population impacts the very small-scale clustering (\citealt{decorated}). Moreover as \citet{sunayama2016} demonstrates, the scale-dependence of the halo assembly bias has a pronounced bump in the 1-halo to 2-halo transition regime (1$\sim$2 $h^{-1}\rm{Mpc}$). This scale can be impacted by fiber collision systematics. Precise investigation of the possible impact of this signal on the galaxy clustering modeling requires accurate measurements of 2PCF on small scales. 
+The advantage of using these measurements is that the effects of fiber collision systematic errors on the two-point statistics are corrected for (with the method described in \citealt{guo2012}), and therefore, these measurements provide accurate small scale clustering measurements. The assembly bias parameters introduced in section \ref{sec:method} can have a 10-percent level impacts on galaxy clustering (\citealt{decorated}). Presence of assembly bias in the satellite population impacts the very small-scale clustering (\citealt{decorated}). Moreover as \citet{sunayama2016} demonstrates, the scale-dependence of the halo assembly bias has a pronounced bump in the 1-halo to 2-halo transition regime (1$\sim$2 $h^{-1}\rm{Mpc}$). This scale can be impacted by fiber collision systematics. Precise investigation of the possible impact of this signal on the galaxy clustering modeling requires accurate measurements of 2PCF on small scales. 
 The method of \citet{guo2012} is able to recover the true $\wpp$ with  $\sim 6\%$ accuracy in small scales ($r_{\rm{p}} = 0.1 \; h^{-1}\rm{Mpc}$) and with $\sim 2.5\%$ at relatively large scales $r_{\rm{p}} \sim 30 \; h^{-1}\rm{Mpc}$. 
 
 Note that the comoving volume of the $N$-body simulation used in this investigation is 64 $\times 10^{6} \; h^{-3}\rm{Mpc}^{3}$ which is larger than the comoving volume of all the luminosity-threshold samples in the SDSS data considered in this study except the two most luminous samples. The comoving volumes of the $M_{\rm r}<-21, \; 21.5$ samples are 71.74 and 134.65 (in units of $10^{6} h^{-3}\rm{Mpc}^{3}$) respectively. Since we are not studying very large scale clustering ($r_{p,\; \rm max} \leq 25 \; h^{-1}\rm{Mpc}$), using a slightly smaller box for those samples is justified. 
 
-\section{Analysis}\label{sec:ganalysis}
+\section{Analysis}\label{sec:analysis}
 
 \subsection{Inference setup}\label{subsec:analysis}
 
-Given the SDSS measurements described in Section \ref{sec:gdata}, we aim to constrain the HOD model without assembly bias (described in \ref{subsubsec:hod}), and the HOD model with assembly bias (described in \ref{subsubsec:decorated}) for each luminosity-threshold sample, by sampling from the posterior probability distribution $p(\theta|d) \propto p(d|\theta) \pi(\theta)$ where $\theta$ denotes the parameter vector and $d$ denotes the data vector. In the standard HOD modeling $\theta$ is given by
+Given the SDSS measurements described in Section \ref{sec:data}, we aim to constrain the HOD model without assembly bias (described in \ref{subsubsec:hod}), and the HOD model with assembly bias (described in \ref{subsubsec:decorated}) for each luminosity-threshold sample, by sampling from the posterior probability distribution $p(\theta|d) \propto p(d|\theta) \pi(\theta)$ where $\theta$ denotes the parameter vector and $d$ denotes the data vector. In the standard HOD modeling $\theta$ is given by
 \beq
 \theta = \{ \mmin,\;\sigmam,\;\mzero,\; \alpha,\;\mone \},
 \eeq
@@ -304,7 +304,7 @@ where $N=400$ is the number of the jackknife samples, and $d=12$ is the length o
 
 For sampling from the posterior probability, given the likelihood function (see equation \ref{eq:lnlike_wp}) and the prior probability distributions (see Table \ref{tab:prior}), we use the affine-invariant ensemble MCMC sampler (\citealt{goodmanweare}) and its implementation $\mathtt{emcee}$ (\citealt{emcee}). In particular, we run the $\mathtt{emcee}$ code with 20 walkers and we run the chains for at least 10000 iterations. We discard the first one-third part of the chains as burn-in samples and use the reminder of the chains as production MCMC chains. Furthermore, we perform Gelman-Rubin convergence test (\citealt{grtest}) to ensure that the MCMC chains have reached convergence.
 
-\section{Results and Discussion}\label{sec:gresult}
+\section{Results and Discussion}\label{sec:result}
 
 \subsection{Constraints and Interpretations}
 %Our constraints on the assembly bias parameters fall into two main categories. First, the satellite 
@@ -444,7 +444,7 @@ We note that both AIC and BIC scores improve in the luminosity-threshold samples
 
 \subsection{choice of simulation}
 
-Given the SDSS clustering measurements described in Section \ref{sec:gdata}, We repeat the inference of the assembly bias parameters $\asat$ and $\acen$ with the $\mathtt{BolshoiP}$ simulation (\citealt{smallmultidark}). This $N$-body simulation is carried out with similar setting as the $\mathtt{Bolshoi}$ simulation with the exception that in the $\mathtt{BolshoiP}$ simulation, Planck cosmology is adapted and the mass per simulation particle is $1.49\times 10^8 \; h^{-1} M_{\odot}$. 
+Given the SDSS clustering measurements described in Section \ref{sec:data}, We repeat the inference of the assembly bias parameters $\asat$ and $\acen$ with the $\mathtt{BolshoiP}$ simulation (\citealt{smallmultidark}). This $N$-body simulation is carried out with similar setting as the $\mathtt{Bolshoi}$ simulation with the exception that in the $\mathtt{BolshoiP}$ simulation, Planck cosmology is adapted and the mass per simulation particle is $1.49\times 10^8 \; h^{-1} M_{\odot}$. 
 
 The summary of constraints are shown in Figure \ref{fig:bias_comparison}. In Figure \ref{fig:bias_comparison}, the constraints from the $\mathtt{SMDP}$ and the $\mathtt{BolshoiP}$ simulations are shown with circles and crosses respectively. Additionally, the upper and lower bounds on the inferred parameters reported by \citet{zentner2016} are shown in shaded blue regions. In the case of central assembly bias, all three constraints are consistent. For the luminosity-thresholds samples $M_{\rm r}<-20.5, -20, -19.5$, where the central assembly bias parameters are strongly positive, the constraints obtained from the $\mathtt{SMDP}$ simulation are tighter. 
   
@@ -454,7 +454,7 @@ For the $M_{\rm r}<-19, -20.5$ samples, the marginalized posterior PDFs over $\a
 
 In terms of the effect of assembly bias on galaxy clustering, note that mocks created using the inferred parameters with the $\mathtt{SMDP}$ simulation show the same behavior as we observe in the abundance matching catalogs presented in \citet{arz2014} and \citet{lehman2015}. That is, the difference in $w_{p}$ between the mock catalogs and the randomized catalogs is mostly on large scales where the clustering is governed by the central galaxies. That is, the impact of assembly bias on the satellite occupation is negligible and only the central occupation is affected.  
 
-\section{Summary and Conclusion}\label{sec:gsummary}
+\section{Summary and Conclusion}\label{sec:summary}
 
 In this investigation, we provide constraints on the concentration-dependence of halo occupation for a wide range of galaxy luminosities in the SDSS data. In particular, the modeling is done in the context of the decorated HOD model \citet{decorated}, and the data used in this investigation is the projected 2PCF measurements published by \citet{guo2015}. We make use of $\mathtt{SMDP}$ high resolution $N$-body simulation that enables us to reliably perform inference for the faintest galaxy samples in the SDSS DR7 catalog that live in low mass halos, and the brightest galaxy samples that occupy large comoving volumes. 
 
