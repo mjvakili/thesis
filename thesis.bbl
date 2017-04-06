@@ -23,7 +23,6 @@
 \bibitem[Bardeen et al.(1986)]{bardeen1986} Bardeen, J.~M., Bond, J.~R., Kaiser, N., \& Szalay, A.~S.\ 1986, \apj, 304, 15
 \bibitem[Beaumont et al.(2008)]{abcpmc} Beaumont, M.~A., Cornuet, J.-M., Marin, J.-M., \& Robert, C.~P.\ 2008, arXiv:0805.2256 
 \bibitem[Behroozi et al.(2013)]{behroozi13} Behroozi, P.~S., Wechsler, R.~H., \& Conroy, C.\ 2013, \apj, 770, 57 
-\bibitem[Behroozi et al.(2013)]{behroozi13} Behroozi, P.~S., Wechsler, R.~H., \& Conroy, C.\ 2013, \apj, 770, 57 
 \bibitem[Behroozi et al.(2013)]{rockstar} Behroozi, P.~S., Wechsler, R.~H., \& Wu, H.-Y.\ 2013, \apj, 762, 109 
 \bibitem[Berlind \& Weinberg(2002)]{berlind_weinberg2002} Berlind, A.~A., \& Weinberg, D.~H.\ 2002, \apj, 575, 587 
 \bibitem[Berlind et al.(2006)]{groups} Berlind, A.~A., Frieman, J., Weinberg, D.~H., et al.\ 2006, \apjs, 167, 1 
@@ -67,7 +66,6 @@
 \bibitem[Croton et al.(2007)]{croton2007} Croton, D.~J., Gao, L., \& White, S.~D.~M.\ 2007, \mnras, 374, 1303 
 \bibitem[Dalal et al.(2008)]{dalal2008} Dalal, N., White, M., Bond, J.~R., \& Shirokov, A.\ 2008, \apj, 687, 12-21 
 \bibitem[Davis et al.(1985)]{fof} Davis, M., Efstathiou, G., Frenk, C.~S., \& White, S.~D.~M.\ 1985, \apj, 292, 371 
-\bibitem[Davis et al.(1985)]{fof} Davis, M., Efstathiou, G., Frenk, C.~S., \& White, S.~D.~M.\ 1985, \apj, 292, 371
 \bibitem[Dawson et al.(2013)]{boss} Dawson, K.~S., Schlegel, D.~J., Ahn, C.~P., et al.\ 2013, \aj, 145, 10 
 \bibitem[Dawson et al.(2013)]{Dawson2013} Dawson, K.~S., Schlegel, D.~J., Ahn, C.~P., et al.\ 2013, \aj, 145, 10 
 \bibitem[Dawson et al.(2016)]{eBOSS} Dawson, K.~S., Kneib, J.-P., Percival, W.~J., et al.\ 2016, \aj, 151, 44 
@@ -190,7 +188,6 @@
 \bibitem[Leauthaud et al.(2017)]{lensingislow} Leauthaud, A., Saito, S., Hilbert, S., et al.\ 2017, \mnras, 467, 3024 
 \bibitem[Leistedt \& Hogg(2016)]{boris2016} Leistedt, B., \& Hogg, D.~W.\ 2016, arXiv:1612.00847 
 \bibitem[Levi et al.(2013)]{desi} Levi, M., Bebek, C., Beers, T., et al.\ 2013, arXiv:1308.0847 
-\bibitem[Levi et al.(2013)]{desi} Levi, M., Bebek, C., Beers, T., et al.\ 2013, arXiv:1308.0847 
 \bibitem[Li et al.(2008)]{li2008} Li, Y., Mo, H.~J., \& Gao, L.\ 2008, \mnras, 389, 1419 
 \bibitem[Lin \& Kilbinger(2015)]{abcwl} Lin, C.-A., \& Kilbinger, M.\ 2015, \aap, 583, A70 
 \bibitem[Lin et al.(2016)]{abcwl2} Lin, C.-A., Kilbinger, M., \& Pires, S.\ 2016, \aap, 593, A88 
@@ -247,7 +244,7 @@
 \bibitem[Press \& Schechter(1974)]{press74} Press, W.~H., \& Schechter, P.\ 1974, \apj, 187, 425 
 \bibitem[Reddick et al.(2013)]{reddick2013} Reddick, R.~M., Wechsler, R.~H., Tinker, J.~L., \& Behroozi, P.~S.\ 2013, \apj, 771, 30 
 \bibitem[Reid et al.(2014)]{reid2014} Reid, B.~A., Seo, H.-J., Leauthaud, A., Tinker, J.~L., \& White, M.\ 2014, \mnras, 444, 476 
-\bibitem[Riebe et al.(2011)]{multidark} Riebe, K., Partl, A.~M., Enke, H., et al.\ 2011, arXiv:1109.0003 
+%\bibitem[Riebe et al.(2011)]{multidark} Riebe, K., Partl, A.~M., Enke, H., et al.\ 2011, arXiv:1109.0003 
 \bibitem[Riess et al.(1998)]{Riess:1998aa} Riess, A.~G., Filippenko, A.~V., Challis, P., et al.\ 1998, \aj, 116, 1009 
 \bibitem[Rodr{\'{\i}}guez-Puebla et al.(2012)]{rodriguez2012} Rodr{\'{\i}}guez-Puebla, A., Drory, N., \& Avila-Reese, V.\ 2012, \apj, 756, 2 
 \bibitem[Rodr{\'{\i}}guez-Torres et al.(2016)]{sergio2016} Rodr{\'{\i}}guez-Torres, S.~A., Chuang, C.-H., Prada, F., et al.\ 2016, \mnras, 460, 1173 
@@ -295,7 +292,6 @@
 \bibitem[Takada \& Spergel(2014)]{takada_spergel} Takada, M., \& Spergel, D.~N.\ 2014, \mnras, 441, 2456 
 \bibitem[Takahashi et al.(2011)]{takahashi2011} Takahashi, R., Yoshida, N., Takada, M., et al.\ 2011, \apj, 726, 7 
 \bibitem[Tasitsiomi et al.(2004)]{tasitsiomi2004} Tasitsiomi, A., Kravtsov, A.~V., Wechsler, R.~H., \& Primack, J.~R.\ 2004, \apj, 614, 533 
-\bibitem[Tassev et al.(2013)]{cola} Tassev, S., Zaldarriaga, M., \& Eisenstein, D.~J.\ 2013, \jcap, 6, 036 
 \bibitem[Tassev et al.(2013)]{cola2013} Tassev, S., Zaldarriaga, M., \& Eisenstein, D.~J.\ 2013, \jcap, 6, 036 
 \bibitem[Tassev et al.(2015)]{cola} Tassev, S., Eisenstein, D.~J., Wandelt, B.~D., \& Zaldarriaga, M.\ 2015, arXiv:1502.07751 
 \bibitem[Taylor et al.(2013)]{taylor2013} Taylor, A., Joachimi, B., \& Kitching, T.\ 2013, \mnras, 432, 1928 
@@ -303,7 +299,6 @@
 \bibitem[Tinker et al.(2005)]{tinker05} Tinker, J.~L., Weinberg, D.~H., Zheng, Z., \& Zehavi, I.\ 2005, \apj, 631, 41 
 \bibitem[Tinker et al.(2006)]{tinker_density_hod} Tinker, J.~L., Weinberg, D.~H., \& Warren, M.~S.\ 2006, \apj, 647, 737 
 \bibitem[Tinker(2007)]{tinker_rsd2007} Tinker, J.~L.\ 2007, \mnras, 374, 477 
-\bibitem[Tinker et al.(2008)]{edHOD-tinker} Tinker, J.~L., Conroy, C., Norberg, P., et al.\ 2008, \apj, 686, 53-71 
 \bibitem[Tinker et al.(2008)]{edHOD-tinker} Tinker, J.~L., Conroy, C., Norberg, P., et al.\ 2008, \apj, 686, 53-71 
 \bibitem[Tinker et al.(2008)]{tinker08} Tinker, J., Kravtsov, A.~V., Klypin, A., et al.\ 2008, \apj, 688, 709-728 
 \bibitem[Tinker \& Conroy(2009)]{tinker_void_2009} Tinker, J.~L., \& Conroy, C.\ 2009, \apj, 691, 633 
