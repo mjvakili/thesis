@@ -1,15 +1,3 @@
-\newcommand{\todo}[1]{{\em \textcolor{red}{ #1}}}
-\newcommand{\beq}{\begin{equation}}
-\newcommand{\eeq}{\end{equation}}
-\newcommand{\lang}{\langle}
-\newcommand{\ra}{\rangle}
-\newcommand{\vep}{\bm{\epsilon}}
-\newcommand{\ep}{\epsilon}
-\newcommand{\pars}{\vec{\theta}}
-\newcommand{\dev}{\mathrm{d}}
-\newcommand{\mstar}{h^{-1}M_\odot}
-\newcommand{\hst}{\project{HST}}
-\newcommand{\wfc}{\project{WFC3}}
 
 \chapter{Super-resolution PSF model of HST WFC3-IR\chaplabel{wfc3ir}}
 
@@ -115,15 +103,14 @@ respect to the center of the patch.
 
 Given these ingredients, we write down the generative forward model of the point sources in the center of patches in the following way:
 
-\begin{eqnarray}
-\mathbf{d}_{n} &=&  \mathbf{m}_{n} + \mathrm{noise}, \label{eq:model1} \\
-m_{n,i} &=& f_{n}K^{(n)}_{il} (\Delta_n) X_{l} + b_{n}. 
+\begin{eqnarray} \mathbf{d}_{n} &=& \mathbf{m}_{n} + \mathrm{noise}, \label{eq:model1} \\
+       m_{n,i} &=& f_{n}K^{(n)}_{il} (\Delta_n) X_{l} + b_{n}. 
 \label{eq:model}
 \end{eqnarray} 
 
 In Eq.~\ref{eq:model1}, $\mathbf{d}_{n}$ is the observed 625 dimensional vector describing the brightness of the pixels in the 25 pixels $\times$ 25 pixels patch $n$. 
 $\mathbf{m}_{n}$ is the model that describes the pixel-convolved model of the point source sitting on the center of the patch $n$ with the same dimensionality. The 
-noise term \mathrm{noise} has a variance that we present shortly.
+noise term $\mathrm{noise}$ has a variance that we present shortly.
 In Eq.~\ref{eq:model}, the operator $K^{(n)}(\Delta_n)$ is a linear operator that maps the super-resolution psf $X$ to a downsampled PSF at the native 
 data grid. That is, when this operator acts on $X$, it samples $X$ on a downsampled grid (with the same resolution as the observations) 
 that is shifted with respect to the grid on which $X$ is defined. The shift between the two grids is given by the vector $\Delta_n = (\Delta x_n , \Delta y_n)$.
@@ -150,10 +137,10 @@ has a resolution three times that of the native pixel grid of the observations.
 
 In order to estimate the PSF, we optimize the following likelihood function:
 
-\begin{eqnarray}
--2 \ln L &=& -2 \sum_{n=1}^{N_{patches}} \ln L_{n} \label{eq:total} , \\
+\begin{eqnarray} -2 \ln L &=& -2 \sum_{n=1}^{N_{patches}} \ln L_{n} \label{eq:total} , \\
 -2 \ln L_{n} &=& \sum_{i=1}^{N_{\rm pix}} \Big( \frac{\big(d_{n,i} - m_{n,i} \big)^{2}}{s^{2}_{n,i}} + \ln(2 \pi s_{n,i}^{2}) \Big) \label{eq:patch},
 \end{eqnarray}
+
 where $L_{n}$ is the likelihood of patch $n$, $L$ is the likelihood of the entire astronomical scene, $s_{n,i}$ is the $i$th component of the 625 dimensional vector $\mathbf{s}_n$, and 
 $\mathbf{s}_n^{2}$ is variance of the noise model in patch $n$. The variance is comprised of two terms, one arising from the Gaussian readout noise and another arising from the Poisson noise.
 Therefore the total variance is given by a constant per-pixel variance of a Gaussian noise and a gain-like term that is proportional to the model $\mathbf{m}_{n}$:
@@ -171,7 +158,7 @@ smoothness condition to $X$.
 
 We add the following term to the log-likelihood $L$
 \beq
-C_{\rm reg} &=& -2\ln L + \epsilon \sum_{j,k} \delta^{2}_{j,k},
+C_{\rm reg} = -2\ln L + \epsilon \sum_{j,k} \delta^{2}_{j,k},
 \label{eq:reg}
 \eeq
 where the second term is the sum of the squared of the matrix $\delta$ whose $j,k$ components are given by the difference between the $j$th row and $k$th column of the super-resolution PSF 
@@ -234,7 +221,7 @@ contribute to computation of the patch likelihood function (\ref{eq:patch}).
 At every iteration of optimizing the patch log-likelihood function, we mask out the pixels for which a clipped $\chi^{2}$ 
 (denoted by $\chi^{2}_{clip}$ from now on) is larger than 3. For a given patch $n$, the clipped $\chi^{2}$ is defined in the following way:
 \beq
-\chi^{2}_{n,\mathrm{clip}} &=& \frac{(\mathbf{d}_{n} - \mathbf{m}_{n})^{2}}{\tilde{\mathbf{s}}_{n}^{2}}, 
+\chi^{2}_{n,\mathrm{clip}} = \frac{(\mathbf{d}_{n} - \mathbf{m}_{n})^{2}}{\tilde{\mathbf{s}}_{n}^{2}}, 
 \label{eq:chi_clip}
 \eeq
 where $\tilde{\mathbf{s}}_{n}^{2}$ is given by Eq.~\ref{eq:modified_variance}. In a given patch $n$, the log-likelihood pixels with $\chi^{2}_{n,\mathrm{clip}} > 3$ 

@@ -1,38 +1,5 @@
-\renewcommand*{\sectionautorefname}{Section} %for \autoref
-\renewcommand*{\subsectionautorefname}{Section} %for \autoref
 
-\definecolor{dred}{rgb}{0.75,0,0}
-\definecolor{darkred}{rgb}{0.5,0,0}
-\definecolor{darkgreen}{rgb}{0,0.5,0}
-\definecolor{darkblue}{rgb}{0,0,0.5}
-\hypersetup{ colorlinks,
-linkcolor=darkblue,
-filecolor=darkgreen,
-urlcolor=darkred,
-citecolor=darkblue}
 
-\DeclareMathOperator*{\argmax}{arg\,max}
-\newcommand{\beq}{\begin{equation}}
-\newcommand{\eeq}{\end{equation}}
-\newcommand{\lang}{\langle}
-\newcommand{\ra}{\rangle}
-\newcommand{\vep}{\bm{\epsilon}}
-\newcommand{\ep}{\epsilon}
-\newcommand{\pars}{\vec{\theta}}
-\newcommand{\dev}{\mathrm{d}}
-\newcommand{\ngal}{n_{g}}
-\newcommand{\gmf}{g(N)}
-\newcommand{\mr}{M_{\rm r}}
-\newcommand{\rpp}{r_{\rm p}}
-\newcommand{\mzero}{\log M_{0}}
-\newcommand{\mone}{\log M_{1}}
-\newcommand{\mmin}{\log M_{\rm min}}
-\newcommand{\sigmam}{\sigma_{\log \rm M}} 
-\newcommand{\wpp}{w_{\rm p}} 
-
-\newcommand{\acen}{\mathcal{A}_{\rm cen}}
-\newcommand{\asat}{\mathcal{A}_{\rm sat}}
-\newcommand{\todo}[1]{{\em \textcolor{red}{ #1}}}
 
 
 \chapter{How are galaxies assigned to halos? searching for assembly bias in SDSS clustering measurements\chaplabel{gambly}}
@@ -280,10 +247,10 @@ where $\Delta \wpp$ is a 12 dimensional vector, $\Delta \wpp(\rpp) = \wpp^{\rm d
 \beq
 \widehat{C^{-1}} = \frac{N -d - 2}{N -1} \; \widehat{C}^{-1},
 \eeq
-where $N=400$ is the number of the jackknife samples, and $d=12$ is the length of the data vector $w_{\rm p}$. Another important ingredient of our analysis is specification of the prior probabilities $\pi(\theta)$ over the parameters of the halo occupation models considered in this study. For both models, we use uniform flat priors for all the parameters. The prior ranges are specified in the Table \ref{tab:prior}. Note that a uniform prior between -1 and 1 is chosen for assembly bias parameters since these parameters are, by definition, bounded between -1 and 1. 
+where $N=400$ is the number of the jackknife samples, and $d=12$ is the length of the data vector $w_{\rm p}$. Another important ingredient of our analysis is specification of the prior probabilities $\pi(\theta)$ over the parameters of the halo occupation models considered in this study. For both models, we use uniform flat priors for all the parameters. The prior ranges are specified in the Table \ref{tab:prior2}. Note that a uniform prior between -1 and 1 is chosen for assembly bias parameters since these parameters are, by definition, bounded between -1 and 1. 
 \begin{table}
 \begin{center}
-  \label{tab:prior}
+  \label{tab:prior2}
   \caption{{\bf Prior Specifications}: The prior probability distribution 
   and its range for each of the parameters. 
   All mass parameters are in unit of $h^{-1}M_\odot$. The parameters marked by $*$ are only used in the Heaviside Assembly bias modeling and by definition are bounded between -1 and 1.}
@@ -302,7 +269,7 @@ where $N=400$ is the number of the jackknife samples, and $d=12$ is the length o
 \end{center}
 \end{table}
 
-For sampling from the posterior probability, given the likelihood function (see equation \ref{eq:lnlike_wp}) and the prior probability distributions (see Table \ref{tab:prior}), we use the affine-invariant ensemble MCMC sampler (\citealt{goodmanweare}) and its implementation $\mathtt{emcee}$ (\citealt{emcee}). In particular, we run the $\mathtt{emcee}$ code with 20 walkers and we run the chains for at least 10000 iterations. We discard the first one-third part of the chains as burn-in samples and use the reminder of the chains as production MCMC chains. Furthermore, we perform Gelman-Rubin convergence test (\citealt{grtest}) to ensure that the MCMC chains have reached convergence.
+For sampling from the posterior probability, given the likelihood function (see equation \ref{eq:lnlike_wp}) and the prior probability distributions (see Table \ref{tab:prior2}), we use the affine-invariant ensemble MCMC sampler (\citealt{goodmanweare}) and its implementation $\mathtt{emcee}$ (\citealt{emcee}). In particular, we run the $\mathtt{emcee}$ code with 20 walkers and we run the chains for at least 10000 iterations. We discard the first one-third part of the chains as burn-in samples and use the reminder of the chains as production MCMC chains. Furthermore, we perform Gelman-Rubin convergence test (\citealt{grtest}) to ensure that the MCMC chains have reached convergence.
 
 \section{Results and Discussion}\label{sec:gresult}
 

@@ -25,6 +25,70 @@
 
 % Commands:
 
+\renewcommand*{\sectionautorefname}{Section} %for \autoref
+\renewcommand*{\subsectionautorefname}{Section} %for \autoref
+\definecolor{dred}{rgb}{0.75,0.,0.}
+\definecolor{darkred}{rgb}{0.5,0.,0.}
+\definecolor{darkgreen}{rgb}{0.,0.5,0.}
+\definecolor{dred}{rgb}{0.75,0,0}
+\definecolor{darkred}{rgb}{0.5,0,0}
+\definecolor{darkgreen}{rgb}{0,0.5,0}
+\definecolor{darkblue}{rgb}{0,0,0.5}
+\hypersetup{ colorlinks,
+linkcolor=darkblue,
+filecolor=darkgreen,
+urlcolor=darkred,
+citecolor=darkblue}
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\newcommand{\lang}{\langle}
+\newcommand{\ra}{\rangle}
+\newcommand{\vep}{\bm{\epsilon}}
+\newcommand{\ep}{\epsilon}
+\newcommand{\pars}{\vec{\theta}}
+\newcommand{\dev}{\mathrm{d}}
+\newcommand{\ngal}{n_{g}}
+\newcommand{\gmf}{g(N)}
+\newcommand{\mr}{M_{\rm r}}
+\newcommand{\rpp}{r_{\rm p}}
+\newcommand{\mzero}{\log M_{0}}
+\newcommand{\mone}{\log M_{1}}
+\newcommand{\mmin}{\log M_{\rm min}}
+\newcommand{\sigmam}{\sigma_{\log \rm M}} 
+\newcommand{\wpp}{w_{\rm p}} 
+
+\newcommand{\acen}{\mathcal{A}_{\rm cen}}
+\newcommand{\asat}{\mathcal{A}_{\rm sat}}
+\newcommand{\todo}[1]{{\em \textcolor{red}{ #1}}}
+
+\newcommand{\argmax}{\mathrm{argmax}}
+\newcommand{\mstar}{h^{-1}M_\odot}
+
+
+
+\newcommand{\lcdm}{\Lambda {\rm CDM}}
+\newcommand{\mean}[2]{\left\langle#1 \vert {#2}\right\rangle}
+
+%%% HALO OCCUPATION DISTRIBUTION %%%
+\newcommand{\nsat}{N_\mathrm{s}}
+\newcommand{\ncen}{N_\mathrm{c}}
+\newcommand{\pnm}[2]{p(#1|#2)}
+
+\newcommand{\mhalo}{M_{\rm h}}
+\newcommand{\mvir}{M_\mathrm{vir}} 
+
+\newcommand{\dndmvir}{\frac{\dd n}{\dd\mvir}}
+\newcommand{\dndmhalo}{\frac{\dd n}{\dd\mhalo}}
+\newcommand{\dndmvirprime}{\frac{\dd n}{\dd\mvir'}}
+
+%%% CLUSTERING STATISTICS %%%
+\newcommand{\xigg}{\xi_{\mathrm{gg}}}
+\newcommand{\xihh}{\xi_{\mathrm{hh}}}
+\newcommand{\xiggr}{\xi_{\mathrm{gg}}(r)}
+\newcommand{\xiggroneh}{\xi^{1h}_{\mathrm{gg}}(r)}
+\newcommand{\xiggrtwoh}{\xi^{2h}_{\mathrm{gg}}(r)}
+\newcommand{\ngalaxy}{\bar{n}_{\mathrm{g}}}
+
 % General formatting:
 \newcommand{\paper}{Chapter}
 
@@ -32,10 +96,14 @@
 \newcommand{\foreign}[1]{\emph{#1}}
 \newcommand{\etal}{\foreign{et\,al.}}
 \newcommand{\etc}{\foreign{etc.}}
+\newcommand{\eg}{\foreign{eg.}}
 
 % Project references:
+\newcommand{\project}[1]{{\textsl{#1}}}
 \newcommand{\sdss}{\project{SDSS}}
 \newcommand{\boss}{\project{BOSS}}
+\newcommand{\hst}{\project{HST}}
+\newcommand{\wfc}{\project{WFC3}}
 
 % LaTeX object referencing:
 \newcommand{\chapid}{no chapter}
@@ -73,7 +141,6 @@
 \newcommand{\chapalt}[1]{\ref{chap:#1}}
 \newcommand{\chaplabel}[1]{\label{chap:#1}}
 
-\newcommand{\todo}[3]{{\color{#2}\emph{#1}: #3}}
 \newcommand{\dfmtodo}[1]{\todo{DFM}{red}{#1}}
 
 % Math:
