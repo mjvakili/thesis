@@ -48,7 +48,7 @@ Mathematically, this assumption can be written as $P(N|M,\{x\})=P(N|M)$ where $\
 
 Despite this simplifying assumption, the models of galaxy--halo connection based on HOD have been successfully used in fitting the measurements of a wide range of statistics such as the projected two-point correlation function of galaxies, small scale redshift space distortion, three-point function, and galaxy--galaxy lensing with remarkable success (e.g. \citealt{zheng07,tinker_rsd2007,zehavi2011,leauthaud12,parejko2013,coupon2015,hod-3pcf,miyatake15,zu2015,hod_vs_sham}). 
 HOD has been used in constraining the cosmological parameters through modeling the galaxy two-point correlation function (hereafter 2PCF) (\citealt{abazajian2005}), combination of 2PCF with mass-to-light ratio of galaxies (\citealt{tinker05}), redshift space distortions (\citealt{tinker_rsd2007}), mass-to-number ratio of galaxy clusters (\citealt{tinker2012}) galaxy-galaxy weak lensing (\citealt{vdb03,cacciato13,more13,vdb13}) in the main sample of galaxies
-of the Sloan Digital Sky Survey (hereafter SDSS, \citealt{york2000}), and also the combination of galaxy clustering and galaxy-galaxy lensing (\citealt{more15}) in SDSS III Baryon Oscillation Spectroscopic Survey (BOSS, \citealt{boss}). Furthermore, HOD is implemented in producing mock galaxy catalogs in the BOSS survey (\citealt{manera2013,white2014}). It has also been used in galaxy evolution studies (\citealt{conroy2009,leauthaud12,behroozi13,hudson2015,zu2015,zu2016}).
+of the Sloan Digital Sky Survey (hereafter SDSS, \citealt{york2000}), and also the combination of galaxy clustering and galaxy-galaxy lensing (\citealt{more15}) in SDSS III Baryon Oscillation Spectroscopic Survey (BOSS, \citealt{boss}). Furthermore, HOD is implemented in producing mock galaxy catalogs in the BOSS survey (\citealt{pthalo,qpm}). It has also been used in galaxy evolution studies (\citealt{conroy2009,leauthaud12,behroozi13,hudson2015,zu2015,zu2016}).
 
 The complexity of structure formation however, is not sufficiently modeled under the standard HOD framework. Numerous $N$-body simulations that examine the clustering of 
 dark matter halos have demonstrated that halo clustering is correlated with the formation 
@@ -112,9 +112,9 @@ In this section, we discuss the ingredients of our modeling one-by-one. First, w
 
 \subsection{Simulation}
 
-For the simulations used in this work, we make use of the Rockstar (\citealt{rockstar}) halo catalogs in the $z=0$ snapshot of the Small MultiDark of Planck cosmology (referred to as $\mathtt{SMDP}$) (\citealt{smallmultidark}). This high resolution $N$-body simulation (publicly available at \url{https://www.cosmosim.org}) was carried out using the 
+For the simulations used in this work, we make use of the Rockstar (\citealt{rockstar}) halo catalogs in the $z=0$ snapshot of the Small MultiDark of Planck cosmology (referred to as $\mathtt{SMDP}$) (\citealt{multidark}). This high resolution $N$-body simulation (publicly available at \url{https://www.cosmosim.org}) was carried out using the 
 %%% CHH: small typo
-GADGET-2 (see \citealt{smallmultidark} and references therein) code, 
+GADGET-2 (see \citealt{multidark} and references therein) code, 
 %%%
 following the Planck $\Lambda$CDM cosmological parameters 
 $\Omega_{\rm m} = 0.307$, $\Omega_{\rm b} = 0.048$, $\Omega_{\Lambda} = 0.693$, $\sigma_{8} = 0.823$, $n_{\rm s}=0.96$, 
@@ -144,7 +144,7 @@ in the low mass limit, the $\mathtt{SMDP}$ simulation has been used to model the
 galaxy samples in the SDSS data~\citep[see][]{hod_vs_sham}. 
 
 %%%
-The added advantage of using the $\mathtt{SMDP}$ simulation over some of the other industrial simulation boxes commonly used in the literature such as $\mathtt{Bolshoi}$ (\citealt{Klypin2011,smallmultidark}) simulation is its larger comoving volume. Larger volume makes this simulation more suitable for performing inference with $L_{\star}$ (corresponding to $M_{\rm r} \sim -20.44$, see \citealt{blanton2003}) and more luminous than $L_{\star}$ galaxy samples that occupy larger comoving volumes.
+The added advantage of using the $\mathtt{SMDP}$ simulation over some of the other industrial simulation boxes commonly used in the literature such as $\mathtt{Bolshoi}$ (\citealt{bolshoi,multidark}) simulation is its larger comoving volume. Larger volume makes this simulation more suitable for performing inference with $L_{\star}$ (corresponding to $M_{\rm r} \sim -20.44$, see \citealt{blanton2003}) and more luminous than $L_{\star}$ galaxy samples that occupy larger comoving volumes.
 
 \subsection{Halo occupation modeling}
 \subsubsection{standard model without assembly bias}\label{subsubsec:hod}
@@ -328,7 +328,7 @@ A few galaxy--halo connection methods have been proposed in the literature that 
 
 We aim to provide a comparison between the impact of assembly bias on clustering in these mock catalogs and the mock catalogs predicted from our constraints on the decorated HOD model for $L_{\star}$-type galaxies. In particular, we consider the abundance matching catalogs produced by \citet{hw2013}. These catalogs have been extensively studied for examining potential systematic effects of galaxy assembly bias on cosmological (\citealt{edHOD-weinberg}) and halo occupation (\citealt{arz2014}) parameter inferences. 
 
-This abundance matching catalog was built based on the $\mathtt{Bolshoi}$ $N$-body simulation (\citealt{Klypin2011}) using the adaptive refinement tree code (ART \citealt{art}). The Box size for this simulation is 250 $h^{-1} \rm{Mpc}$, the number of simulation particles is 2048$^3$, the mass per simulation particle $m_{\rm p}$ is $1.35 \times 10^{8} \; h^{-1} M_{\odot}$, and the gravitational softening length $\epsilon$ is 1 $h^{-1} \rm{kpc}$. The halos and subhalos in this simulation are identified using the ROCKSTAR algorithm (\citealt{rockstar}). 
+This abundance matching catalog was built based on the $\mathtt{Bolshoi}$ $N$-body simulation (\citealt{bolshoi}) using the adaptive refinement tree code (ART \citealt{art}). The Box size for this simulation is 250 $h^{-1} \rm{Mpc}$, the number of simulation particles is 2048$^3$, the mass per simulation particle $m_{\rm p}$ is $1.35 \times 10^{8} \; h^{-1} M_{\odot}$, and the gravitational softening length $\epsilon$ is 1 $h^{-1} \rm{kpc}$. The halos and subhalos in this simulation are identified using the ROCKSTAR algorithm (\citealt{rockstar}). 
 The \citealt{hw2013} catalogs make use of $V_{\rm peak}$ (maximum $V_{\rm max}$ throughout the assembly history of halo) as the subhalo property to be matched to galaxy luminosity. 
 
 As noted by \citet{arz2014} and \citet{edHOD-weinberg}, these galaxy mock catalogs show significant levels of assembly bias in the central galaxy population. This has been demonstrated by investigating the difference in $w_{p}$ between the randomized mock catalogs and the original mock catalogs. Randomization is performed in a procedure described in \citet{arz2014} which we briefly summarize here: First, halos are divided into different bins of halo mass with width of 0.1 dex. Then all central galaxies are shuffled among all halos within each bin. Once the centrals have been shuffled, within each bin, the satellite systems are shuffled among all halos in that mass bin, preserving their relative distance to the center of halo. This procedure preserves the HOD, but erases any dependence of the galaxy population on the assembly history of halos. Therefore, assembly bias is erased in the randomized galaxy catalog. 
@@ -411,7 +411,7 @@ We note that both AIC and BIC scores improve in the luminosity-threshold samples
 
 \subsection{choice of simulation}
 
-Given the SDSS clustering measurements described in Section \ref{sec:gdata}, We repeat the inference of the assembly bias parameters $\asat$ and $\acen$ with the $\mathtt{BolshoiP}$ simulation (\citealt{smallmultidark}). This $N$-body simulation is carried out with similar setting as the $\mathtt{Bolshoi}$ simulation with the exception that in the $\mathtt{BolshoiP}$ simulation, Planck cosmology is adapted and the mass per simulation particle is $1.49\times 10^8 \; h^{-1} M_{\odot}$. 
+Given the SDSS clustering measurements described in Section \ref{sec:gdata}, We repeat the inference of the assembly bias parameters $\asat$ and $\acen$ with the $\mathtt{BolshoiP}$ simulation (\citealt{multidark}). This $N$-body simulation is carried out with similar setting as the $\mathtt{Bolshoi}$ simulation with the exception that in the $\mathtt{BolshoiP}$ simulation, Planck cosmology is adapted and the mass per simulation particle is $1.49\times 10^8 \; h^{-1} M_{\odot}$. 
 
 The summary of constraints are shown in Figure \ref{fig:bias_comparison}. In Figure \ref{fig:bias_comparison}, the constraints from the $\mathtt{SMDP}$ and the $\mathtt{BolshoiP}$ simulations are shown with circles and crosses respectively. Additionally, the upper and lower bounds on the inferred parameters reported by \citet{zentner2016} are shown in shaded blue regions. In the case of central assembly bias, all three constraints are consistent. For the luminosity-thresholds samples $M_{\rm r}<-20.5, -20, -19.5$, where the central assembly bias parameters are strongly positive, the constraints obtained from the $\mathtt{SMDP}$ simulation are tighter. 
   

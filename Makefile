@@ -2,7 +2,7 @@ LATEX       = pdflatex
 BASH        = bash -c
 ECHO        = echo
 RM          = rm -rf
-TMP_SUFFS   = pdf aux bbl blg log dvi ps eps out toc lof lot
+TMP_SUFFS   = pdf aux blg log dvi ps eps out toc lof lot
 CHECK_RERUN =
 
 all: thesis.pdf abstractpage.pdf

@@ -121,20 +121,20 @@ In certain cases when no reliable analytical or simulation-based estimate of the
 For instance in Chapter 3, for interpreting the SDSS DR7 galaxy clustering measurements, 
 we make use of covariance estimates based on jackknife resampling of the data. But as \citet{norberg,fried2016} point out, data resampling methods do not faithfully capture the uncertainties of the data. 
 
-Precision estimation of the covariance matrix from mocks requires generation of a large number of mocks for a given analysis. This has led to development of \emph{approximate} \emph{methods} for mass production of galaxy and halo mock catalogs. Approximate methods rely on approximate gravity solvers for generating dark matter density fields with reasonable accuracy on large scales and statistical prescriptions for populating the dark matter density field with mock galaxies (see for example \citealt{manera2013,qpm,eazymock,kitaura2016} and references 
+Precision estimation of the covariance matrix from mocks requires generation of a large number of mocks for a given analysis. This has led to development of \emph{approximate} \emph{methods} for mass production of galaxy and halo mock catalogs. Approximate methods rely on approximate gravity solvers for generating dark matter density fields with reasonable accuracy on large scales and statistical prescriptions for populating the dark matter density field with mock galaxies (see for example \citealt{pthalo,qpm,eazymock,kitaura2016} and references 
 therein). The state-of-the-art techniques for production of mock catalogs are QPM \citep{qpm} and PATCHY \citep{kitaura2016}. These methods were used in 
 cosmological analyses of the SDSS III-BOSS final data release \citep{alam2016}.
 
 In the PATCHY method the density field is generated with perturbation theory. Then the expected number of galaxies in a cosmic volume given the density field is computed according to a biasing relation whose parameters are unknown. 
 Finally, the number of galaxies is drawn from a negative binomial distribution which is a Poisson distribution with additional stochasticity. 
-\citet{nifty} demonstrates that this approach is very powerful at reproducing the two-point and three-point statistics of galaxies with high accuracy toward mildly nonlinear regimes.
+\citet{chuang2015} demonstrates that this approach is very powerful at reproducing the two-point and three-point statistics of galaxies with high accuracy toward mildly nonlinear regimes.
 
 In Chapter 4, we address two limitations of this method: \emph{bias} \emph{estimation} and \emph{accuracy on small scales}. We replace the perturbation theory-based 
 gravity solver of the PATCHY code with the fast particle mesh (PM) method of \citet{fastpm}. The main difference between the Particle mesh implementations of \citet{fastpm} and \citet{qpm} is that 
 FastPM imposes exact large scale growth and thus it does not suffer from the loss of power on large scales as a result of using a limited number of time steps for solving equations of motion. We also introduce an automatic bias estimation method based on MCMC. 
 
 In comparison with the previous version of the code based on perturbation theory, our novel approach yields higher accuracy toward nonlinear scales for both two-point 
-and three-point statistics. One of the main advantages of our approach is the following. In order to reach reasonable accuracy, the common approximate $N$-body methods \citep{qpm,fastpm,ice_cola} require a larger grid size than the number of particles. That is, the gravitational forces between the particles need to be calculated on a mesh (at least) twice larger than the number of particles (see also \citealt{nifty,monaco2016}) in order to resolve halos. We note that our effective bias prescription for populating the dark matter density field with halos bypasses this requirement and as a consequence, it significantly reduces the computational cost of generating mocks.      
+and three-point statistics. One of the main advantages of our approach is the following. In order to reach reasonable accuracy, the common approximate $N$-body methods \citep{qpm,fastpm,ice_cola} require a larger grid size than the number of particles. That is, the gravitational forces between the particles need to be calculated on a mesh (at least) twice larger than the number of particles (see also \citealt{chuang2015,monaco2016}) in order to resolve halos. We note that our effective bias prescription for populating the dark matter density field with halos bypasses this requirement and as a consequence, it significantly reduces the computational cost of generating mocks.      
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Gravitational lensing of luminous sources (galaxies, CMB) can measure 
 the state of the inhomogeneous matter density and the time-dependence of dark energy. 
@@ -220,8 +220,8 @@ The filters in HST WFC3 IR channel have the most undersampled detectors among al
 As such, HST WFC3 IR channel could benefit a lot from an accurate model of its super resolution PSF. 
 In this chapter 5, we present the first generative forward model of stellar sources as observed by the HST camera.
 Unlike previous attempts at inferring the PSF model of HST WFC3, our model is data driven in that it makes 
-use of the observed data and it presents a proper treatment of modeling in the presence of damaged pixels, overlapping 
-point sources, \etc\.  
+use of the observed data and it presents a proper treatment of modeling in the presence of damaged pixels and overlapping 
+point sources.  
 
 Galaxies are luminous tracers of the large scale structure. Thus study of galaxy clustering o understand the growth of structure is 
 one of the key drivers of low redshift surveys. Significant progress has been made in linking the observations of 
@@ -288,12 +288,12 @@ of random variables, Fourier modes of the density field in the cosmological cont
 the very large scales where there are very few Fourier modes. Nonlinear evolution of the density field on small scales may also break down this assumption. 
 
 The presence of systematics such as missing data as a result of fiber collision, selection effects, incompleteness due to color-magnitude cuts, 
-or catastrophic redshift failures \citep{Guo:2012a,Ross:2012aa,Hahn:2017a} could affect the distribution of the estimated summary statistics of the data 
+or catastrophic redshift failures \citep{guo2012,Ross:2012aa,Hahn:2017a} could affect the distribution of the estimated summary statistics of the data 
 in a nontrivial way that is difficult to model. Unconventional observables beyond two-point statistics such as the group statistics are not very 
-robust against methodological systematics such as group identification (see \citealt{berlind2006,campbell2015}). Modeling such systematics in an explicit likelihood analysis may not be possible. A similar summary statistics in the context of weak lensing are the convergence peak counts. Convergence peak counts can, in principle, deliver competitive cosmological constraints but they suffer from systematic uncertainties \citep{abcwl2} that are hard to model. 
+robust against methodological systematics such as group identification (see \citealt{groups,campbell2015}). Modeling such systematics in an explicit likelihood analysis may not be possible. A similar summary statistics in the context of weak lensing are the convergence peak counts. Convergence peak counts can, in principle, deliver competitive cosmological constraints but they suffer from systematic uncertainties \citep{abcwl2} that are hard to model. 
 
 Furthermore as we have mentioned earlier, parameter estimation with cosmological datasets requires precise estimate of 
-the sample variance in form of the covariance matrix. Estimation of the covariance matrix is computationally demanding \citep{nifty,harnois} and even 
+the sample variance in form of the covariance matrix. Estimation of the covariance matrix is computationally demanding \citep{chuang2015,harnois} and even 
 in the presence of an estimate of it the form of the likelihood function can no longer be characterized by a Multivariate Gaussian distribution \citep{Sellentin:2016a,Sellentin:2017a}.
 These problems can potentially lead to biases in cosmological parameter estimation.
 
@@ -322,7 +322,7 @@ In this thesis, we try to address different aspects of solving a cosmological pr
 \mathcal{L} = p(\mathbf{d} \; | \; \bf{\mu} , \mathbf{C}),
 \end{equation}
 
-where $\mathbf{d}$ is an estimated data vector, $\bf{\mu}$ is a theoretical prediction, and \mathbf{C} is a covariance matrix that characterizes the uncertainties on the entries of the datavector. In Chapters 1 and 5, we try to address the systematic uncertainties that affect $\mathbf{d}$ in weak lensing analyses. In Chapter 3 we attempt to address a source of uncertainty, \emph{assembly bias}, that could impact certain cosmological predictions $\bf{\mu}$. In Chapter 4, we present a method for accurately simulating mock datasets needed for precise estimation of the error covariance matrices $\mathbf{C}$ of galaxy clustering and its inverse. In Chapter 2, we investigate how one can bypass the need for specifying a functional form for the likelihood function $p(\mathbf{d} \; | \; \mathbf{\mu} , \mathbf{C})$ and the challenges associated with it.
+where $\mathbf{d}$ is an estimated data vector, $\bf{\mu}$ is a theoretical prediction, and $\mathbf{C}$ is a covariance matrix that characterizes the uncertainties on the entries of the datavector. In Chapters 1 and 5, we try to address the systematic uncertainties that affect $\mathbf{d}$ in weak lensing analyses. In Chapter 3 we attempt to address a source of uncertainty, \emph{assembly bias}, that could impact certain cosmological predictions $\bf{\mu}$. In Chapter 4, we present a method for accurately simulating mock datasets needed for precise estimation of the error covariance matrices $\mathbf{C}$ of galaxy clustering and its inverse. In Chapter 2, we investigate how one can bypass the need for specifying a functional form for the likelihood function $p(\mathbf{d} \; | \; \mathbf{\mu} , \mathbf{C})$ and the challenges associated with it.
 
 Chapter 1 of this thesis is based on a paper I wrote with David~W.~Hogg. The underlying ideas and the direction of this project were developed by David~W.~Hogg and me. 
 All the codes and text for this chapter was written by me with significant edits and modifications received from David~W.~Hogg. Chapter 2 is based on a paper I wrote with ChangHoon~ Hahn, Kilian~Walsh, Andrew~Hearin, David~W.~Hogg, and Duncan~Campbell. ChangHoon~Hahn and I contributed equally to development of the bulk of the code and text for this project. Kilian~Walsh had significant contributions to both coding and writing. Andrew~Hearin and David~Hogg contributed to writing of the paper and Duncan~Campbell had some contribution 
@@ -358,4 +358,4 @@ Funding for the SDSS and SDSS-II has been provided by the Alfred P. Sloan Founda
 
 In Chapter 5, all of the HST archival data were obtained from the Mikulski Archive for Space Telescopes (MAST) \footnote{\url{https://archive.stsci.edu}}. STScI is operated by the Association of Universities for Research in Astronomy, Inc., under NASA contract NAS5-26555.
  
-Bulk of the computations in this work were carried out on the Mercer cluster which is part of the New York University High Performance Computing facilities \footnote{https://wikis.nyu.edu/display/NYUHPC/Clusters+-+Mercer}}. For a fraction of computations performed for this thesis, I acknowledge the use of machines in Center for Cosmology and Particle Physics \footnote{http://ccpp.nyu.edu}} and the computing resources provided by MareNostrum Cosmological Project \footnote{http://astro.ft.uam.es/marenostrum/}}. 
+Bulk of the computations in this work were carried out on the Mercer cluster which is part of the New York University High Performance Computing facilities \footnote{\url{https://wikis.nyu.edu/display/NYUHPC/Clusters+-+Mercer}}. For a fraction of computations performed for this thesis, I acknowledge the use of machines in Center for Cosmology and Particle Physics \footnote{\url{http://ccpp.nyu.edu}} and the computing resources provided by MareNostrum Cosmological Project \footnote{\url{http://astro.ft.uam.es/marenostrum/}}. 

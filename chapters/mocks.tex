@@ -94,20 +94,6 @@ Our method consists of producing the large scale dark matter field on a mesh and
 Our approach is agnostic about the method used for identification of halos in the reference catalog. The \textsc{patchy} code permits us to sample galaxies directly from the density field. For instance \citet{kitaura2016} samples mock galaxy catalogs based on an accurate reference mock galaxy catalog \citep{sergio2016}. 
 Let us first describe in \S \ref{sec:sf} the new implementation of the structure formation in \textsc{patchy}, followed in \S \ref{sec:bias} by the bias model, and finally in  \S \ref{sec:mcmc} our novel MCMC sampling procedure to obtain the bias parameters. 
 
-\begin{figure*}
- \begin{tabular}{ccc}
-\includegraphics[width=0.3\textwidth]{figures/mocks/bigmd_large.pdf}
-\includegraphics[width=0.3\textwidth]{figures/mocks/fastpm_large.pdf}
-\includegraphics[width=0.3\textwidth]{figures/mocks/alpt_large.pdf}\\
-\includegraphics[width=0.3\textwidth]{figures/mocks/bigmd_medium.pdf}
-\includegraphics[width=0.3\textwidth]{figures/mocks/fastpm_medium.pdf}
-\includegraphics[width=0.3\textwidth]{figures/mocks/alpt_medium.pdf}\\
-\includegraphics[width=0.3\textwidth]{figures/mocks/bigmd_small.pdf}
-\includegraphics[width=0.3\textwidth]{figures/mocks/fastpm_small.pdf}
-\includegraphics[width=0.3\textwidth]{figures/mocks/alpt_small.pdf}
-\end{tabular}
-\caption{\label{fig:darkmatter} Dark matter overdensity $\delta = \rho_{\rm m}/\rho -1$ slices of 20 $\mperh$ from the high-resolution BigMultiDark simulation (left panels) , the low-resolution \textsc{FastPM} simulation (central panels) and from the \textsc{alpt} simulation (right panels), taking a subvolume of $(1250 \;\mperh)^3$ (top panels), $(625 \;\mperh)^3$ (middle panels), and $(312.5 \;\mperh)^3$ (bottom panels). The structures in the high-resolution $N$-body simulation and the low-resolution \textsc{FastPM} simulation look very similar inspite of having very different resolutions ($3840^3$ vs $960^3$ particles). The low-resolution \textsc{alpt} simulation looks more diffuse.}
-\end{figure*}
 
 \subsection{Structure formation model}
 \label{sec:sf}
@@ -168,9 +154,9 @@ P(N_{\rm h}|\lambda_{\rm h}, \beta) &=& \underbrace{\frac{\lambda_{\rm h}^{N_{\r
 \ea
 For $\beta\rightarrow\infty$ we can show that the second raw in the above equation goes to one. Since $\Gamma(\beta)=\frac{\Gamma(\beta+1)}{\beta}=\frac{\Gamma(\beta+N_{\rm h})}{\beta(\beta+1)\cdots(\beta+N_{\rm h}-1)}$, the first factor can be written as $\frac{\Gamma(\beta+N_{\rm h})}{\Gamma(\beta)(\beta + \lambda_{\rm h})^{N_{\rm h}}}=\frac{\beta(\beta+1)\cdots(\beta+N_{\rm h}-1)}{(\beta + \lambda_{\rm h})^{N_{\rm h}}}=\frac{(1+1/\beta)\cdots(1+(N_{\rm h}-1)/\beta)}{(1 + \lambda_{\rm h}/\beta)^{N_{\rm h}}}$. It is now straightforward to see that this goes to one for $\beta\rightarrow\infty$. The same happens for the second factor $\frac{e^{\lambda_{\rm h}}}{(1+\lambda_{\rm h}/\beta)^{\beta}}\rightarrow 1$, since $(1+\lambda_{\rm h}/\beta)^{\beta}\rightarrow e^{\lambda_{\rm h}}$ in that limit.
 
-Given a dark matter density field $\rho_{\rm m}$, the halo density field can be constructed by drawing samples from the expected halo density field $\rho_{\rm h}$ with the Negative-Binomial (hereafter NB) distribution (Eq.~\ref{eq:devpois}). This is inspired by the fact that the excess probability of finding halos in high density regions generates over-dispersion \citep[][]{somerville2001,miranda2002}. This over-dispersion is modeled by a NB distribution (\citealt{kitaura2014,neyrinck2014}). 
+Given a dark matter density field $\rho_{\rm m}$, the halo density field can be constructed by drawing samples from the expected halo density field $\rho_{\rm h}$ with the Negative-Binomial (hereafter NB) distribution (Eq.~\ref{eq:devpois}). This is inspired by the fact that the excess probability of finding halos in high density regions generates over-dispersion \citep[][]{somerville2001,Casas-Miranda:2002aa}. This over-dispersion is modeled by a NB distribution (\citealt{kitaura2014,neyrinck2014}). 
 
-The stochastic bias stands for the shot noise from the transition of the continuous dark matter field to the discrete halo (or galaxy) distribution. As predicted by \citet{Peebles1980}, it produces a dispersion larger than Poisson, as long as the two-point correlation function remains positive below the scale of the cell size. This is captured by the negative binomial PDF (Eq.~\ref{eq:devpois}).
+The stochastic bias stands for the shot noise from the transition of the continuous dark matter field to the discrete halo (or galaxy) distribution. As predicted by \citet{peebles80}, it produces a dispersion larger than Poisson, as long as the two-point correlation function remains positive below the scale of the cell size. This is captured by the negative binomial PDF (Eq.~\ref{eq:devpois}).
 
 \subsection{Constraining the bias model}
 \label{sec:mcmc}
@@ -208,48 +194,12 @@ Moreover, the approach we follow in \textsc{patchy} tests the validity range of 
 
 Now for the first time we include a robust MCMC sampling scheme to determine the bias parameters, and have improved the gravity solver with \textsc{FastPM}.
 
-\begin{figure*}
-%\begin{center}
-\includegraphics[width=0.9\textwidth]{figures/mocks/posterior.pdf}
-\caption{\label{fig:bias2} Posterior probability distribution of the \textsc{patchy} bias parameters $\{\delta_{\rm th},\alpha,\beta,\rho_{\epsilon},\epsilon\}$. The contours mark the 68$\%$ and the 95$\%$ confidence intervals of the posterior probabilities. This plot is made using the open-source software \textsc{corner} (\citealt{corner}).}
-%\end{center}
-\end{figure*}
-
-\begin{figure*}
- \begin{tabular}{cc}
-\includegraphics[width=0.4\textwidth]{figures/mocks/pdf.pdf}
-\includegraphics[width=0.4\textwidth]{figures/mocks/pk.pdf}
-\end{tabular}
-\caption{\label{fig:pdfpower} Top: Demonstration of the halo bivariate probability distribution function of halos (halo counts-in-cells) in the BigMultiDark simulation (shown in black) and in the \textsc{FastPM}-\textsc{patchy} simulation (shown in blue) and in the \textsc{alpt}-\textsc{patchy} simulation (shown in red) on the left. Comparison between the real-space power spectrum of the BDM halos (shown in black) in the reference BigMultiDark simulation and that of the halos in the \textsc{FastPM}-\textsc{patchy} (\textsc{alpt}-\textsc{patchy}) simulation shown in blue (red) on the right. 
-Bottom: Ratio between the halo PDFs of the approximate mocks and halo PDF of the BigMultiDark simulation on the left. Ratio between the halo power spectra of the approximate mocks and the halo power spectrum of the BigMultiDark simulation on the right.}
-\end{figure*}
-
-\begin{figure*}
-\vspace{-0.5cm}
-\begin{tabular}{cc}
-%\hspace{-0.4cm}
-\includegraphics[width=0.4\textwidth]{figures/mocks/bispec1.pdf}
-\includegraphics[width=0.4\textwidth]{figures/mocks/bispec3.pdf}
-\vspace{-0.8cm}
-\\
-%\hspace{-0.4cm}
-\includegraphics[width=0.4\textwidth]{figures/mocks/bispec2.pdf}
-\includegraphics[width=0.4\textwidth]{figures/mocks/bispec5.pdf}
-\vspace{-0.8cm}
-\\
-%\hspace{-0.4cm}
-\includegraphics[width=0.4\textwidth]{figures/mocks/bispec4.pdf}
-\includegraphics[width=0.4\textwidth]{figures/mocks/bispec6.pdf}
-\vspace{-0.25cm}
-\end{tabular}
-\caption{\label{fig:bispec} Real-space bispectrum of the BigMD BDM halos and that of the approximate mocks as a function of angle $\alpha_{12}$ between $\mathbf{k}_1$ and $\mathbf{k}_{2}$ for $k_{1}=k_{2}=0.1\; \hperm$ (upper left), $2k_{1}=k_{2}=0.2\; \hperm$ (upper right), $k_{1}=k_{2}=0.15\; \hperm$ (middle left), $k_{1}=k_{2}=0.2\; \hperm$ (middle right), $2k_{1}=k_{2}=0.3\; \hperm$ (lower left), and $2k_{1}=k_{2}=0.4\; \hperm$ (lower right). The BigMD is represent by the solid black line, while \textsc{alpt}-\textsc{patchy} is represented by the dashed red line, and \textsc{FastPM}-\textsc{patchy} is represented by the dashed blue line.}
-\end{figure*}
 
 
 \section{Demonstration on an accurate $N$-body based halo catalog}
 \label{sec:mocktest}
 
-In this section we present the application of the above described method to a well studied case: the halo distribution required to describe the CMASS LRG sample of the BOSS survey \citep{white2011,Dawson2013}.
+In this section we present the application of the above described method to a well studied case: the halo distribution required to describe the CMASS LRG sample of the BOSS survey \citep{white2011,boss}.
 First, we briefly describe the reference catalog and then present a detailed statistical analysis of the results.
 
 \subsection{Reference catalog}
@@ -262,7 +212,7 @@ $h=0.678$. The box size for this $N$-body simulation is 2500 $\mperh$, the numbe
 the mass per simulation particle $m_{\rm p}$ is $2.359 \times 10^{10} \; h^{-1} M_{\odot}$, and the gravitational softening length 
 $\epsilon$ is 30 $h^{-1} \rm{kpc}$ at high-$z$ and 10 $h^{-1} \rm{kpc}$ at low-$z$.
 
-A minimum mass cut of $0.5 \times 10^{13} \; h^{-1} M_{\odot}$ has been applied to the halo catalog so that it matches with the number density of the SDSS III-BOSS CMASS galaxy catalog \citep{white2011,Dawson2013}. After applying the mass cut, the number density of the final catalog is 3.5 $\times 10^{-4}$ $(\hperm)^{3}$. The MultiDark-\textsc{patchy} galaxy catalogs \citep{kitaura2016} are calibrated against BOSS-HAM catalogs which were constructed by populating the halos in different snapshots of the BigMultiDark simulation using halo abundance matching \citep{sergio2016}.   
+A minimum mass cut of $0.5 \times 10^{13} \; h^{-1} M_{\odot}$ has been applied to the halo catalog so that it matches with the number density of the SDSS III-BOSS CMASS galaxy catalog \citep{white2011,boss}. After applying the mass cut, the number density of the final catalog is 3.5 $\times 10^{-4}$ $(\hperm)^{3}$. The MultiDark-\textsc{patchy} galaxy catalogs \citep{kitaura2016} are calibrated against BOSS-HAM catalogs which were constructed by populating the halos in different snapshots of the BigMultiDark simulation using halo abundance matching \citep{sergio2016}.   
 
 Evaluation of $P(k)$ and $\rho(n)$ for a set of bias parameters requires running the forward model of generating halos from the matter density field. Therefore, in order to speed up the fitting procedure we run the \textsc{patchy} code with a smaller box size of 625 $\mperh$ and grid size of 240 in each dimension. This choice of box and grid size preserves the resolution. Furthermore, running the \textsc{patchy} code and computing the statistics of the halo catalogs in a smaller box size significantly reduces the computational time needed for constraining the bias parameters.
 
@@ -352,5 +302,58 @@ The CosmoSim database used in this paper is a service by the Leibniz-Institute f
 %\bibliographystyle{mn2e}
 %\bibliography{mybib}
 
+%%%%%%%%%%%%% FIGURES %%%%%%%%%%%%%%%%%%%%%%%%%
 
+\begin{figure*}
+ \begin{tabular}{ccc}
+\includegraphics[width=0.3\textwidth]{figures/mocks/bigmd_large.pdf}
+\includegraphics[width=0.3\textwidth]{figures/mocks/fastpm_large.pdf}
+\includegraphics[width=0.3\textwidth]{figures/mocks/alpt_large.pdf}\\
+\includegraphics[width=0.3\textwidth]{figures/mocks/bigmd_medium.pdf}
+\includegraphics[width=0.3\textwidth]{figures/mocks/fastpm_medium.pdf}
+\includegraphics[width=0.3\textwidth]{figures/mocks/alpt_medium.pdf}\\
+\includegraphics[width=0.3\textwidth]{figures/mocks/bigmd_small.pdf}
+\includegraphics[width=0.3\textwidth]{figures/mocks/fastpm_small.pdf}
+\includegraphics[width=0.3\textwidth]{figures/mocks/alpt_small.pdf}
+\end{tabular}
+\caption{\label{fig:darkmatter} Dark matter overdensity $\delta = \rho_{\rm m}/\rho -1$ slices of 20 $\mperh$ from the high-resolution BigMultiDark simulation (left panels) , the low-resolution \textsc{FastPM} simulation (central panels) and from the \textsc{alpt} simulation (right panels), taking a subvolume of $(1250 \;\mperh)^3$ (top panels), $(625 \;\mperh)^3$ (middle panels), and $(312.5 \;\mperh)^3$ (bottom panels). The structures in the high-resolution $N$-body simulation and the low-resolution \textsc{FastPM} simulation look very similar inspite of having very different resolutions ($3840^3$ vs $960^3$ particles). The low-resolution \textsc{alpt} simulation looks more diffuse.}
+\end{figure*}
+
+
+\begin{figure*}
+%\begin{center}
+\includegraphics[width=0.9\textwidth]{figures/mocks/posterior.pdf}
+\caption{\label{fig:bias2} Posterior probability distribution of the \textsc{patchy} bias parameters $\{\delta_{\rm th},\alpha,\beta,\rho_{\epsilon},\epsilon\}$. The contours mark the 68$\%$ and the 95$\%$ confidence intervals of the posterior probabilities. This plot is made using the open-source software \textsc{corner} (\citealt{corner}).}
+%\end{center}
+\end{figure*}
+
+\begin{figure*}
+ \begin{tabular}{cc}
+\includegraphics[width=0.4\textwidth]{figures/mocks/pdf.pdf}
+\includegraphics[width=0.4\textwidth]{figures/mocks/pk.pdf}
+\end{tabular}
+\caption{\label{fig:pdfpower} Top: Demonstration of the halo bivariate probability distribution function of halos (halo counts-in-cells) in the BigMultiDark simulation (shown in black) and in the \textsc{FastPM}-\textsc{patchy} simulation (shown in blue) and in the \textsc{alpt}-\textsc{patchy} simulation (shown in red) on the left. Comparison between the real-space power spectrum of the BDM halos (shown in black) in the reference BigMultiDark simulation and that of the halos in the \textsc{FastPM}-\textsc{patchy} (\textsc{alpt}-\textsc{patchy}) simulation shown in blue (red) on the right. 
+Bottom: Ratio between the halo PDFs of the approximate mocks and halo PDF of the BigMultiDark simulation on the left. Ratio between the halo power spectra of the approximate mocks and the halo power spectrum of the BigMultiDark simulation on the right.}
+\end{figure*}
+
+\begin{figure*}
+\vspace{-0.5cm}
+\begin{tabular}{cc}
+%\hspace{-0.4cm}
+\includegraphics[width=0.4\textwidth]{figures/mocks/bispec1.pdf}
+\includegraphics[width=0.4\textwidth]{figures/mocks/bispec3.pdf}
+\vspace{-0.8cm}
+\\
+%\hspace{-0.4cm}
+\includegraphics[width=0.4\textwidth]{figures/mocks/bispec2.pdf}
+\includegraphics[width=0.4\textwidth]{figures/mocks/bispec5.pdf}
+\vspace{-0.8cm}
+\\
+%\hspace{-0.4cm}
+\includegraphics[width=0.4\textwidth]{figures/mocks/bispec4.pdf}
+\includegraphics[width=0.4\textwidth]{figures/mocks/bispec6.pdf}
+\vspace{-0.25cm}
+\end{tabular}
+\caption{\label{fig:bispec} Real-space bispectrum of the BigMD BDM halos and that of the approximate mocks as a function of angle $\alpha_{12}$ between $\mathbf{k}_1$ and $\mathbf{k}_{2}$ for $k_{1}=k_{2}=0.1\; \hperm$ (upper left), $2k_{1}=k_{2}=0.2\; \hperm$ (upper right), $k_{1}=k_{2}=0.15\; \hperm$ (middle left), $k_{1}=k_{2}=0.2\; \hperm$ (middle right), $2k_{1}=k_{2}=0.3\; \hperm$ (lower left), and $2k_{1}=k_{2}=0.4\; \hperm$ (lower right). The BigMD is represent by the solid black line, while \textsc{alpt}-\textsc{patchy} is represented by the dashed red line, and \textsc{FastPM}-\textsc{patchy} is represented by the dashed blue line.}
+\end{figure*}
 

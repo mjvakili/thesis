@@ -55,9 +55,9 @@ formed through nonlinear gravitational evolution and biasing, the likelihood {\e
 Even if the initial conditions are perfectly Gaussian, the growth of structure creates non-linearities 
 which are non-Gaussian (see \citealt{Bernardeau:2002aa} for a comprehensive review). 
 Galaxies form within the density field in some complex manner that is modeled only effectively
-(\citealt{Dressler:1980aa, Kaiser:1984aa, Santiago:1992aa, Steidel:1998aa}; see \citealt{somerville15} for a recent review).  
-Even if the galaxies were a Poisson sampling of the density field, which they are not (\citealt{Mo:1996aa, Sommerville:2001aa, Casas-Miranda:2002aa}), it would be tremendously difficult to write down even 
-an approximate likelihood function (\citealt{devpois}).
+(\citealt{Dressler:1980aa, kaiser1984, Santiago:1992aa, Steidel:1998aa}; see \citealt{somerville15} for a recent review).  
+Even if the galaxies were a Poisson sampling of the density field, which they are not (\citealt{Mo:1996aa, somerville2001, Casas-Miranda:2002aa}), it would be tremendously difficult to write down even 
+an approximate likelihood function (\citealt{ata2015}).
 
 The standard approach makes the strong assumption that the likelihood function 
 for the data can be approximated by a pseudo-likelihood function that is a Gaussian
@@ -116,16 +116,16 @@ $N$ galaxies subject to some observational selection criteria
 (\citealt{lemson99, seljak2000,scoccimarro2001,berlind_weinberg2002,zheng2005}).
 This statistical prescription for connecting galaxies to halos has been remarkably
 successful in reproducing the galaxy clustering, galaxy--galaxy lensing, and other 
-observational statistics (\citealt{Rodriguez-Torres:2015aa, miyatake15}), and is a 
+observational statistics (\citealt{miyatake15,sergio2016}), and is a 
 useful framework for constraining cosmological parameters (\citealt{vdb03, tinker05, cacciato13, more13}) 
-as well as galaxy evolution models (\citealt{conroy09, Tinker:2011aa, leauthaud12, behroozi13, Tinker:2013aa}, 
+as well as galaxy evolution models (\citealt{conroy2009, tinker2011, leauthaud12, behroozi13, tinker2013}, 
 Walsh et al. in preparation). 
 
 More specifically, we limit our scope to a likelihood analysis of HOD model parameter space, 
 keeping cosmology fixed. We forward model galaxy survey data by populating pre-built dark 
 matter halo catalogs obtained from high resolution N-body simulations (\citealt{bolshoi,multidark}) using 
 $\mathtt{Halotools}$\footnote{http://halotools.readthedocs.org} 
-(\citealt{Hearin:2016aa}), 
+(\citealt{halotools}), 
 an open-source package for modeling the galaxy-halo connection. 
 Equipped with the forward model, we use summary statistics such as 
 number density, two-point correlation function, galaxy group multiplicity function (GMF)
@@ -362,7 +362,7 @@ Fitting function techniques, however, require many simplifying assumptions. For 
 Eqs.~(\ref{eq:onehaloterm}) and (\ref{eq:twohaloterm}) assume that the galaxy 
 distribution within a halo is spherically symmetric. These equations 
 also face well-known difficulties of properly treating halo exclusion and scale-dependent bias, 
-which results in additional inaccuracies commonly exceeding the $10\%$ level (\citealt{vdBosch13}). 
+which results in additional inaccuracies commonly exceeding the $10\%$ level (\citealt{vdb13}). 
 Direct emulation methods have made significant improvements in precision and accuracy in recent 
 years (\citealt{coyote2,coyote1}); however, a labor- and computation-intensive interpolation 
 exercise must be carried out each time any alternative statistic is explored, which is one of the goals of the present work.
@@ -370,7 +370,7 @@ exercise must be carried out each time any alternative statistic is explored, wh
 To address these problems, throughout this paper we make no appeal to fitting functions or emulators. 
 Instead, we use the $\mathtt{Halotools}$ package to populate dark matter halos with mock galaxies and 
 then calculate our summary statistics directly on the resulting galaxy catalog with the same estimators 
-that are used on observational data (\citealt{Hearin:2016aa}). Additionally, through our forward modeling approaching, we are
+that are used on observational data (\citealt{halotools}). Additionally, through our forward modeling approaching, we are
 able to explore observables beyond the 2PCF, such as the group multiplicity function, for which 
 there is no available fitting function. This framework allows us to use group multiplicity function for providing quantitative constraints on the galaxy-halo connection. In the following section, we will show that using this observable, we can obtain constraints on the HOD parameters comparable to those found from the 2PCF measurements. 
 
@@ -393,7 +393,7 @@ reside within the virial radius following an NFW spatial profile (\citealt{nfw})
 parameter given by the $c(M)$ relation (\citealt{nfw_c(M)}). The peculiar velocity of satellites with 
 respect to their host halo is calculated according to the solution of the Jeans equation of an NFW 
 profile (\citealt{more2010}). We refer the reader to \cite{hearin15}, 
-\cite{Hearin:2016aa}, and \url{http://halotools.readthedocs.io}
+\cite{halotools}, and \url{http://halotools.readthedocs.io}
 for further details.  
 
 For the halo catalog of our forward model, we use the publicly available $\mathtt{Rockstar}$ 
@@ -830,7 +830,7 @@ capture the sample variance of the data.
 Accurate estimation of the covariance matrix 
 in LSS, however, faces a number of challenges. It is both labor and computationally 
 expensive and dependent on the accuracy of simulated mock catalogs, known to be 
-unreliable on small scales~(see \citealt{cosmiccode,nifty} and references therein). 
+unreliable on small scales~(see \citealt{cosmiccode,chuang2015} and references therein). 
 In fact, as \cite{Sellentin:2016a} points out, using estimates of the covariance 
 matrix in the Gaussian psuedo-likelihood approach become further problematic. Even 
 when inferring parameters from a Gaussian-distributed data set, using covariance 
@@ -845,7 +845,7 @@ for sources of systematic uncertainties that affect observations. All observatio
 suffer from significant systematic effects which are often difficult to correct. 
 For instance, in SDSS-III BOSS~\citep{boss}, fiber collisions and redshift
 failures siginifcantly bias measurements and analysis of observables such as 
-$\xigg$ or the galaxy powerspectrum~\citep{Ross:2012aa, Guo:2012a, Hahn:2017a}. 
+$\xigg$ or the galaxy powerspectrum~\citep{Ross:2012aa, guo2012, Hahn:2017a}. 
 In parameter inference, these systematics can affect the likelihood, and thus any 
 analysis that requires writing down the likelihood, in unknown ways. With a forward generative model of the ABC-PMC 
 method, the systematics can be simulated and marginalized out to achieve unbiased 

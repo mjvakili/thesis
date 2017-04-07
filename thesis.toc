@@ -1,0 +1,78 @@
+\contentsline {section}{Copyright}{ii}{Doc-Start}
+\contentsline {section}{Acknowledgements}{iv}{section*.1}
+\contentsline {section}{Abstract}{v}{section*.2}
+\contentsline {section}{List of Figures}{xi}{chapter*.3}
+\contentsline {section}{List of Tables}{xxvi}{chapter*.4}
+\contentsline {chapter}{Introduction}{1}{chapter*.6}
+\contentsline {chapter}{\numberline {1}Fast stellar centroiding and saturation of the Cramer-Rao lower bound}{21}{chapter.1}
+\contentsline {section}{\numberline {1.1}Chapter abstract}{21}{section.1.1}
+\contentsline {section}{\numberline {1.2}Introduction}{22}{section.1.2}
+\contentsline {section}{\numberline {1.3}The Cram\'{e}r-Rao lower bound}{25}{section.1.3}
+\contentsline {section}{\numberline {1.4}Centroiding methods}{31}{section.1.4}
+\contentsline {subsection}{\numberline {1.4.1}Centroiding by fitting a correct PSF profile}{32}{subsection.1.4.1}
+\contentsline {subsection}{\numberline {1.4.2}Matched-filter polynomial centroiding}{32}{subsection.1.4.2}
+\contentsline {subsection}{\numberline {1.4.3}Fixed-Gaussian polynomial centroiding}{34}{subsection.1.4.3}
+\contentsline {subsection}{\numberline {1.4.4}Center-of-light centroiding}{35}{subsection.1.4.4}
+\contentsline {section}{\numberline {1.5}Tests}{35}{section.1.5}
+\contentsline {section}{\numberline {1.6}Results}{36}{section.1.6}
+\contentsline {subsection}{\numberline {1.6.1}Experiment 1 : variable SNR; constant $\gamma $}{36}{subsection.1.6.1}
+\contentsline {subsection}{\numberline {1.6.2}Experiment 2 : constant SNR; variable $\gamma $}{37}{subsection.1.6.2}
+\contentsline {section}{\numberline {1.7}Discussion}{38}{section.1.7}
+\contentsline {chapter}{\numberline {2}Approximate bayesian computation in large scale structure: constraining the galaxy halo connection }{51}{chapter.2}
+\contentsline {section}{\numberline {2.1}Section abstract}{51}{section.2.1}
+\contentsline {section}{\numberline {2.2}Introduction}{52}{section.2.2}
+\contentsline {section}{\numberline {2.3}Methods}{56}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Approximate Bayesian Computation}{56}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Forward model}{61}{subsection.2.3.2}
+\contentsline {subsubsection}{\numberline {2.3.2.1}Halo Occupation Modeling}{61}{subsubsection.2.3.2.1}
+\contentsline {subsection}{\numberline {2.3.3}Summary Statistics}{65}{subsection.2.3.3}
+\contentsline {section}{\numberline {2.4}ABC at work}{68}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Mock Observations}{68}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}ABC-PMC Design}{70}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}Results: ABC}{73}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.4}Comparison to the Gaussian Pseudo-Likelihood MCMC Analysis}{75}{subsection.2.4.4}
+\contentsline {section}{\numberline {2.5}Summary and Conclusion}{80}{section.2.5}
+\contentsline {chapter}{\numberline {3}How are galaxies assigned to halos? searching for assembly bias in SDSS clustering measurements}{89}{chapter.3}
+\contentsline {section}{\numberline {3.1}chapter abstract}{89}{section.3.1}
+\contentsline {section}{\numberline {3.2}Introduction}{90}{section.3.2}
+\contentsline {section}{\numberline {3.3}Method}{96}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Simulation}{96}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Halo occupation modeling}{98}{subsection.3.3.2}
+\contentsline {subsubsection}{\numberline {3.3.2.1}standard model without assembly bias}{98}{subsubsection.3.3.2.1}
+\contentsline {subsubsection}{\numberline {3.3.2.2}Model with Assembly bias}{99}{subsubsection.3.3.2.2}
+\contentsline {subsubsection}{\numberline {3.3.2.3}Redshift-space distortion}{100}{subsubsection.3.3.2.3}
+\contentsline {subsection}{\numberline {3.3.3}Model Observables}{101}{subsection.3.3.3}
+\contentsline {section}{\numberline {3.4}Data}{102}{section.3.4}
+\contentsline {section}{\numberline {3.5}Analysis}{104}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Inference setup}{104}{subsection.3.5.1}
+\contentsline {section}{\numberline {3.6}Results and Discussion}{106}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}Constraints and Interpretations}{106}{subsection.3.6.1}
+\contentsline {subsection}{\numberline {3.6.2}model comparison}{114}{subsection.3.6.2}
+\contentsline {subsection}{\numberline {3.6.3}choice of simulation}{116}{subsection.3.6.3}
+\contentsline {section}{\numberline {3.7}Summary and Conclusion}{118}{section.3.7}
+\contentsline {chapter}{\numberline {4}Accurate galaxy-halo mocks with automatic bias estimation and particle-mesh gravity solvers}{130}{chapter.4}
+\contentsline {section}{\numberline {4.1}abstract}{130}{section.4.1}
+\contentsline {section}{\numberline {4.2}Introduction}{131}{section.4.2}
+\contentsline {section}{\numberline {4.3}Methodology}{135}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Structure formation model}{136}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Sampling halos from the density field}{137}{subsection.4.3.2}
+\contentsline {subsubsection}{\numberline {4.3.2.1}Deterministic bias}{137}{subsubsection.4.3.2.1}
+\contentsline {subsubsection}{\numberline {4.3.2.2}Stochastic bias}{138}{subsubsection.4.3.2.2}
+\contentsline {subsection}{\numberline {4.3.3}Constraining the bias model}{140}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.4}Comparison with other approximate methods}{141}{subsection.4.3.4}
+\contentsline {section}{\numberline {4.4}Demonstration on an accurate $N$-body based halo catalog}{143}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Reference catalog}{143}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Bias parameters}{144}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}Statistical comparison}{146}{subsection.4.4.3}
+\contentsline {section}{\numberline {4.5}Summary and Discussion}{148}{section.4.5}
+\contentsline {chapter}{\numberline {5}Super-resolution PSF model of HST WFC3-IR}{156}{chapter.5}
+\contentsline {section}{\numberline {5.1}Chapter abstract}{156}{section.5.1}
+\contentsline {section}{\numberline {5.2}Introduction}{157}{section.5.2}
+\contentsline {section}{\numberline {5.3}Data}{159}{section.5.3}
+\contentsline {section}{\numberline {5.4}Method}{160}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}generative model}{160}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}likelihood optimization}{162}{subsection.5.4.2}
+\contentsline {section}{\numberline {5.5}Preliminary Results}{167}{section.5.5}
+\contentsline {section}{\numberline {5.6}Summary and Discussion}{170}{section.5.6}
+\contentsline {chapter}{Conclusion}{184}{chapter*.11}
+\contentsline {chapter}{Bibliography}{186}{chapter*.11}
