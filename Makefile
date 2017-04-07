@@ -9,7 +9,7 @@ all: thesis.pdf abstractpage.pdf
 
 thesis.pdf: *.tex chapters/*.tex *.bib
 	${LATEX} thesis
-	bibtex thesis
+	#bibtex thesis
 	${LATEX} thesis
 	( grep Rerun thesis.log && ${LATEX} thesis ) || echo "Done."
 	( grep Rerun thesis.log && ${LATEX} thesis ) || echo "Done."
