@@ -1,8 +1,0 @@
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces {\bf Prior Specifications}: The prior probability distribution and its range for each of the \citet {zheng07} HOD parameters. All mass parameters are in unit of $h^{-1}M_\odot $}}{72}{table.2.1}
-\addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces {\bf Prior Specifications}: The prior probability distribution and its range for each of the parameters. All mass parameters are in unit of $h^{-1}M_\odot $. The parameters marked by $*$ are only used in the Heaviside Assembly bias modeling and by definition are bounded between -1 and 1.}}{106}{table.3.1}
-\contentsline {table}{\numberline {3.2}{\ignorespaces {\bf Constraints}: Constraints on the parameters of the HOD models with and without assembly bias. All mass parameters are in unit of $h^{-1}M_\odot $. The best-estimates and the error bars correspond to the 50$\%$ quantile and 68$\%$ confidence intervals obtained from the marginalized posterior probability pdfs. The last column is $\chi ^{2}$ per degrees of freedom ($dof$), where $dof = N_{data} - N_{par}$}}{115}{table.3.2}
-\addvspace {10\p@ }
-\addvspace {10\p@ }
