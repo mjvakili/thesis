@@ -77,10 +77,63 @@ For each FLT image, we follow the following procedure to select stars with suffi
 for PSF modeling. First the Source Extractor software \citep{sextractor} is run on each image to detect the objects. 
 For each object, the stellarity index and blending/error flags are extracted. An object is called a \emph{star} if no blending/error flag is 
 raised, its stellarity index is greater than 0.8, and if its peak pixel brightness value is 25 times greater than the median pixel brightness 
-value.  
+value. The Source Extractor configuration file used in our analysis is shown in Table~\ref{tab:sextractor}. 
 
 The FLT files obtained from the HST MAST archive \footnote{\url{https://archive.stsci.edu}} are accompanied by Data Quality extension files. 
-While extracting the super-resolution PSF model from the point sources in FLT images, pixels with data quality other than zero are flagged and we do not include them in model fitting. This requirement ensures that the damaged pixels do not contribute to the PSF model. For each point source, we extract a 25 pixels $\times$ 25 pixels patch that is centered on the brightest pixel of the point source.   
+While extracting the super-resolution PSF model from the point sources in FLT images, pixels with data quality other than zero are flagged and we do not include them in model fitting. This requirement ensures that the damaged pixels do not contribute to the PSF model. For each point source, we extract a 25 pixels $\times$ 25 pixels patch that is centered on the brightest pixel of the point source. The Neural-Network weights for Source Extractor star-galaxy separation is available in \url{https://github.com/mjvakili/supermean/blob/master/default.nnw}.
+
+\clearpage
+
+\begin{table}
+\begin{center}
+  \label{tab:sextractor}
+  \caption{{\bf Source Extraction}: Source Extractor configuration file for extraction of the point sources from the $\hst$ $\wfc$ IR.}
+\begin{tabular}{@{}lllll}
+\\ \hline 
+    Configuration Parameter & & Value & &  Description\\ \hline
+  $\mathtt{DETECT \; TYPE}$ & & CCD & &  CCD (linear) or PHOTO (with gamma correction) \\
+  $\mathtt{DETECT \; MINAREA}$ & & 5 & &  minimum number of pixels above threshold \\
+  $\mathtt{DETECT \; THRESH}$ & & 5 & &  sigmas in $\mathrm{mag.arcsec}^{-2}$ \\
+  $\mathtt{ANALYSIS \; THRESH}$ & & 1.5 & & sigmas in $\mathrm{mag.arcsec}^{-2}$  \\
+  $\mathtt{FILTER}$ & & N & &  apply filter for detection?\\ 
+  $\mathtt{DEBLEND \;  NTHRESH}$ & & 32 & &  Number of deblending sub-thresholds \\
+  $\mathtt{DEBLEND \; MINCONT}$ & & 0.005 & &  Minimum contrast parameter for deblending \\
+  $\mathtt{CLEAN}$ & & Y & &  Clean spurious detections?\\
+  $\mathtt{CLEAN \; PARAM}$ & & 1.0 & & Cleaning efficiency \\
+  $\mathtt{MASK \; TYPE}$ & & CORRECT & &  type of detection MASKing \\
+  $\mathtt{FLAG \; IMAGE}$ & & flags.fits & &   \\
+  $\mathtt{FLAG \; TYPE}$ & & AND & &   \\
+  $\mathtt{WEIGHT \; GAIN}$ & & N & &   \\
+  $\mathtt{WEIGHT \; IMAGE}$ & & variance.fits & &  \\
+  $\mathtt{WEIGHT \; TYPE}$ & & MAP VAR & &  \\
+  $\mathtt{PHOT \; APERTURES}$ & & 3,5,7 & &  MAG APER aperture diameter(s) in pixels \\
+  $\mathtt{PHOT \; AUTOPARAMS}$ & & 2.5, 3.5 & &  MAG AUTO parameters: Kron fact, min radius \\
+  $\mathtt{PHOT \; PETROPARAMS}$ & & 2.0, 3.5 & &  MAG PETRO parameters: Petrosian fact , min radius \\
+  $\mathtt{PHOT \; FLUXFRAC}$ & & 0.2, 0.5, 0.9 & &   \\
+  $\mathtt{SATUR \; LEVEL}$ & & 50000.0 & &  level (in ADUs) at which arises saturation \\
+  $\mathtt{MAG \; ZEROPOINT}$ & & 1.0e-19  & &  magnitude zero-point \\
+  $\mathtt{MAG \; GAMMA}$ & & 4.0 & &  gamma of emulsion (for photographic scans) \\
+  $\mathtt{GAIN}$ & & 0.0 & &  detector gain in $e-/ADU$ \\
+  $\mathtt{PIXEL \; SCALE}$ & & 0.13 & &  size of pixel in arcsec\\
+  $\mathtt{SEEING \; FWHM}$ & & 0.17 & &  stellar FWHM in arcsec \\
+  $\mathtt{STARNNW \; NAME}$ & & ``./default.nnw'' & &  Neural-Network Weight table filename \\
+  $\mathtt{BACK \; SIZE}$ & & 64 & &  Background mesh: size \\
+  $\mathtt{BACK \; FILTERSIZE}$ & & 3 & &  Background filter: size \\
+  $\mathtt{BACKPHOTO \; TYPE}$ & & GLOBAL & &  Background type: can be GLOBAL or LOCAL \\
+  %$\mathtt{CHECKIMAGE TYPE}$ & & NONE & &   \\
+  %$\mathtt{CHECKIMAGE NAME}$ & & check.fits & &   \\
+  %$\mathtt{MEMORY OBJSTACK}$ & & 3000 & &  number of objects in stack \\
+  %$\mathtt{MEMORY PIXSTACK}$ & & 300000 & &  number of pixels in stack \\
+  %$\mathtt{MEMORY BUFSIZE}$ & & 1024 & &  number of lines in buffer \\
+  %$\mathtt{VERBOSE TYPE}$ & & QUIET & &  can be QUIET, NORMAL or FULL \\
+  %$\mathtt{WRITE XML}$ & & N & &  Write XML file (Y/N)? \\
+  %$\mathtt{XML NAME}$ & & sex.xml & &  Filename for XML output \\
+ \hline
+  \end{tabular}
+\end{center}
+\end{table}
+
+\clearpage
 
 \section{Method}\label{sec:hstmethod}
 
@@ -345,7 +398,7 @@ This allows us to make optimal use of all the pixels in $\wfc$ IR observations o
 
 \section*{Acknowledgments}
 
-We are grateful to Jay~Anderson, Dan~Foreman-Mackey, Michael~Blanton, and Alex~Malz, and Michael~Blanton for discussions related to this work.
+We are grateful to Jay~Anderson, Dan~Foreman-Mackey, Michael~Blanton, and Alex~Malz for discussions related to this work.
 
 %%%%%%%%%%%%%%%%%%%% FIGURES %%%%%%%%%%%%%%%%%%
 
