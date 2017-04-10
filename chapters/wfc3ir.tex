@@ -358,18 +358,18 @@ upsampling and averaging is very smooth. Additionally, the initial PSF misses ma
 Performance of the method at modeling the patches in the training sample is demonstrated in Figures~\ref{fig:training_1},~\ref{fig:training_2},~\ref{fig:training_3},~\ref{fig:training_4}. 
 Note that, we have \emph{intentionally} selected isolated sources with relatively high signal-to-noise ratios for training our algorithm. In addition to the data and the scaled realization of the model at the native pixel grid, we show a $\chi$ map (a measure for the goodness-of-fit), and a map of various pixels across the patch that have been flagged by the observations or the model. Pixels with $\mathtt{FLAG}=0$ are the pixels used in PSF modeling. $\mathtt{FLAG}=1$ corresponds to pixels that where flagged in MAST data quality extensions. Finally, $\mathtt{FLAG}=2$ corresponds to the group of pixels for which $\chi^{2}_{\rm clip}>3$. 
 
-Figures~\ref{fig:training_1} and~\ref{fig:training_2} show examples of two relatively bright sources. Note that even in our training pixels, there are pixels that are ill-fit and are masked out according to the clipping criteria. Figures~\ref{fig:training_3},~\ref{fig:training_4} show the performance of our method at modeling the relatively low signal-to-noise ratio point sources in the training sample. We note that overall, the model shows a good performance at modeling these sources.
+Figures~\ref{fig:training_1} and~\ref{fig:training_2} show examples of two relatively bright sources. Note that even in our training pixels, there are pixels that are ill-fit and are masked out according to the clipping criteria. Figures~\ref{fig:training_3},~\ref{fig:training_4} show the performance of our method at modeling the relatively low signal-to-noise ratio point sources in the training sample. We note that overall, the model shows good performance at modeling these sources.
 
-The validation set consists of stellar sources that are mostly present in crowded fields. Majority of the patches in the validation set have either more than 
+The validation set consists of stellar sources that are mostly present in crowded fields. The majority of the patches in the validation set have either more than 
 one point source, or have light contamination by nearby sources. We have not used these sources in our PSF modeling but we show how our super-resolution PSF estimate 
-can be used in modeling the crowded astronomical scenes in the validation set. In each patch, we optimize the patch negative log-likelihood function given in Eq.~\ref{eq:patch} to 
+can be used in modeling the crowded astronomical scenes in the validation set. In each patch, we optimize the patch negative log-likelihood function given in Eq.~(\ref{eq:patch}) to 
 estimate the background sky, flux, and the centroid of the point source on the center of the patch. 
 
-Furthermore, we use the clipping criterion $\chi^{2}_{\rm clip}>3$ to mask out pixels for which the squared model residuals are larger than modified variance (\ref{eq:modified_variance}).
-Note that the masking procedure needs to be repeated at every realization of the patch model given in equation (\ref{eq:model}). After applying this clipping method to the validation set, we also decided to extend it in the following way: after every model realization and identifying the flagged pixels with $\chi^{2}_{\rm clip}>3$, we grow the flagged regions 
+Furthermore, we use the clipping criterion $\chi^{2}_{\rm clip}>3$ to mask out pixels for which the squared model residuals are larger than modified variance given in equation~(\ref{eq:modified_variance}).
+Note that the masking procedure needs to be repeated at every realization of the patch model given in equation (\ref{eq:model}). After applying this clipping method to the validation set, we extended it in the following way: after every model realization and identifying the flagged pixels with $\chi^{2}_{\rm clip}>3$, we grow the flagged regions 
 in every direction by one pixel. We found this to be a more conservative choice and also better at capturing the pixels that receive light from the outer tails of the PSF from other stars. In what follows, we show examples for both the original and the extended versions of our masking algorithm.
 
-Examples of the performance of our model with a less conservative masking algorithm are shown in Figures~\ref{fig:validation_1},~\ref{fig:validation_2},~\ref{fig:validation_3},~\ref{fig:validation_4}. As it can be seen in Figs.~\ref{fig:validation_1},~\ref{fig:validation_2},~\ref{fig:validation_3}, the masking algorithm identifies majority of the pixels that are ill-fit with the PSF model (\ref{eq:model}) and prevents them from contributing to the $\chi$ map. However, there are still pixels that receive a small fraction of their brightness from the nearby point sources and are not masked out of the $\chi$ map. 
+Examples of the performance of our model with a less conservative masking algorithm are shown in Figs.~\ref{fig:validation_1},~\ref{fig:validation_2},~\ref{fig:validation_3},~\ref{fig:validation_4}. As it can be seen in Figs.~\ref{fig:validation_1},~\ref{fig:validation_2},~\ref{fig:validation_3}, the masking algorithm identifies majority of the pixels that are ill-fit with the PSF model (\ref{eq:model}) and prevents them from contributing to the $\chi$ map. However, there are still pixels that receive a small fraction of their brightness from the nearby point sources and are not masked out of the $\chi$ map. 
 
 Figure~\ref{fig:validation_4} demonstrates the most extreme case in which a tail of the PSF from a very bright nearby source is present in the patch and it is not completely masked out by the original clipping algorithm. This shows the need to adopt the more 
 conservative choice described above and grow the masked regions in every direction by one pixel.
@@ -377,23 +377,23 @@ Figures~\ref{fig:validation_5},~\ref{fig:validation_6},~\ref{fig:validation_7} d
 
 \section{Summary and Discussion}\label{sec:hstsummary}
 
-In this work, we have presented the first generative forward model of the observations of every point sources in the rich $\hst$ $\wfc$ IR dataset. 
+In this work, we have presented the first generative forward model of the observations of every point source in the rich $\hst$ $\wfc$ IR dataset. 
 The point spread functions of $\wfc$ IR channels are the most undersampled amongst all $\hst$ channels. 
 The exercise of making highly accurate measurements of the shapes of faint and poorly resolved galaxies, accurate and precise astrometry and photometry of point sources, 
 correction of the variable sub-pixel response function ``flat-field'' of the telescope, and many other scientific applications require great knowledge of 
 the PSF at a resolution higher than what is sampled by the $\wfc$ IR detectors. 
 
-Our approach differs from the analysis developed for the \emph{Euclid satellite} presented in \citet{ngole,ngole2} in that it does not attempt to infer the super-resolution PSF in a wavelet basis and it does not imposes any sparsity regularization. It assumes a more general noise model that includes both the Gaussian pixel noise and the Poisson noise arising from the instrument gain.
+Our approach differs from the analysis developed for the \emph{Euclid satellite} presented in \citet{ngole,ngole2} in that it does not attempt to infer the super-resolution PSF in a wavelet basis and it does not impose any sparsity regularization. It assumes a more general noise model that includes both the Gaussian pixel noise and the Poisson noise arising from the instrument gain.
 
 Our analysis is different than the approach of \citet{anderson2000} as we estimate the PSF by optimizing a well-motivated objective function 
 that is based on a generative forward model of the observations. However, they are similar in that they both require regularization of the PSF model after every iteration so that the degeneracy between the super-resolution PSF and the centroids of stars can be lifted. 
-The method presented in \citet{anderson2000} is based on shifting, averaging and eventually smoothing the PSF that does not involve optimizing any likelihood function.
-
+The method presented in \citet{anderson2000} is based on shifting, averaging and eventually smoothing the PSF but it does not involve optimizing any likelihood function.
 Furthermore, it is restricted to using only the isolated point sources and it is not prone to patches in which there is light contamination by the nearby sources. 
+
 The method presented in this \paper\ implements a rigorous treatment of every pixel that is ill-fit by the PSF model as a result of overlapping sources or light contamination by nearby sources. We implemented this by introducing a clipped $\chi^{2}_{\rm clip}$ that takes into account the model uncertainty. At every model realization throughout patch-fitting, pixels with $\chi^{2}_{\rm clip}$ more than a certain level are prevented from contributing to the likelihood function.
 
 PSF estimation and accurate point source photometry on a crowded field has two main challenges. \emph{First}: a large fraction of the pixels may not be usable for modeling purposes. This could lead to  significant information loss. \emph{Second}: using pixels that receive photons from multiple sources in modeling the PSF can bias the final PSF estimate. 
-Using a validation set containing many point sources in the crowded fields, we show that we can successfully use our technique to perform PSF-fitting. 
+Using a validation set containing many point sources in the crowded fields, we show that we can successfully use our technique to learn the pixel-convolved PSF. 
 This allows us to make optimal use of all the pixels in $\wfc$ IR observations of crowded fields.
 
 \section*{Acknowledgments}
