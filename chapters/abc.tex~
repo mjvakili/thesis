@@ -7,7 +7,7 @@
 This \paper\ is joint work with ChangHoon~Hahn (NYU), Kilian~W.~Walsh (NYU), Andrew~Hearin (Yale), David~W.~Hogg (NYU), and Duncan~Campbell (Yale) and it is submitted to the \emph{Monthly Royal Astronomical Society Notice}. 
 
 % Abstract of the paper
-\section{Chapter abstract}
+\section{Section abstract}
 
 Standard approaches to Bayesian parameter inference in large scale 
 structure assume a Gaussian functional form (chi-squared form) 

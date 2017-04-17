@@ -1,6 +1,6 @@
 \chapter*{Introduction}\addcontentsline{toc}{chapter}{Introduction}
 
-\section{background}
+\section{Background}
 
 Cosmology is entering a new era. Thanks to the ongoing and 
 the upcoming low redshift galaxy surveys as well as the early universe probes, 
@@ -69,8 +69,9 @@ can be precisely determined by the Power spectrum of CMB temperature anisotropie
 The acoustic feature in the late time matter clustering can be estimated from 
 the galaxy clustering measurements. Thus, the sound horizon scale along with the BAO feature in 
 galaxy clustering along (perpendicular) the line of sight provides an accurate estimate 
-of the the expansion rate of the universe (angular diameter distance) throughout cosmic history.
-
+of the the expansion rate of the universe (angular diameter distance) throughout cosmic history. Further BAO 
+measurements from $z\sim0.1$ to $z\sim 2$ have been able to place precise constraints on the distance ladder \citep{percival2010,beutler2011,anderson2014,font2014,delubac2015,ross2015,alam2016}. 
+ 
 In galaxy redshift surveys, the distances to galaxies can be estimated by the measured 
 redshifts. The distance information provided by these surveys is distorted by the peculiar 
 velocities of galaxies along the line of sight. These distortions are referred to as redshift space 
@@ -85,11 +86,14 @@ which increases the power spectrum parallel to the line of sight. At small-scale
 of galaxies inside halos suppress the clustering along the line of sight, an effect known as the 
 \emph{fingers-of-God effect}. Thus, RSDs result in anisotropic clustering of galaxies. Significant progress has 
 been made in theoretical modeling of the anisotropic clustering of galaxies \citep{roman2004,percival2009,reid2011}. 
-The amplitude of the anisotropic correlation functions is dictated by the derivative of the growth rate and the amplitude of the 
+The amplitude of the anisotropic correlation functions is dictated by the growth rate and the amplitude of the 
 matter power spectrum. Therefore, RSDs offer highly sensitive probes of the growth and contain additional cosmological information 
 beyond what is provided by the BAO feature. By measuring the growth rate, these analyses can 
-test the predictions of GR and modified theories of gravity \citep{linder2007,gong2008,Stril2010}. 
+test the predictions of GR and modified theories of gravity \citep{linder2007,gong2008,Stril2010}. Analyses 
+of the anisotropic redshift space distortions at different redshifts provide precise measurements 
+of the growth across cosmic history \citep{chuang2013,beutler2014,sanchez2014,gill2017}. 
 
+ 
 Study of galaxy clustering in order to understand the growth of structure is one of 
 the key drivers of low redshift surveys. Significant progress has been made in linking the observations of 
 galaxies and our theoretical understanding of the nonlinear evolution of dark matter. 
@@ -99,99 +103,19 @@ poses a challenge to applicability of perturbative approaches in small scales. I
 galaxy clustering must be understood within the context of the halo model which has had 
 much success in describing time evolution of the clustering of matter \citep{seljak2000,tinker_rsd2007,reid2014}.
 
-
 Gravitational lensing of luminous sources (galaxies, CMB) can measure 
 the state of the inhomogeneous matter density and the time-dependence of dark energy. 
 Lensing of the light emitted by background faint galaxies by the intervening large scale structure 
 results in very small but correlated distortions in the shapes of galaxies. This phenomenon is referred to 
-as cosmic shear.
+as cosmic shear. 
 
-
-%Spectroscopic surveys such as eBOSS \citep{eboss}, DESI, and Euclid \citep{euclid} allow us to precisely 
-%constrain the expansion history of the universe as well as the growth of structure. 
-%However, interpretation of these rich datasets requires characterization of the uncertainties on the clustering 
-%measurements of these datasets. The uncertainties are estimated in terms of the covariance matrix. Precision matrix, 
-%the inverse of the covariance matrix appears in the cosmological likelihood 
-%(the probability of the observed data given the model).
-
-%These constraints will enable us to distinguish between different physical scenarios that explain the accelerated expansion of the universe. 
-%A crucial component of BAO and RSD analyses is estimation of the uncertainties of the statistical summaries of 
-%the data obtained from galaxy surveys. One of the most promising frameworks for estimating the uncertainties in form of covariance matrices is production 
-%of a large number of accurate simulations of our observations. 
-
-\section{mocks and covariances}
-
-The large datasets from galaxy surveys are analyzed by estimating the statistical summaries of the 
-data and then interpreting them with the predictions from cosmological theories. This is formally done 
-by writing down a likelihood function which is the probability of the observed data given the theoretical model under 
-consideration. Cosmological likelihood functions are often assumed to have a multivariate Gaussian 
-functional form. Given this assumption, the likelihood can be fully specified with three ingredients: a data vector which is estimated from observations, a mean model vector 
-which is computed from the predictions of theoretical models, and an inverse covariance matrix. 
-
-Therefore, a crucial step in interpreting the data is computing the error covariance matrix. 
-In fact, the quantity that we need to know precisely is the inverse covariance matrix (precision matrix) because it is this matrix that appears in the likelihood function. Modern cosmological analyses rely on computing the covariance matrix analytically, estimating the matrix from a large suite of simulations, or from internal resampling of the data. 
-
-Motivated by the pursuit of minimizing the effect of the noise properties of the precision matrix on 
-cosmological parameter estimation, \citet{dodelson2013,taylor2013,taylor2014} derived a set of requirements 
-on the number of independent mock simulations given the number of data points and the number of parameters 
-in a given cosmological analysis. Assuming that the estimated covariance matrix follows a \emph{Wishart} distribution, 
-\citep{Sellentin:2016a} present a method for marginalizing over the precision matrix. They demonstrate that the 
-resulting likelihood function is no longer Gaussian and instead follows a $t$-distribution.
-
-\citet{dodelson2013,Sellentin:2017a} demonstrate that a noisy estimate of the precision matrix 
-constructed from insufficient number of simulated mocks can systematically bias the confidence 
-intervals over the cosmological parameters. These findings place strict requirement on the number of 
-mock catalogs for the ongoing and future galaxy surveys. In general, the number of mocks need to be much larger than 
-the number of data points.
-
-Common practices in analysis of deep imaging surveys are tomographic binning of the data and combining probes.
-In tomographic binning, the dataset is split into multiple redshift slices and the summary statistics of 
-the data are estimated by correlating the data within each redshift slice and cross-correlating the data across 
-multiple redshift slices. The size of the resulting data vector can be as large as a few hundred which makes the task of creating mock catalogs even more challenging. 
-
-Combining probes involves joint analysis of different cosmic probes such as galaxy 
-positions and galaxy shears. Multi-probe analyses are more robust against systematic 
-uncertainties (specially systematics that only affect one of the probes) 
-and have more constraining power (can break the degeneracies inherent in single probes). 
-Most modern surveys offer this great opportunity. 
-One of the main obstacles a head of these efforts is the large data vector under investigation. 
-Production of the covariance of this data vector requires many simulations which may not 
-be feasible to provide.   
-
-Analytical covariance matrices on the other hand, are not as computationally demanding. 
-Their inverse (precision matrix) is noise free. But the model approximations and assumptions used in these methods may not be sufficient for the accuracy requirements of precision cosmology. Analytical covariance matrices are considered to receive Gaussian and a non-Gaussian contributions. Assuming that the density field is a 
-Gaussian random field, the Gaussian part of the covariance matrix is straightforward to compute \citep{grieb2016,klaus2016,slepian2016b}.
-
-Including the non-Gaussian part of the covariance matrix however, is necessary for accurate parameter estimation \citep{takahashi2011,blot2016,chan2016}.
-Significant progress has been made in modeling the non-Gaussian contribution to covariance matrices based on perturbation theory and effective theories of large scale structure \citep{mohammed_seljak,mohammed2017} or by adopting halo (virialized regions of matter overdensity) model \citep{takada_spergel,eifler2014}.
-Regardless of the applicability of analytical covariance matrices in analyzing the survey data, production of simulated mocks remains an important step in \emph{validation} and \emph{calibration} of these analytical covariance matrices \citep{slepian2016b,hildebrandt2017}.
-
-Considerable progress has been made in developing methods that take into account our prior beliefs 
-about the of covariance matrices. By considering sparsity of the covariance matrix, \citet{paz2015,padmanabhan2016} 
-present methods to estimate the precision matrices with fewer mocks. Shrinkage methods \citep{pope2008,joachimi2016} 
-also require fewer simulations. \citet{fried2017} presents a trick for expanding the precision matrix 
-around a part that can be easily computed through analytical means and estimating the leading expansion terms with finite number of simulations.
-
-One of the common tools for estimation of covariance matrices is internal resampling of the data such as jackknife and bootstrap. These estimators have been extensively used in analyses of galaxy clustering and galaxy-galaxy lensing (for example see \citealt{reid2014,hod_vs_sham,shirasaki2016,singh2016,kwan2017}).
-In certain cases when no reliable analytical or simulation-based estimate of the covariance is available, one could use these estimators. 
-For instance in Chapter 3, for interpreting the SDSS DR7 galaxy clustering measurements, 
-we make use of covariance estimates based on jackknife resampling of the data. But as \citet{norberg,fried2016} point out, data resampling methods do not faithfully capture the uncertainties of the data. 
-
-Precision estimation of the covariance matrix from mocks requires generation of a large number of mocks for a given analysis. This has led to development of \emph{approximate} \emph{methods} for mass production of galaxy and halo mock catalogs. Approximate methods rely on approximate gravity solvers for generating dark matter density fields with reasonable accuracy on large scales and statistical prescriptions for populating the dark matter density field with mock galaxies (see for example \citealt{pthalo,qpm,eazymock,kitaura2016} and references 
-therein). The state-of-the-art techniques for production of mock catalogs are QPM \citep{qpm} and PATCHY \citep{kitaura2016}. These methods were used in 
-cosmological analyses of the SDSS III-BOSS final data release \citep{alam2016}.
-
-In the PATCHY method the density field is generated with perturbation theory. Then the expected number of galaxies in a cosmic volume given the density field is computed according to a biasing relation whose parameters are unknown. 
-Finally, the number of galaxies is drawn from a negative binomial distribution which is a Poisson distribution with additional stochasticity. 
-\citet{chuang2015} demonstrates that this approach is very powerful at reproducing the two-point and three-point statistics of galaxies with high accuracy toward mildly nonlinear regimes.
-
-In Chapter 4, we address two limitations of this method: \emph{bias} \emph{estimation} and \emph{accuracy on small scales}. We replace the perturbation theory-based 
-gravity solver of the PATCHY code with the fast particle mesh (PM) method of \citet{fastpm}. The main difference between the Particle mesh implementations of \citet{fastpm} and \citet{qpm} is that 
-FastPM imposes exact large scale growth and thus it does not suffer from the loss of power on large scales as a result of using a limited number of time steps for solving equations of motion. We also introduce an automatic bias estimation method based on MCMC. 
-
-In comparison with the previous version of the code based on perturbation theory, our novel approach yields higher accuracy toward nonlinear scales for both two-point 
-and three-point statistics. One of the main advantages of our approach is the following. In order to reach reasonable accuracy, the common approximate $N$-body methods \citep{qpm,fastpm,ice_cola} require a larger grid size than the number of particles. That is, the gravitational forces between the particles need to be calculated on a mesh (at least) twice larger than the number of particles (see also \citealt{chuang2015,monaco2016}) in order to resolve halos. We note that our effective bias prescription for populating the dark matter density field with halos bypasses this requirement and as a consequence, it significantly reduces the computational cost of generating mocks.      
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Cosmic shear is a sensitive probe of both growth and expansion history of the universe and therefore, it 
+is one of the key drivers of the ongoing and upcoming deep imaging surveys such as the Dark Energy Survey \citep{DES}, 
+the Kilo Degree Survey \citep{hildebrandt2017}, Euclid \citep{euclid}, and LSST \citep{desc}. Cosmic shear offers a more 
+direct probe of the matter distribution in the universe and as a result, is able to place constraints on the matter density 
+as well as the amplitude of fluctuations \citep{heymans,abbot2016,joudaki2016,hildebrandt2017}. By covering larger fractions of 
+sky and increasing the number density of observed galaxies through deep imaging, cosmic shear studies will be able to 
+provide competitive constraints on the dark energy equation of state and theories of modified gravity.  
 
 \section{Cosmic shear and systematics}
 
@@ -216,7 +140,7 @@ Baryonic feedback and the accuracy of the emulators for nonlinear matter cluster
 
 Perhaps the most widely and extensively studied sources of systematics in weak lensing are the image systematics which make 
 the process of inferring the cosmic shear from noisy images of galaxies far from trivial. The light profile of 
-galaxies is distorted with the atmosphere and telescope optics. The amount of distortion is captured in a kernel called 
+galaxies is distorted by the atmosphere and telescope optics. The amount of distortion is captured in a kernel called 
 the Point Spread Function (PSF). The size and shear of the background galaxies used in weak lensing studies is often 
 smaller than those of the PSF, making the cosmic shear signal dominated by the PSF which is empirically estimated at 
 the positions of stars and then interpolated to the positions of galaxies.  
@@ -232,7 +156,7 @@ a multiplicative bias shear. This bias gives rise to a spurious correlation func
 same order of magnitude as the cosmological signal.
 
 The shear biases are either calibrated with realistic image simulations \citep{im3shape,jee2016,conti2017} or through cross correlation of 
-the cosmic shear signal with other cosmic probes that do not suffer from the same biases (\eg\ galaxy positions)
+the cosmic shear signal with other cosmic probes that do not suffer from the same biases ($e.g.,$ galaxy positions)
 \citep{liu2016,schann,singh2017}. 
 
 Simulation based techniques are limited due to difficulty in 
@@ -243,7 +167,7 @@ and depend on morphological properties of galaxies \citep{im3shape,conti2017}.
 
 Novel shear inference models that do not rely on delivering a point-estimate for the shear signal \citep{schneider,bernstein,huff,sheldon} 
 provide promising venues for mitigation of biases but their accuracy is limited to the accuracy in the PSF model.
-In chapters 1 and 5, we try to address two challenges in accurate PSF modeling that could lead to biases in cosmological weak lensing analysis. 
+In chapters 1 and 2, we try to address two challenges in accurate PSF modeling that could lead to biases in cosmological weak lensing analysis. 
 
 One of the steps of astronomical image processing that could lead to inaccurate model of the PSF is centroiding 
 of stars. An erroneous method for determination of the centroid of stars could lead to both inaccurate estimation of the 
@@ -271,61 +195,16 @@ knowing the the galaxy light profile model and the PSF at higher resolutions tha
 
 The filters in HST WFC3 IR channel have the most undersampled detectors among all HST filters. 
 As such, HST WFC3 IR channel could benefit a lot from an accurate model of its super resolution PSF. 
-In this chapter 5, we present the first generative forward model of stellar sources as observed by the HST camera.
-Unlike previous attempts at inferring the PSF model of HST WFC3, our model is data driven in that it makes 
+In chapter 2, we present the first generative forward model of stellar sources as observed by the HST camera.
+Unlike previous attempts at inferring the PSF model of HST WFC3, our model is data driven, in that it makes 
 use of the observed data and it presents a proper treatment of modeling in the presence of damaged pixels and overlapping 
-point sources.  
-
-\section{Galaxy-dark matter connection and assembly bias}
-
-Modeling galaxy clustering with the halo model follows two central assumptions. \emph{First}, galaxies form in virialized regions of 
-dark matter overdensity known as halos. \emph{Second}, clustering of galaxies is governed by clustering of dark matter halos. 
-In order to use galaxy clustering measurements for gaining insight into cosmological structure formation models we need to 
-know how clustering of galaxies can be determined from clustering of halos. That is, we are required to specify how halos 
-are populated with galaxies \citep{seljak2000,scoccimarro2001,berlind_weinberg2002}.
-
-One of the successful prescriptions for assignment of galaxies to halos is the halo occupation distribution (HOD). 
-HOD provides a prescription for the expected number of galaxies that reside a halo as well as 
-the positions and velocities of galaxies that are distributed within a halo. It usually assumes that the halo mass alone 
-is sufficient halo property for characterization of this prescription. This simple assumption has been useful 
-in reproducing the observed statistics of galaxies \citep{tinker_rsd2007,zehavi2011,zheng_guo}.
-
-Despite being successful at reproducing a wide range of the spatial statistics of galaxies, the simple \emph{mass-only} HOD 
-remains challenged by a theoretical phenomenon known as assembly bias. Assembly bias, seen in $N-$body simulations, states that at a fixed halo mass, clustering 
-of halos depend on halo properties beyond mass such as their formation history, gravitational potential, \etc\ \citep{weschler2006,gao2007,arz2014,sunayama2016}.
-This theoretical prediction has not yet been confirmed with observations and there are very mixed results in the literature.
-
-By weak lensing analysis of the galaxy groups in GAMA (GAlaxy and Mass Assembly, see \citealt{driver}) 
-with the KiDS (Kilo Degree Survey, see \citealt{kuijken2015}) imaging data, \citet{dvornik2017} find no evidence for halo assembly bias.
-Using the galaxy-galaxy lensing and clustering measurements of SDSS galaxy \emph{redmapper} clusters \citep{rykoff} with halo masses $10^{14}$ $M_{\odot}$, 
-\citet{miyatake2016} claimed strong difference between the bias of two populations of clusters with different radial distribution of satellite galaxies 
-(a proxy for the formation history of a dark matter halo). \citet{zuetal2016} argues that the findings of \citet{miyatake2016} is most likely due to projection effects (as a result of highly uncertain photometric redshifts) and they cannot be interpreted as detection of assembly bias. 
-
-The effect of assembly bias on galaxy clustering can be seen in many subhalo abundance matching (SHAM, see \citealt{hearin2014,lehman2015} and references therein) methods. SHAM assumes a one-to-one relation between halo (including subhalos) properties (\eg\ mass, circular velocity) and some galaxy properties (\eg\ stellar mass, luminosity). In Chapter 3, with the clustering measurements of SDSS DR7 main sample of galaxies \citep{abazajian2009} and the Small MultiDark $N$-body simulation, we show that the clustering predictions of \citep{decorated} HOD model that takes assembly bias into account are consistent with the predictions of the \emph{mass-only} HOD model within 1-$\sigma$ level. 
-
-We also note that for the sample of $L_{\star}$ galaxies, there is \emph{slight} improvements in galaxy clustering predictions of the HOD model with assembly bias 
-on large scales. Furthermore, we note that in terms of information criteria, there is no gain in using a more complex HOD model to fit the clustering measurements.
-We note that in terms of the impact of halo assembly bias on galaxy clustering, our constraints show qualitatively similar behavior to the predictions of subhalo abundance matching models. Unlike the findings of \citet{zentner2016}, we do not find any evidence for assembly bias in the satellite population of galaxies.
-
-One of the perplexities faced by contemporary cosmology is the discordance between the constraints on cosmological parameters from some of the low redshift probes and 
-the Planck CMB results \citep{planckII}. This includes the cosmological constraints from the cosmic shear analysis of CFHTLenS \citep{heymans,kitching2016} and KiDs \citep{hildebrandt2017}. The disagreement appears in the constraints over the parameters $\sigma_{8}$ (the amplitude of the linear matter power spectrum) and $\Omega_{m}$ (the amount of matter). This tension exists at a 2-$\sigma$ level and does not seem to be alleviated by exploring all possible sources of astrophysical and observational systematics \citep{battye2014,boris2014,maccrann2015,grandis2016,raveri2016}. 
-
-This \emph{cosmic} \emph{discordance} persists even when the low redshift probe under consideration is galaxy-galaxy lensing which contains information regarding galaxy-matter cross correlation. Similar to galaxy clustering, modeling the small scale galaxy-galaxy lensing signal requires assuming a halo model. 
-This signal is an estimate of the lensing of the background galaxies from a \emph{deep} imaging survey and the foreground galaxies in a \emph{shallow} spectroscopic survey.
-
-The galaxy-galaxy lensing measurements of SDSS III/BOSS \citep{miyatake15,lensingislow} are not consistent with the predictions of best-fit Planck cosmology \citep{planckII}.
-The $\sigma_{8}$-$\Omega_{m}$ constraint from clustering and galaxy-galaxy lensing measurements of BOSS galaxies \citep{more15} does not match the Planck constraint.
-This disagreements also holds for the cosmological constraints---assuming a simple mass only HOD model---from the clustering and galaxy-galaxy lensing measurements of SDSS DR7 main sample \citep{cacciato13}. These discrepancies could signal a new physics that we are missing in our picture of cosmology. But it could also be caused by observational systematics or uncertainties arising from the galaxy formation physics, including \emph{assembly} \emph{bias}.
-
-Combining the early universe probes of cosmology and large scale structure requires accurate 
-characterization of systematics and nuisance parameters in both datasets. In the context of large scale 
-structure, models governing the galaxy-halo connection serve as nuisance parameters that we marginalize over. A possible source of uncertainty in characterization of galaxy-halo connection is assembly bias. In order to distinguish between scenarios pointing at potentially new physics and systematics, it is important to study the effect of halo assembly bias on low redshift cosmological probes including galaxy clustering and galaxy-galaxy lensing. In Chapter 3, we take a step toward better understanding the impact of this phenomenon. 
+point sources. 
 
 \section{Approximate Bayesian Computation}
 
 Cosmological inferences rely on assuming a functional form for the likelihoods. For instance, interpretation of the 
 two-point correlation functions of galaxy shears or galaxy positions is done through assuming a multivariate Gaussian likelihood 
-and interpreting the Cluster number counts is done through a Poisson likelihood. Therefore common practices in 
+and interpreting the Cluster number counts is done through a Poisson likelihood. Therefore, common practices in 
 cosmology make strong assumptions about the underlying distribution of the \emph{estimated} observables.
 
 This fundamental assumption may not hold in detail and a robust test of this assumption can only be done with a large 
@@ -355,7 +234,7 @@ distributed, one could use the ABC method for inferring the parameters of intere
 Dependence of the analysis on the precise knowledge of the precision matrix can be circumvented by accounting for the sample variance 
 in the forward model. It is important to note that, the accuracy of this approach relies on the distance metric. Considerable care is needed in order to find and test a reliable distance metric which in general depends on the cosmological probe under consideration \citep{abcsn,abcwl,jennings2016a,jennings2016b}. 
 
-In Chapter 2, we present the first application of ABC in the context of large scale structure. In particular, we show that this approach can be reliably used in order to constrain 
+In Chapter 3, we present the first application of ABC in the context of large scale structure. In particular, we show that this approach can be reliably used in order to constrain 
 the galaxy-halo connection models with small-scale galaxy clustering and group statistics. Using a simulated data with known true HOD parameters, we show that one can use ABC to infer these true parameters. We show that observables beyond conventional two-point statistics such as the abundance of galaxy groups can robustly constrain the galaxy-halo connection parameters with ABC. More importantly, we make comparison between the performance of ABC equipped with Particle Monte Carlo sampling and Gaussian Pseudo-likelihood with MCMC sampling. We show that the constraints obtained from the two approaches are comparable and consistent within 1-$\sigma$ level, with the ABC-PMC results being slightly less 
 biased when the abundance of galaxy groups is used as the summary statistics. 
 
@@ -363,7 +242,130 @@ Furthermore, we discuss why the ABC-PMC method is advantageous in terms of imple
 We also point out the limitations of applying such technique to cosmological parameter estimation with galaxy clustering measurements of the modern galaxy surveys. 
 We argue that the main computational bottleneck is going to be designing a forward model that includes all relevant observational systematics and complex structure formation models. 
 
-\section{What we do in thesis}
+
+\section{Galaxy-dark matter connection and assembly bias}
+
+Modeling galaxy clustering with the halo model follows two central assumptions. \emph{First}, galaxies form in virialized regions of 
+dark matter overdensity known as halos. \emph{Second}, clustering of galaxies is governed by clustering of dark matter halos. 
+In order to use galaxy clustering measurements for gaining insight into cosmological structure formation models we need to 
+know how clustering of galaxies can be determined from clustering of halos. That is, we are required to specify how halos 
+are populated with galaxies \citep{seljak2000,scoccimarro2001,berlind_weinberg2002}.
+
+One of the successful prescriptions for assignment of galaxies to halos is the halo occupation distribution (HOD). 
+HOD provides a prescription for the expected number of galaxies that reside a halo as well as 
+the positions and velocities of galaxies that are distributed within a halo. It usually assumes that the halo mass alone 
+is sufficient halo property for characterization of this prescription. This simple assumption has been useful 
+in reproducing the observed statistics of galaxies \citep{tinker_rsd2007,zehavi2011,zheng_guo}.
+
+Despite being successful at reproducing a wide range of the spatial statistics of galaxies, the simple \emph{mass-only} HOD can be potentially 
+challenged by a theoretical phenomenon known as the halo assembly bias. Halo assembly bias, seen in $N-$body simulations, states that at a fixed halo mass, clustering 
+of halos depend on halo properties beyond mass such as their formation history, gravitational potential, \etc\ \citep{weschler2006,gao2007,arz2014,sunayama2016}.
+This theoretical prediction has not yet been confirmed with observations and there are mixed results in the literature.
+
+By weak lensing analysis of the galaxy groups in GAMA (GAlaxy and Mass Assembly, see \citealt{driver}) 
+with the KiDS (Kilo Degree Survey, see \citealt{kuijken2015}) imaging data, \citet{dvornik2017} find no evidence for halo assembly bias.
+Using the galaxy-galaxy lensing and clustering measurements of SDSS galaxy \emph{redmapper} clusters \citep{rykoff} with halo masses $10^{14}$ $M_{\odot}$, 
+\citet{miyatake2016} claimed strong difference between the bias of two populations of clusters with different radial distribution of satellite galaxies 
+(a proxy for the formation history of a dark matter halo). \citet{zuetal2016} argues that the findings of \citet{miyatake2016} is most likely due to projection effects (as a result of highly uncertain photometric redshifts) and they cannot be interpreted as detection of assembly bias. 
+
+Halo assembly bias impacts galaxy clustering in many subhalo abundance matching (SHAM, see \citealt{hearin2014,lehman2015} and references therein) methods. SHAM assumes a one-to-one relation between halo (including subhalos) properties ($e.g.,$ mass, circular velocity) and some galaxy properties ($e.g.,$ stellar mass, luminosity). In Chapter 4, with the clustering measurements of SDSS DR7 main sample of galaxies \citep{abazajian2009} and the Small MultiDark $N$-body simulation, we show that the clustering predictions of \citep{decorated} HOD model that takes assembly bias into account are consistent with the predictions of the \emph{mass-only} HOD model within 1-$\sigma$ level. 
+
+We also note that for the sample of $L_{\star}$ galaxies, there is \emph{slight} improvements in galaxy clustering predictions of the HOD model with assembly bias 
+on large scales. Furthermore, in terms of information criteria, there is no gain in using a more complex HOD model to fit the clustering measurements \citep{decorated}.
+We note that in terms of the impact of halo assembly bias on galaxy clustering, our constraints show qualitatively similar behavior to the predictions of subhalo abundance matching models. Unlike the findings of \citet{zentner2016}, we do not find any evidence for dependence of the expected number of the satellite population of galaxies on halo properties beyond mass.
+
+One of the perplexities faced by contemporary cosmology is the discordance between the constraints on cosmological parameters from some of the low redshift probes and 
+the Planck CMB results \citep{planckII}. This includes the cosmological constraints from the cosmic shear analysis of CFHTLenS \citep{heymans,kitching2016} and KiDs \citep{hildebrandt2017}. The disagreement appears in the constraints over the parameters $\sigma_{8}$ (the amplitude of the linear matter power spectrum) and $\Omega_{m}$ (the amount of matter). This tension exists at a 2-$\sigma$ level and does not seem to be alleviated by exploring all possible sources of astrophysical and observational systematics \citep{battye2014,boris2014,maccrann2015,grandis2016,raveri2016}. 
+
+This \emph{cosmic} \emph{discordance} persists even when the low redshift probe under consideration is galaxy-galaxy lensing which contains information regarding galaxy-matter cross correlation \citep{mandel2013,more15,lensingislow}. Similar to galaxy clustering, modeling the small scale galaxy-galaxy lensing signal requires assuming a halo model. 
+This signal is an estimate of the lensing of the background galaxies from a \emph{deep} imaging survey and the foreground galaxies in a \emph{shallow} spectroscopic survey.
+
+The galaxy-galaxy lensing measurements of SDSS III/BOSS \citep{miyatake15,lensingislow} are not consistent with the predictions of best-fit Planck cosmology \citep{planckII}.
+The $\sigma_{8}-\Omega_{m}$ constraint from clustering and galaxy-galaxy lensing measurements of BOSS galaxies \citep{more15} does not match the Planck constraint.
+This disagreements also holds for the cosmological constraints---assuming a simple mass only HOD model---from the clustering and galaxy-galaxy lensing measurements of SDSS DR7 main sample \citep{cacciato13}. These discrepancies could signal a new physics that we are missing in our picture of cosmology. But it could also be caused by observational systematics or uncertainties arising from the galaxy formation physics, including \emph{assembly} \emph{bias}.
+
+Combining the early universe probes of cosmology and large scale structure requires accurate 
+characterization of systematics and nuisance parameters in both datasets. In the context of large scale 
+structure, models governing the galaxy-halo connection serve as nuisance parameters that we marginalize over. A possible source of uncertainty in characterization of galaxy-halo connection is assembly bias. In order to distinguish between scenarios pointing at potentially new physics and systematics, it is important to study the effect of halo assembly bias on low redshift cosmological probes including galaxy clustering and galaxy-galaxy lensing. In Chapter 4, we take a step toward better understanding the impact of this phenomenon. 
+
+\section{Mocks and covariances}
+
+The large datasets from galaxy surveys are analyzed by estimating the statistical summaries of the 
+data and then interpreting them with the predictions from cosmological theories. This is formally done 
+by writing down a likelihood function which is the probability of the observed data given the theoretical model under 
+consideration. Cosmological likelihood functions are often assumed to have a multivariate Gaussian 
+functional form. Given this assumption, the likelihood can be fully specified with three ingredients: a data vector which is estimated from observations, a mean model vector 
+which is computed from the predictions of theoretical models, and an inverse covariance matrix. 
+
+Therefore, a crucial step in interpreting the data is computing the error covariance matrix. 
+In fact, the quantity that we need to know precisely is the inverse covariance matrix (precision matrix) because it is this matrix that appears in the likelihood function. Modern cosmological analyses rely on computing the covariance matrix analytically, estimating the matrix from a large suite of simulations, or from internal resampling of the data. 
+
+Motivated by the pursuit of minimizing the effect of the noise properties of the precision matrix on 
+cosmological parameter estimation, \citet{dodelson2013}, \citet{taylor2013}, and \citet{taylor2014} derived a set of requirements 
+on the number of independent mock simulations given the number of data points and the number of parameters 
+in a given cosmological analysis. Assuming that the estimated covariance matrix follows a \emph{Wishart} distribution, 
+\citet{Sellentin:2016a} present a method for marginalizing over the precision matrix. They demonstrate that the 
+resulting likelihood function is no longer Gaussian and instead follows a $t$-distribution.
+
+A noisy estimate of the precision matrix 
+constructed from insufficient number of simulated mocks can systematically bias the confidence 
+intervals over the cosmological parameters \citep{dodelson2013,Sellentin:2017a}. These findings place strict requirement on the number of 
+mock catalogs for the ongoing and future galaxy surveys. In general, the number of mocks need to be much larger than 
+the number of data points.
+
+Common practices in analysis of deep imaging surveys are \emph{tomographic} \emph{binning} of the data and \emph{combining probes}.
+In tomographic binning, the dataset is split into multiple redshift slices and the summary statistics of 
+the data are estimated by correlating the data within each redshift slice and cross-correlating the data across 
+multiple redshift slices. Some cosmological observables such as the cosmic shear power spectrum are inherently degenerate in terms 
+of their dependence on cosmological parameters. Breaking the data into tomographic redshift bins can help break these inherent degeneracies.
+An added benefit of tomography is mitigation of systematics such as the intrinsic alignments that have redshift dependence \citep{eifler2015,krause2016}. 
+The size of the resulting data vector can be as large as a few hundred which makes the task of creating mock catalogs even more challenging. 
+
+\emph{Combining probes} involves joint analysis of different cosmic probes such as galaxy 
+positions and galaxy shears. Multi-probe analyses are more robust against systematic 
+uncertainties (specially systematics that only affect one of the probes) 
+and have more constraining power (can break the degeneracies inherent in single probes). 
+Most modern surveys offer this great opportunity. 
+One of the main obstacles a head of these efforts is the large data vector under investigation. 
+Production of the covariance of this data vector requires many simulations which may not 
+be feasible to provide \citep{eifler2015,schaan,krause2016,kwan2017}.   
+
+Analytical covariance matrices on the other hand, are not as computationally demanding. 
+Their inverse (precision matrix) is noise free. But the model approximations and assumptions used in these methods may not be sufficient for the accuracy requirements of precision cosmology. Analytical covariance matrices are considered to receive Gaussian and a non-Gaussian contributions. Assuming that the density field is a 
+Gaussian random field, the Gaussian part of the covariance matrix is straightforward to compute \citep{grieb2016,klaus2016,slepian2016b}.
+
+Including the non-Gaussian part of the covariance matrix however, is necessary for accurate parameter estimation \citep{takahashi2011,blot2016,chan2016}.
+Significant progress has been made in modeling the non-Gaussian contribution to covariance matrices based on perturbation theory and effective theories of large scale structure \citep{mohammed_seljak,mohammed2017} or by adopting halo (virialized regions of matter overdensity) model \citep{takada_spergel,eifler2014}.
+Regardless of the applicability of analytical covariance matrices in analyzing the survey data, production of simulated mocks remains an important step in \emph{validation} and \emph{calibration} of these analytical covariance matrices \citep{slepian2016b,hildebrandt2017}.
+
+Considerable progress has been made in developing methods that take into account our prior beliefs 
+about the of covariance matrices. By considering sparsity of the covariance matrix, \citet{paz2015,padmanabhan2016} 
+present methods to estimate the precision matrices with fewer mocks. Shrinkage methods \citep{pope2008,joachimi2016} 
+also require fewer simulations. \citet{fried2017} presents a trick for expanding the precision matrix 
+around a part that can be easily computed through analytical means and estimating the leading expansion terms with finite number of simulations.
+
+One of the common tools for estimation of covariance matrices is internal resampling of the data such as jackknife and bootstrap. These estimators have been extensively used in analyses of galaxy clustering and galaxy-galaxy lensing (for example see \citealt{reid2014,hod_vs_sham,shirasaki2016,singh2016,kwan2017}).
+In certain cases when no reliable analytical or simulation-based estimate of the covariance is available, one could use these estimators. 
+For instance in Chapter 4, for interpreting the SDSS DR7 galaxy clustering measurements, 
+we make use of covariance estimates based on jackknife resampling of the data. But as \citet{norberg,fried2016} point out, data resampling methods do not faithfully capture the uncertainties of the data. 
+
+Precision estimation of the covariance matrix from mocks requires generation of a large number of mocks for a given analysis. This has led to development of \emph{approximate} \emph{methods} for mass production of galaxy and halo mock catalogs. Approximate methods rely on approximate gravity solvers for generating dark matter density fields with reasonable accuracy on large scales and statistical prescriptions for populating the dark matter density field with mock galaxies (see for example \citealt{pthalo,qpm,eazymock,kitaura2016} and references 
+therein). The state-of-the-art techniques for production of mock catalogs are QPM \citep{qpm} and PATCHY \citep{kitaura2016}. These methods were used in 
+cosmological analyses of the SDSS III-BOSS final data release \citep{alam2016}.
+
+In the PATCHY method the density field is generated with perturbation theory. Then the expected number of galaxies in a cosmic volume given the density field is computed according to a biasing relation whose parameters are unknown. 
+Finally, the number of galaxies is drawn from a negative binomial distribution which is a Poisson distribution with additional stochasticity. 
+\citet{chuang2015} demonstrates that this approach is very powerful at reproducing the two-point and three-point statistics of galaxies with high accuracy toward mildly nonlinear regimes.
+
+In Chapter 5, we address two limitations of this method: \emph{bias} \emph{estimation} and \emph{accuracy on small scales}. We replace the perturbation theory-based 
+gravity solver of the PATCHY code with the fast particle mesh (PM) method of \citet{fastpm}. The main difference between the Particle mesh implementations of \citet{fastpm} and \citet{qpm} is that 
+FastPM imposes exact large scale growth and thus, it does not suffer from the loss of power on large scales as a result of using a limited number of time steps for solving equations of motion. We also introduce an automatic bias estimation method based on MCMC. 
+
+In comparison with the previous version of the code based on perturbation theory, our novel approach yields higher accuracy toward nonlinear scales for both two-point 
+and three-point statistics. One of the main advantages of our approach is the following. In order to reach reasonable accuracy, the common approximate $N$-body methods \citep{qpm,fastpm,ice_cola} require a larger grid size than the number of particles. That is, the gravitational forces between the particles need to be calculated on a mesh (at least) twice larger than the number of particles in order to resolve halos (see also \citealt{chuang2015,monaco2016}). We note that our effective bias prescription for populating the dark matter density field with halos bypasses this requirement and as a consequence, it significantly reduces the computational cost of generating mocks.      
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{What we attempt to address in this thesis}
 
 In this thesis, we try to address different aspects of solving a cosmological problem which is equivalent to specifying the following general form of likelihood:
 
@@ -371,23 +373,22 @@ In this thesis, we try to address different aspects of solving a cosmological pr
 \mathcal{L} = p(\mathbf{d} \; | \; \bf{\mu} , \mathbf{C}),
 \end{equation}
 
-where $\mathbf{d}$ is an estimated data vector, $\bf{\mu}$ is a theoretical prediction, and $\mathbf{C}$ is a covariance matrix that characterizes the uncertainties on the entries of the datavector. In Chapters 1 and 5, we try to address the systematic uncertainties that affect $\mathbf{d}$ in weak lensing analyses. In Chapter 3 we attempt to address a source of uncertainty, \emph{assembly bias}, that could impact certain cosmological predictions $\bf{\mu}$. In Chapter 4, we present a method for accurately simulating mock datasets needed for precise estimation of the error covariance matrices $\mathbf{C}$ of galaxy clustering and its inverse. In Chapter 2, we investigate how one can bypass the need for specifying a functional form for the likelihood function $p(\mathbf{d} \; | \; \mathbf{\mu} , \mathbf{C})$ and the challenges associated with it.
+where $\mathbf{d}$ is an estimated data vector, $\bf{\mu}$ is a theoretical prediction, and $\mathbf{C}$ is a covariance matrix that characterizes the uncertainties on the entries of the datavector. In Chapters 1 and 2, we try to address the systematic uncertainties that affect $\mathbf{d}$ in weak lensing analyses. In Chapter 4 we attempt to address a source of uncertainty, \emph{assembly bias}, that could impact certain cosmological predictions $\bf{\mu}$. In Chapter 5, we present a method for accurately simulating mock datasets needed for precise estimation of the error covariance matrices $\mathbf{C}$ of galaxy clustering and its inverse. In Chapter 3, we investigate how one can bypass the need for specifying a functional form for the likelihood function $p(\mathbf{d} \; | \; \mathbf{\mu} , \mathbf{C})$ and the challenges associated with it.
 
 \section{Outline and contributions}
 
 Chapter 1 of this thesis is based on a paper I wrote with David~W.~Hogg. The underlying ideas and the direction of this project were developed by David~W.~Hogg and me. 
-All the codes and text for this chapter was written by me with significant edits and modifications received from David~W.~Hogg. Chapter 2 is based on a paper I wrote with ChangHoon~ Hahn, Kilian~Walsh, Andrew~Hearin, David~W.~Hogg, and Duncan~Campbell. ChangHoon~Hahn and I contributed equally to development of the bulk of the code and text for this project. Kilian~Walsh made significant contributions to both coding and writing. Andrew~Hearin and David~Hogg contributed to writing of the paper and Duncan~Campbell made some contribution 
+All the codes and text for this chapter was written by me with significant edits and modifications received from David~W.~Hogg. Chapter 2 has been developed in collaboration with Ross~Fadely and David~W.~Hogg. Development of the code was done by me and under the supervision of Ross~Fadely and David~W.~Hogg. All the text was written by me with edits by David~W.~Hogg. This work is currently being prepared for submission to a refereed journal.
+Chapter 3 is based on a paper I wrote with ChangHoon~ Hahn, Kilian~Walsh, Andrew~Hearin, David~W.~Hogg, and Duncan~Campbell. ChangHoon~Hahn and I contributed equally to development of the bulk of the code and text for this project. Kilian~Walsh made significant contributions to both coding and writing. Andrew~Hearin and David~Hogg contributed to writing of the paper and Duncan~Campbell made some contribution 
 to the code. 
 
-Chapter 3 is based on the paper I wrote with ChangHoon~Hahn. All of the code and the text for Chapter 3 was written by me. ChangHoon~Hahn contributed considerably to editing the text. I also received valuable comments from David~W.~Hogg, Alex~I.~Malz regarding the text and from Andrew~Hearin and Chia-Hsun~Chuang regarding some of the technical details of the work. Chapter 4 is based on a paper I wrote with Francisco-Shu~Kitauro, Yu~Feng, Gustavo~Yepes, Cheng~Zhao, Chia-Hsun~Chuang, and ChangHoon~Hahn. 
-The idea of Chapter 4 was developed through conversations between Francisco-Shu~Kitauro, Yu~Feng and myself. I wrote all the code and text, with some contribution to the text from Francisco-Shu~Kitaura. For the computations related to this work, I received significant help from Franciso-Shu Kitauro, Yu~Feng, Gustavo~Yepes, Cheng~Zhao, Chia-Hsun~Chuang, and ChangHoon~Hahn. 
-
-Chapter 5 has been developed in collaboration with Ross~Fadely and David~W.~Hogg. Development of the code was done by me and under the supervision of Ross~Fadely and David~W.~Hogg. All the text was written by me with edits by David~W.~Hogg. This work is currently being prepared for submission to a refereed journal.s
+Chapter 4 is based on the paper I wrote with ChangHoon~Hahn. All of the code and the text for Chapter 4 was written by me. ChangHoon~Hahn contributed considerably to editing the text. I also received valuable comments from David~W.~Hogg, Alex~I.~Malz regarding the text and from Andrew~Hearin and Chia-Hsun~Chuang regarding some of the technical details of the work. Chapter 5 is based on a paper I wrote with Francisco-Shu~Kitauro, Yu~Feng, Gustavo~Yepes, Cheng~Zhao, Chia-Hsun~Chuang, and ChangHoon~Hahn. 
+The idea of Chapter 5 was developed through conversations between Francisco-Shu~Kitauro, Yu~Feng and myself. I wrote all the code and text, with some contribution to the text from Francisco-Shu~Kitaura. For the computations related to this work, I received significant help from Franciso-Shu Kitauro, Yu~Feng, Gustavo~Yepes, Cheng~Zhao, Chia-Hsun~Chuang, and ChangHoon~Hahn. 
 
 \section{Acknowledgement of data and computational resources}
 
 All of the code that I have written for the computations in this thesis are publicly available \emph{except} the PATCHY code which is being prepared for a public release. 
-The codes for Chapters 1,2,3, and 5 are available at \url{github.com/mjvakili/centerer}, \url{github.com/mjvakili/ccppabc}, \url{github.com/mjvakili/gambly}, and \url{github.com/mjvakili/supermean}, respectively.
+The codes for Chapters 1,2,3, and 4 are available at \url{github.com/mjvakili/centerer}, \url{github.com/mjvakili/supermean}, \url{github.com/mjvakili/ccppabc}, and \url{github.com/mjvakili/gambly} respectively. The chapters 1,3,4, and 5 of this thesis are based on the following papers publicly available on arXiv: \url{https://arxiv.org/abs/1610.05873}, \url{https://arxiv.org/abs/1607.01782}, \url{https://arxiv.org/abs/1610.01991}, and \url{https://arxiv.org/abs/1701.03765}.
 
 %These ambitious goal however, can only be achieved if we keep the 
 %uncertainties arising from astrophysical and observation systematics 
@@ -404,11 +405,11 @@ The codes for Chapters 1,2,3, and 5 are available at \url{github.com/mjvakili/ce
 %trace the underlying invisible dark matter density. Furthermore, more comprehensive knowledge of galaxy-dark matter connection 
 %can inform cosmological parameter inferences with galaxies. 
 
-In Chapters 2,3, and 4 we used the suite of MultiDark cosmological $N$-body simulations made publicly available in the CosmoSim database\footnote{\url{https://www.cosmosim.org}}. The CosmoSim database used in this paper is a service by the Leibniz-Institute for Astrophysics Potsdam (AIP). The MultiDark database was developed in cooperation with the Spanish MultiDark Consolider Project CSD2009-00064.
+In Chapter 2, all of the HST archival data were obtained from the Mikulski Archive for Space Telescopes (MAST)\footnote{\url{https://archive.stsci.edu}}. STScI is operated by the Association of Universities for Research in Astronomy, Inc., under NASA contract NAS5-26555.
+ 
+In Chapters 3,4, and 5 we used the suite of MultiDark cosmological $N$-body simulations made publicly available in the CosmoSim database\footnote{\url{https://www.cosmosim.org}}. The CosmoSim database used in this paper is a service by the Leibniz-Institute for Astrophysics Potsdam (AIP). The MultiDark database was developed in cooperation with the Spanish MultiDark Consolider Project CSD2009-00064.
 
-In Chapter 3, we used the measurements done with the SDSS DR7\footnote{\url{http://classic.sdss.org/dr7/}} data \citep{abazajian2009}. 
+In Chapter 4, we used the measurements done with the SDSS DR7\footnote{\url{http://classic.sdss.org/dr7/}} data \citep{abazajian2009}. 
 Funding for the SDSS and SDSS-II has been provided by the Alfred P. Sloan Foundation, the Participating Institutions, the National Science Foundation, the U.S. Department of Energy, the National Aeronautics and Space Administration, the Japanese Monbukagakusho, the Max Planck Society, and the Higher Education Funding Council for England. The SDSS Web Site is http://www.sdss.org/. The SDSS is managed by the Astrophysical Research Consortium for the Participating Institutions. The Participating Institutions are the American Museum of Natural History, Astrophysical Institute Potsdam, University of Basel, University of Cambridge, Case Western Reserve University, University of Chicago, Drexel University, Fermilab, the Institute for Advanced Study, the Japan Participation Group, Johns Hopkins University, the Joint Institute for Nuclear Astrophysics, the Kavli Institute for Particle Astrophysics and Cosmology, the Korean Scientist Group, the Chinese Academy of Sciences (LAMOST), Los Alamos National Laboratory, the Max-Planck-Institute for Astronomy (MPIA), the Max-Planck-Institute for Astrophysics (MPA), New Mexico State University, Ohio State University, University of Pittsburgh, University of Portsmouth, Princeton University, the United States Naval Observatory, and the University of Washington.
 
-In Chapter 5, all of the HST archival data were obtained from the Mikulski Archive for Space Telescopes (MAST)\footnote{\url{https://archive.stsci.edu}}. STScI is operated by the Association of Universities for Research in Astronomy, Inc., under NASA contract NAS5-26555.
- 
 Bulk of the computations in this work were carried out on the Mercer cluster which is part of the New York University High Performance Computing facilities\footnote{\url{https://wikis.nyu.edu/display/NYUHPC/Clusters+-+Mercer}}. For a fraction of computations performed for this thesis, I acknowledge the use of machines in Center for Cosmology and Particle Physics\footnote{\url{http://ccpp.nyu.edu}} and the computing resources provided by MareNostrum Cosmological Project\footnote{\url{http://astro.ft.uam.es/marenostrum/}}. 

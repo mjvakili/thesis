@@ -49,7 +49,7 @@
 This \paper\ is joint work with Francisco-Shu~Kitaura (IAC), Yu~Feng (Berkeley),  Gustavo~Yepes (UAM), Cheng~Zhao (Tsinghua), Chia-Hsun~Chuang (Leibniz), ChangHoon~Hahn (NYU) and it is submitted to the \emph{Monthly Royal Astronomical Society Notice}.
 
 
-\section{Chapter abstract}
+\section{abstract}
 Reliable extraction of cosmological information from clustering measurements of galaxy surveys requires estimation of the error covariance matrices of observables. The accuracy of covariance matrices is limited by our ability to generate sufficiently large number of independent mock catalogs that can describe the physics of galaxy clustering across a wide range of scales. 
 Furthermore, galaxy mock catalogs are required to study systematics in galaxy surveys and to test analysis tools.
 In this investigation, we present a fast and accurate approach for generation of mock catalogs for the upcoming galaxy surveys. 
