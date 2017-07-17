@@ -110,7 +110,7 @@ While extracting the super-resolution PSF model from the point sources in FLT im
   $\mathtt{PHOT \; AUTOPARAMS}$ & 2.5, 3.5 & &  MAG AUTO parameters\\
   $\mathtt{PHOT \; PETROPARAMS}$ & 2.0, 3.5 & &  MAG PETRO parameters \\
   $\mathtt{MAG \; ZEROPOINT}$ & 1.0e-19  & &  magnitude zero-point \\
-  $\mathtt{GAIN}$ & 0.0 & &  detector gain ($e-/ADU$) \\
+  $\mathtt{GAIN}$ & 0.0 & &  detector gain ($e$-$/ADU$) \\
   $\mathtt{PIXEL \; SCALE}$ & 0.13 & &  size of pixel in arcsec\\
   $\mathtt{SEEING \; FWHM}$ & 0.17 & &  stellar FWHM in arcsec \\
   $\mathtt{STARNNW \; NAME}$ & ``./default.nnw'' & &  Neural-Network Weight table\\
@@ -163,7 +163,7 @@ Given these ingredients, we write down the generative forward model of the point
 
 In Eq.~\ref{eq:model1}, $\mathbf{d}_{n}$ is the observed 625-dimensional vector describing the brightness of the pixels in the 25 pixels $\times$ 25 pixels patch $n$. 
 $\mathbf{m}_{n}$ is the model that describes the pixel-convolved model of the point source sitting on the center of the patch $n$ with the same dimensionality. The 
-noise term $\mathrm{noise}$ has a variance that we present shortly.
+noise term has the same dimensionality and it is drawn from a zero-mean Gaussian distribution with a variance that we will explain shortly.
 In Eq.~\ref{eq:model}, the operator $K^{(n)}(\Delta_n)$ is a linear operator that maps the super-resolution PSF $X$ to a downsampled PSF at the native 
 data grid. That is, when this operator acts on $X$, it samples $X$ on a downsampled grid (with the same resolution as the observations) 
 that is shifted with respect to the grid on which $X$ is defined. The shift between the two grids is given by the vector $\Delta_n = (\Delta x_n , \Delta y_n)$.
@@ -179,7 +179,7 @@ need. Ideally, one could use a sinc interpolation \citep{bickerton,galsim}, whic
 But we find sinc interpolation to be computationally demanding. Under same assumptions, we experimented with Gaussian Process interpolation for designing the downsampling matrix $K$, but Gaussian Process interpolation requires additional computing time to set hyper parameters.
 
 
-The factor by which the PSF is undersampled varies from one filter to another. Our strategy for inferring the super-resolution of the PSF model of F160W filter is as follows. 
+The factor by which the PSF is undersampled varies from one filter to another. Our strategy for inferring the super-resolution PSF model of the F160W filter is as follows. 
 We aim to estimate $X$ on a 75 pixels $\times$ 75 pixels grid, which is a resolution three times that of the native pixel grid of the observations.
 
 \subsection{Likelihood optimization}
@@ -197,7 +197,7 @@ In order to estimate the PSF, we optimize the following likelihood function with
 
 where $L_{n}$ is the likelihood of patch $n$, $L$ is the likelihood of the entire astronomical scene, $s_{n,i}$ is the $i$th component of the 625 dimensional vector $\mathbf{s}_n$, and 
 $\mathbf{s}_n^{2}$ is variance of the noise model in patch $n$. The variance is composed of two terms, one arising from the Gaussian readout noise and another arising from the Poisson noise.
-Therefore the total variance is given by a constant per-pixel variance of a Gaussian noise and a gain-like term that is proportional to the model $\mathbf{m}_{n}$ defined in Eqs.~\ref{eq:model1,model}:
+Therefore the total variance is given by a constant per-pixel variance of a Gaussian noise and a gain-like term that is proportional to the model $\mathbf{m}_{n}$ defined in Eqs.~\ref{eq:model1},\ref{eq:model}:
 \beq
 \mathbf{s}_n^{2} = \sigma^{2} + g.\mathbf{m}_{n},
 \label{eq:variance}
@@ -237,7 +237,7 @@ the central pixels of the patches. The reason for limiting our initialization of
 overlapping and nearby sources. Besides, since the PSF is poorly sampled, we expect the majority of the flux to be captured by a few pixels around the centers of the patches. 
 
 Lastly, the super-resolution PSF $X$ is initialized in the following way. First we subtract our initial estimates of the sky background levels from the patches. Then we divide the 
-pixel values of the patches by their corresponding initial flux estimates. Then we use the cubic-spline interpolation method to interpolate the rescaled patches to a high resolution 
+pixel values of the patches by their corresponding initial flux estimates. Then we use the cubic-spline interpolation method to interpolate the rescaled patches to high resolution 
 75 $\times$ 75 grids that are shifted by $\{-\Delta_n\}$ with respect to the patch centers. Afterwards, we evaluate the mean of the interpolated rescaled patches 
 to estimate the initial PSF. Furthermore, we normalize the PSF and interpolate it such that it is centered on the central pixel of the 75 $\times$ 75 high resolution grid.  
 
@@ -260,9 +260,8 @@ The variance of this noise model is given by
 \tilde{\mathbf{s}}_n^2 = \sigma^{2} + g\mathbf{m}_{n} + q\mathbf{m}_{n}^{2},
 \label{eq:modified_variance}
 \eeq 
-which is similar to the variance given by Eq.~\ref{eq:variance} but with an additional term is 
-proportional to the squared, downsampled model describing the patch. This accounts for possible discrepancies between the downsampled PSF model of the 
-point source at the center of the patch and the observed pixels. That is, it is an effective model ``wrongness term'' term. 
+which is similar to the variance given by Eq.~\ref{eq:variance} but with an additional term proportional to the squared, downsampled model describing the patch. This accounts for possible discrepancies between the downsampled PSF model of the 
+point source at the center of the patch and the observed pixels. That is, it is an effective ``model wrongness'' term. 
 
 This variance is used in a $\chi^2$ clipping technique to mask out ill-fit portions of the patches. 
 This clipping step will prevent the the pixels affected by nearby sources to bias the inferred parameters.
@@ -277,7 +276,7 @@ At every iteration of optimizing the patch log-likelihood function, we mask out 
 \eeq
 where $\tilde{\mathbf{s}}_{n}^{2}$ is given by Eq.~\ref{eq:modified_variance}. In a given patch $n$, the log-likelihood pixels with $\chi^{2}_{n,\mathrm{clip}} > 3$ 
 do not contribute to computation of $L_n$ and its derivatives with respect to model variables. 
-We set the parameter $q$ to 1. We note that this choice of does a good job at masking out the pixels that receive light from the nearby or overlapping sources. 
+We set the parameter $q$ to 1. We note that this choice of $q$ does a good job at masking out the pixels that receive light from the nearby or overlapping sources. 
 In principle $q$ needs to decrease iteratively as our knowledge of the PSF improves. In this work however, we choose to hold the value of $q$ fixed at one. 
 
 
@@ -405,12 +404,12 @@ This allows us to make optimal use of all the pixels in $\wfc$ IR observations o
 \includegraphics[width=0.5\textwidth]{figures/wfc3ir/super2.png}
 \end{tabular}
 \caption{\label{fig:srpsf} Left: Demonstration of the initialization of the super-resolution PSF model. The initial PSF was constructed by scaling (background subtraction and flux normalization), shifting (through matched-filter polynomial centroiding), upsampling (with cubic spline interpolation), and averaging the isolated stars in the observation sample. 
-Right: Super-resolution PSF estimated by optimizing the likelihood function after six iterations. We note that the averaged upsampled initial PSF is smooth and lacks the sharp features visible across the full radian support of the PSF, specially the tails.}
+Right: Super-resolution PSF estimated by optimizing the likelihood function after six iterations. We note that the averaged upsampled initial PSF is smooth and lacks the sharp features visible across the full radial support of the PSF, specially the tails.}
 \end{figure*}
 
 \begin{figure*}
 \includegraphics[width=0.9\textwidth , height=0.9\textwidth ]{figures/wfc3ir/training.pdf}
-\caption{\label{fig:training_1} An example of a patch containing a high signal-to-noise ratio star in the training set. Upper-left and upper-right panels show the data and the model respectively. The lower left panel shows $\chi$. The lower right panel shows the flagged pixels. Pixels with $\mathtt{FLAG}=0$ are used in PSF-fitting. Pixels with are $\mathtt{FLAG}=1$ (provided by the MAST data) are masked out prior to the analysis. Finally, pixels with $\mathtt{FLAG}=2$ correspond to the pixels in a given model realization with $\chi^{2}_{\rm clip} > 3$.}
+\caption{\label{fig:training_1} An example of a patch containing a high signal-to-noise ratio star in the training set. Upper-left and upper-right panels show the data and the model respectively. The lower left panel shows $\chi$. The lower right panel shows the flagged pixels. Pixels with $\mathtt{FLAG}=0$ are used in PSF-fitting. Pixels with $\mathtt{FLAG}=1$ (provided by the MAST data) are masked out prior to the analysis. Finally, pixels with $\mathtt{FLAG}=2$ correspond to the pixels with $\chi^{2}_{\rm clip} > 3$.}
 \end{figure*}
 
 \begin{figure*}
