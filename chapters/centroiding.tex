@@ -138,7 +138,29 @@ the more optimal---in terms of preseving the information---the estimator is.
 The Cram\'{e}r-Rao inequality \citep{crlb} sets a lower bound on the 
 root-mean-squared error of unbiased estimators. The CRLB is given by the square-root of the inverse of 
 the Fisher information matrix $\mathcal{F}$. Thus, in order to find the CRLB, it is sufficient to compute the Fisher matrix. 
-This computation relies on a set of assumptions:
+This computations relies on having a functional form for the likelihood function, a generative model of the data under consideration, and 
+being able to compute the derivatives of the likelihood function (or the model) with respect to the model parameters. 
+Given a likelihood function $\mathcal{L}$, elements of the Fisher information matrix corresponding to the model parameters $\theta_i$ and $\theta_j$ 
+are given by:
+
+\beq 
+\mathcal{F}_{ij} = \mathbb{E}\Big[\frac{d \ln \mathcal{L}}{d\theta_{i}}\frac{d \ln \mathcal{L}}{d\theta_{j}}\Big].
+\label{fisher1}
+\eeq
+
+Let us assume that we have computed the root-mean-squared error on the parameter $\theta_{i}$ arising from applying an estimator to a large number of data. The Cram\'{e}r-Rao inequality states that this root-mean-squared error is greater than or equal to the $i$-th diagonal element of the inverse of the Fisher information matrix:
+\beq
+%\text{RMSE}[\{\hat{\theta_{i}}\}] \geq \sqrt{[\mathcal{F}^{-1}]_{ii}},
+\text{RMSE} \geq \sqrt{[\mathcal{F}^{-1}]_{ii}},
+\label{inequality}
+\eeq
+where the left hand side of the inequality is called the Cram\'{e}r-Rao bound on 
+the root-mean-squared error of estimating the parameter $\theta_{i}$.
+
+Based on Cram\'{e}r-Rao inequality (\ref{inequality}), \citet{crlb} defines efficiency of optimal estimators as the ratio of the CRLB and the root-mean-squared-error such that the maximum efficiency achievable by an estimator is unity. The closer the RMSE to the CRLB, 
+the more information about the parameter of interest is preserved, and thus the more efficient the estimator is. 
+
+Furthermore, we make the following simplifying assumptions to compute the Fisher information matrix for centroiding of stars in astronomical imaging:
 
 \begin{itemize}
 %  \item Known, constant model observable with known dependence on the model parameters. 
@@ -158,13 +180,7 @@ to the Poisson pixel noise is largely dominated by the sky rather than the objec
 
 A number of factors can produce correlation between pixels. These include detector imperfection, saturation, and post-processing of images such as smoothing, rotating, and shifting the images. In raw unsaturated images, pixel noise is close to uncorrelated. Instrument gain can introduce heteroscedasticity. In that case, the noise variance varies between pixels. In an upcoming publication on the inference of the HST WFC3-IR channel PSF (Vakili $\etal$, in preparation), we discuss proper treatment of centroiding in the presence of gain. For simplicity, we assume that per-pixel uncertainty remains constant across all pixels. 
 
-%After subtraction of the 
-%sky background level, distribution of the Poisson pixel noise can be approximated by a Gaussian %distribution with 
-%zero mean. \todo{Also mention in the discussion: The assumption of uncorrelated Gaussian noise is only %an approximation 
-%to a Poisson distribution which has broader tails than what we expect from a Gaussian!} 
-%\todo{HOGG HELP: can you write a few words about uncorrelated noise?}
-
-Let us assume that there are $M$ observables $\mathbf{f} = (f_{1}, ... , f_{M})$, each
+Let us assume that there are $M$ observables $\mathbf{f} = (f_{1}, ... , f_{M})$, each 
 related to $B$ model parameters $\boldsymbol{\mathbf{\theta}} = (\theta_{1} , ... , \theta_{B})$ 
 \beq
 f_{m} = f_{m}(\theta_{1} , ... , \theta_{B}).
@@ -172,43 +188,19 @@ f_{m} = f_{m}(\theta_{1} , ... , \theta_{B}).
 \eeq
 
 Assuming uncorrelated Gaussian error with variance $\sigma^{2}_{m}$ for each observable $f_{m}$, elements
-of the $B\times B$ Fisher matrix $\mathcal{F}_{ij}$ are given by
+of the $B\times B$ Fisher matrix $\mathcal{F}_{ij}$ (\ref{fisher1}) are given by the following simple expression: 
 \beq
-\mathcal{F}_{ij} = \sum_{m=1}^{M}\frac{1}{\sigma_{m}^{2}}\frac{\partial f_{m}}{\partial \theta_{i}}\frac{\partial f_{m}}{\partial \theta_{j}}
+\mathcal{F}_{ij} = \sum_{m=1}^{M}\frac{1}{\sigma_{m}^{2}}\frac{\partial f_{m}}{\partial \theta_{i}}\frac{\partial f_{m}}{\partial \theta_{j}}.
 \label{fisher}
 \eeq
 %Let us assume that, for each parameter $\theta_{i}$, there exists a set of 
 %asymptotically unbiased estimators $\{\hat{\theta}_{i}\}$. 
-Let us assume that we have computed the root-mean-squared error on the parameter $\theta_{i}$ arising from applying an estimator to a large number of data. The Cram\'{e}r-Rao inequality states that this root-mean-squared error is greater than or equal to the $i$-th diagonal element of the inverse of the Fisher information matrix:
-\beq
-%\text{RMSE}[\{\hat{\theta_{i}}\}] \geq \sqrt{[\mathcal{F}^{-1}]_{ii}},
-\text{RMSE} \geq \sqrt{[\mathcal{F}^{-1}]_{ii}},
-\label{inequality}
-\eeq
-where the left hand side of the inequality is called the Cram\'{e}r-Rao bound on 
-the root-mean-squared error of estimating the parameter $\theta_{i}$. Note that 
-the bound is computed assuming that the model (equation~\ref{genmodel}) generating the data 
-is known, and that uncertainties are given by additive uncorrelated Gaussian noise.
 
-Based on Cram\'{e}r-Rao inequality (\ref{inequality}), \citet{crlb} defines efficiency of optimal estimators as the ratio of the CRLB and the root-mean-squared-error such that the maximum efficiency 
-achievable by an estimator is unity. The closer the RMSE to the CRLB, 
-the more information about the parameter of interest is preserved, and thus the more efficient the estimator is. 
-
-Let us consider the case of a maximum likelihood estimate $\boldsymbol{\mathbf{\theta}}_{\text{ML}}$, 
-where the likelihood function corresponds to the same generative assumptions that we used to compute the CRLB.
-
-\begin{eqnarray}
-\boldsymbol{\mathbf{\theta}}_{\text{ML}} &=& \argmax \mathcal{L}, \\
--2\ln \mathcal{L} &=& \sum_{m}\frac{1}{\sigma_{m}^{2}}( y_{m} - f_{m}(\boldsymbol{\mathbf{\theta}}))^{2}, \\
-\end{eqnarray}
-where $y_{m}$ is the $m$th component of the observed data $\mathbf{y}$
-\beq
-\mathbf{y} = \mathbf{f}(\boldsymbol{\mathbf{\theta}}_{\text{true}}) + \mathbf{n}.
-\eeq
-
-Maximum likelihood estimators can achieve maximum efficiency. That is, when a maximum likelihood %estimators are applied to a large number of data, the RMSE is greater than or equal to the CRLB (see
-estimator is applied to a large number of data and RMSE is computed, the RMSE approaches the CRLB (see
-\citealt{crlb}; \citealt{lecam} for proof) in which case the CRLB is saturated. Therefore, we want to investigate the conditions under which the RMSE arising from a given fast centroiding method is close to the CRLB, or whether it can saturate the CRLB.
+%After subtraction of the 
+%sky background level, distribution of the Poisson pixel noise can be approximated by a Gaussian %distribution with 
+%zero mean. \todo{Also mention in the discussion: The assumption of uncorrelated Gaussian noise is only %an approximation 
+%to a Poisson distribution which has broader tails than what we expect from a Gaussian!} 
+%\todo{HOGG HELP: can you write a few words about uncorrelated noise?}
 
 %However, the relation (\ref{inequality}) does not necessarily hold for biased estimators. That is, 
 %the root-mean-squared-error for a biased estimator can be smaller than the CRLB (see \citealt{lecam} %for examples).
@@ -272,8 +264,8 @@ a Gaussian distribution
 p(y_{i}) = \mathcal{N}(FP_{i},\sigma^{2}). 
 \eeq
 
-The optimal estimator of flux is the matched-filter flux estimator 
-$\tilde{F}=\sum_{i}y_{i}P_{i}$. It can be shown that 
+The optimal estimator of flux is proportional to the matched-filter flux estimator 
+$\tilde{F} \propto \sum_{i}y_{i}P_{i}$. It can be shown that 
 \beq
 p(\tilde{F}) = \mathcal{N}(F , \frac{\sigma^{2}}{\sum_{i}P_{i}^{2}}),
 \eeq  

@@ -90,36 +90,33 @@ While extracting the super-resolution PSF model from the point sources in FLT im
   \caption{{\bf Source Extraction}: Source Extractor configuration file for extraction of the point sources from the $\hst$ $\wfc$ IR.}
 \begin{tabular}{@{}lllll}
 \\ \hline 
-    Configuration Parameter & & Value & &  Description\\ \hline
-  $\mathtt{DETECT \; TYPE}$ & & CCD & &  CCD (linear) or PHOTO (with gamma correction) \\
-  $\mathtt{DETECT \; MINAREA}$ & & 5 & &  minimum number of pixels above threshold \\
-  $\mathtt{DETECT \; THRESH}$ & & 5 & &  sigmas in $\mathrm{mag.arcsec}^{-2}$ \\
-  $\mathtt{ANALYSIS \; THRESH}$ & & 1.5 & & sigmas in $\mathrm{mag.arcsec}^{-2}$  \\
-  $\mathtt{FILTER}$ & & N & &  apply filter for detection?\\ 
-  $\mathtt{DEBLEND \;  NTHRESH}$ & & 32 & &  Number of deblending sub-thresholds \\
-  $\mathtt{DEBLEND \; MINCONT}$ & & 0.005 & &  Minimum contrast parameter for deblending \\
-  $\mathtt{CLEAN}$ & & Y & &  Clean spurious detections?\\
-  $\mathtt{CLEAN \; PARAM}$ & & 1.0 & & Cleaning efficiency \\
-  $\mathtt{MASK \; TYPE}$ & & CORRECT & &  type of detection MASKing \\
-  $\mathtt{FLAG \; IMAGE}$ & & flags.fits & &   \\
-  $\mathtt{FLAG \; TYPE}$ & & AND & &   \\
-  $\mathtt{WEIGHT \; GAIN}$ & & N & &   \\
-  $\mathtt{WEIGHT \; IMAGE}$ & & variance.fits & &  \\
-  $\mathtt{WEIGHT \; TYPE}$ & & MAP VAR & &  \\
-  $\mathtt{PHOT \; APERTURES}$ & & 3,5,7 & &  MAG APER aperture diameter(s) in pixels \\
-  $\mathtt{PHOT \; AUTOPARAMS}$ & & 2.5, 3.5 & &  MAG AUTO parameters: Kron fact, min radius \\
-  $\mathtt{PHOT \; PETROPARAMS}$ & & 2.0, 3.5 & &  MAG PETRO parameters: Petrosian fact , min radius \\
-  $\mathtt{PHOT \; FLUXFRAC}$ & & 0.2, 0.5, 0.9 & &   \\
-  $\mathtt{SATUR \; LEVEL}$ & & 50000.0 & &  level (in ADUs) at which arises saturation \\
-  $\mathtt{MAG \; ZEROPOINT}$ & & 1.0e-19  & &  magnitude zero-point \\
-  $\mathtt{MAG \; GAMMA}$ & & 4.0 & &  gamma of emulsion (for photographic scans) \\
-  $\mathtt{GAIN}$ & & 0.0 & &  detector gain in $e-/ADU$ \\
-  $\mathtt{PIXEL \; SCALE}$ & & 0.13 & &  size of pixel in arcsec\\
-  $\mathtt{SEEING \; FWHM}$ & & 0.17 & &  stellar FWHM in arcsec \\
-  $\mathtt{STARNNW \; NAME}$ & & ``./default.nnw'' & &  Neural-Network Weight table filename \\
-  $\mathtt{BACK \; SIZE}$ & & 64 & &  Background mesh: size \\
-  $\mathtt{BACK \; FILTERSIZE}$ & & 3 & &  Background filter: size \\
-  $\mathtt{BACKPHOTO \; TYPE}$ & & GLOBAL & &  Background type: can be GLOBAL or LOCAL \\
+    Config Parameter & Value & &  Description\\ \hline
+  $\mathtt{DETECT \; TYPE}$ & CCD & &  $-$\\
+  $\mathtt{DETECT \; MINAREA}$ & 5 & &  minimum number of pixels above threshold\\
+  $\mathtt{DETECT \; THRESH}$ & 5 & &  sigmas in $\mathrm{mag.arcsec}^{-2}$ \\
+  $\mathtt{ANALYSIS \; THRESH}$ & 1.5 & & sigmas in $\mathrm{mag.arcsec}^{-2}$  \\
+  $\mathtt{FILTER}$ & N & &  apply filter for detection?\\ 
+  $\mathtt{DEBLEND \;  NTHRESH}$ & 32 & &  Number of deblending sub-thresholds \\
+  $\mathtt{DEBLEND \; MINCONT}$ & 0.005 & &  Minimum contrast parameter for deblending \\
+  $\mathtt{CLEAN}$ & Y & &  Clean spurious detections?\\
+  $\mathtt{CLEAN \; PARAM}$ & 1.0 & & Cleaning efficiency \\
+  $\mathtt{MASK \; TYPE}$ & CORRECT & &  type of detection masking \\
+  $\mathtt{FLAG \; IMAGE}$ & flags.fits & &   \\
+  $\mathtt{FLAG \; TYPE}$ & AND & &   \\
+  $\mathtt{WEIGHT \; GAIN}$ & N & &   \\
+  $\mathtt{WEIGHT \; IMAGE}$ & variance.fits & &  \\
+  $\mathtt{WEIGHT \; TYPE}$ & MAP VAR & &  \\
+  $\mathtt{PHOT \; APERTURES}$ & 3,5,7 & &  MAG APER aperture diameter(s)\\
+  $\mathtt{PHOT \; AUTOPARAMS}$ & 2.5, 3.5 & &  MAG AUTO parameters\\
+  $\mathtt{PHOT \; PETROPARAMS}$ & 2.0, 3.5 & &  MAG PETRO parameters \\
+  $\mathtt{MAG \; ZEROPOINT}$ & 1.0e-19  & &  magnitude zero-point \\
+  $\mathtt{GAIN}$ & 0.0 & &  detector gain ($e-/ADU$) \\
+  $\mathtt{PIXEL \; SCALE}$ & 0.13 & &  size of pixel in arcsec\\
+  $\mathtt{SEEING \; FWHM}$ & 0.17 & &  stellar FWHM in arcsec \\
+  $\mathtt{STARNNW \; NAME}$ & ``./default.nnw'' & &  Neural-Network Weight table\\
+  $\mathtt{BACK \; SIZE}$ & 64 & &  Size of the background mesh\\
+  $\mathtt{BACK \; FILTERSIZE}$ & 3 & &  Size of the background filter\\
+  $\mathtt{BACKPHOTO \; TYPE}$ & GLOBAL & &  Background type\\
   %$\mathtt{CHECKIMAGE TYPE}$ & & NONE & &   \\
   %$\mathtt{CHECKIMAGE NAME}$ & & check.fits & &   \\
   %$\mathtt{MEMORY OBJSTACK}$ & & 3000 & &  number of objects in stack \\
